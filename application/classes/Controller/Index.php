@@ -19,7 +19,12 @@ class Controller_Index extends Controller_Base
 
         $notices = $noticeModel->getNotice();
 
-		$this->response->body($template);
+        $template->content = View::factory('index')
+            ->set('get', $_GET)
+            ->set('post', $_POST)
+        ;
+
+        $this->response->body($template);
 	}
 
 	public function action_catalogs()

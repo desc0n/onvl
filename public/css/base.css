@@ -10349,7 +10349,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .input.__success:after {
     height: 23px;
     width: 23px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -666px;
     background-repeat: no-repeat;
     content: "";
@@ -10377,7 +10377,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .textarea.__success:after {
     height: 23px;
     width: 23px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -666px;
     background-repeat: no-repeat;
     content: "";
@@ -10448,7 +10448,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .input-icon-magnifier {
     height: 20px;
     width: 20px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1653px;
     background-repeat: no-repeat;
     margin-top: -10px;
@@ -10771,7 +10771,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     margin-bottom: 16px;
     height: 37px;
     width: 47px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1794px;
     background-repeat: no-repeat
 }
@@ -10870,7 +10870,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content:before {
     height: 24px;
     width: 24px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -709px;
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -10903,7 +10903,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-balcony:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -438px;
     background-repeat: no-repeat
 }
@@ -10922,7 +10922,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-dishwasher:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1023px;
     background-repeat: no-repeat
 }
@@ -10941,7 +10941,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-fridge:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1563px;
     background-repeat: no-repeat
 }
@@ -10960,7 +10960,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-washer:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2664px;
     background-repeat: no-repeat
 }
@@ -10979,7 +10979,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-tv:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2484px;
     background-repeat: no-repeat
 }
@@ -10998,7 +10998,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-water-heater:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2844px;
     background-repeat: no-repeat
 }
@@ -11017,7 +11017,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-conditioner:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -843px;
     background-repeat: no-repeat
 }
@@ -11036,7 +11036,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-smoking:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2304px;
     background-repeat: no-repeat
 }
@@ -11055,7 +11055,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-events:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1203px;
     background-repeat: no-repeat
 }
@@ -11074,7 +11074,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-animals:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -90px;
     background-repeat: no-repeat
 }
@@ -11093,7 +11093,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-control:checked + .checkbox-content .checkbox-icon-family:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1383px;
     background-repeat: no-repeat
 }
@@ -11136,7 +11136,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-balcony:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -348px;
     background-repeat: no-repeat
 }
@@ -11155,7 +11155,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-dishwasher:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -933px;
     background-repeat: no-repeat
 }
@@ -11174,7 +11174,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-fridge:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1473px;
     background-repeat: no-repeat
 }
@@ -11193,7 +11193,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-washer:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2574px;
     background-repeat: no-repeat
 }
@@ -11212,7 +11212,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-tv:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2394px;
     background-repeat: no-repeat
 }
@@ -11231,7 +11231,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-water-heater:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2754px;
     background-repeat: no-repeat
 }
@@ -11250,7 +11250,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-conditioner:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -753px;
     background-repeat: no-repeat
 }
@@ -11269,7 +11269,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-smoking:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2214px;
     background-repeat: no-repeat
 }
@@ -11288,7 +11288,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-events:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1113px;
     background-repeat: no-repeat
 }
@@ -11307,7 +11307,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-animals:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 0;
     background-repeat: no-repeat
 }
@@ -11326,7 +11326,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat .checkbox-icon-family:after {
     height: 70px;
     width: 81px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1293px;
     background-repeat: no-repeat
 }
@@ -11381,7 +11381,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-flat2 .checkbox-fake:after {
     height: 34px;
     width: 34px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -528px;
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -11480,7 +11480,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-flat2 .radio-fake:after {
     height: 34px;
     width: 34px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -528px;
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -11574,7 +11574,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .checkbox-group-features .checkbox-flat .checkbox-content:before {
     height: 24px;
     width: 24px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -622px;
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -11661,7 +11661,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-flat .radio-control:checked + .radio-content .radio-icon-room:after {
     height: 64px;
     width: 85px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2036px;
     background-repeat: no-repeat
 }
@@ -11680,7 +11680,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-flat .radio-control:checked + .radio-content .radio-icon-apartment:after {
     height: 64px;
     width: 85px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -264px;
     background-repeat: no-repeat
 }
@@ -11724,7 +11724,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-flat .radio-icon-room:after {
     height: 64px;
     width: 85px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1952px;
     background-repeat: no-repeat
 }
@@ -11743,7 +11743,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-flat .radio-icon-apartment:after {
     height: 64px;
     width: 85px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -180px;
     background-repeat: no-repeat
 }
@@ -11788,7 +11788,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-group-offerkind .radio-flat .radio-control:checked + .radio-content:before {
     height: 24px;
     width: 24px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -709px;
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -11813,7 +11813,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .radio-group-offerkind .radio-flat .radio-content:before {
     height: 24px;
     width: 24px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -622px;
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -12441,7 +12441,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .form-verificator-icon-sad-smile {
     height: 74px;
     width: 74px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -2120px;
     background-repeat: no-repeat
 }
@@ -12460,7 +12460,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .form-verificator-icon-negative-report {
     height: 81px;
     width: 66px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1693px;
     background-repeat: no-repeat
 }
@@ -12479,7 +12479,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .form-verificator-icon-positive-report {
     height: 81px;
     width: 66px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -1851px;
     background-repeat: no-repeat
 }
@@ -12515,7 +12515,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 .input-icon-calendar {
     height: 20px;
     width: 18px;
-    background-image: url(/assets/sprite/forms-s724c79ca67-eb665bcec455f7697c15e9986ab39c7d.png);
+    background-image: url(/public/i/forms.png);
     background-position: 0 -582px;
     background-repeat: no-repeat;
     margin-top: -10px;
