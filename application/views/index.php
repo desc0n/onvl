@@ -1,255 +1,85 @@
-<nav class="navigation __hide" ls-navigation="">
-    <div class="navigation-header">
-        <div class="navigation-header-inner">
-            <div class="navigation-close" ls-navigation-close="">
-                <i class="navigation-close-icon">
-
-                </i>
-                <span class="navigation-close-text">Закрыть</span>
-            </div>
-            <div class="navigation-header-links">
-                <a class="navigation-header-link" data-auth-modal-trigger="" href="#" title="Войти">Войти</a>
-                <a class="navigation-header-link" data-auth-modal-form="register" data-auth-modal-trigger="" href="#"
-                   title="Зарегистрироваться">Зарегистрироваться</a>
-            </div>
-        </div>
-    </div>
-    <div class="navigation-body">
-        <div class="navigation-col">
-            <dl class="navigation-list">
-                <dt class="navigation-list-title">Арендаторам</dt>
-                <dd class="navigation-list-item">
-                    <a class="navigation-list-link" href="/rooms" title="Найти квартиру">Найти квартиру</a>
-                </dd>
-                <dd class="navigation-list-item">
-                    <a class="navigation-list-link" href="/plan" title="Полный доступ">Полный доступ</a>
-                </dd>
-                <dd class="navigation-list-item">
-                    <a class="navigation-list-link" href="/pages/faq" title="Частые вопросы">Частые вопросы</a>
-                </dd>
-            </dl>
-        </div>
-        <div class="navigation-col">
-            <dl class="navigation-list">
-                <dt class="navigation-list-title">Владельцам</dt>
-                <dd class="navigation-list-item">
-                    <a class="navigation-list-link" href="/notice/new" title="Сдать квартиру">Сдать квартиру</a>
-                </dd>
-                <dd class="navigation-list-item">
-                    <a class="navigation-list-link" href="#" title="Договор аренды">Договор
-                        аренды</a>
-                </dd>
-                <dd class="navigation-list-item">
-                    <a class="navigation-list-link" href="/pages/faq_owner" title="Частые вопросы">Частые вопросы</a>
-                </dd>
-            </dl>
-        </div>
-        <div class="navigation-col">
-            <dl class="navigation-list">
-                <dt class="navigation-list-title">Мы на связи</dt>
-                <dd class="navigation-list-item">
-                    <div class="main-phone">
-                        <i class="main-phone-icon sprite-icon sprite-icon-phone">
-
-                        </i>
-                        <div class="main-phone-content">
-                            <div class="main-phone-number">
-                                <a href="tel:8800">8 (800) 000-00-00</a>
-                            </div>
-                            По будням с 11 до 19
-                        </div>
-                    </div>
-                </dd>
-                <dd class="navigation-list-item">
-                    <ul class="social-links-list">
-                        <li class="social-links-list-item">
-                            <a class="social-link" href="mailto:shop@locals.lan" title="shop@locals.lan">
-                                <span class="social-link-icon">
-                                    <i class="icon-at">
-
-                                    </i>
-                                </span>
-                                <span class="social-link-text">shop@locals.lan</span>
-                            </a>
-                        </li>
-                        <li class="social-links-list-item">
-                            <a class="social-link" href="https://www.facebook.com/" title="Facebook">
-                                <span class="social-link-icon">
-                                    <i class="icon-facebook">
-
-                                    </i>
-                                </span>
-                                <span class="social-link-text">Вконтакте</span>
-                            </a>
-                        </li>
-                        <li class="social-links-list-item">
-                            <a class="social-link" href="https://vk.com/" title="Вконтакте">
-                                <span class="social-link-icon">
-                                    <i class="icon-vkontakte">
-
-                                    </i>
-                                </span>
-                                <span class="social-link-text">Вконтакте</span>
-                            </a>
-                        </li>
-                    </ul>
-                </dd>
-            </dl>
-        </div>
-    </div>
-</nav>
+<?=View::factory('navigation');?>
 <div class="layout">
-    <header class="header">
-        <div class="header-topline">
-            <div class="container-fluid">
-                <div class="header-topline-main">
-                    <div class="header-topline-item col-xs-12 col-sm-4">
-                        <i class="header-topline-icon header-topline-icon-placemark">
-
-                        </i>
-                        <span class="text-muted hidden-xs hidden-sm">Аренда квартир без комиссии</span>
-                    </div>
-                    <div class="header-topline-item col-xs-12 col-sm-4">
-                        <a class="header-topline-link header-topline-link-block" href="tel:88003331368">
-                            <span class="margin-right-10">
-                                <i class="header-topline-icon header-topline-icon-phone">
-
-                                </i>8 (800) 333-13-68</span>
-                            <span class="text-muted">Будни с 11 до 19</span>
-                        </a>
-                    </div>
-                    <div class="header-topline-item col-xs-12 col-sm-4">
-                        <a class="header-topline-link header-topline-link-block" data-auth-modal-trigger="" href="#">
-                            <i class="header-topline-icon header-topline-icon-user">
-
-                            </i>Войти в кабинет</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-navbar">
-            <div class="container-fluid">
-                <button class="header-nav-trigger" ls-navigation-open="">
-                    <div class="header-nav-trigger-burger">
-
-                    </div>
-                    <div class="header-nav-trigger-text">Меню</div>
-                </button>
-                <div class="header-navbar-logo">
-                    <a class="logo" href="/">
-
-                    </a>
-                </div>
-                <div class="header-navbar-actions">
-                    <a class="button button-green button-rent hidden-xs hidden-sm" href="/notice/new">Сдать квартиру</a>
-                    <a class="button button-green button-small button-rent-sm hidden-md hidden-lg" href="/notice/new">Сдать</a>
-                </div>
-                <nav class="header-navbar-nav">
-                    <ul class="header-navbar-nav-list">
-                        <li class="header-navbar-nav-item">
-                            <a class="header-navbar-nav-link" title="Найти квартиру" href="/rooms">
-                                <i class="header-navbar-nav-icon header-navbar-nav-icon-magnifier">
-
-                                </i>Найти квартиру <span class="text-muted">650</span>
-                            </a>
-                        </li>
-                        <li class="header-navbar-nav-item">
-                            <a class="header-navbar-nav-link" title="Квартиры на карте" href="/rooms?map=true">
-                                <i class="header-navbar-nav-icon header-navbar-nav-icon-placemark">
-
-                                </i>Квартиры на карте</a>
-                        </li>
-                        <li class="header-navbar-nav-item hidden-xs hidden-sm">
-                            <a class="header-navbar-nav-link" title="Полный доступ" href="/plan">
-                                <i class="header-navbar-nav-icon header-navbar-nav-icon-premium">
-
-                                </i>Полный доступ</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="header-hero">
-            <div class="header-cover"></div>
-            <div class="header-main">
-                <div class="header-main-cell">
-                    <div class="container-fluid">
-                        <h1 class="header-main-title">Аренда квартир<br> без&nbsp;комиссии</h1>
-                        <div class="header-main-search-form">
-                            <div>
-                                <div class="search-form" data-reactid=".d1z9wdl340" data-react-checksum="-1897560714">
-                                    <div class="search-form-item" data-reactid=".d1z9wdl340.1">
-                                        <div class="search-form-item-inner" data-reactid=".d1z9wdl340.1.0">
-                                            <div class="search-form-item-cell" data-reactid=".d1z9wdl340.1.0.0">
+    <?=View::factory('header');?>
+    <div class="header-hero">
+        <div class="header-cover"></div>
+        <div class="header-main">
+            <div class="header-main-cell">
+                <div class="container-fluid">
+                    <h1 class="header-main-title">Аренда квартир<br> без&nbsp;комиссии</h1>
+                    <div class="header-main-search-form">
+                        <div>
+                            <div class="search-form" data-reactid=".d1z9wdl340" data-react-checksum="-1897560714">
+                                <div class="search-form-item" data-reactid=".d1z9wdl340.1">
+                                    <div class="search-form-item-inner" data-reactid=".d1z9wdl340.1.0">
+                                        <div class="search-form-item-cell" data-reactid=".d1z9wdl340.1.0.0">
+                                            <label
+                                                class="search-form-checkbox"
+                                                data-reactid=".d1z9wdl340.1.0.0.0">
+                                                <input
+                                                    class="search-form-checkbox-control" type="checkbox"
+                                                    data-reactid=".d1z9wdl340.1.0.0.0.0">
+                                                <span
+                                                    class="search-form-checkbox-content"
+                                                    data-reactid=".d1z9wdl340.1.0.0.0.1">Комната</span>
+                                            </label>
+                                        </div>
+                                        <div class="search-form-item-cell" data-reactid=".d1z9wdl340.1.0.1">
+                                            <div class="search-form-checkbox-group"
+                                                 data-reactid=".d1z9wdl340.1.0.1.0">
                                                 <label
-                                                    class="search-form-checkbox"
-                                                    data-reactid=".d1z9wdl340.1.0.0.0">
+                                                    class="search-form-checkbox search-form-checkbox-rooms"
+                                                    data-original-title="Однокомнатные квартиры"
+                                                    data-reactid=".d1z9wdl340.1.0.1.0.$1">
                                                     <input
                                                         class="search-form-checkbox-control" type="checkbox"
-                                                        data-reactid=".d1z9wdl340.1.0.0.0.0">
+                                                        value="1" data-reactid=".d1z9wdl340.1.0.1.0.$1.0">
                                                     <span
                                                         class="search-form-checkbox-content"
-                                                        data-reactid=".d1z9wdl340.1.0.0.0.1">Комната</span>
+                                                        data-reactid=".d1z9wdl340.1.0.1.0.$1.1">1</span>
                                                 </label>
-                                            </div>
-                                            <div class="search-form-item-cell" data-reactid=".d1z9wdl340.1.0.1">
-                                                <div class="search-form-checkbox-group"
-                                                     data-reactid=".d1z9wdl340.1.0.1.0">
-                                                    <label
-                                                        class="search-form-checkbox search-form-checkbox-rooms"
-                                                        data-original-title="Однокомнатные квартиры"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$1">
-                                                        <input
-                                                            class="search-form-checkbox-control" type="checkbox"
-                                                            value="1" data-reactid=".d1z9wdl340.1.0.1.0.$1.0">
-                                                        <span
-                                                            class="search-form-checkbox-content"
-                                                            data-reactid=".d1z9wdl340.1.0.1.0.$1.1">1</span>
-                                                    </label>
-                                                    <label
-                                                        class="search-form-checkbox search-form-checkbox-rooms"
-                                                        data-original-title="Двухкомнатные квартиры"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$2">
-                                                        <input
-                                                            class="search-form-checkbox-control" type="checkbox"
-                                                            value="2" data-reactid=".d1z9wdl340.1.0.1.0.$2.0">
-                                                        <span
-                                                            class="search-form-checkbox-content"
-                                                            data-reactid=".d1z9wdl340.1.0.1.0.$2.1">2</span>
-                                                    </label>
-                                                    <label
-                                                        class="search-form-checkbox search-form-checkbox-rooms"
-                                                        data-original-title="Трехкомнатные квартиры"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$3">
-                                                        <input
-                                                            class="search-form-checkbox-control" type="checkbox"
-                                                            value="3" data-reactid=".d1z9wdl340.1.0.1.0.$3.0">
-                                                        <span
-                                                            class="search-form-checkbox-content"
-                                                            data-reactid=".d1z9wdl340.1.0.1.0.$3.1">3</span>
-                                                    </label>
-                                                    <label
-                                                        class="search-form-checkbox search-form-checkbox-rooms"
-                                                        data-original-title="Многокомнатные квартиры"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$4">
-                                                        <input
-                                                            class="search-form-checkbox-control" type="checkbox"
-                                                            value="4" data-reactid=".d1z9wdl340.1.0.1.0.$4.0">
-                                                        <span
-                                                            class="search-form-checkbox-content"
-                                                            data-reactid=".d1z9wdl340.1.0.1.0.$4.1">4+</span>
-                                                    </label>
-                                                </div>
+                                                <label
+                                                    class="search-form-checkbox search-form-checkbox-rooms"
+                                                    data-original-title="Двухкомнатные квартиры"
+                                                    data-reactid=".d1z9wdl340.1.0.1.0.$2">
+                                                    <input
+                                                        class="search-form-checkbox-control" type="checkbox"
+                                                        value="2" data-reactid=".d1z9wdl340.1.0.1.0.$2.0">
+                                                    <span
+                                                        class="search-form-checkbox-content"
+                                                        data-reactid=".d1z9wdl340.1.0.1.0.$2.1">2</span>
+                                                </label>
+                                                <label
+                                                    class="search-form-checkbox search-form-checkbox-rooms"
+                                                    data-original-title="Трехкомнатные квартиры"
+                                                    data-reactid=".d1z9wdl340.1.0.1.0.$3">
+                                                    <input
+                                                        class="search-form-checkbox-control" type="checkbox"
+                                                        value="3" data-reactid=".d1z9wdl340.1.0.1.0.$3.0">
+                                                    <span
+                                                        class="search-form-checkbox-content"
+                                                        data-reactid=".d1z9wdl340.1.0.1.0.$3.1">3</span>
+                                                </label>
+                                                <label
+                                                    class="search-form-checkbox search-form-checkbox-rooms"
+                                                    data-original-title="Многокомнатные квартиры"
+                                                    data-reactid=".d1z9wdl340.1.0.1.0.$4">
+                                                    <input
+                                                        class="search-form-checkbox-control" type="checkbox"
+                                                        value="4" data-reactid=".d1z9wdl340.1.0.1.0.$4.0">
+                                                    <span
+                                                        class="search-form-checkbox-content"
+                                                        data-reactid=".d1z9wdl340.1.0.1.0.$4.1">4+</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="search-form-item search-form-item-submit" data-reactid=".d1z9wdl340.2">
-                                        <div class="search-form-item-inner" data-reactid=".d1z9wdl340.2.0">
-                                            <div class="search-form-item-cell" data-reactid=".d1z9wdl340.2.0.0">
-                                                <button class="button button-green search-form-submit"
-                                                        data-reactid=".d1z9wdl340.2.0.0.0">Найти объявления
-                                                </button>
-                                            </div>
+                                </div>
+                                <div class="search-form-item search-form-item-submit">
+                                    <div class="search-form-item-inner">
+                                        <div class="search-form-item-cell">
+                                            <button class="button button-green search-form-submit" onclick="document.location='/search';">Найти объявления
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -259,7 +89,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
     <div class="body">
         <section class="features">
             <div class="container">

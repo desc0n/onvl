@@ -2,7 +2,7 @@
 
 class Controller_Notice extends Controller_Base
 {
-	public function action_show()
+	public function action_index()
 	{
 		/** @var $contentModel Model_Content */
 		$contentModel = Model::factory('Content');
@@ -26,7 +26,7 @@ class Controller_Notice extends Controller_Base
 
 		$template = $contentModel->getBaseTemplate();
 
-		$template->content=View::factory('item')
+		$template->content=View::factory('notice')
 			->set('itemData', $itemData)
 			->set('id', $id)
 		;

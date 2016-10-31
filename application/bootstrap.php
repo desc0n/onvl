@@ -135,32 +135,22 @@ Route::set('page', 'page/<slug>',[
 	])
 ;
 
-Route::set('catalogs', 'catalogs',[
+Route::set('search', 'search',[
         'controller' => 'index',
-        'action'     => 'catalogs',
+        'action'     => 'search',
     ])
-	->defaults(array(
+	->defaults([
 		'controller' => 'index',
-		'action'     => 'catalogs',
-	));
+		'action'     => 'search',
+	]);
 
-Route::set('cart', 'cart',[
-        'controller' => 'index',
-        'action'     => 'cart',
+Route::set('notice', 'notice/<id>',[
+        'id' => '[0-9]+',
     ])
-	->defaults(array(
-		'controller' => 'index',
-		'action'     => 'cart',
-	));
-
-Route::set('reviews', 'reviews',[
-        'controller' => 'index',
-        'action'     => 'reviews',
-    ])
-	->defaults(array(
-		'controller' => 'index',
-		'action'     => 'reviews',
-	));
+	->defaults([
+		'controller' => 'notice',
+		'action'     => 'index',
+	]);
 
 Route::set('default', '(<controller>(/<action>(/<id>)))',array('id' =>'[0-9a-z_]+'))
 	->defaults(array(

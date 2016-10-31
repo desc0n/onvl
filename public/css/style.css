@@ -342,3 +342,22 @@
 .header-hero .header-cover {
     background-image:url(/public/i/header-cover-background.jpg);
 }
+
+#loginModal {
+    padding: 0;
+}
+
+#loginModal .modal-dialog {
+    width: 100%
+}
+
+#loginModal .modal-content {
+    position: relative;
+}
+
+#loginModal .modal-content .close {
+    position: absolute;
+    font-size: 36px;
+    right: 10px;
+    top: 10px;
+}

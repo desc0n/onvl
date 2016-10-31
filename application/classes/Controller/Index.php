@@ -27,19 +27,16 @@ class Controller_Index extends Controller_Base
         $this->response->body($template);
 	}
 
-	public function action_catalogs()
+	public function action_search()
 	{
-        /** @var $adminModel Model_Admin */
-        $adminModel = Model::factory('Admin');
+        View::set_global('title', 'Поиск');
 
-        View::set_global('title', 'Каталог');
+        $template=View::factory('template');
 
-        $template=View::factory("template");
-
-		$template->content = View::factory("catalogs")
-            ->set('catalogsData', $adminModel->getCatalogsData())
+		$template->content = View::factory('search')
 			->set('get', $_GET)
-			->set('post', $_POST);
+			->set('post', $_POST)
+        ;
 
 		$this->response->body($template);
 	}
