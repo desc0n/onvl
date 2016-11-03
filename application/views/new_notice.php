@@ -214,7 +214,7 @@
                         </div>
                         <div class="form-row form-row-actions">
                             <div class="form-row-content">
-                                <button name="button" type="submit" class="button button-green button-xl">Отправить на модерацию
+                                <button name="button" type="submit" class="button button-blue button-xl">Отправить на модерацию
                                 </button>
                             </div>
                         </div>

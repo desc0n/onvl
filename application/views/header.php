@@ -37,12 +37,12 @@
             </button>
             <div class="header-navbar-logo">
                 <a class="logo" href="/">
-
+                    <img src="/public/i/logo.png">
                 </a>
             </div>
             <div class="header-navbar-actions">
-                <a class="button button-green button-rent hidden-xs hidden-sm" href="/notice/new">Сдать квартиру</a>
-                <a class="button button-green button-small button-rent-sm hidden-md hidden-lg" href="/notice/new">Сдать</a>
+                <a class="button button-blue button-rent hidden-xs hidden-sm" href="/notice/new">Сдать квартиру</a>
+                <a class="button button-blue button-small button-rent-sm hidden-md hidden-lg" href="/notice/new">Сдать</a>
             </div>
             <nav class="header-navbar-nav">
                 <ul class="header-navbar-nav-list">

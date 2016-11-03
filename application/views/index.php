@@ -78,7 +78,7 @@
                                 <div class="search-form-item search-form-item-submit">
                                     <div class="search-form-item-inner">
                                         <div class="search-form-item-cell">
-                                            <button class="button button-green search-form-submit" onclick="document.location='/search';">Найти объявления
+                                            <button class="button button-blue search-form-submit" onclick="document.location='/search';">Найти объявления
                                             </button>
                                         </div>
                                     </div>
@@ -144,9 +144,9 @@
             <div class="container-fluid">
                 <h2 class="section-title">Последние предложения</h2>
                 <div class="cards-container">
-                    <section class="cards">
-                        <div class="cards-list">
-                            <article class="card">
+                    <div class="cards">
+                        <div class="cards-list row">
+                            <div class="card col-sm-12 col-lg-3">
                                 <div class="card-inner">
                                     <a class="card-link" href="#" target="_blank">
                                         <div class="card-content">
@@ -204,21 +204,9 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite" data-reactid=".pjmrs9y0hs.0.$206605.0.1">
-                                        <div class="control-favorite-text" data-reactid=".pjmrs9y0hs.0.$206605.0.1.0">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon"
-                                             data-reactid=".pjmrs9y0hs.0.$206605.0.1.1"></div>
-                                    </div>
-                                    <div data-original-title="Это объявление продвигается" class="control-promo"
-                                         data-reactid=".pjmrs9y0hs.0.$206605.0.2">
-                                        <div class="control-promo-icon"
-                                             data-reactid=".pjmrs9y0hs.0.$206605.0.2.0"></div>
-                                    </div>
                                 </div>
-                            </article>
-                            <article class="card" data-reactid=".pjmrs9y0hs.0.$202137">
+                            </div>
+                            <div class="card col-sm-12 col-lg-3" data-reactid=".pjmrs9y0hs.0.$202137">
                                 <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$202137.0"><a class="card-link"
                                                                                                   href="/stilnaya-odnushka-090efdde-1029-49dc-a472-7297e0ece1b1"
                                                                                                   target="_blank"
@@ -301,21 +289,9 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite" data-reactid=".pjmrs9y0hs.0.$202137.0.1">
-                                        <div class="control-favorite-text" data-reactid=".pjmrs9y0hs.0.$202137.0.1.0">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon"
-                                             data-reactid=".pjmrs9y0hs.0.$202137.0.1.1"></div>
-                                    </div>
-                                    <div data-original-title="Это объявление продвигается" class="control-promo"
-                                         data-reactid=".pjmrs9y0hs.0.$202137.0.2">
-                                        <div class="control-promo-icon"
-                                             data-reactid=".pjmrs9y0hs.0.$202137.0.2.0"></div>
-                                    </div>
                                 </div>
-                            </article>
-                            <article class="card" data-reactid=".pjmrs9y0hs.0.$208338">
+                            </div>
+                            <div class="card col-sm-12 col-lg-3" data-reactid=".pjmrs9y0hs.0.$208338">
                                 <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$208338.0"><a class="card-link"
                                                                                                   href="/kvartira-ryadom-s-neboskrebami"
                                                                                                   target="_blank"
@@ -403,21 +379,102 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite">
-                                        <div class="control-favorite-text">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon">
-                                        </div>
-                                    </div>
-                                    <noscript>
-                                    </noscript>
                                 </div>
-                            </article>
+                            </div>
+                            <div class="card col-sm-12 col-lg-3" data-reactid=".pjmrs9y0hs.0.$208338">
+                                <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$208338.0"><a class="card-link"
+                                                                                                  href="/kvartira-ryadom-s-neboskrebami"
+                                                                                                  target="_blank"
+                                                                                                  data-reactid=".pjmrs9y0hs.0.$208338.0.0">
+                                        <div class="card-content" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0">
+                                            <figure class="card-pic" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0"><img
+                                                    class="card-pic-img"
+                                                    src="https://assets.thelocals.ru/uploads/image/file/1598054/thumb_22da85c4.jpg"
+                                                    alt="Квартира рядом с небоскребами :-)))"
+                                                    data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.0">
+                                                <div class="card-pic-bg"
+                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1598054/thumb_22da85c4.jpg);"
+                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.1"></div>
+                                                <div class="card-pic-overlay"
+                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.2"></div>
+                                                <span data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.4">
+
+                                                </span>
+                                            </figure>
+                                            <div class="card-desc" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1">
+                                                <div class="card-options"
+                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0">
+                                                    <div class="card-options-item"
+                                                         data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0">
+                                                        <div class="card-options-item-label"
+                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0.0">Комнат
+                                                        </div>
+                                                        <div class="card-options-item-value"
+                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0.1">2
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-options-item"
+                                                         data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1">
+                                                        <div class="card-options-item-label"
+                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0">
+                                                            <span
+                                                                data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0.0">Площадь, м</span>
+                                                            <sup
+                                                                data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0.1">2</sup>
+                                                        </div>
+                                                        <div class="card-options-item-value">60
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-options-item"
+                                                    >
+                                                        <div class="card-options-item-label">
+                                                            <span>руб</span>
+                                                            <span>. / месяц</span>
+                                                        </div>
+                                                        <div class="card-options-item-value">75 000</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="card-info-item card-info-item-price">
+                                                        <span class="card-price">
+                                                            <span>75 000</span>
+                                                            <span> </span>
+                                                            <span>руб</span>
+                                                            <span>.</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card-info-item card-info-item-space"
+                                                    >
+                                                        <span
+                                                            class="card-space"
+                                                        >
+                                                            <span>2-комн.</span>
+                                                            <span>, </span>
+                                                            <span>60</span>
+                                                            <span>&nbsp;м</span>
+                                                            <sup>2</sup>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <h4 class="card-title">
+                                                    Квартира рядом с небоскребами :-)))</h4>
+                                                <div class="card-metro">
+                                                    <i class="card-metro-icon"
+                                                    >
+
+                                                    </i>
+                                                    <span
+                                                    >Киевская, Деловой центр, Студенческая</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
-                <a class="button button-green button-xl button-offers" href="/rooms">Все предложения</a></div>
+                <a class="button button-blue button-xl button-offers" href="/rooms">Все предложения</a></div>
         </section>
         <section class="reviews reviews-bubbly bg-gray">
             <div class="container"><h2 class="section-title">Отзывы наших клиентов</h2>
@@ -434,7 +491,7 @@
                         </div>
                     </div>
                     <div class="reviews-item">
-                        <blockquote class="reviews-item-quote">Дорогие the locals!
+                        <blockquote class="reviews-item-quote">Дорогие onvl!
                             Отличный и удобный сервис, спасибо Вам большое! Сдали квартиру быстро и без лишних хлопот.
                             Будем советовать Вас друзьям и знакомым!
                             Спасибо!
@@ -451,46 +508,25 @@
                                 class="grid-table grid-table-h"><span class="grid-table-cell grid-table-cell-middle">Антон 35 лет</span></span>
                         </div>
                     </div>
-                    <div class="reviews-item">
-                        <blockquote class="reviews-item-quote">За час эфирного времени на Locals – 9 звонков, нашли
-                            арендатора за пару часов!!! Работать с сервисом чрезвычайно приятно и очень продуктивно!
-                            Спасибо)
-                        </blockquote>
-                        <div class="reviews-item-author reviews-item-author-no-ava text-muted"><span
-                                class="grid-table grid-table-h"><span class="grid-table-cell grid-table-cell-middle">Ольга </span></span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
         <section class="features">
-            <div class="section-overlay"
-                 style="background-image: url(https://assets.thelocals.ru/assets/rent_bg-1e9d898ad777789688cadeed3ad4fbf9.png);"></div>
-            <div class="container"><h2 class="section-title">Хотите <span>сдать</span> квартиру?</h2>
+            <div class="section-overlay" style="background-image: url('/public/i/background-apartment.jpg');"></div>
+            <div class="container"><h2 class="section-title">Сдать квартиру?</h2>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 feature">
+                    <div class="col-xs-12 col-sm-3 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle"><i
                                         class="feature-icon feature-icon-quick"></i></div>
                             </div>
                         </div>
-                        <h4>Это быстро</h4>
+                        <h4>Сдать быстро и просто</h4>
                         <p>80% квартир на&nbsp;Onvl сдаются в&nbsp;первую неделю. Разумеется, при том условии, что вы&nbsp;выставили
                             адекватную цену. Кому нужна «двушка» за&nbsp;85&nbsp;тысяч рублей в&nbsp;месяц? Никому.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-4 feature">
-                        <div class="feature-icon-wrapper">
-                            <div class="grid-table grid-table-h grid-table-v">
-                                <div class="grid-table-cell grid-table-cell-middle"><i
-                                        class="feature-icon feature-icon-public"></i></div>
-                            </div>
-                        </div>
-                        <h4>Приличная публика</h4>
-                        <p>Onvl&nbsp;— это не&nbsp;глобальная доска объявлений, на&nbsp;которой собираются всякие
-                            подозрительные личности. У&nbsp;нас сайт «для своих» и&nbsp;публика&nbsp;— соответствующая,
-                            приличная.</p></div>
-                    <div class="col-xs-12 col-sm-4 feature">
+                    <div class="col-xs-12 col-sm-3 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle"><i
@@ -501,8 +537,40 @@
                         <p>Мы&nbsp;составили для вас типовой договор аренды,&nbsp;— можете скачивать его и&nbsp;подписывать
                             с&nbsp;арендатором.</p>
                     </div>
+                    <div class="col-xs-12 col-sm-3 feature">
+                        <div class="feature-icon-wrapper">
+                            <div class="grid-table grid-table-h grid-table-v">
+                                <div class="grid-table-cell grid-table-cell-middle"><i
+                                        class="feature-icon feature-icon-public"></i></div>
+                            </div>
+                        </div>
+                        <h4>Проверенная публика</h4>
+                        <p>Onvl&nbsp;— это не&nbsp;глобальная доска объявлений, на&nbsp;которой собираются всякие
+                            подозрительные личности. У&nbsp;нас сайт «для своих» и&nbsp;публика&nbsp;— соответствующая,
+                            приличная.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 feature">
+                        <div class="feature-icon-wrapper">
+                            <div class="grid-table grid-table-h grid-table-v">
+                                <div class="grid-table-cell grid-table-cell-middle">
+                                    <i class="feature-icon feature-icon-no-agency"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Без назойливых агентств</h4>
+                        <p>Onvl&nbsp;— это отсутствие каких либо посредников.</p>
+                    </div>
+
                 </div>
-                <a class="button button-green button-xl" href="/notice/new">Сдать квартиру бесплатно</a></div>
+                <a class="button button-blue button-xl" href="/notice/new">Сдать квартиру бесплатно</a></div>
+        </section>
+        <section class="service-list">
+            <div class="services container">
+                <a href="/insurance" class="service-link col-sm-12 col-lg-3">Страхование</a>
+                <a href="/apartment-crossing" class="service-link col-sm-12 col-lg-3">Квартирный переезд</a>
+                <a href="/small-repair" class="service-link col-sm-12 col-lg-3">Мелкий ремонт</a>
+                <a href="/clean-apartment" class="service-link last col-sm-12 col-lg-3">Уборка квартир</a>
+            </div>
         </section>
     </div>
     <?=View::factory('footer');?>

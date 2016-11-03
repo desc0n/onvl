@@ -6,7 +6,7 @@
     <title>Аренда недвижимости без комиссии во Владивостоке</title>
     <meta name="description"
           content="Снять недвижимость в Москве без комиссии. Новые проверенные объявления каждый день. Сдавайте и снимайте жилье на самой большой доске объявлений от собственников.">
-    <link href="/fav.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/public/i/logo.png" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" media="screen" href="/public/css/bootstrap.css">
     <link rel="stylesheet" media="screen" href="/public/css/base.css">
     <style type="text/css">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="modal-form-item modal-form-item-actions">
                         <div class="modal-form-item-cell">
-                            <button type="submit" class="button button-green modal-form-submit">
+                            <button type="submit" class="button button-blue modal-form-submit">
                                 Зарегистрироваться
                             </button>
                         </div>

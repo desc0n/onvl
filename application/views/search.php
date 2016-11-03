@@ -467,12 +467,9 @@
                             </div>
                             <div class="catalog-grid-col catalog-grid-col-main" data-reactid=".1vz5g377mdc.2.1.0.1">
                                 <div class="catalog-list" data-reactid=".1vz5g377mdc.2.1.0.1.0">
-                                    <section class="cards" data-reactid=".1vz5g377mdc.2.1.0.1.0.0">
-                                        <div class="cards-list" data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0">
-                                            <noscript data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.0">
-
-                                            </noscript>
-                                            <article class="card" data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659">
+                                    <div class="cards" data-reactid=".1vz5g377mdc.2.1.0.1.0.0">
+                                        <div class="cards-list row">
+                                            <div class="card col-sm-12 col-lg-4" data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659">
                                                 <div class="card-inner"
                                                      data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0">
                                                     <a
@@ -606,27 +603,9 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <div class="control-favorite"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.1">
-                                                        <div class="control-favorite-text"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.1.0">
-                                                            Добавить в избранное
-                                                        </div>
-                                                        <div class="control-favorite-icon"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.1.1">
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="control-promo"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.2">
-                                                        <div class="control-promo-icon"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.2.0">
-
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                            </article>
-                                            <article class="card" data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169">
+                                            </div>
+                                            <div class="card col-sm-12 col-lg-4" data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169">
                                                 <div class="card-inner"
                                                      data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0">
                                                     <a
@@ -760,28 +739,146 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <div class="control-favorite"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.1">
-                                                        <div class="control-favorite-text"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.1.0">
-                                                            Добавить в избранное
-                                                        </div>
-                                                        <div class="control-favorite-icon"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.1.1">
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="control-promo"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.2">
-                                                        <div class="control-promo-icon"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.2.0">
-
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                            </article>
+                                            </div>
+                                            <div class="card col-sm-12 col-lg-4" data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169">
+                                                <div class="card-inner"
+                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0">
+                                                    <a
+                                                        class="card-link"
+                                                        href="/notice/1"
+                                                        target="_blank"
+                                                        data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0">
+                                                        <div class="card-content"
+                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0">
+                                                            <figure class="card-pic"
+                                                                    data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.0">
+                                                                <img class="card-pic-img"
+                                                                     src="https://assets.thelocals.ru/uploads/image/file/1620199/thumb_d1bd366c.jpg"
+                                                                     alt="Большая трешка с отличным свежим ремонтом"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.0.0">
+                                                                <div class="card-pic-bg"
+                                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1620199/thumb_d1bd366c.jpg);"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.0.1">
+
+                                                                </div>
+                                                                <div class="card-pic-overlay"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.0.2">
+
+                                                                </div>
+                                                                <div class="card-date"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.0.3">
+                                                                    2 дня назад
+                                                                </div>
+                                                                <span
+                                                                    data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.0.4">
+
+                                                                </span>
+                                                            </figure>
+                                                            <div class="card-desc"
+                                                                 data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1">
+                                                                <div class="card-options"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0">
+                                                                    <div class="card-options-item"
+                                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.0">
+                                                                        <div class="card-options-item-label"
+                                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.0.0">
+                                                                            Комнат
+                                                                        </div>
+                                                                        <div class="card-options-item-value"
+                                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.0.1">
+                                                                            3
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-options-item"
+                                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1">
+                                                                        <div class="card-options-item-label"
+                                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1.0">
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1.0.0">Площадь</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1.0.1">, </span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1.0.2">м</span>
+                                                                            <sup
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1.0.3">2</sup>
+                                                                        </div>
+                                                                        <div class="card-options-item-value"
+                                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.1.1">
+                                                                            74
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-options-item"
+                                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.2">
+                                                                        <div class="card-options-item-label"
+                                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.2.0">
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.2.0.0">руб</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.2.0.1">. / </span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.2.0.2">месяц</span>
+                                                                        </div>
+                                                                        <div class="card-options-item-value"
+                                                                             data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.0.2.1">
+                                                                            65 000
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-info"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1">
+                                                                    <div class="card-info-item card-info-item-price"
+                                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.0">
+                                                                        <span class="card-price"
+                                                                              data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.0.0">
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.0.0.0">65 000</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.0.0.1"> </span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.0.0.2">руб</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.0.0.3">.</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="card-info-item card-info-item-space"
+                                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1">
+                                                                        <span class="card-space"
+                                                                              data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0">
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0.0">3-комн.</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0.1">, </span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0.2">74</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0.3">&nbsp;</span>
+                                                                            <span
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0.4">м</span>
+                                                                            <sup
+                                                                                data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.1.1.0.5">2</sup>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <h4 class="card-title"
+                                                                    data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.2">
+                                                                    Большая трешка с отличным свежим ремонтом</h4>
+                                                                <div class="card-metro"
+                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3">
+                                                                    <i class="card-metro-icon"
+                                                                       data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3.0">
+
+                                                                    </i>
+                                                                    <span
+                                                                        data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3.1">Волжская, Кузьминки</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </section>
+                                    </div>
                                 </div>
                             </div>
                         </div>

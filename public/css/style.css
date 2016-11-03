@@ -340,11 +340,13 @@
 }
 
 .header-hero .header-cover {
-    background-image:url(/public/i/header-cover-background.jpg);
+    background-image:url(/public/i/background-apartment.jpg);
 }
 
 #loginModal {
     padding: 0;
+    position: absolute;
+    top: -1000px;
 }
 
 #loginModal .modal-dialog {
@@ -360,4 +362,35 @@
     font-size: 36px;
     right: 10px;
     top: 10px;
+}
+
+.reviews-item {
+    width: 30%;
+}
+
+.service-list {
+    background-color: #313131!important;
+}
+
+.service-list a,
+.service-list a:hover,
+.service-list a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.service-link {
+    padding: 20px 0;
+    text-align: center;
+    border-left: solid 1px #e4e4e4;
+    margin: 0;
+}
+
+.service-link.last {
+    border-right: solid 1px #e4e4e4;
+}
+
+.form-offer .input-control {
+    height: 30px;
+    padding: 10px;
 }
