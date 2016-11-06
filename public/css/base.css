@@ -1,13 +1,11 @@
-﻿@import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic,700italic&subset=latin,cyrillic);
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400italic,700italic,400,700&subset=latin,cyrillic);
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
     font: inherit;
     font-size: 100%;
-    vertical-align: baseline
+    vertical-align: baseline;
+    font-family: 'Roboto',sans-serif;
 }
 
 html {
@@ -1198,7 +1196,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     z-index: 1070;
     display: block;
     visibility: visible;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     font-weight: normal;
     line-height: 1.4;
@@ -1371,7 +1368,6 @@ html {
     color: #252525;
     font-size: 15px;
     line-height: 1.4;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: .02em;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
@@ -1379,7 +1375,6 @@ html {
 
 input, select, textarea, button {
     outline: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 input:-webkit-autofill {
@@ -1458,53 +1453,6 @@ b {
     }
 }
 
-@font-face {
-    font-family: "Helvetica Neue UltraLight";
-    src: url(/public/fonts/hn_ultralight.eot);
-    src: url(/public/fonts/hn_ultralight.eot?#iefix) format("embedded-opentype"), url(/public/fonts/hn_ultralight.woff) format("woff"), url(/public/fonts/hn_ultralight.ttf) format("truetype"), url(/public/fonts/hn_ultralight.svg) format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "Helvetica Neue Thin";
-    src: url(/public/fonts/helveticaneuecyr-thin-webfont.eot);
-    src: url(/public/fonts/helveticaneuecyr-thin-webfont.eot?#iefix) format("embedded-opentype"), url(/public/fonts/helveticaneuecyr-thin-webfont.woff2) format("woff2"), url(/public/fonts/helveticaneuecyr-thin-webfont.woff) format("woff"), url(/public/fonts/helveticaneuecyr-thin-webfont.ttf) format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "Helvetica Neue Light";
-    src: url(/public/fonts/HelveticaNeue-Light.eot);
-    src: url(/public/fonts/HelveticaNeue-Light.eot?#iefix) format("embedded-opentype"), url(/public/fonts/HelveticaNeue-Light.woff) format("woff"), url(/public/fonts/HelveticaNeue-Light.ttf) format("truetype"), url(/public/fonts/HelveticaNeue-Light.svg) format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "Helvetica Neue";
-    src: url(/public/fonts/hn_regular.eot);
-    src: url(/public/fonts/hn_regular.eot?#iefix) format("embedded-opentype"), url(/public/fonts/hn_regular.woff) format("woff"), url(/public/fonts/hn_regular.ttf) format("truetype"), url(/public/fonts/hn_regular.svg) format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "Helvetica Neue Medium";
-    src: url(/public/fonts/hn_medium.eot);
-    src: url(/public/fonts/hn_medium.eot?#iefix) format("embedded-opentype"), url(/public/fonts/hn_medium.woff) format("woff"), url(/public/fonts/hn_medium.ttf) format("truetype"), url(/public/fonts/hn_medium.svg) format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "Helvetica Neue";
-    src: url(/public/fonts/helveticaneuecyr-bold-webfont.eot);
-    src: url(/public/fonts/helveticaneuecyr-bold-webfont.eot?#iefix) format("embedded-opentype"), url(/public/fonts/helveticaneuecyr-bold-webfont.woff2) format("woff2"), url(/public/fonts/helveticaneuecyr-bold-webfont.woff) format("woff"), url(/public/fonts/helveticaneuecyr-bold-webfont.ttf) format("truetype");
-    font-weight: bold;
-    font-style: normal
-}
 
 @font-face {
     font-family: 'socicon';
@@ -2483,7 +2431,6 @@ b {
     border: 1px solid transparent;
     font-size: 15px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     vertical-align: top
 }
 
@@ -2515,7 +2462,6 @@ b {
     background-color: #fff;
     font-size: 15px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: hidden
 }
 
@@ -2873,7 +2819,6 @@ b {
     border: 1px solid transparent;
     font-size: 15px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     vertical-align: top
 }
 
@@ -2909,7 +2854,6 @@ b {
     background-color: #fff;
     font-size: 15px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: hidden
 }
 
@@ -5621,7 +5565,6 @@ body.blog-item .article-preview {
     font-weight: normal;
     font-size: 28px;
     line-height: 38px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .requestform-box {
@@ -5705,7 +5648,6 @@ body.blog-item .article-preview {
 .requestform-phone {
     font-size: 35px;
     line-height: 45px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .requestform-thanks {
@@ -6206,7 +6148,6 @@ body.blog-item .article-preview {
     background-color: #313131;
     display: none;
     font-size: 14px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff
 }
 
@@ -6293,7 +6234,7 @@ body.blog-item .article-preview {
 }
 
 .header-topline-link:hover {
-    color: #18a24b
+    color: #1b75b6
 }
 
 .header-topline-link-block {
@@ -6839,12 +6780,12 @@ body.blog-item .article-preview {
 
 .header-navbar-logo {
     margin: 0;
-    height: 50px;
+    height: 40px;
 }
 
 .header-navbar-logo .logo {
-    vertical-align: top;
-    height: 50px;
+    margin-top: 3px;
+    height: 35px;
     text-align: center;
 }
 
@@ -6909,7 +6850,6 @@ body.blog-item .article-preview {
     display: inline-block;
     font-size: 38px;
     line-height: 1;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .header-navbar-check-text {
@@ -7114,7 +7054,6 @@ body.blog-item .article-preview {
     background-color: #2a2a2a;
     font-size: 1em;
     line-height: 1.467em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
     overflow: hidden
 }
@@ -7406,14 +7345,13 @@ body.blog-item .article-preview {
     }
 }
 
-.button, .testimonials-more-button, .testimonials-add-button, .button-service, .button-social, .button-vk, .button-fb, .button-favorite, .button-complain, .uploadzone-button, .subscription-plan-button, .filter-action-button, .filter-apply-button, .filter-trigger-button, .order-service .btn-repost, .promo-services-card-button, .subscription-filter-button {
+.button, .testimonials-more-button, .testimonials-add-button, .button-service, .button-social, .button-vk, .button-fb, .button-favorite, .button-complain, .uploadzone-button, .subscription-plan-button, .filter-action-button, .filter-apply-button, .filter-trigger-button, .order-service .btn-repost, .subscription-filter-button {
     width: auto;
     margin: 0;
     padding: 0;
     display: inline-block;
     border: 1px solid transparent;
     background: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
@@ -7441,19 +7379,19 @@ body.blog-item .article-preview {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease
 }
 
-.button.__disabled, .__disabled.testimonials-more-button, .__disabled.testimonials-add-button, .__disabled.button-service, .__disabled.button-social, .__disabled.button-vk, .__disabled.button-fb, .__disabled.button-favorite, .__disabled.button-complain, .__disabled.uploadzone-button, .__disabled.subscription-plan-button, .__disabled.filter-action-button, .__disabled.filter-apply-button, .__disabled.filter-trigger-button, .order-service .__disabled.btn-repost, .__disabled.promo-services-card-button, .__disabled.subscription-filter-button {
+.button.__disabled, .__disabled.testimonials-more-button, .__disabled.testimonials-add-button, .__disabled.button-service, .__disabled.button-social, .__disabled.button-vk, .__disabled.button-fb, .__disabled.button-favorite, .__disabled.button-complain, .__disabled.uploadzone-button, .__disabled.subscription-plan-button, .__disabled.filter-action-button, .__disabled.filter-apply-button, .__disabled.filter-trigger-button, .order-service .__disabled.btn-repost,  .__disabled.subscription-filter-button {
     cursor: default
 }
 
-.button b, .testimonials-more-button b, .testimonials-add-button b, .button-service b, .button-social b, .button-vk b, .button-fb b, .button-favorite b, .button-complain b, .uploadzone-button b, .subscription-plan-button b, .filter-action-button b, .filter-apply-button b, .filter-trigger-button b, .order-service .btn-repost b, .promo-services-card-button b, .subscription-filter-button b {
+.button b, .testimonials-more-button b, .testimonials-add-button b, .button-service b, .button-social b, .button-vk b, .button-fb b, .button-favorite b, .button-complain b, .uploadzone-button b, .subscription-plan-button b, .filter-action-button b, .filter-apply-button b, .filter-trigger-button b, .order-service .btn-repost b, .subscription-filter-button b {
     font-weight: bold
 }
 
-a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-service, a.button-social, a.button-vk, a.button-fb, a.button-favorite, a.button-complain, a.uploadzone-button, a.subscription-plan-button, a.filter-action-button, a.filter-apply-button, a.filter-trigger-button, .order-service a.btn-repost, a.promo-services-card-button, a.subscription-filter-button {
+a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-service, a.button-social, a.button-vk, a.button-fb, a.button-favorite, a.button-complain, a.uploadzone-button, a.subscription-plan-button, a.filter-action-button, a.filter-apply-button, a.filter-trigger-button, .order-service a.btn-repost, a.subscription-filter-button {
     text-decoration: none !important
 }
 
-.button-block, .button-service, .button-order-service, .subscription-plan-button, .filter-apply-button, .order-service .btn-repost, .promo-services-card-button {
+.button-block, .button-service, .button-order-service, .subscription-plan-button, .filter-apply-button, .order-service .btn-repost {
     width: 100%;
     padding-right: 0;
     padding-left: 0;
@@ -7516,7 +7454,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     color: #fff
 }
 
-.button-green, .subscription-plan-button, .filter-apply-button, .filter-trigger-button, .promo-services-card-button, .subscription-filter-button {
+.button-green, .subscription-plan-button, .filter-apply-button, .filter-trigger-button, .subscription-filter-button {
     background-color: #18a24b;
     color: #fff
 }
@@ -7526,7 +7464,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     color: #fff
 }
 
-.button-green:hover, .subscription-plan-button:hover, .filter-apply-button:hover, .filter-trigger-button:hover, .promo-services-card-button:hover, .subscription-filter-button:hover {
+.button-green:hover, .subscription-plan-button:hover, .filter-apply-button:hover, .filter-trigger-button:hover, .subscription-filter-button:hover {
     background-color: #1bb855;
     color: #fff
 }
@@ -7619,7 +7557,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     margin-left: -1px
 }
 
-.button-group > .button:not(:last-child), .button-group > .testimonials-more-button:not(:last-child), .button-group > .testimonials-add-button:not(:last-child), .button-group > .button-service:not(:last-child), .button-group > .button-social:not(:last-child), .button-group > .button-vk:not(:last-child), .button-group > .button-fb:not(:last-child), .button-group > .button-favorite:not(:last-child), .button-group > .button-complain:not(:last-child), .button-group > .uploadzone-button:not(:last-child), .button-group > .subscription-plan-button:not(:last-child), .button-group > .filter-action-button:not(:last-child), .button-group > .filter-apply-button:not(:last-child), .button-group > .filter-trigger-button:not(:last-child), .order-service .button-group > .btn-repost:not(:last-child), .button-group > .promo-services-card-button:not(:last-child), .button-group > .subscription-filter-button:not(:last-child) {
+.button-group > .button:not(:last-child), .button-group > .testimonials-more-button:not(:last-child), .button-group > .testimonials-add-button:not(:last-child), .button-group > .button-service:not(:last-child), .button-group > .button-social:not(:last-child), .button-group > .button-vk:not(:last-child), .button-group > .button-fb:not(:last-child), .button-group > .button-favorite:not(:last-child), .button-group > .button-complain:not(:last-child), .button-group > .uploadzone-button:not(:last-child), .button-group > .subscription-plan-button:not(:last-child), .button-group > .filter-action-button:not(:last-child), .button-group > .filter-apply-button:not(:last-child), .button-group > .filter-trigger-button:not(:last-child), .order-service .button-group > .btn-repost:not(:last-child), .button-group > .subscription-filter-button:not(:last-child) {
     -moz-border-radius-topright: 0;
     -webkit-border-top-right-radius: 0;
     border-top-right-radius: 0;
@@ -7628,13 +7566,13 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     border-bottom-right-radius: 0
 }
 
-.button-group > .button:not(:first-child):not(:last-child), .button-group > .testimonials-more-button:not(:first-child):not(:last-child), .button-group > .testimonials-add-button:not(:first-child):not(:last-child), .button-group > .button-service:not(:first-child):not(:last-child), .button-group > .button-social:not(:first-child):not(:last-child), .button-group > .button-vk:not(:first-child):not(:last-child), .button-group > .button-fb:not(:first-child):not(:last-child), .button-group > .button-favorite:not(:first-child):not(:last-child), .button-group > .button-complain:not(:first-child):not(:last-child), .button-group > .uploadzone-button:not(:first-child):not(:last-child), .button-group > .subscription-plan-button:not(:first-child):not(:last-child), .button-group > .filter-action-button:not(:first-child):not(:last-child), .button-group > .filter-apply-button:not(:first-child):not(:last-child), .button-group > .filter-trigger-button:not(:first-child):not(:last-child), .order-service .button-group > .btn-repost:not(:first-child):not(:last-child), .button-group > .promo-services-card-button:not(:first-child):not(:last-child), .button-group > .subscription-filter-button:not(:first-child):not(:last-child) {
+.button-group > .button:not(:first-child):not(:last-child), .button-group > .testimonials-more-button:not(:first-child):not(:last-child), .button-group > .testimonials-add-button:not(:first-child):not(:last-child), .button-group > .button-service:not(:first-child):not(:last-child), .button-group > .button-social:not(:first-child):not(:last-child), .button-group > .button-vk:not(:first-child):not(:last-child), .button-group > .button-fb:not(:first-child):not(:last-child), .button-group > .button-favorite:not(:first-child):not(:last-child), .button-group > .button-complain:not(:first-child):not(:last-child), .button-group > .uploadzone-button:not(:first-child):not(:last-child), .button-group > .subscription-plan-button:not(:first-child):not(:last-child), .button-group > .filter-action-button:not(:first-child):not(:last-child), .button-group > .filter-apply-button:not(:first-child):not(:last-child), .button-group > .filter-trigger-button:not(:first-child):not(:last-child), .order-service .button-group > .btn-repost:not(:first-child):not(:last-child), .button-group > .subscription-filter-button:not(:first-child):not(:last-child) {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0
 }
 
-.button-group > .button:hover, .button-group > .testimonials-more-button:hover, .button-group > .testimonials-add-button:hover, .button-group > .button-service:hover, .button-group > .button-social:hover, .button-group > .button-vk:hover, .button-group > .button-fb:hover, .button-group > .button-favorite:hover, .button-group > .button-complain:hover, .button-group > .uploadzone-button:hover, .button-group > .subscription-plan-button:hover, .button-group > .filter-action-button:hover, .button-group > .filter-apply-button:hover, .button-group > .filter-trigger-button:hover, .order-service .button-group > .btn-repost:hover, .button-group > .promo-services-card-button:hover, .button-group > .subscription-filter-button:hover, .button-group > .button:active, .button-group > .testimonials-more-button:active, .button-group > .testimonials-add-button:active, .button-group > .button-service:active, .button-group > .button-social:active, .button-group > .button-vk:active, .button-group > .button-fb:active, .button-group > .button-favorite:active, .button-group > .button-complain:active, .button-group > .uploadzone-button:active, .button-group > .subscription-plan-button:active, .button-group > .filter-action-button:active, .button-group > .filter-apply-button:active, .button-group > .filter-trigger-button:active, .order-service .button-group > .btn-repost:active, .button-group > .promo-services-card-button:active, .button-group > .subscription-filter-button:active, .button-group > .button.__active, .button-group > .__active.testimonials-more-button, .button-group > .__active.testimonials-add-button, .button-group > .__active.button-service, .button-group > .__active.button-social, .button-group > .__active.button-vk, .button-group > .__active.button-fb, .button-group > .__active.button-favorite, .button-group > .__active.button-complain, .button-group > .__active.uploadzone-button, .button-group > .__active.subscription-plan-button, .button-group > .__active.filter-action-button, .button-group > .__active.filter-apply-button, .button-group > .__active.filter-trigger-button, .order-service .button-group > .__active.btn-repost, .button-group > .__active.promo-services-card-button, .button-group > .__active.subscription-filter-button {
+.button-group > .button:hover, .button-group > .testimonials-more-button:hover, .button-group > .testimonials-add-button:hover, .button-group > .button-service:hover, .button-group > .button-social:hover, .button-group > .button-vk:hover, .button-group > .button-fb:hover, .button-group > .button-favorite:hover, .button-group > .button-complain:hover, .button-group > .uploadzone-button:hover, .button-group > .subscription-plan-button:hover, .button-group > .filter-action-button:hover, .button-group > .filter-apply-button:hover, .button-group > .filter-trigger-button:hover, .order-service .button-group > .btn-repost:hover, .button-group > .subscription-filter-button:hover, .button-group > .button:active, .button-group > .testimonials-more-button:active, .button-group > .testimonials-add-button:active, .button-group > .button-service:active, .button-group > .button-social:active, .button-group > .button-vk:active, .button-group > .button-fb:active, .button-group > .button-favorite:active, .button-group > .button-complain:active, .button-group > .uploadzone-button:active, .button-group > .subscription-plan-button:active, .button-group > .filter-action-button:active, .button-group > .filter-apply-button:active, .button-group > .filter-trigger-button:active, .order-service .button-group > .btn-repost:active, .button-group > .subscription-filter-button:active, .button-group > .button.__active, .button-group > .__active.testimonials-more-button, .button-group > .__active.testimonials-add-button, .button-group > .__active.button-service, .button-group > .__active.button-social, .button-group > .__active.button-vk, .button-group > .__active.button-fb, .button-group > .__active.button-favorite, .button-group > .__active.button-complain, .button-group > .__active.uploadzone-button, .button-group > .__active.subscription-plan-button, .button-group > .__active.filter-action-button, .button-group > .__active.filter-apply-button, .button-group > .__active.filter-trigger-button, .order-service .button-group > .__active.btn-repost, .button-group > .__active.subscription-filter-button {
     position: relative
 }
 
@@ -7642,7 +7580,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     margin-left: -1px
 }
 
-.button-group > .button-group:not(:first-child) .button, .button-group > .button-group:not(:first-child) .testimonials-more-button, .button-group > .button-group:not(:first-child) .testimonials-add-button, .button-group > .button-group:not(:first-child) .button-service, .button-group > .button-group:not(:first-child) .button-social, .button-group > .button-group:not(:first-child) .button-vk, .button-group > .button-group:not(:first-child) .button-fb, .button-group > .button-group:not(:first-child) .button-favorite, .button-group > .button-group:not(:first-child) .button-complain, .button-group > .button-group:not(:first-child) .uploadzone-button, .button-group > .button-group:not(:first-child) .subscription-plan-button, .button-group > .button-group:not(:first-child) .filter-action-button, .button-group > .button-group:not(:first-child) .filter-apply-button, .button-group > .button-group:not(:first-child) .filter-trigger-button, .button-group > .button-group:not(:first-child) .order-service .btn-repost, .order-service .button-group > .button-group:not(:first-child) .btn-repost, .button-group > .button-group:not(:first-child) .promo-services-card-button, .button-group > .button-group:not(:first-child) .subscription-filter-button {
+.button-group > .button-group:not(:first-child) .button, .button-group > .button-group:not(:first-child) .testimonials-more-button, .button-group > .button-group:not(:first-child) .testimonials-add-button, .button-group > .button-group:not(:first-child) .button-service, .button-group > .button-group:not(:first-child) .button-social, .button-group > .button-group:not(:first-child) .button-vk, .button-group > .button-group:not(:first-child) .button-fb, .button-group > .button-group:not(:first-child) .button-favorite, .button-group > .button-group:not(:first-child) .button-complain, .button-group > .button-group:not(:first-child) .uploadzone-button, .button-group > .button-group:not(:first-child) .subscription-plan-button, .button-group > .button-group:not(:first-child) .filter-action-button, .button-group > .button-group:not(:first-child) .filter-apply-button, .button-group > .button-group:not(:first-child) .filter-trigger-button, .button-group > .button-group:not(:first-child) .order-service .btn-repost, .order-service .button-group > .button-group:not(:first-child) .btn-repost, .button-group > .button-group:not(:first-child) .subscription-filter-button {
     -moz-border-radius-topleft: 0;
     -webkit-border-top-left-radius: 0;
     border-top-left-radius: 0;
@@ -7651,7 +7589,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     border-bottom-left-radius: 0
 }
 
-.button-group > .button-group:not(:last-child) .button, .button-group > .button-group:not(:last-child) .testimonials-more-button, .button-group > .button-group:not(:last-child) .testimonials-add-button, .button-group > .button-group:not(:last-child) .button-service, .button-group > .button-group:not(:last-child) .button-social, .button-group > .button-group:not(:last-child) .button-vk, .button-group > .button-group:not(:last-child) .button-fb, .button-group > .button-group:not(:last-child) .button-favorite, .button-group > .button-group:not(:last-child) .button-complain, .button-group > .button-group:not(:last-child) .uploadzone-button, .button-group > .button-group:not(:last-child) .subscription-plan-button, .button-group > .button-group:not(:last-child) .filter-action-button, .button-group > .button-group:not(:last-child) .filter-apply-button, .button-group > .button-group:not(:last-child) .filter-trigger-button, .button-group > .button-group:not(:last-child) .order-service .btn-repost, .order-service .button-group > .button-group:not(:last-child) .btn-repost, .button-group > .button-group:not(:last-child) .promo-services-card-button, .button-group > .button-group:not(:last-child) .subscription-filter-button {
+.button-group > .button-group:not(:last-child) .button, .button-group > .button-group:not(:last-child) .testimonials-more-button, .button-group > .button-group:not(:last-child) .testimonials-add-button, .button-group > .button-group:not(:last-child) .button-service, .button-group > .button-group:not(:last-child) .button-social, .button-group > .button-group:not(:last-child) .button-vk, .button-group > .button-group:not(:last-child) .button-fb, .button-group > .button-group:not(:last-child) .button-favorite, .button-group > .button-group:not(:last-child) .button-complain, .button-group > .button-group:not(:last-child) .uploadzone-button, .button-group > .button-group:not(:last-child) .subscription-plan-button, .button-group > .button-group:not(:last-child) .filter-action-button, .button-group > .button-group:not(:last-child) .filter-apply-button, .button-group > .button-group:not(:last-child) .filter-trigger-button, .button-group > .button-group:not(:last-child) .order-service .btn-repost, .order-service .button-group > .button-group:not(:last-child) .btn-repost, .button-group > .button-group:not(:last-child) .subscription-filter-button {
     -moz-border-radius-topright: 0;
     -webkit-border-top-right-radius: 0;
     border-top-right-radius: 0;
@@ -7726,12 +7664,12 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     height: 35px
 }
 
-.button-back.landing-button, .requestform .button-back.button, .requestform .button-back.testimonials-more-button, .requestform .button-back.testimonials-add-button, .requestform .button-back.button-service, .requestform .button-back.button-social, .requestform .button-back.button-vk, .requestform .button-back.button-fb, .requestform .button-back.button-favorite, .requestform .button-back.button-complain, .requestform .button-back.uploadzone-button, .requestform .button-back.subscription-plan-button, .requestform .button-back.filter-action-button, .requestform .button-back.filter-apply-button, .requestform .button-back.filter-trigger-button, .requestform .order-service .button-back.btn-repost, .order-service .requestform .button-back.btn-repost, .requestform .button-back.promo-services-card-button, .requestform .button-back.subscription-filter-button {
+.button-back.landing-button, .requestform .button-back.button, .requestform .button-back.testimonials-more-button, .requestform .button-back.testimonials-add-button, .requestform .button-back.button-service, .requestform .button-back.button-social, .requestform .button-back.button-vk, .requestform .button-back.button-fb, .requestform .button-back.button-favorite, .requestform .button-back.button-complain, .requestform .button-back.uploadzone-button, .requestform .button-back.subscription-plan-button, .requestform .button-back.filter-action-button, .requestform .button-back.filter-apply-button, .requestform .button-back.filter-trigger-button, .requestform .order-service .button-back.btn-repost, .order-service .requestform .button-back.btn-repost, .requestform .button-back.subscription-filter-button {
     padding-right: 20px !important;
     padding-left: 12px !important
 }
 
-.button-back.landing-button:before, .requestform .button-back.button:before, .requestform .button-back.testimonials-more-button:before, .requestform .button-back.testimonials-add-button:before, .requestform .button-back.button-service:before, .requestform .button-back.button-social:before, .requestform .button-back.button-vk:before, .requestform .button-back.button-fb:before, .requestform .button-back.button-favorite:before, .requestform .button-back.button-complain:before, .requestform .button-back.uploadzone-button:before, .requestform .button-back.subscription-plan-button:before, .requestform .button-back.filter-action-button:before, .requestform .button-back.filter-apply-button:before, .requestform .button-back.filter-trigger-button:before, .requestform .order-service .button-back.btn-repost:before, .order-service .requestform .button-back.btn-repost:before, .requestform .button-back.promo-services-card-button:before, .requestform .button-back.subscription-filter-button:before {
+.button-back.landing-button:before, .requestform .button-back.button:before, .requestform .button-back.testimonials-more-button:before, .requestform .button-back.testimonials-add-button:before, .requestform .button-back.button-service:before, .requestform .button-back.button-social:before, .requestform .button-back.button-vk:before, .requestform .button-back.button-fb:before, .requestform .button-back.button-favorite:before, .requestform .button-back.button-complain:before, .requestform .button-back.uploadzone-button:before, .requestform .button-back.subscription-plan-button:before, .requestform .button-back.filter-action-button:before, .requestform .button-back.filter-apply-button:before, .requestform .button-back.filter-trigger-button:before, .requestform .order-service .button-back.btn-repost:before, .order-service .requestform .button-back.btn-repost:before, .requestform .button-back.subscription-filter-button:before {
     width: 32px;
     height: 32px
 }
@@ -8168,7 +8106,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     position: relative
 }
 
-.button-group-view .button, .button-group-view .testimonials-more-button, .button-group-view .testimonials-add-button, .button-group-view .button-service, .button-group-view .button-social, .button-group-view .button-vk, .button-group-view .button-fb, .button-group-view .button-favorite, .button-group-view .button-complain, .button-group-view .uploadzone-button, .button-group-view .subscription-plan-button, .button-group-view .filter-action-button, .button-group-view .filter-apply-button, .button-group-view .filter-trigger-button, .button-group-view .order-service .btn-repost, .order-service .button-group-view .btn-repost, .button-group-view .promo-services-card-button, .button-group-view .subscription-filter-button {
+.button-group-view .button, .button-group-view .testimonials-more-button, .button-group-view .testimonials-add-button, .button-group-view .button-service, .button-group-view .button-social, .button-group-view .button-vk, .button-group-view .button-fb, .button-group-view .button-favorite, .button-group-view .button-complain, .button-group-view .uploadzone-button, .button-group-view .subscription-plan-button, .button-group-view .filter-action-button, .button-group-view .filter-apply-button, .button-group-view .filter-trigger-button, .button-group-view .order-service .btn-repost, .order-service .button-group-view .btn-repost, .button-group-view .subscription-filter-button {
     height: 40px;
     padding-right: 30px;
     padding-left: 30px;
@@ -8178,18 +8116,18 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     color: #6e6e6e
 }
 
-.button-group-view .button:hover, .button-group-view .testimonials-more-button:hover, .button-group-view .testimonials-add-button:hover, .button-group-view .button-service:hover, .button-group-view .button-social:hover, .button-group-view .button-vk:hover, .button-group-view .button-fb:hover, .button-group-view .button-favorite:hover, .button-group-view .button-complain:hover, .button-group-view .uploadzone-button:hover, .button-group-view .subscription-plan-button:hover, .button-group-view .filter-action-button:hover, .button-group-view .filter-apply-button:hover, .button-group-view .filter-trigger-button:hover, .button-group-view .order-service .btn-repost:hover, .order-service .button-group-view .btn-repost:hover, .button-group-view .promo-services-card-button:hover, .button-group-view .subscription-filter-button:hover {
+.button-group-view .button:hover, .button-group-view .testimonials-more-button:hover, .button-group-view .testimonials-add-button:hover, .button-group-view .button-service:hover, .button-group-view .button-social:hover, .button-group-view .button-vk:hover, .button-group-view .button-fb:hover, .button-group-view .button-favorite:hover, .button-group-view .button-complain:hover, .button-group-view .uploadzone-button:hover, .button-group-view .subscription-plan-button:hover, .button-group-view .filter-action-button:hover, .button-group-view .filter-apply-button:hover, .button-group-view .filter-trigger-button:hover, .button-group-view .order-service .btn-repost:hover, .order-service .button-group-view .btn-repost:hover,.button-group-view .subscription-filter-button:hover {
     border-color: #999;
     color: #6e6e6e
 }
 
-.button-group-view .button.__active, .button-group-view .__active.testimonials-more-button, .button-group-view .__active.testimonials-add-button, .button-group-view .__active.button-service, .button-group-view .__active.button-social, .button-group-view .__active.button-vk, .button-group-view .__active.button-fb, .button-group-view .__active.button-favorite, .button-group-view .__active.button-complain, .button-group-view .__active.uploadzone-button, .button-group-view .__active.subscription-plan-button, .button-group-view .__active.filter-action-button, .button-group-view .__active.filter-apply-button, .button-group-view .__active.filter-trigger-button, .button-group-view .order-service .__active.btn-repost, .order-service .button-group-view .__active.btn-repost, .button-group-view .__active.promo-services-card-button, .button-group-view .__active.subscription-filter-button {
+.button-group-view .button.__active, .button-group-view .__active.testimonials-more-button, .button-group-view .__active.testimonials-add-button, .button-group-view .__active.button-service, .button-group-view .__active.button-social, .button-group-view .__active.button-vk, .button-group-view .__active.button-fb, .button-group-view .__active.button-favorite, .button-group-view .__active.button-complain, .button-group-view .__active.uploadzone-button, .button-group-view .__active.subscription-plan-button, .button-group-view .__active.filter-action-button, .button-group-view .__active.filter-apply-button, .button-group-view .__active.filter-trigger-button, .button-group-view .order-service .__active.btn-repost, .order-service .button-group-view .__active.btn-repost, .button-group-view .__active.subscription-filter-button {
     border-color: transparent;
     background-color: #18a24b;
     color: #fff
 }
 
-.button-group-view .button .label-soon, .button-group-view .testimonials-more-button .label-soon, .button-group-view .testimonials-add-button .label-soon, .button-group-view .button-service .label-soon, .button-group-view .button-social .label-soon, .button-group-view .button-vk .label-soon, .button-group-view .button-fb .label-soon, .button-group-view .button-favorite .label-soon, .button-group-view .button-complain .label-soon, .button-group-view .uploadzone-button .label-soon, .button-group-view .subscription-plan-button .label-soon, .button-group-view .filter-action-button .label-soon, .button-group-view .filter-apply-button .label-soon, .button-group-view .filter-trigger-button .label-soon, .button-group-view .order-service .btn-repost .label-soon, .order-service .button-group-view .btn-repost .label-soon, .button-group-view .promo-services-card-button .label-soon, .button-group-view .subscription-filter-button .label-soon {
+.button-group-view .button .label-soon, .button-group-view .testimonials-more-button .label-soon, .button-group-view .testimonials-add-button .label-soon, .button-group-view .button-service .label-soon, .button-group-view .button-social .label-soon, .button-group-view .button-vk .label-soon, .button-group-view .button-fb .label-soon, .button-group-view .button-favorite .label-soon, .button-group-view .button-complain .label-soon, .button-group-view .uploadzone-button .label-soon, .button-group-view .subscription-plan-button .label-soon, .button-group-view .filter-action-button .label-soon, .button-group-view .filter-apply-button .label-soon, .button-group-view .filter-trigger-button .label-soon, .button-group-view .order-service .btn-repost .label-soon, .order-service .button-group-view .btn-repost .label-soon, .button-group-view .subscription-filter-button .label-soon {
     position: absolute;
     margin-top: -1em
 }
@@ -8242,7 +8180,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     white-space: nowrap
 }
 
-.button-group-rating .button, .button-group-rating .testimonials-more-button, .button-group-rating .testimonials-add-button, .button-group-rating .button-service, .button-group-rating .button-social, .button-group-rating .button-vk, .button-group-rating .button-fb, .button-group-rating .button-favorite, .button-group-rating .button-complain, .button-group-rating .uploadzone-button, .button-group-rating .subscription-plan-button, .button-group-rating .filter-action-button, .button-group-rating .filter-apply-button, .button-group-rating .filter-trigger-button, .button-group-rating .order-service .btn-repost, .order-service .button-group-rating .btn-repost, .button-group-rating .promo-services-card-button, .button-group-rating .subscription-filter-button {
+.button-group-rating .button, .button-group-rating .testimonials-more-button, .button-group-rating .testimonials-add-button, .button-group-rating .button-service, .button-group-rating .button-social, .button-group-rating .button-vk, .button-group-rating .button-fb, .button-group-rating .button-favorite, .button-group-rating .button-complain, .button-group-rating .uploadzone-button, .button-group-rating .subscription-plan-button, .button-group-rating .filter-action-button, .button-group-rating .filter-apply-button, .button-group-rating .filter-trigger-button, .button-group-rating .order-service .btn-repost, .order-service .button-group-rating .btn-repost, .button-group-rating .subscription-filter-button {
     border-color: #dcdcdc;
     color: #6e6e6e;
     min-width: 125px;
@@ -8252,12 +8190,12 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     font-size: 13px
 }
 
-.button-group-rating .button:hover, .button-group-rating .testimonials-more-button:hover, .button-group-rating .testimonials-add-button:hover, .button-group-rating .button-service:hover, .button-group-rating .button-social:hover, .button-group-rating .button-vk:hover, .button-group-rating .button-fb:hover, .button-group-rating .button-favorite:hover, .button-group-rating .button-complain:hover, .button-group-rating .uploadzone-button:hover, .button-group-rating .subscription-plan-button:hover, .button-group-rating .filter-action-button:hover, .button-group-rating .filter-apply-button:hover, .button-group-rating .filter-trigger-button:hover, .button-group-rating .order-service .btn-repost:hover, .order-service .button-group-rating .btn-repost:hover, .button-group-rating .promo-services-card-button:hover, .button-group-rating .subscription-filter-button:hover {
+.button-group-rating .button:hover, .button-group-rating .testimonials-more-button:hover, .button-group-rating .testimonials-add-button:hover, .button-group-rating .button-service:hover, .button-group-rating .button-social:hover, .button-group-rating .button-vk:hover, .button-group-rating .button-fb:hover, .button-group-rating .button-favorite:hover, .button-group-rating .button-complain:hover, .button-group-rating .uploadzone-button:hover, .button-group-rating .subscription-plan-button:hover, .button-group-rating .filter-action-button:hover, .button-group-rating .filter-apply-button:hover, .button-group-rating .filter-trigger-button:hover, .button-group-rating .order-service .btn-repost:hover, .order-service .button-group-rating .btn-repost:hover, .button-group-rating .subscription-filter-button:hover {
     border-color: #999;
     color: #6e6e6e
 }
 
-.button-group-rating .button:after, .button-group-rating .testimonials-more-button:after, .button-group-rating .testimonials-add-button:after, .button-group-rating .button-service:after, .button-group-rating .button-social:after, .button-group-rating .button-vk:after, .button-group-rating .button-fb:after, .button-group-rating .button-favorite:after, .button-group-rating .button-complain:after, .button-group-rating .uploadzone-button:after, .button-group-rating .subscription-plan-button:after, .button-group-rating .filter-action-button:after, .button-group-rating .filter-apply-button:after, .button-group-rating .filter-trigger-button:after, .button-group-rating .order-service .btn-repost:after, .order-service .button-group-rating .btn-repost:after, .button-group-rating .promo-services-card-button:after, .button-group-rating .subscription-filter-button:after {
+.button-group-rating .button:after, .button-group-rating .testimonials-more-button:after, .button-group-rating .testimonials-add-button:after, .button-group-rating .button-service:after, .button-group-rating .button-social:after, .button-group-rating .button-vk:after, .button-group-rating .button-fb:after, .button-group-rating .button-favorite:after, .button-group-rating .button-complain:after, .button-group-rating .uploadzone-button:after, .button-group-rating .subscription-plan-button:after, .button-group-rating .filter-action-button:after, .button-group-rating .filter-apply-button:after, .button-group-rating .filter-trigger-button:after, .button-group-rating .order-service .btn-repost:after, .order-service .button-group-rating .btn-repost:after, .button-group-rating .subscription-filter-button:after {
     -moz-transition: border 0.3s ease;
     -o-transition: border 0.3s ease;
     -webkit-transition: border 0.3s ease;
@@ -8279,31 +8217,31 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     border-color: #999
 }
 
-.button-group-rating > .button:first-child:after, .button-group-rating > .testimonials-more-button:first-child:after, .button-group-rating > .testimonials-add-button:first-child:after, .button-group-rating > .button-service:first-child:after, .button-group-rating > .button-social:first-child:after, .button-group-rating > .button-vk:first-child:after, .button-group-rating > .button-fb:first-child:after, .button-group-rating > .button-favorite:first-child:after, .button-group-rating > .button-complain:first-child:after, .button-group-rating > .uploadzone-button:first-child:after, .button-group-rating > .subscription-plan-button:first-child:after, .button-group-rating > .filter-action-button:first-child:after, .button-group-rating > .filter-apply-button:first-child:after, .button-group-rating > .filter-trigger-button:first-child:after, .order-service .button-group-rating > .btn-repost:first-child:after, .button-group-rating > .promo-services-card-button:first-child:after, .button-group-rating > .subscription-filter-button:first-child:after {
+.button-group-rating > .button:first-child:after, .button-group-rating > .testimonials-more-button:first-child:after, .button-group-rating > .testimonials-add-button:first-child:after, .button-group-rating > .button-service:first-child:after, .button-group-rating > .button-social:first-child:after, .button-group-rating > .button-vk:first-child:after, .button-group-rating > .button-fb:first-child:after, .button-group-rating > .button-favorite:first-child:after, .button-group-rating > .button-complain:first-child:after, .button-group-rating > .uploadzone-button:first-child:after, .button-group-rating > .subscription-plan-button:first-child:after, .button-group-rating > .filter-action-button:first-child:after, .button-group-rating > .filter-apply-button:first-child:after, .button-group-rating > .filter-trigger-button:first-child:after, .order-service .button-group-rating > .btn-repost:first-child:after, .button-group-rating > .subscription-filter-button:first-child:after {
     left: auto;
     border-left: 0
 }
 
-.button-group-rating > .button:last-child:after, .button-group-rating > .testimonials-more-button:last-child:after, .button-group-rating > .testimonials-add-button:last-child:after, .button-group-rating > .button-service:last-child:after, .button-group-rating > .button-social:last-child:after, .button-group-rating > .button-vk:last-child:after, .button-group-rating > .button-fb:last-child:after, .button-group-rating > .button-favorite:last-child:after, .button-group-rating > .button-complain:last-child:after, .button-group-rating > .uploadzone-button:last-child:after, .button-group-rating > .subscription-plan-button:last-child:after, .button-group-rating > .filter-action-button:last-child:after, .button-group-rating > .filter-apply-button:last-child:after, .button-group-rating > .filter-trigger-button:last-child:after, .order-service .button-group-rating > .btn-repost:last-child:after, .button-group-rating > .promo-services-card-button:last-child:after, .button-group-rating > .subscription-filter-button:last-child:after {
+.button-group-rating > .button:last-child:after, .button-group-rating > .testimonials-more-button:last-child:after, .button-group-rating > .testimonials-add-button:last-child:after, .button-group-rating > .button-service:last-child:after, .button-group-rating > .button-social:last-child:after, .button-group-rating > .button-vk:last-child:after, .button-group-rating > .button-fb:last-child:after, .button-group-rating > .button-favorite:last-child:after, .button-group-rating > .button-complain:last-child:after, .button-group-rating > .uploadzone-button:last-child:after, .button-group-rating > .subscription-plan-button:last-child:after, .button-group-rating > .filter-action-button:last-child:after, .button-group-rating > .filter-apply-button:last-child:after, .button-group-rating > .filter-trigger-button:last-child:after, .order-service .button-group-rating > .btn-repost:last-child:after, .button-group-rating > .subscription-filter-button:last-child:after {
     right: auto;
     border-right: 0
 }
 
-.button-group-rating > .button + .button, .button-group-rating > .testimonials-more-button + .button, .button-group-rating > .testimonials-add-button + .button, .button-group-rating > .button-service + .button, .button-group-rating > .button-social + .button, .button-group-rating > .button-vk + .button, .button-group-rating > .button-fb + .button, .button-group-rating > .button-favorite + .button, .button-group-rating > .button-complain + .button, .button-group-rating > .uploadzone-button + .button, .button-group-rating > .subscription-plan-button + .button, .button-group-rating > .filter-action-button + .button, .button-group-rating > .filter-apply-button + .button, .button-group-rating > .filter-trigger-button + .button, .order-service .button-group-rating > .btn-repost + .button, .button-group-rating > .promo-services-card-button + .button, .button-group-rating > .subscription-filter-button + .button, .button-group-rating > .button + .testimonials-more-button, .button-group-rating > .testimonials-more-button + .testimonials-more-button, .button-group-rating > .testimonials-add-button + .testimonials-more-button, .button-group-rating > .button-service + .testimonials-more-button, .button-group-rating > .button-social + .testimonials-more-button, .button-group-rating > .button-vk + .testimonials-more-button, .button-group-rating > .button-fb + .testimonials-more-button, .button-group-rating > .button-favorite + .testimonials-more-button, .button-group-rating > .button-complain + .testimonials-more-button, .button-group-rating > .uploadzone-button + .testimonials-more-button, .button-group-rating > .subscription-plan-button + .testimonials-more-button, .button-group-rating > .filter-action-button + .testimonials-more-button, .button-group-rating > .filter-apply-button + .testimonials-more-button, .button-group-rating > .filter-trigger-button + .testimonials-more-button, .order-service .button-group-rating > .btn-repost + .testimonials-more-button, .button-group-rating > .promo-services-card-button + .testimonials-more-button, .button-group-rating > .subscription-filter-button + .testimonials-more-button, .button-group-rating > .button + .testimonials-add-button, .button-group-rating > .testimonials-more-button + .testimonials-add-button, .button-group-rating > .testimonials-add-button + .testimonials-add-button, .button-group-rating > .button-service + .testimonials-add-button, .button-group-rating > .button-social + .testimonials-add-button, .button-group-rating > .button-vk + .testimonials-add-button, .button-group-rating > .button-fb + .testimonials-add-button, .button-group-rating > .button-favorite + .testimonials-add-button, .button-group-rating > .button-complain + .testimonials-add-button, .button-group-rating > .uploadzone-button + .testimonials-add-button, .button-group-rating > .subscription-plan-button + .testimonials-add-button, .button-group-rating > .filter-action-button + .testimonials-add-button, .button-group-rating > .filter-apply-button + .testimonials-add-button, .button-group-rating > .filter-trigger-button + .testimonials-add-button, .order-service .button-group-rating > .btn-repost + .testimonials-add-button, .button-group-rating > .promo-services-card-button + .testimonials-add-button, .button-group-rating > .subscription-filter-button + .testimonials-add-button, .button-group-rating > .button + .button-service, .button-group-rating > .testimonials-more-button + .button-service, .button-group-rating > .testimonials-add-button + .button-service, .button-group-rating > .button-service + .button-service, .button-group-rating > .button-social + .button-service, .button-group-rating > .button-vk + .button-service, .button-group-rating > .button-fb + .button-service, .button-group-rating > .button-favorite + .button-service, .button-group-rating > .button-complain + .button-service, .button-group-rating > .uploadzone-button + .button-service, .button-group-rating > .subscription-plan-button + .button-service, .button-group-rating > .filter-action-button + .button-service, .button-group-rating > .filter-apply-button + .button-service, .button-group-rating > .filter-trigger-button + .button-service, .order-service .button-group-rating > .btn-repost + .button-service, .button-group-rating > .promo-services-card-button + .button-service, .button-group-rating > .subscription-filter-button + .button-service, .button-group-rating > .button + .button-social, .button-group-rating > .testimonials-more-button + .button-social, .button-group-rating > .testimonials-add-button + .button-social, .button-group-rating > .button-service + .button-social, .button-group-rating > .button-social + .button-social, .button-group-rating > .button-vk + .button-social, .button-group-rating > .button-fb + .button-social, .button-group-rating > .button-favorite + .button-social, .button-group-rating > .button-complain + .button-social, .button-group-rating > .uploadzone-button + .button-social, .button-group-rating > .subscription-plan-button + .button-social, .button-group-rating > .filter-action-button + .button-social, .button-group-rating > .filter-apply-button + .button-social, .button-group-rating > .filter-trigger-button + .button-social, .order-service .button-group-rating > .btn-repost + .button-social, .button-group-rating > .promo-services-card-button + .button-social, .button-group-rating > .subscription-filter-button + .button-social, .button-group-rating > .button + .button-vk, .button-group-rating > .testimonials-more-button + .button-vk, .button-group-rating > .testimonials-add-button + .button-vk, .button-group-rating > .button-service + .button-vk, .button-group-rating > .button-social + .button-vk, .button-group-rating > .button-vk + .button-vk, .button-group-rating > .button-fb + .button-vk, .button-group-rating > .button-favorite + .button-vk, .button-group-rating > .button-complain + .button-vk, .button-group-rating > .uploadzone-button + .button-vk, .button-group-rating > .subscription-plan-button + .button-vk, .button-group-rating > .filter-action-button + .button-vk, .button-group-rating > .filter-apply-button + .button-vk, .button-group-rating > .filter-trigger-button + .button-vk, .order-service .button-group-rating > .btn-repost + .button-vk, .button-group-rating > .promo-services-card-button + .button-vk, .button-group-rating > .subscription-filter-button + .button-vk, .button-group-rating > .button + .button-fb, .button-group-rating > .testimonials-more-button + .button-fb, .button-group-rating > .testimonials-add-button + .button-fb, .button-group-rating > .button-service + .button-fb, .button-group-rating > .button-social + .button-fb, .button-group-rating > .button-vk + .button-fb, .button-group-rating > .button-fb + .button-fb, .button-group-rating > .button-favorite + .button-fb, .button-group-rating > .button-complain + .button-fb, .button-group-rating > .uploadzone-button + .button-fb, .button-group-rating > .subscription-plan-button + .button-fb, .button-group-rating > .filter-action-button + .button-fb, .button-group-rating > .filter-apply-button + .button-fb, .button-group-rating > .filter-trigger-button + .button-fb, .order-service .button-group-rating > .btn-repost + .button-fb, .button-group-rating > .promo-services-card-button + .button-fb, .button-group-rating > .subscription-filter-button + .button-fb, .button-group-rating > .button + .button-favorite, .button-group-rating > .testimonials-more-button + .button-favorite, .button-group-rating > .testimonials-add-button + .button-favorite, .button-group-rating > .button-service + .button-favorite, .button-group-rating > .button-social + .button-favorite, .button-group-rating > .button-vk + .button-favorite, .button-group-rating > .button-fb + .button-favorite, .button-group-rating > .button-favorite + .button-favorite, .button-group-rating > .button-complain + .button-favorite, .button-group-rating > .uploadzone-button + .button-favorite, .button-group-rating > .subscription-plan-button + .button-favorite, .button-group-rating > .filter-action-button + .button-favorite, .button-group-rating > .filter-apply-button + .button-favorite, .button-group-rating > .filter-trigger-button + .button-favorite, .order-service .button-group-rating > .btn-repost + .button-favorite, .button-group-rating > .promo-services-card-button + .button-favorite, .button-group-rating > .subscription-filter-button + .button-favorite, .button-group-rating > .button + .button-complain, .button-group-rating > .testimonials-more-button + .button-complain, .button-group-rating > .testimonials-add-button + .button-complain, .button-group-rating > .button-service + .button-complain, .button-group-rating > .button-social + .button-complain, .button-group-rating > .button-vk + .button-complain, .button-group-rating > .button-fb + .button-complain, .button-group-rating > .button-favorite + .button-complain, .button-group-rating > .button-complain + .button-complain, .button-group-rating > .uploadzone-button + .button-complain, .button-group-rating > .subscription-plan-button + .button-complain, .button-group-rating > .filter-action-button + .button-complain, .button-group-rating > .filter-apply-button + .button-complain, .button-group-rating > .filter-trigger-button + .button-complain, .order-service .button-group-rating > .btn-repost + .button-complain, .button-group-rating > .promo-services-card-button + .button-complain, .button-group-rating > .subscription-filter-button + .button-complain, .button-group-rating > .button + .uploadzone-button, .button-group-rating > .testimonials-more-button + .uploadzone-button, .button-group-rating > .testimonials-add-button + .uploadzone-button, .button-group-rating > .button-service + .uploadzone-button, .button-group-rating > .button-social + .uploadzone-button, .button-group-rating > .button-vk + .uploadzone-button, .button-group-rating > .button-fb + .uploadzone-button, .button-group-rating > .button-favorite + .uploadzone-button, .button-group-rating > .button-complain + .uploadzone-button, .button-group-rating > .uploadzone-button + .uploadzone-button, .button-group-rating > .subscription-plan-button + .uploadzone-button, .button-group-rating > .filter-action-button + .uploadzone-button, .button-group-rating > .filter-apply-button + .uploadzone-button, .button-group-rating > .filter-trigger-button + .uploadzone-button, .order-service .button-group-rating > .btn-repost + .uploadzone-button, .button-group-rating > .promo-services-card-button + .uploadzone-button, .button-group-rating > .subscription-filter-button + .uploadzone-button, .button-group-rating > .button + .subscription-plan-button, .button-group-rating > .testimonials-more-button + .subscription-plan-button, .button-group-rating > .testimonials-add-button + .subscription-plan-button, .button-group-rating > .button-service + .subscription-plan-button, .button-group-rating > .button-social + .subscription-plan-button, .button-group-rating > .button-vk + .subscription-plan-button, .button-group-rating > .button-fb + .subscription-plan-button, .button-group-rating > .button-favorite + .subscription-plan-button, .button-group-rating > .button-complain + .subscription-plan-button, .button-group-rating > .uploadzone-button + .subscription-plan-button, .button-group-rating > .subscription-plan-button + .subscription-plan-button, .button-group-rating > .filter-action-button + .subscription-plan-button, .button-group-rating > .filter-apply-button + .subscription-plan-button, .button-group-rating > .filter-trigger-button + .subscription-plan-button, .order-service .button-group-rating > .btn-repost + .subscription-plan-button, .button-group-rating > .promo-services-card-button + .subscription-plan-button, .button-group-rating > .subscription-filter-button + .subscription-plan-button, .button-group-rating > .button + .filter-action-button, .button-group-rating > .testimonials-more-button + .filter-action-button, .button-group-rating > .testimonials-add-button + .filter-action-button, .button-group-rating > .button-service + .filter-action-button, .button-group-rating > .button-social + .filter-action-button, .button-group-rating > .button-vk + .filter-action-button, .button-group-rating > .button-fb + .filter-action-button, .button-group-rating > .button-favorite + .filter-action-button, .button-group-rating > .button-complain + .filter-action-button, .button-group-rating > .uploadzone-button + .filter-action-button, .button-group-rating > .subscription-plan-button + .filter-action-button, .button-group-rating > .filter-action-button + .filter-action-button, .button-group-rating > .filter-apply-button + .filter-action-button, .button-group-rating > .filter-trigger-button + .filter-action-button, .order-service .button-group-rating > .btn-repost + .filter-action-button, .button-group-rating > .promo-services-card-button + .filter-action-button, .button-group-rating > .subscription-filter-button + .filter-action-button, .button-group-rating > .button + .filter-apply-button, .button-group-rating > .testimonials-more-button + .filter-apply-button, .button-group-rating > .testimonials-add-button + .filter-apply-button, .button-group-rating > .button-service + .filter-apply-button, .button-group-rating > .button-social + .filter-apply-button, .button-group-rating > .button-vk + .filter-apply-button, .button-group-rating > .button-fb + .filter-apply-button, .button-group-rating > .button-favorite + .filter-apply-button, .button-group-rating > .button-complain + .filter-apply-button, .button-group-rating > .uploadzone-button + .filter-apply-button, .button-group-rating > .subscription-plan-button + .filter-apply-button, .button-group-rating > .filter-action-button + .filter-apply-button, .button-group-rating > .filter-apply-button + .filter-apply-button, .button-group-rating > .filter-trigger-button + .filter-apply-button, .order-service .button-group-rating > .btn-repost + .filter-apply-button, .button-group-rating > .promo-services-card-button + .filter-apply-button, .button-group-rating > .subscription-filter-button + .filter-apply-button, .button-group-rating > .button + .filter-trigger-button, .button-group-rating > .testimonials-more-button + .filter-trigger-button, .button-group-rating > .testimonials-add-button + .filter-trigger-button, .button-group-rating > .button-service + .filter-trigger-button, .button-group-rating > .button-social + .filter-trigger-button, .button-group-rating > .button-vk + .filter-trigger-button, .button-group-rating > .button-fb + .filter-trigger-button, .button-group-rating > .button-favorite + .filter-trigger-button, .button-group-rating > .button-complain + .filter-trigger-button, .button-group-rating > .uploadzone-button + .filter-trigger-button, .button-group-rating > .subscription-plan-button + .filter-trigger-button, .button-group-rating > .filter-action-button + .filter-trigger-button, .button-group-rating > .filter-apply-button + .filter-trigger-button, .button-group-rating > .filter-trigger-button + .filter-trigger-button, .order-service .button-group-rating > .btn-repost + .filter-trigger-button, .button-group-rating > .promo-services-card-button + .filter-trigger-button, .button-group-rating > .subscription-filter-button + .filter-trigger-button, .order-service .button-group-rating > .button + .btn-repost, .order-service .button-group-rating > .testimonials-more-button + .btn-repost, .order-service .button-group-rating > .testimonials-add-button + .btn-repost, .order-service .button-group-rating > .button-service + .btn-repost, .order-service .button-group-rating > .button-social + .btn-repost, .order-service .button-group-rating > .button-vk + .btn-repost, .order-service .button-group-rating > .button-fb + .btn-repost, .order-service .button-group-rating > .button-favorite + .btn-repost, .order-service .button-group-rating > .button-complain + .btn-repost, .order-service .button-group-rating > .uploadzone-button + .btn-repost, .order-service .button-group-rating > .subscription-plan-button + .btn-repost, .order-service .button-group-rating > .filter-action-button + .btn-repost, .order-service .button-group-rating > .filter-apply-button + .btn-repost, .order-service .button-group-rating > .filter-trigger-button + .btn-repost, .order-service .button-group-rating > .btn-repost + .btn-repost, .order-service .button-group-rating > .promo-services-card-button + .btn-repost, .order-service .button-group-rating > .subscription-filter-button + .btn-repost, .button-group-rating > .button + .promo-services-card-button, .button-group-rating > .testimonials-more-button + .promo-services-card-button, .button-group-rating > .testimonials-add-button + .promo-services-card-button, .button-group-rating > .button-service + .promo-services-card-button, .button-group-rating > .button-social + .promo-services-card-button, .button-group-rating > .button-vk + .promo-services-card-button, .button-group-rating > .button-fb + .promo-services-card-button, .button-group-rating > .button-favorite + .promo-services-card-button, .button-group-rating > .button-complain + .promo-services-card-button, .button-group-rating > .uploadzone-button + .promo-services-card-button, .button-group-rating > .subscription-plan-button + .promo-services-card-button, .button-group-rating > .filter-action-button + .promo-services-card-button, .button-group-rating > .filter-apply-button + .promo-services-card-button, .button-group-rating > .filter-trigger-button + .promo-services-card-button, .order-service .button-group-rating > .btn-repost + .promo-services-card-button, .button-group-rating > .promo-services-card-button + .promo-services-card-button, .button-group-rating > .subscription-filter-button + .promo-services-card-button, .button-group-rating > .button + .subscription-filter-button, .button-group-rating > .testimonials-more-button + .subscription-filter-button, .button-group-rating > .testimonials-add-button + .subscription-filter-button, .button-group-rating > .button-service + .subscription-filter-button, .button-group-rating > .button-social + .subscription-filter-button, .button-group-rating > .button-vk + .subscription-filter-button, .button-group-rating > .button-fb + .subscription-filter-button, .button-group-rating > .button-favorite + .subscription-filter-button, .button-group-rating > .button-complain + .subscription-filter-button, .button-group-rating > .uploadzone-button + .subscription-filter-button, .button-group-rating > .subscription-plan-button + .subscription-filter-button, .button-group-rating > .filter-action-button + .subscription-filter-button, .button-group-rating > .filter-apply-button + .subscription-filter-button, .button-group-rating > .filter-trigger-button + .subscription-filter-button, .order-service .button-group-rating > .btn-repost + .subscription-filter-button, .button-group-rating > .promo-services-card-button + .subscription-filter-button, .button-group-rating > .subscription-filter-button + .subscription-filter-button, .button-group-rating > .button + .button-group .button, .button-group-rating > .testimonials-more-button + .button-group .button, .button-group-rating > .testimonials-add-button + .button-group .button, .button-group-rating > .button-service + .button-group .button, .button-group-rating > .button-social + .button-group .button, .button-group-rating > .button-vk + .button-group .button, .button-group-rating > .button-fb + .button-group .button, .button-group-rating > .button-favorite + .button-group .button, .button-group-rating > .button-complain + .button-group .button, .button-group-rating > .uploadzone-button + .button-group .button, .button-group-rating > .subscription-plan-button + .button-group .button, .button-group-rating > .filter-action-button + .button-group .button, .button-group-rating > .filter-apply-button + .button-group .button, .button-group-rating > .filter-trigger-button + .button-group .button, .order-service .button-group-rating > .btn-repost + .button-group .button, .button-group-rating > .promo-services-card-button + .button-group .button, .button-group-rating > .subscription-filter-button + .button-group .button, .button-group-rating > .button + .button-group .testimonials-more-button, .button-group-rating > .testimonials-more-button + .button-group .testimonials-more-button, .button-group-rating > .testimonials-add-button + .button-group .testimonials-more-button, .button-group-rating > .button-service + .button-group .testimonials-more-button, .button-group-rating > .button-social + .button-group .testimonials-more-button, .button-group-rating > .button-vk + .button-group .testimonials-more-button, .button-group-rating > .button-fb + .button-group .testimonials-more-button, .button-group-rating > .button-favorite + .button-group .testimonials-more-button, .button-group-rating > .button-complain + .button-group .testimonials-more-button, .button-group-rating > .uploadzone-button + .button-group .testimonials-more-button, .button-group-rating > .subscription-plan-button + .button-group .testimonials-more-button, .button-group-rating > .filter-action-button + .button-group .testimonials-more-button, .button-group-rating > .filter-apply-button + .button-group .testimonials-more-button, .button-group-rating > .filter-trigger-button + .button-group .testimonials-more-button, .order-service .button-group-rating > .btn-repost + .button-group .testimonials-more-button, .button-group-rating > .promo-services-card-button + .button-group .testimonials-more-button, .button-group-rating > .subscription-filter-button + .button-group .testimonials-more-button, .button-group-rating > .button + .button-group .testimonials-add-button, .button-group-rating > .testimonials-more-button + .button-group .testimonials-add-button, .button-group-rating > .testimonials-add-button + .button-group .testimonials-add-button, .button-group-rating > .button-service + .button-group .testimonials-add-button, .button-group-rating > .button-social + .button-group .testimonials-add-button, .button-group-rating > .button-vk + .button-group .testimonials-add-button, .button-group-rating > .button-fb + .button-group .testimonials-add-button, .button-group-rating > .button-favorite + .button-group .testimonials-add-button, .button-group-rating > .button-complain + .button-group .testimonials-add-button, .button-group-rating > .uploadzone-button + .button-group .testimonials-add-button, .button-group-rating > .subscription-plan-button + .button-group .testimonials-add-button, .button-group-rating > .filter-action-button + .button-group .testimonials-add-button, .button-group-rating > .filter-apply-button + .button-group .testimonials-add-button, .button-group-rating > .filter-trigger-button + .button-group .testimonials-add-button, .order-service .button-group-rating > .btn-repost + .button-group .testimonials-add-button, .button-group-rating > .promo-services-card-button + .button-group .testimonials-add-button, .button-group-rating > .subscription-filter-button + .button-group .testimonials-add-button, .button-group-rating > .button + .button-group .button-service, .button-group-rating > .testimonials-more-button + .button-group .button-service, .button-group-rating > .testimonials-add-button + .button-group .button-service, .button-group-rating > .button-service + .button-group .button-service, .button-group-rating > .button-social + .button-group .button-service, .button-group-rating > .button-vk + .button-group .button-service, .button-group-rating > .button-fb + .button-group .button-service, .button-group-rating > .button-favorite + .button-group .button-service, .button-group-rating > .button-complain + .button-group .button-service, .button-group-rating > .uploadzone-button + .button-group .button-service, .button-group-rating > .subscription-plan-button + .button-group .button-service, .button-group-rating > .filter-action-button + .button-group .button-service, .button-group-rating > .filter-apply-button + .button-group .button-service, .button-group-rating > .filter-trigger-button + .button-group .button-service, .order-service .button-group-rating > .btn-repost + .button-group .button-service, .button-group-rating > .promo-services-card-button + .button-group .button-service, .button-group-rating > .subscription-filter-button + .button-group .button-service, .button-group-rating > .button + .button-group .button-social, .button-group-rating > .testimonials-more-button + .button-group .button-social, .button-group-rating > .testimonials-add-button + .button-group .button-social, .button-group-rating > .button-service + .button-group .button-social, .button-group-rating > .button-social + .button-group .button-social, .button-group-rating > .button-vk + .button-group .button-social, .button-group-rating > .button-fb + .button-group .button-social, .button-group-rating > .button-favorite + .button-group .button-social, .button-group-rating > .button-complain + .button-group .button-social, .button-group-rating > .uploadzone-button + .button-group .button-social, .button-group-rating > .subscription-plan-button + .button-group .button-social, .button-group-rating > .filter-action-button + .button-group .button-social, .button-group-rating > .filter-apply-button + .button-group .button-social, .button-group-rating > .filter-trigger-button + .button-group .button-social, .order-service .button-group-rating > .btn-repost + .button-group .button-social, .button-group-rating > .promo-services-card-button + .button-group .button-social, .button-group-rating > .subscription-filter-button + .button-group .button-social, .button-group-rating > .button + .button-group .button-vk, .button-group-rating > .testimonials-more-button + .button-group .button-vk, .button-group-rating > .testimonials-add-button + .button-group .button-vk, .button-group-rating > .button-service + .button-group .button-vk, .button-group-rating > .button-social + .button-group .button-vk, .button-group-rating > .button-vk + .button-group .button-vk, .button-group-rating > .button-fb + .button-group .button-vk, .button-group-rating > .button-favorite + .button-group .button-vk, .button-group-rating > .button-complain + .button-group .button-vk, .button-group-rating > .uploadzone-button + .button-group .button-vk, .button-group-rating > .subscription-plan-button + .button-group .button-vk, .button-group-rating > .filter-action-button + .button-group .button-vk, .button-group-rating > .filter-apply-button + .button-group .button-vk, .button-group-rating > .filter-trigger-button + .button-group .button-vk, .order-service .button-group-rating > .btn-repost + .button-group .button-vk, .button-group-rating > .promo-services-card-button + .button-group .button-vk, .button-group-rating > .subscription-filter-button + .button-group .button-vk, .button-group-rating > .button + .button-group .button-fb, .button-group-rating > .testimonials-more-button + .button-group .button-fb, .button-group-rating > .testimonials-add-button + .button-group .button-fb, .button-group-rating > .button-service + .button-group .button-fb, .button-group-rating > .button-social + .button-group .button-fb, .button-group-rating > .button-vk + .button-group .button-fb, .button-group-rating > .button-fb + .button-group .button-fb, .button-group-rating > .button-favorite + .button-group .button-fb, .button-group-rating > .button-complain + .button-group .button-fb, .button-group-rating > .uploadzone-button + .button-group .button-fb, .button-group-rating > .subscription-plan-button + .button-group .button-fb, .button-group-rating > .filter-action-button + .button-group .button-fb, .button-group-rating > .filter-apply-button + .button-group .button-fb, .button-group-rating > .filter-trigger-button + .button-group .button-fb, .order-service .button-group-rating > .btn-repost + .button-group .button-fb, .button-group-rating > .promo-services-card-button + .button-group .button-fb, .button-group-rating > .subscription-filter-button + .button-group .button-fb, .button-group-rating > .button + .button-group .button-favorite, .button-group-rating > .testimonials-more-button + .button-group .button-favorite, .button-group-rating > .testimonials-add-button + .button-group .button-favorite, .button-group-rating > .button-service + .button-group .button-favorite, .button-group-rating > .button-social + .button-group .button-favorite, .button-group-rating > .button-vk + .button-group .button-favorite, .button-group-rating > .button-fb + .button-group .button-favorite, .button-group-rating > .button-favorite + .button-group .button-favorite, .button-group-rating > .button-complain + .button-group .button-favorite, .button-group-rating > .uploadzone-button + .button-group .button-favorite, .button-group-rating > .subscription-plan-button + .button-group .button-favorite, .button-group-rating > .filter-action-button + .button-group .button-favorite, .button-group-rating > .filter-apply-button + .button-group .button-favorite, .button-group-rating > .filter-trigger-button + .button-group .button-favorite, .order-service .button-group-rating > .btn-repost + .button-group .button-favorite, .button-group-rating > .promo-services-card-button + .button-group .button-favorite, .button-group-rating > .subscription-filter-button + .button-group .button-favorite, .button-group-rating > .button + .button-group .button-complain, .button-group-rating > .testimonials-more-button + .button-group .button-complain, .button-group-rating > .testimonials-add-button + .button-group .button-complain, .button-group-rating > .button-service + .button-group .button-complain, .button-group-rating > .button-social + .button-group .button-complain, .button-group-rating > .button-vk + .button-group .button-complain, .button-group-rating > .button-fb + .button-group .button-complain, .button-group-rating > .button-favorite + .button-group .button-complain, .button-group-rating > .button-complain + .button-group .button-complain, .button-group-rating > .uploadzone-button + .button-group .button-complain, .button-group-rating > .subscription-plan-button + .button-group .button-complain, .button-group-rating > .filter-action-button + .button-group .button-complain, .button-group-rating > .filter-apply-button + .button-group .button-complain, .button-group-rating > .filter-trigger-button + .button-group .button-complain, .order-service .button-group-rating > .btn-repost + .button-group .button-complain, .button-group-rating > .promo-services-card-button + .button-group .button-complain, .button-group-rating > .subscription-filter-button + .button-group .button-complain, .button-group-rating > .button + .button-group .uploadzone-button, .button-group-rating > .testimonials-more-button + .button-group .uploadzone-button, .button-group-rating > .testimonials-add-button + .button-group .uploadzone-button, .button-group-rating > .button-service + .button-group .uploadzone-button, .button-group-rating > .button-social + .button-group .uploadzone-button, .button-group-rating > .button-vk + .button-group .uploadzone-button, .button-group-rating > .button-fb + .button-group .uploadzone-button, .button-group-rating > .button-favorite + .button-group .uploadzone-button, .button-group-rating > .button-complain + .button-group .uploadzone-button, .button-group-rating > .uploadzone-button + .button-group .uploadzone-button, .button-group-rating > .subscription-plan-button + .button-group .uploadzone-button, .button-group-rating > .filter-action-button + .button-group .uploadzone-button, .button-group-rating > .filter-apply-button + .button-group .uploadzone-button, .button-group-rating > .filter-trigger-button + .button-group .uploadzone-button, .order-service .button-group-rating > .btn-repost + .button-group .uploadzone-button, .button-group-rating > .promo-services-card-button + .button-group .uploadzone-button, .button-group-rating > .subscription-filter-button + .button-group .uploadzone-button, .button-group-rating > .button + .button-group .subscription-plan-button, .button-group-rating > .testimonials-more-button + .button-group .subscription-plan-button, .button-group-rating > .testimonials-add-button + .button-group .subscription-plan-button, .button-group-rating > .button-service + .button-group .subscription-plan-button, .button-group-rating > .button-social + .button-group .subscription-plan-button, .button-group-rating > .button-vk + .button-group .subscription-plan-button, .button-group-rating > .button-fb + .button-group .subscription-plan-button, .button-group-rating > .button-favorite + .button-group .subscription-plan-button, .button-group-rating > .button-complain + .button-group .subscription-plan-button, .button-group-rating > .uploadzone-button + .button-group .subscription-plan-button, .button-group-rating > .subscription-plan-button + .button-group .subscription-plan-button, .button-group-rating > .filter-action-button + .button-group .subscription-plan-button, .button-group-rating > .filter-apply-button + .button-group .subscription-plan-button, .button-group-rating > .filter-trigger-button + .button-group .subscription-plan-button, .order-service .button-group-rating > .btn-repost + .button-group .subscription-plan-button, .button-group-rating > .promo-services-card-button + .button-group .subscription-plan-button, .button-group-rating > .subscription-filter-button + .button-group .subscription-plan-button, .button-group-rating > .button + .button-group .filter-action-button, .button-group-rating > .testimonials-more-button + .button-group .filter-action-button, .button-group-rating > .testimonials-add-button + .button-group .filter-action-button, .button-group-rating > .button-service + .button-group .filter-action-button, .button-group-rating > .button-social + .button-group .filter-action-button, .button-group-rating > .button-vk + .button-group .filter-action-button, .button-group-rating > .button-fb + .button-group .filter-action-button, .button-group-rating > .button-favorite + .button-group .filter-action-button, .button-group-rating > .button-complain + .button-group .filter-action-button, .button-group-rating > .uploadzone-button + .button-group .filter-action-button, .button-group-rating > .subscription-plan-button + .button-group .filter-action-button, .button-group-rating > .filter-action-button + .button-group .filter-action-button, .button-group-rating > .filter-apply-button + .button-group .filter-action-button, .button-group-rating > .filter-trigger-button + .button-group .filter-action-button, .order-service .button-group-rating > .btn-repost + .button-group .filter-action-button, .button-group-rating > .promo-services-card-button + .button-group .filter-action-button, .button-group-rating > .subscription-filter-button + .button-group .filter-action-button, .button-group-rating > .button + .button-group .filter-apply-button, .button-group-rating > .testimonials-more-button + .button-group .filter-apply-button, .button-group-rating > .testimonials-add-button + .button-group .filter-apply-button, .button-group-rating > .button-service + .button-group .filter-apply-button, .button-group-rating > .button-social + .button-group .filter-apply-button, .button-group-rating > .button-vk + .button-group .filter-apply-button, .button-group-rating > .button-fb + .button-group .filter-apply-button, .button-group-rating > .button-favorite + .button-group .filter-apply-button, .button-group-rating > .button-complain + .button-group .filter-apply-button, .button-group-rating > .uploadzone-button + .button-group .filter-apply-button, .button-group-rating > .subscription-plan-button + .button-group .filter-apply-button, .button-group-rating > .filter-action-button + .button-group .filter-apply-button, .button-group-rating > .filter-apply-button + .button-group .filter-apply-button, .button-group-rating > .filter-trigger-button + .button-group .filter-apply-button, .order-service .button-group-rating > .btn-repost + .button-group .filter-apply-button, .button-group-rating > .promo-services-card-button + .button-group .filter-apply-button, .button-group-rating > .subscription-filter-button + .button-group .filter-apply-button, .button-group-rating > .button + .button-group .filter-trigger-button, .button-group-rating > .testimonials-more-button + .button-group .filter-trigger-button, .button-group-rating > .testimonials-add-button + .button-group .filter-trigger-button, .button-group-rating > .button-service + .button-group .filter-trigger-button, .button-group-rating > .button-social + .button-group .filter-trigger-button, .button-group-rating > .button-vk + .button-group .filter-trigger-button, .button-group-rating > .button-fb + .button-group .filter-trigger-button, .button-group-rating > .button-favorite + .button-group .filter-trigger-button, .button-group-rating > .button-complain + .button-group .filter-trigger-button, .button-group-rating > .uploadzone-button + .button-group .filter-trigger-button, .button-group-rating > .subscription-plan-button + .button-group .filter-trigger-button, .button-group-rating > .filter-action-button + .button-group .filter-trigger-button, .button-group-rating > .filter-apply-button + .button-group .filter-trigger-button, .button-group-rating > .filter-trigger-button + .button-group .filter-trigger-button, .order-service .button-group-rating > .btn-repost + .button-group .filter-trigger-button, .button-group-rating > .promo-services-card-button + .button-group .filter-trigger-button, .button-group-rating > .subscription-filter-button + .button-group .filter-trigger-button, .button-group-rating > .button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button + .button-group .btn-repost, .button-group-rating > .testimonials-more-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .testimonials-more-button + .button-group .btn-repost, .button-group-rating > .testimonials-add-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .testimonials-add-button + .button-group .btn-repost, .button-group-rating > .button-service + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-service + .button-group .btn-repost, .button-group-rating > .button-social + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-social + .button-group .btn-repost, .button-group-rating > .button-vk + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-vk + .button-group .btn-repost, .button-group-rating > .button-fb + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-fb + .button-group .btn-repost, .button-group-rating > .button-favorite + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-favorite + .button-group .btn-repost, .button-group-rating > .button-complain + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-complain + .button-group .btn-repost, .button-group-rating > .uploadzone-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .uploadzone-button + .button-group .btn-repost, .button-group-rating > .subscription-plan-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .subscription-plan-button + .button-group .btn-repost, .button-group-rating > .filter-action-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .filter-action-button + .button-group .btn-repost, .button-group-rating > .filter-apply-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .filter-apply-button + .button-group .btn-repost, .button-group-rating > .filter-trigger-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .filter-trigger-button + .button-group .btn-repost, .order-service .button-group-rating > .btn-repost + .button-group .btn-repost, .button-group-rating > .promo-services-card-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .promo-services-card-button + .button-group .btn-repost, .button-group-rating > .subscription-filter-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .subscription-filter-button + .button-group .btn-repost, .button-group-rating > .button + .button-group .promo-services-card-button, .button-group-rating > .testimonials-more-button + .button-group .promo-services-card-button, .button-group-rating > .testimonials-add-button + .button-group .promo-services-card-button, .button-group-rating > .button-service + .button-group .promo-services-card-button, .button-group-rating > .button-social + .button-group .promo-services-card-button, .button-group-rating > .button-vk + .button-group .promo-services-card-button, .button-group-rating > .button-fb + .button-group .promo-services-card-button, .button-group-rating > .button-favorite + .button-group .promo-services-card-button, .button-group-rating > .button-complain + .button-group .promo-services-card-button, .button-group-rating > .uploadzone-button + .button-group .promo-services-card-button, .button-group-rating > .subscription-plan-button + .button-group .promo-services-card-button, .button-group-rating > .filter-action-button + .button-group .promo-services-card-button, .button-group-rating > .filter-apply-button + .button-group .promo-services-card-button, .button-group-rating > .filter-trigger-button + .button-group .promo-services-card-button, .order-service .button-group-rating > .btn-repost + .button-group .promo-services-card-button, .button-group-rating > .promo-services-card-button + .button-group .promo-services-card-button, .button-group-rating > .subscription-filter-button + .button-group .promo-services-card-button, .button-group-rating > .button + .button-group .subscription-filter-button, .button-group-rating > .testimonials-more-button + .button-group .subscription-filter-button, .button-group-rating > .testimonials-add-button + .button-group .subscription-filter-button, .button-group-rating > .button-service + .button-group .subscription-filter-button, .button-group-rating > .button-social + .button-group .subscription-filter-button, .button-group-rating > .button-vk + .button-group .subscription-filter-button, .button-group-rating > .button-fb + .button-group .subscription-filter-button, .button-group-rating > .button-favorite + .button-group .subscription-filter-button, .button-group-rating > .button-complain + .button-group .subscription-filter-button, .button-group-rating > .uploadzone-button + .button-group .subscription-filter-button, .button-group-rating > .subscription-plan-button + .button-group .subscription-filter-button, .button-group-rating > .filter-action-button + .button-group .subscription-filter-button, .button-group-rating > .filter-apply-button + .button-group .subscription-filter-button, .button-group-rating > .filter-trigger-button + .button-group .subscription-filter-button, .order-service .button-group-rating > .btn-repost + .button-group .subscription-filter-button, .button-group-rating > .promo-services-card-button + .button-group .subscription-filter-button, .button-group-rating > .subscription-filter-button + .button-group .subscription-filter-button {
+.button-group-rating > .button + .button, .button-group-rating > .testimonials-more-button + .button, .button-group-rating > .testimonials-add-button + .button, .button-group-rating > .button-service + .button, .button-group-rating > .button-social + .button, .button-group-rating > .button-vk + .button, .button-group-rating > .button-fb + .button, .button-group-rating > .button-favorite + .button, .button-group-rating > .button-complain + .button, .button-group-rating > .uploadzone-button + .button, .button-group-rating > .subscription-plan-button + .button, .button-group-rating > .filter-action-button + .button, .button-group-rating > .filter-apply-button + .button, .button-group-rating > .filter-trigger-button + .button, .order-service .button-group-rating > .btn-repost + .button, .button-group-rating > .subscription-filter-button + .button, .button-group-rating > .button + .testimonials-more-button, .button-group-rating > .testimonials-more-button + .testimonials-more-button, .button-group-rating > .testimonials-add-button + .testimonials-more-button, .button-group-rating > .button-service + .testimonials-more-button, .button-group-rating > .button-social + .testimonials-more-button, .button-group-rating > .button-vk + .testimonials-more-button, .button-group-rating > .button-fb + .testimonials-more-button, .button-group-rating > .button-favorite + .testimonials-more-button, .button-group-rating > .button-complain + .testimonials-more-button, .button-group-rating > .uploadzone-button + .testimonials-more-button, .button-group-rating > .subscription-plan-button + .testimonials-more-button, .button-group-rating > .filter-action-button + .testimonials-more-button, .button-group-rating > .filter-apply-button + .testimonials-more-button, .button-group-rating > .filter-trigger-button + .testimonials-more-button, .order-service .button-group-rating > .btn-repost + .testimonials-more-button, .button-group-rating > .subscription-filter-button + .testimonials-more-button, .button-group-rating > .button + .testimonials-add-button, .button-group-rating > .testimonials-more-button + .testimonials-add-button, .button-group-rating > .testimonials-add-button + .testimonials-add-button, .button-group-rating > .button-service + .testimonials-add-button, .button-group-rating > .button-social + .testimonials-add-button, .button-group-rating > .button-vk + .testimonials-add-button, .button-group-rating > .button-fb + .testimonials-add-button, .button-group-rating > .button-favorite + .testimonials-add-button, .button-group-rating > .button-complain + .testimonials-add-button, .button-group-rating > .uploadzone-button + .testimonials-add-button, .button-group-rating > .subscription-plan-button + .testimonials-add-button, .button-group-rating > .filter-action-button + .testimonials-add-button, .button-group-rating > .filter-apply-button + .testimonials-add-button, .button-group-rating > .filter-trigger-button + .testimonials-add-button, .order-service .button-group-rating > .btn-repost + .testimonials-add-button, .button-group-rating > .subscription-filter-button + .testimonials-add-button, .button-group-rating > .button + .button-service, .button-group-rating > .testimonials-more-button + .button-service, .button-group-rating > .testimonials-add-button + .button-service, .button-group-rating > .button-service + .button-service, .button-group-rating > .button-social + .button-service, .button-group-rating > .button-vk + .button-service, .button-group-rating > .button-fb + .button-service, .button-group-rating > .button-favorite + .button-service, .button-group-rating > .button-complain + .button-service, .button-group-rating > .uploadzone-button + .button-service, .button-group-rating > .subscription-plan-button + .button-service, .button-group-rating > .filter-action-button + .button-service, .button-group-rating > .filter-apply-button + .button-service, .button-group-rating > .filter-trigger-button + .button-service, .order-service .button-group-rating > .btn-repost + .button-service, .button-group-rating > .promo-services-card-button + .button-service, .button-group-rating > .subscription-filter-button + .button-service, .button-group-rating > .button + .button-social, .button-group-rating > .testimonials-more-button + .button-social, .button-group-rating > .testimonials-add-button + .button-social, .button-group-rating > .button-service + .button-social, .button-group-rating > .button-social + .button-social, .button-group-rating > .button-vk + .button-social, .button-group-rating > .button-fb + .button-social, .button-group-rating > .button-favorite + .button-social, .button-group-rating > .button-complain + .button-social, .button-group-rating > .uploadzone-button + .button-social, .button-group-rating > .subscription-plan-button + .button-social, .button-group-rating > .filter-action-button + .button-social, .button-group-rating > .filter-apply-button + .button-social, .button-group-rating > .filter-trigger-button + .button-social, .order-service .button-group-rating > .btn-repost + .button-social, .button-group-rating > .subscription-filter-button + .button-social, .button-group-rating > .button + .button-vk, .button-group-rating > .testimonials-more-button + .button-vk, .button-group-rating > .testimonials-add-button + .button-vk, .button-group-rating > .button-service + .button-vk, .button-group-rating > .button-social + .button-vk, .button-group-rating > .button-vk + .button-vk, .button-group-rating > .button-fb + .button-vk, .button-group-rating > .button-favorite + .button-vk, .button-group-rating > .button-complain + .button-vk, .button-group-rating > .uploadzone-button + .button-vk, .button-group-rating > .subscription-plan-button + .button-vk, .button-group-rating > .filter-action-button + .button-vk, .button-group-rating > .filter-apply-button + .button-vk, .button-group-rating > .filter-trigger-button + .button-vk, .order-service .button-group-rating > .btn-repost + .button-vk, .button-group-rating > .subscription-filter-button + .button-vk, .button-group-rating > .button + .button-fb, .button-group-rating > .testimonials-more-button + .button-fb, .button-group-rating > .testimonials-add-button + .button-fb, .button-group-rating > .button-service + .button-fb, .button-group-rating > .button-social + .button-fb, .button-group-rating > .button-vk + .button-fb, .button-group-rating > .button-fb + .button-fb, .button-group-rating > .button-favorite + .button-fb, .button-group-rating > .button-complain + .button-fb, .button-group-rating > .uploadzone-button + .button-fb, .button-group-rating > .subscription-plan-button + .button-fb, .button-group-rating > .filter-action-button + .button-fb, .button-group-rating > .filter-apply-button + .button-fb, .button-group-rating > .filter-trigger-button + .button-fb, .order-service .button-group-rating > .btn-repost + .button-fb, .button-group-rating > .subscription-filter-button + .button-fb, .button-group-rating > .button + .button-favorite, .button-group-rating > .testimonials-more-button + .button-favorite, .button-group-rating > .testimonials-add-button + .button-favorite, .button-group-rating > .button-service + .button-favorite, .button-group-rating > .button-social + .button-favorite, .button-group-rating > .button-vk + .button-favorite, .button-group-rating > .button-fb + .button-favorite, .button-group-rating > .button-favorite + .button-favorite, .button-group-rating > .button-complain + .button-favorite, .button-group-rating > .uploadzone-button + .button-favorite, .button-group-rating > .subscription-plan-button + .button-favorite, .button-group-rating > .filter-action-button + .button-favorite, .button-group-rating > .filter-apply-button + .button-favorite, .button-group-rating > .filter-trigger-button + .button-favorite, .order-service .button-group-rating > .btn-repost + .button-favorite, .button-group-rating > .subscription-filter-button + .button-favorite, .button-group-rating > .button + .button-complain, .button-group-rating > .testimonials-more-button + .button-complain, .button-group-rating > .testimonials-add-button + .button-complain, .button-group-rating > .button-service + .button-complain, .button-group-rating > .button-social + .button-complain, .button-group-rating > .button-vk + .button-complain, .button-group-rating > .button-fb + .button-complain, .button-group-rating > .button-favorite + .button-complain, .button-group-rating > .button-complain + .button-complain, .button-group-rating > .uploadzone-button + .button-complain, .button-group-rating > .subscription-plan-button + .button-complain, .button-group-rating > .filter-action-button + .button-complain, .button-group-rating > .filter-apply-button + .button-complain, .button-group-rating > .filter-trigger-button + .button-complain, .order-service .button-group-rating > .btn-repost + .button-complain, .button-group-rating > .subscription-filter-button + .button-complain, .button-group-rating > .button + .uploadzone-button, .button-group-rating > .testimonials-more-button + .uploadzone-button, .button-group-rating > .testimonials-add-button + .uploadzone-button, .button-group-rating > .button-service + .uploadzone-button, .button-group-rating > .button-social + .uploadzone-button, .button-group-rating > .button-vk + .uploadzone-button, .button-group-rating > .button-fb + .uploadzone-button, .button-group-rating > .button-favorite + .uploadzone-button, .button-group-rating > .button-complain + .uploadzone-button, .button-group-rating > .uploadzone-button + .uploadzone-button, .button-group-rating > .subscription-plan-button + .uploadzone-button, .button-group-rating > .filter-action-button + .uploadzone-button, .button-group-rating > .filter-apply-button + .uploadzone-button, .button-group-rating > .filter-trigger-button + .uploadzone-button, .order-service .button-group-rating > .btn-repost + .uploadzone-button, .button-group-rating > .subscription-filter-button + .uploadzone-button, .button-group-rating > .button + .subscription-plan-button, .button-group-rating > .testimonials-more-button + .subscription-plan-button, .button-group-rating > .testimonials-add-button + .subscription-plan-button, .button-group-rating > .button-service + .subscription-plan-button, .button-group-rating > .button-social + .subscription-plan-button, .button-group-rating > .button-vk + .subscription-plan-button, .button-group-rating > .button-fb + .subscription-plan-button, .button-group-rating > .button-favorite + .subscription-plan-button, .button-group-rating > .button-complain + .subscription-plan-button, .button-group-rating > .uploadzone-button + .subscription-plan-button, .button-group-rating > .subscription-plan-button + .subscription-plan-button, .button-group-rating > .filter-action-button + .subscription-plan-button, .button-group-rating > .filter-apply-button + .subscription-plan-button, .button-group-rating > .filter-trigger-button + .subscription-plan-button, .order-service .button-group-rating > .btn-repost + .subscription-plan-button, .button-group-rating > .subscription-filter-button + .subscription-plan-button, .button-group-rating > .button + .filter-action-button, .button-group-rating > .testimonials-more-button + .filter-action-button, .button-group-rating > .testimonials-add-button + .filter-action-button, .button-group-rating > .button-service + .filter-action-button, .button-group-rating > .button-social + .filter-action-button, .button-group-rating > .button-vk + .filter-action-button, .button-group-rating > .button-fb + .filter-action-button, .button-group-rating > .button-favorite + .filter-action-button, .button-group-rating > .button-complain + .filter-action-button, .button-group-rating > .uploadzone-button + .filter-action-button, .button-group-rating > .subscription-plan-button + .filter-action-button, .button-group-rating > .filter-action-button + .filter-action-button, .button-group-rating > .filter-apply-button + .filter-action-button, .button-group-rating > .filter-trigger-button + .filter-action-button, .order-service .button-group-rating > .btn-repost + .filter-action-button, .button-group-rating > .subscription-filter-button + .filter-action-button, .button-group-rating > .button + .filter-apply-button, .button-group-rating > .testimonials-more-button + .filter-apply-button, .button-group-rating > .testimonials-add-button + .filter-apply-button, .button-group-rating > .button-service + .filter-apply-button, .button-group-rating > .button-social + .filter-apply-button, .button-group-rating > .button-vk + .filter-apply-button, .button-group-rating > .button-fb + .filter-apply-button, .button-group-rating > .button-favorite + .filter-apply-button, .button-group-rating > .button-complain + .filter-apply-button, .button-group-rating > .uploadzone-button + .filter-apply-button, .button-group-rating > .subscription-plan-button + .filter-apply-button, .button-group-rating > .filter-action-button + .filter-apply-button, .button-group-rating > .filter-apply-button + .filter-apply-button, .button-group-rating > .filter-trigger-button + .filter-apply-button, .order-service .button-group-rating > .btn-repost + .filter-apply-button, .button-group-rating > .subscription-filter-button + .filter-apply-button, .button-group-rating > .button + .filter-trigger-button, .button-group-rating > .testimonials-more-button + .filter-trigger-button, .button-group-rating > .testimonials-add-button + .filter-trigger-button, .button-group-rating > .button-service + .filter-trigger-button, .button-group-rating > .button-social + .filter-trigger-button, .button-group-rating > .button-vk + .filter-trigger-button, .button-group-rating > .button-fb + .filter-trigger-button, .button-group-rating > .button-favorite + .filter-trigger-button, .button-group-rating > .button-complain + .filter-trigger-button, .button-group-rating > .uploadzone-button + .filter-trigger-button, .button-group-rating > .subscription-plan-button + .filter-trigger-button, .button-group-rating > .filter-action-button + .filter-trigger-button, .button-group-rating > .filter-apply-button + .filter-trigger-button, .button-group-rating > .filter-trigger-button + .filter-trigger-button, .order-service .button-group-rating > .btn-repost + .filter-trigger-button, .button-group-rating > .subscription-filter-button + .filter-trigger-button, .order-service .button-group-rating > .button + .btn-repost, .order-service .button-group-rating > .testimonials-more-button + .btn-repost, .order-service .button-group-rating > .testimonials-add-button + .btn-repost, .order-service .button-group-rating > .button-service + .btn-repost, .order-service .button-group-rating > .button-social + .btn-repost, .order-service .button-group-rating > .button-vk + .btn-repost, .order-service .button-group-rating > .button-fb + .btn-repost, .order-service .button-group-rating > .button-favorite + .btn-repost, .order-service .button-group-rating > .button-complain + .btn-repost, .order-service .button-group-rating > .uploadzone-button + .btn-repost, .order-service .button-group-rating > .subscription-plan-button + .btn-repost, .order-service .button-group-rating > .filter-action-button + .btn-repost, .order-service .button-group-rating > .filter-apply-button + .btn-repost, .order-service .button-group-rating > .filter-trigger-button + .btn-repost, .order-service .button-group-rating > .btn-repost + .btn-repost, .order-service .button-group-rating > .subscription-filter-button + .btn-repost, .button-group-rating > .button + .subscription-filter-button, .button-group-rating > .testimonials-more-button + .subscription-filter-button, .button-group-rating > .testimonials-add-button + .subscription-filter-button, .button-group-rating > .button-service + .subscription-filter-button, .button-group-rating > .button-social + .subscription-filter-button, .button-group-rating > .button-vk + .subscription-filter-button, .button-group-rating > .button-fb + .subscription-filter-button, .button-group-rating > .button-favorite + .subscription-filter-button, .button-group-rating > .button-complain + .subscription-filter-button, .button-group-rating > .uploadzone-button + .subscription-filter-button, .button-group-rating > .subscription-plan-button + .subscription-filter-button, .button-group-rating > .filter-action-button + .subscription-filter-button, .button-group-rating > .filter-apply-button + .subscription-filter-button, .button-group-rating > .filter-trigger-button + .subscription-filter-button, .order-service .button-group-rating > .btn-repost + .subscription-filter-button, .button-group-rating > .subscription-filter-button + .subscription-filter-button, .button-group-rating > .button + .button-group .button, .button-group-rating > .testimonials-more-button + .button-group .button, .button-group-rating > .testimonials-add-button + .button-group .button, .button-group-rating > .button-service + .button-group .button, .button-group-rating > .button-social + .button-group .button, .button-group-rating > .button-vk + .button-group .button, .button-group-rating > .button-fb + .button-group .button, .button-group-rating > .button-favorite + .button-group .button, .button-group-rating > .button-complain + .button-group .button, .button-group-rating > .uploadzone-button + .button-group .button, .button-group-rating > .subscription-plan-button + .button-group .button, .button-group-rating > .filter-action-button + .button-group .button, .button-group-rating > .filter-apply-button + .button-group .button, .button-group-rating > .filter-trigger-button + .button-group .button, .order-service .button-group-rating > .btn-repost + .button-group .button, .button-group-rating > .subscription-filter-button + .button-group .button, .button-group-rating > .button + .button-group .testimonials-more-button, .button-group-rating > .testimonials-more-button + .button-group .testimonials-more-button, .button-group-rating > .testimonials-add-button + .button-group .testimonials-more-button, .button-group-rating > .button-service + .button-group .testimonials-more-button, .button-group-rating > .button-social + .button-group .testimonials-more-button, .button-group-rating > .button-vk + .button-group .testimonials-more-button, .button-group-rating > .button-fb + .button-group .testimonials-more-button, .button-group-rating > .button-favorite + .button-group .testimonials-more-button, .button-group-rating > .button-complain + .button-group .testimonials-more-button, .button-group-rating > .uploadzone-button + .button-group .testimonials-more-button, .button-group-rating > .subscription-plan-button + .button-group .testimonials-more-button, .button-group-rating > .filter-action-button + .button-group .testimonials-more-button, .button-group-rating > .filter-apply-button + .button-group .testimonials-more-button, .button-group-rating > .filter-trigger-button + .button-group .testimonials-more-button, .order-service .button-group-rating > .btn-repost + .button-group .testimonials-more-button, .button-group-rating > .promo-services-card-button + .button-group .testimonials-more-button, .button-group-rating > .subscription-filter-button + .button-group .testimonials-more-button, .button-group-rating > .button + .button-group .testimonials-add-button, .button-group-rating > .testimonials-more-button + .button-group .testimonials-add-button, .button-group-rating > .testimonials-add-button + .button-group .testimonials-add-button, .button-group-rating > .button-service + .button-group .testimonials-add-button, .button-group-rating > .button-social + .button-group .testimonials-add-button, .button-group-rating > .button-vk + .button-group .testimonials-add-button, .button-group-rating > .button-fb + .button-group .testimonials-add-button, .button-group-rating > .button-favorite + .button-group .testimonials-add-button, .button-group-rating > .button-complain + .button-group .testimonials-add-button, .button-group-rating > .uploadzone-button + .button-group .testimonials-add-button, .button-group-rating > .subscription-plan-button + .button-group .testimonials-add-button, .button-group-rating > .filter-action-button + .button-group .testimonials-add-button, .button-group-rating > .filter-apply-button + .button-group .testimonials-add-button, .button-group-rating > .filter-trigger-button + .button-group .testimonials-add-button, .order-service .button-group-rating > .btn-repost + .button-group .testimonials-add-button, .button-group-rating > .subscription-filter-button + .button-group .testimonials-add-button, .button-group-rating > .button + .button-group .button-service, .button-group-rating > .testimonials-more-button + .button-group .button-service, .button-group-rating > .testimonials-add-button + .button-group .button-service, .button-group-rating > .button-service + .button-group .button-service, .button-group-rating > .button-social + .button-group .button-service, .button-group-rating > .button-vk + .button-group .button-service, .button-group-rating > .button-fb + .button-group .button-service, .button-group-rating > .button-favorite + .button-group .button-service, .button-group-rating > .button-complain + .button-group .button-service, .button-group-rating > .uploadzone-button + .button-group .button-service, .button-group-rating > .subscription-plan-button + .button-group .button-service, .button-group-rating > .filter-action-button + .button-group .button-service, .button-group-rating > .filter-apply-button + .button-group .button-service, .button-group-rating > .filter-trigger-button + .button-group .button-service, .order-service .button-group-rating > .btn-repost + .button-group .button-service, .button-group-rating > .subscription-filter-button + .button-group .button-service, .button-group-rating > .button + .button-group .button-social, .button-group-rating > .testimonials-more-button + .button-group .button-social, .button-group-rating > .testimonials-add-button + .button-group .button-social, .button-group-rating > .button-service + .button-group .button-social, .button-group-rating > .button-social + .button-group .button-social, .button-group-rating > .button-vk + .button-group .button-social, .button-group-rating > .button-fb + .button-group .button-social, .button-group-rating > .button-favorite + .button-group .button-social, .button-group-rating > .button-complain + .button-group .button-social, .button-group-rating > .uploadzone-button + .button-group .button-social, .button-group-rating > .subscription-plan-button + .button-group .button-social, .button-group-rating > .filter-action-button + .button-group .button-social, .button-group-rating > .filter-apply-button + .button-group .button-social, .button-group-rating > .filter-trigger-button + .button-group .button-social, .order-service .button-group-rating > .btn-repost + .button-group .button-social, .button-group-rating > .subscription-filter-button + .button-group .button-social, .button-group-rating > .button + .button-group .button-vk, .button-group-rating > .testimonials-more-button + .button-group .button-vk, .button-group-rating > .testimonials-add-button + .button-group .button-vk, .button-group-rating > .button-service + .button-group .button-vk, .button-group-rating > .button-social + .button-group .button-vk, .button-group-rating > .button-vk + .button-group .button-vk, .button-group-rating > .button-fb + .button-group .button-vk, .button-group-rating > .button-favorite + .button-group .button-vk, .button-group-rating > .button-complain + .button-group .button-vk, .button-group-rating > .uploadzone-button + .button-group .button-vk, .button-group-rating > .subscription-plan-button + .button-group .button-vk, .button-group-rating > .filter-action-button + .button-group .button-vk, .button-group-rating > .filter-apply-button + .button-group .button-vk, .button-group-rating > .filter-trigger-button + .button-group .button-vk, .order-service .button-group-rating > .btn-repost + .button-group .button-vk, .button-group-rating > .subscription-filter-button + .button-group .button-vk, .button-group-rating > .button + .button-group .button-fb, .button-group-rating > .testimonials-more-button + .button-group .button-fb, .button-group-rating > .testimonials-add-button + .button-group .button-fb, .button-group-rating > .button-service + .button-group .button-fb, .button-group-rating > .button-social + .button-group .button-fb, .button-group-rating > .button-vk + .button-group .button-fb, .button-group-rating > .button-fb + .button-group .button-fb, .button-group-rating > .button-favorite + .button-group .button-fb, .button-group-rating > .button-complain + .button-group .button-fb, .button-group-rating > .uploadzone-button + .button-group .button-fb, .button-group-rating > .subscription-plan-button + .button-group .button-fb, .button-group-rating > .filter-action-button + .button-group .button-fb, .button-group-rating > .filter-apply-button + .button-group .button-fb, .button-group-rating > .filter-trigger-button + .button-group .button-fb, .order-service .button-group-rating > .btn-repost + .button-group .button-fb, .button-group-rating > .subscription-filter-button + .button-group .button-fb, .button-group-rating > .button + .button-group .button-favorite, .button-group-rating > .testimonials-more-button + .button-group .button-favorite, .button-group-rating > .testimonials-add-button + .button-group .button-favorite, .button-group-rating > .button-service + .button-group .button-favorite, .button-group-rating > .button-social + .button-group .button-favorite, .button-group-rating > .button-vk + .button-group .button-favorite, .button-group-rating > .button-fb + .button-group .button-favorite, .button-group-rating > .button-favorite + .button-group .button-favorite, .button-group-rating > .button-complain + .button-group .button-favorite, .button-group-rating > .uploadzone-button + .button-group .button-favorite, .button-group-rating > .subscription-plan-button + .button-group .button-favorite, .button-group-rating > .filter-action-button + .button-group .button-favorite, .button-group-rating > .filter-apply-button + .button-group .button-favorite, .button-group-rating > .filter-trigger-button + .button-group .button-favorite, .order-service .button-group-rating > .btn-repost + .button-group .button-favorite, .button-group-rating > .subscription-filter-button + .button-group .button-favorite, .button-group-rating > .button + .button-group .button-complain, .button-group-rating > .testimonials-more-button + .button-group .button-complain, .button-group-rating > .testimonials-add-button + .button-group .button-complain, .button-group-rating > .button-service + .button-group .button-complain, .button-group-rating > .button-social + .button-group .button-complain, .button-group-rating > .button-vk + .button-group .button-complain, .button-group-rating > .button-fb + .button-group .button-complain, .button-group-rating > .button-favorite + .button-group .button-complain, .button-group-rating > .button-complain + .button-group .button-complain, .button-group-rating > .uploadzone-button + .button-group .button-complain, .button-group-rating > .subscription-plan-button + .button-group .button-complain, .button-group-rating > .filter-action-button + .button-group .button-complain, .button-group-rating > .filter-apply-button + .button-group .button-complain, .button-group-rating > .filter-trigger-button + .button-group .button-complain, .order-service .button-group-rating > .btn-repost + .button-group .button-complain, .button-group-rating > .subscription-filter-button + .button-group .button-complain, .button-group-rating > .button + .button-group .uploadzone-button, .button-group-rating > .testimonials-more-button + .button-group .uploadzone-button, .button-group-rating > .testimonials-add-button + .button-group .uploadzone-button, .button-group-rating > .button-service + .button-group .uploadzone-button, .button-group-rating > .button-social + .button-group .uploadzone-button, .button-group-rating > .button-vk + .button-group .uploadzone-button, .button-group-rating > .button-fb + .button-group .uploadzone-button, .button-group-rating > .button-favorite + .button-group .uploadzone-button, .button-group-rating > .button-complain + .button-group .uploadzone-button, .button-group-rating > .uploadzone-button + .button-group .uploadzone-button, .button-group-rating > .subscription-plan-button + .button-group .uploadzone-button, .button-group-rating > .filter-action-button + .button-group .uploadzone-button, .button-group-rating > .filter-apply-button + .button-group .uploadzone-button, .button-group-rating > .filter-trigger-button + .button-group .uploadzone-button, .order-service .button-group-rating > .btn-repost + .button-group .uploadzone-button, .button-group-rating > .subscription-filter-button + .button-group .uploadzone-button, .button-group-rating > .button + .button-group .subscription-plan-button, .button-group-rating > .testimonials-more-button + .button-group .subscription-plan-button, .button-group-rating > .testimonials-add-button + .button-group .subscription-plan-button, .button-group-rating > .button-service + .button-group .subscription-plan-button, .button-group-rating > .button-social + .button-group .subscription-plan-button, .button-group-rating > .button-vk + .button-group .subscription-plan-button, .button-group-rating > .button-fb + .button-group .subscription-plan-button, .button-group-rating > .button-favorite + .button-group .subscription-plan-button, .button-group-rating > .button-complain + .button-group .subscription-plan-button, .button-group-rating > .uploadzone-button + .button-group .subscription-plan-button, .button-group-rating > .subscription-plan-button + .button-group .subscription-plan-button, .button-group-rating > .filter-action-button + .button-group .subscription-plan-button, .button-group-rating > .filter-apply-button + .button-group .subscription-plan-button, .button-group-rating > .filter-trigger-button + .button-group .subscription-plan-button, .order-service .button-group-rating > .btn-repost + .button-group .subscription-plan-button, .button-group-rating > .subscription-filter-button + .button-group .subscription-plan-button, .button-group-rating > .button + .button-group .filter-action-button, .button-group-rating > .testimonials-more-button + .button-group .filter-action-button, .button-group-rating > .testimonials-add-button + .button-group .filter-action-button, .button-group-rating > .button-service + .button-group .filter-action-button, .button-group-rating > .button-social + .button-group .filter-action-button, .button-group-rating > .button-vk + .button-group .filter-action-button, .button-group-rating > .button-fb + .button-group .filter-action-button, .button-group-rating > .button-favorite + .button-group .filter-action-button, .button-group-rating > .button-complain + .button-group .filter-action-button, .button-group-rating > .uploadzone-button + .button-group .filter-action-button, .button-group-rating > .subscription-plan-button + .button-group .filter-action-button, .button-group-rating > .filter-action-button + .button-group .filter-action-button, .button-group-rating > .filter-apply-button + .button-group .filter-action-button, .button-group-rating > .filter-trigger-button + .button-group .filter-action-button, .order-service .button-group-rating > .btn-repost + .button-group .filter-action-button, .button-group-rating > .subscription-filter-button + .button-group .filter-action-button, .button-group-rating > .button + .button-group .filter-apply-button, .button-group-rating > .testimonials-more-button + .button-group .filter-apply-button, .button-group-rating > .testimonials-add-button + .button-group .filter-apply-button, .button-group-rating > .button-service + .button-group .filter-apply-button, .button-group-rating > .button-social + .button-group .filter-apply-button, .button-group-rating > .button-vk + .button-group .filter-apply-button, .button-group-rating > .button-fb + .button-group .filter-apply-button, .button-group-rating > .button-favorite + .button-group .filter-apply-button, .button-group-rating > .button-complain + .button-group .filter-apply-button, .button-group-rating > .uploadzone-button + .button-group .filter-apply-button, .button-group-rating > .subscription-plan-button + .button-group .filter-apply-button, .button-group-rating > .filter-action-button + .button-group .filter-apply-button, .button-group-rating > .filter-apply-button + .button-group .filter-apply-button, .button-group-rating > .filter-trigger-button + .button-group .filter-apply-button, .order-service .button-group-rating > .btn-repost + .button-group .filter-apply-button, .button-group-rating > .subscription-filter-button + .button-group .filter-apply-button, .button-group-rating > .button + .button-group .filter-trigger-button, .button-group-rating > .testimonials-more-button + .button-group .filter-trigger-button, .button-group-rating > .testimonials-add-button + .button-group .filter-trigger-button, .button-group-rating > .button-service + .button-group .filter-trigger-button, .button-group-rating > .button-social + .button-group .filter-trigger-button, .button-group-rating > .button-vk + .button-group .filter-trigger-button, .button-group-rating > .button-fb + .button-group .filter-trigger-button, .button-group-rating > .button-favorite + .button-group .filter-trigger-button, .button-group-rating > .button-complain + .button-group .filter-trigger-button, .button-group-rating > .uploadzone-button + .button-group .filter-trigger-button, .button-group-rating > .subscription-plan-button + .button-group .filter-trigger-button, .button-group-rating > .filter-action-button + .button-group .filter-trigger-button, .button-group-rating > .filter-apply-button + .button-group .filter-trigger-button, .button-group-rating > .filter-trigger-button + .button-group .filter-trigger-button, .order-service .button-group-rating > .btn-repost + .button-group .filter-trigger-button, .button-group-rating > .subscription-filter-button + .button-group .filter-trigger-button, .button-group-rating > .button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button + .button-group .btn-repost, .button-group-rating > .testimonials-more-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .testimonials-more-button + .button-group .btn-repost, .button-group-rating > .testimonials-add-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .testimonials-add-button + .button-group .btn-repost, .button-group-rating > .button-service + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-service + .button-group .btn-repost, .button-group-rating > .button-social + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-social + .button-group .btn-repost, .button-group-rating > .button-vk + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-vk + .button-group .btn-repost, .button-group-rating > .button-fb + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-fb + .button-group .btn-repost, .button-group-rating > .button-favorite + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-favorite + .button-group .btn-repost, .button-group-rating > .button-complain + .button-group .order-service .btn-repost, .order-service .button-group-rating > .button-complain + .button-group .btn-repost, .button-group-rating > .uploadzone-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .uploadzone-button + .button-group .btn-repost, .button-group-rating > .subscription-plan-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .subscription-plan-button + .button-group .btn-repost, .button-group-rating > .filter-action-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .filter-action-button + .button-group .btn-repost, .button-group-rating > .filter-apply-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .filter-apply-button + .button-group .btn-repost, .button-group-rating > .filter-trigger-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .filter-trigger-button + .button-group .btn-repost, .order-service .button-group-rating > .btn-repost + .button-group .btn-repost, .button-group-rating > .subscription-filter-button + .button-group .order-service .btn-repost, .order-service .button-group-rating > .subscription-filter-button + .button-group .btn-repost, .button-group-rating > .button + .button-group .subscription-filter-button, .button-group-rating > .testimonials-more-button + .button-group .subscription-filter-button, .button-group-rating > .testimonials-add-button + .button-group .subscription-filter-button, .button-group-rating > .button-service + .button-group .subscription-filter-button, .button-group-rating > .button-social + .button-group .subscription-filter-button, .button-group-rating > .button-vk + .button-group .subscription-filter-button, .button-group-rating > .button-fb + .button-group .subscription-filter-button, .button-group-rating > .button-favorite + .button-group .subscription-filter-button, .button-group-rating > .button-complain + .button-group .subscription-filter-button, .button-group-rating > .uploadzone-button + .button-group .subscription-filter-button, .button-group-rating > .subscription-plan-button + .button-group .subscription-filter-button, .button-group-rating > .filter-action-button + .button-group .subscription-filter-button, .button-group-rating > .filter-apply-button + .button-group .subscription-filter-button, .button-group-rating > .filter-trigger-button + .button-group .subscription-filter-button, .order-service .button-group-rating > .btn-repost + .button-group .subscription-filter-button, .button-group-rating > .subscription-filter-button + .button-group .subscription-filter-button {
     border-left: 1px solid transparent
 }
 
-.button-group-rating .button-group:first-child .button:after, .button-group-rating .button-group:first-child .testimonials-more-button:after, .button-group-rating .button-group:first-child .testimonials-add-button:after, .button-group-rating .button-group:first-child .button-service:after, .button-group-rating .button-group:first-child .button-social:after, .button-group-rating .button-group:first-child .button-vk:after, .button-group-rating .button-group:first-child .button-fb:after, .button-group-rating .button-group:first-child .button-favorite:after, .button-group-rating .button-group:first-child .button-complain:after, .button-group-rating .button-group:first-child .uploadzone-button:after, .button-group-rating .button-group:first-child .subscription-plan-button:after, .button-group-rating .button-group:first-child .filter-action-button:after, .button-group-rating .button-group:first-child .filter-apply-button:after, .button-group-rating .button-group:first-child .filter-trigger-button:after, .button-group-rating .button-group:first-child .order-service .btn-repost:after, .order-service .button-group-rating .button-group:first-child .btn-repost:after, .button-group-rating .button-group:first-child .promo-services-card-button:after, .button-group-rating .button-group:first-child .subscription-filter-button:after {
+.button-group-rating .button-group:first-child .button:after, .button-group-rating .button-group:first-child .testimonials-more-button:after, .button-group-rating .button-group:first-child .testimonials-add-button:after, .button-group-rating .button-group:first-child .button-service:after, .button-group-rating .button-group:first-child .button-social:after, .button-group-rating .button-group:first-child .button-vk:after, .button-group-rating .button-group:first-child .button-fb:after, .button-group-rating .button-group:first-child .button-favorite:after, .button-group-rating .button-group:first-child .button-complain:after, .button-group-rating .button-group:first-child .uploadzone-button:after, .button-group-rating .button-group:first-child .subscription-plan-button:after, .button-group-rating .button-group:first-child .filter-action-button:after, .button-group-rating .button-group:first-child .filter-apply-button:after, .button-group-rating .button-group:first-child .filter-trigger-button:after, .button-group-rating .button-group:first-child .order-service .btn-repost:after, .order-service .button-group-rating .button-group:first-child .btn-repost:after, .button-group-rating .button-group:first-child .subscription-filter-button:after {
     left: auto;
     border-left: 0
 }
 
-.button-group-rating .button-group:last-child .button:after, .button-group-rating .button-group:last-child .testimonials-more-button:after, .button-group-rating .button-group:last-child .testimonials-add-button:after, .button-group-rating .button-group:last-child .button-service:after, .button-group-rating .button-group:last-child .button-social:after, .button-group-rating .button-group:last-child .button-vk:after, .button-group-rating .button-group:last-child .button-fb:after, .button-group-rating .button-group:last-child .button-favorite:after, .button-group-rating .button-group:last-child .button-complain:after, .button-group-rating .button-group:last-child .uploadzone-button:after, .button-group-rating .button-group:last-child .subscription-plan-button:after, .button-group-rating .button-group:last-child .filter-action-button:after, .button-group-rating .button-group:last-child .filter-apply-button:after, .button-group-rating .button-group:last-child .filter-trigger-button:after, .button-group-rating .button-group:last-child .order-service .btn-repost:after, .order-service .button-group-rating .button-group:last-child .btn-repost:after, .button-group-rating .button-group:last-child .promo-services-card-button:after, .button-group-rating .button-group:last-child .subscription-filter-button:after {
+.button-group-rating .button-group:last-child .button:after, .button-group-rating .button-group:last-child .testimonials-more-button:after, .button-group-rating .button-group:last-child .testimonials-add-button:after, .button-group-rating .button-group:last-child .button-service:after, .button-group-rating .button-group:last-child .button-social:after, .button-group-rating .button-group:last-child .button-vk:after, .button-group-rating .button-group:last-child .button-fb:after, .button-group-rating .button-group:last-child .button-favorite:after, .button-group-rating .button-group:last-child .button-complain:after, .button-group-rating .button-group:last-child .uploadzone-button:after, .button-group-rating .button-group:last-child .subscription-plan-button:after, .button-group-rating .button-group:last-child .filter-action-button:after, .button-group-rating .button-group:last-child .filter-apply-button:after, .button-group-rating .button-group:last-child .filter-trigger-button:after, .button-group-rating .button-group:last-child .order-service .btn-repost:after, .order-service .button-group-rating .button-group:last-child .btn-repost:after, .button-group-rating .button-group:last-child .subscription-filter-button:after {
     right: auto;
     border-right: 0
 }
 
-.button-group-rating .button-group + .button, .button-group-rating .button-group + .testimonials-more-button, .button-group-rating .button-group + .testimonials-add-button, .button-group-rating .button-group + .button-service, .button-group-rating .button-group + .button-social, .button-group-rating .button-group + .button-vk, .button-group-rating .button-group + .button-fb, .button-group-rating .button-group + .button-favorite, .button-group-rating .button-group + .button-complain, .button-group-rating .button-group + .uploadzone-button, .button-group-rating .button-group + .subscription-plan-button, .button-group-rating .button-group + .filter-action-button, .button-group-rating .button-group + .filter-apply-button, .button-group-rating .button-group + .filter-trigger-button, .button-group-rating .order-service .button-group + .btn-repost, .order-service .button-group-rating .button-group + .btn-repost, .button-group-rating .button-group + .promo-services-card-button, .button-group-rating .button-group + .subscription-filter-button, .button-group-rating .button-group + .button-group .button, .button-group-rating .button-group + .button-group .testimonials-more-button, .button-group-rating .button-group + .button-group .testimonials-add-button, .button-group-rating .button-group + .button-group .button-service, .button-group-rating .button-group + .button-group .button-social, .button-group-rating .button-group + .button-group .button-vk, .button-group-rating .button-group + .button-group .button-fb, .button-group-rating .button-group + .button-group .button-favorite, .button-group-rating .button-group + .button-group .button-complain, .button-group-rating .button-group + .button-group .uploadzone-button, .button-group-rating .button-group + .button-group .subscription-plan-button, .button-group-rating .button-group + .button-group .filter-action-button, .button-group-rating .button-group + .button-group .filter-apply-button, .button-group-rating .button-group + .button-group .filter-trigger-button, .button-group-rating .button-group + .button-group .order-service .btn-repost, .order-service .button-group-rating .button-group + .button-group .btn-repost, .button-group-rating .button-group + .button-group .promo-services-card-button, .button-group-rating .button-group + .button-group .subscription-filter-button {
+.button-group-rating .button-group + .button, .button-group-rating .button-group + .testimonials-more-button, .button-group-rating .button-group + .testimonials-add-button, .button-group-rating .button-group + .button-service, .button-group-rating .button-group + .button-social, .button-group-rating .button-group + .button-vk, .button-group-rating .button-group + .button-fb, .button-group-rating .button-group + .button-favorite, .button-group-rating .button-group + .button-complain, .button-group-rating .button-group + .uploadzone-button, .button-group-rating .button-group + .subscription-plan-button, .button-group-rating .button-group + .filter-action-button, .button-group-rating .button-group + .filter-apply-button, .button-group-rating .button-group + .filter-trigger-button, .button-group-rating .order-service .button-group + .btn-repost, .order-service .button-group-rating .button-group + .btn-repost, .button-group-rating .button-group + .subscription-filter-button, .button-group-rating .button-group + .button-group .button, .button-group-rating .button-group + .button-group .testimonials-more-button, .button-group-rating .button-group + .button-group .testimonials-add-button, .button-group-rating .button-group + .button-group .button-service, .button-group-rating .button-group + .button-group .button-social, .button-group-rating .button-group + .button-group .button-vk, .button-group-rating .button-group + .button-group .button-fb, .button-group-rating .button-group + .button-group .button-favorite, .button-group-rating .button-group + .button-group .button-complain, .button-group-rating .button-group + .button-group .uploadzone-button, .button-group-rating .button-group + .button-group .subscription-plan-button, .button-group-rating .button-group + .button-group .filter-action-button, .button-group-rating .button-group + .button-group .filter-apply-button, .button-group-rating .button-group + .button-group .filter-trigger-button, .button-group-rating .button-group + .button-group .order-service .btn-repost, .order-service .button-group-rating .button-group + .button-group .btn-repost, .button-group-rating .button-group + .button-group .subscription-filter-button {
     border-left: 1px solid transparent
 }
 
@@ -8579,598 +8517,6 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     color: #fff
 }
 
-.modal .link-green {
-    color: #18a24b
-}
-
-.modal .link-green:hover {
-    color: #1bb855
-}
-
-.modal .link-solid {
-    border-bottom: 1px solid transparent;
-    color: inherit
-}
-
-.modal .link-solid:hover {
-    border-color: inherit;
-    color: inherit
-}
-
-.modal-dialog {
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    margin: 0 auto;
-    position: relative;
-    background-color: #f0f0f0;
-    color: #1b1b1b
-}
-
-.modal-dialog .text-muted {
-    color: #5a5a5a
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 0;
-    line-height: 0;
-    font-family: a;
-    cursor: pointer
-}
-
-.modal-close-icon {
-    height: 17px;
-    width: 17px;
-    background-image: url(/public/i/sprites.png);
-    background-position: 0 -640px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: top
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .modal-close-icon {
-        background-image: url(/assets/sprites-retina-sfaf2174e72-5ade4964af5010d421088b38aab38a4b.png);
-        background-position: 0 -640px;
-        -moz-background-size: 227px auto;
-        -o-background-size: 227px auto;
-        -webkit-background-size: 227px auto;
-        background-size: 227px auto
-    }
-}
-
-.modal-header {
-    padding: 30px 50px 0 25px
-}
-
-.modal-content {
-    padding: 25px
-}
-
-.modal-footer {
-    padding: 0 25px 30px
-}
-
-.modal-title {
-    margin-bottom: .12em;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-}
-
-.modal-lead {
-    font-size: 18px;
-    line-height: 25px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
-}
-
-.modal-lead .email {
-    color: #ff4729;
-    word-break: break-word
-}
-
-.modal-text {
-    font-size: 14px;
-    line-height: 22px
-}
-
-.modal-list {
-    margin: 1.5em 0;
-    padding-left: 1em;
-    list-style-type: disc;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: left
-}
-
-.modal-list li {
-    margin: 1em 0
-}
-
-.modal-loader {
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(240, 240, 240, 0.9)
-}
-
-.modal-loader .spinner {
-    margin: -20px 0 0 -20px;
-    position: absolute;
-    top: 50%;
-    left: 50%
-}
-
-.modal-loader .spinner:before {
-    width: 40px;
-    height: 40px;
-    border-width: 3px
-}
-
-.modal-message {
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center
-}
-
-.modal-message .modal-title {
-    margin-bottom: .4em
-}
-
-.modal-message-success {
-    max-width: 400px
-}
-
-@media screen and (min-width: 992px) {
-    .modal {
-        padding: 0 50px
-    }
-
-    .modal-dialog {
-        -moz-border-radius: 6px;
-        -webkit-border-radius: 6px;
-        border-radius: 6px
-    }
-
-    .modal-close {
-        top: 2px;
-        right: -54px
-    }
-
-    .modal-close-icon {
-        height: 33px;
-        width: 33px;
-        background-image: url(/public/i/sprites.png);
-        background-position: 0 -3553px;
-        background-repeat: no-repeat
-    }
-}
-
-@media screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-width: 992px) and (min--moz-device-pixel-ratio: 1.5), screen and (min-width: 992px) and (-o-min-device-pixel-ratio: 3 / 2), screen and (min-width: 992px) and (min-device-pixel-ratio: 1.5), screen and (min-width: 992px) and (min-resolution: 144dpi) {
-    .modal-close-icon {
-        background-image: url(/assets/sprites-retina-sfaf2174e72-5ade4964af5010d421088b38aab38a4b.png);
-        background-position: 0 -3554px;
-        -moz-background-size: 227px auto;
-        -o-background-size: 227px auto;
-        -webkit-background-size: 227px auto;
-        background-size: 227px auto
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .modal-header {
-        padding: 38px 50px 0;
-        text-align: center
-    }
-
-    .modal-content {
-        padding: 38px 50px
-    }
-
-    .modal-title {
-        font-size: 44px;
-        line-height: 50px
-    }
-
-    .modal-lead {
-        font-size: 40px;
-        line-height: 46px;
-        font-family: "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif
-    }
-
-    .modal-text, .modal-list {
-        font-size: 16px;
-        line-height: 24px
-    }
-
-    .modal-message-unsubscription {
-        padding-right: 10px;
-        padding-left: 10px
-    }
-}
-
-.modal-form .input label.__error {
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    width: 260px;
-    margin: 0 0 10px -130px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    background: #000;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer
-}
-
-.modal-form .input label.__error.__hide {
-    display: none !important
-}
-
-.modal-form .input label.__error:after {
-    content: '';
-    width: 0;
-    height: 0;
-    margin-left: -8px;
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 50%;
-    border-top: 10px solid #000;
-    border-top: 10px solid rgba(0, 0, 0, 0.7);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent
-}
-
-.modal-form .input-control:-moz-placeholder {
-    color: #a1a1a1
-}
-
-.modal-form .input-control::-moz-placeholder {
-    color: #a1a1a1
-}
-
-.modal-form .input-control:-ms-input-placeholder {
-    color: #a1a1a1
-}
-
-.modal-form .input-control::-webkit-input-placeholder {
-    color: #a1a1a1
-}
-
-.modal-form-header {
-    margin-bottom: 20px
-}
-
-.modal-form-title {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-}
-
-.modal-form-text {
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 20px
-}
-
-.modal-form-social {
-    margin-bottom: 12px;
-    text-align: center
-}
-
-.modal-form-social .button, .modal-form-social .testimonials-more-button, .modal-form-social .testimonials-add-button, .modal-form-social .button-service, .modal-form-social .button-social, .modal-form-social .button-vk, .modal-form-social .button-fb, .modal-form-social .button-favorite, .modal-form-social .button-complain, .modal-form-social .uploadzone-button, .modal-form-social .subscription-plan-button, .modal-form-social .filter-action-button, .modal-form-social .filter-apply-button, .modal-form-social .filter-trigger-button, .modal-form-social .order-service .btn-repost, .order-service .modal-form-social .btn-repost, .modal-form-social .promo-services-card-button, .modal-form-social .subscription-filter-button {
-    margin: 6px
-}
-
-.modal-form-text-social {
-    margin: 8px 0 12px;
-    color: #b1b1b1
-}
-
-.modal-form-text-or {
-    margin: 12px 0 20px;
-    text-align: center
-}
-
-.modal-form-text-or > span {
-    position: relative;
-    font-family: "Helvetica Neue Medium", Helvetica, Arial, sans-serif;
-    white-space: nowrap
-}
-
-.modal-form-text-or > span:before, .modal-form-text-or > span:after {
-    content: "";
-    width: 50px;
-    height: 0;
-    margin-top: 1px;
-    border-top: 1px solid #d5d5d5;
-    position: absolute;
-    top: 50%;
-    font-size: 0
-}
-
-.modal-form-text-or > span:before {
-    margin-right: 10px;
-    right: 100%
-}
-
-.modal-form-text-or > span:after {
-    margin-left: 10px;
-    left: 100%
-}
-
-.modal-form-text-terms {
-    font-style: italic;
-    font-family: "PT Sans", sans-serif
-}
-
-.modal-form-item {
-    margin-bottom: 12px
-}
-
-.modal-form-item-actions {
-    margin-bottom: 0
-}
-
-.modal-form-item-actions .modal-form-item-cell + .modal-form-item-cell {
-    margin-top: 24px;
-    padding-top: 12px;
-    border-top: 1px solid #d5d5d5
-}
-
-.modal-form-item-actions .modal-form-item-cell + .modal-form-item-cell .modal-form-text {
-    margin-bottom: 0
-}
-
-.modal-form-submit {
-    padding-right: 40px !important;
-    padding-left: 40px !important
-}
-
-.modal-form-outside {
-    width: 100%;
-    padding: 25px 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #fff;
-    text-align: center
-}
-
-.modal-form-outside .modal-form-text {
-    font-size: 15px;
-    line-height: 22px
-}
-
-@media screen and (min-width: 760px) {
-    .modal-form .button, .modal-form .testimonials-more-button, .modal-form .testimonials-add-button, .modal-form .button-service, .modal-form .button-social, .modal-form .button-vk, .modal-form .button-fb, .modal-form .button-favorite, .modal-form .button-complain, .modal-form .uploadzone-button, .modal-form .subscription-plan-button, .modal-form .filter-action-button, .modal-form .filter-apply-button, .modal-form .filter-trigger-button, .modal-form .order-service .btn-repost, .order-service .modal-form .btn-repost, .modal-form .promo-services-card-button, .modal-form .subscription-filter-button {
-        height: 52px;
-        padding-right: 22px;
-        padding-left: 22px;
-        font-size: 17px;
-        line-height: 50px
-    }
-
-    .modal-form .input.__error .input-control {
-        padding: 14px 18px
-    }
-
-    .modal-form .input.__success:after {
-        top: 17px
-    }
-
-    .modal-form .input-control {
-        height: 58px;
-        padding: 16px 20px;
-        font-size: 22px
-    }
-
-    .modal-form-header {
-        zoom: 1;
-        margin-bottom: 36px
-    }
-
-    .modal-form-header:before, .modal-form-header:after {
-        content: "";
-        display: table
-    }
-
-    .modal-form-header:after {
-        clear: both
-    }
-
-    .modal-form-header .modal-form-title {
-        margin: 0 30px 0 0;
-        float: left
-    }
-
-    .modal-form-header .modal-form-text {
-        margin: 12px 0 0;
-        text-align: right;
-        overflow: hidden
-    }
-
-    .modal-form-title {
-        font-size: 30px;
-        line-height: 36px
-    }
-
-    .modal-form-social {
-        margin-bottom: 35px
-    }
-
-    .modal-form-social .button, .modal-form-social .testimonials-more-button, .modal-form-social .testimonials-add-button, .modal-form-social .button-service, .modal-form-social .button-social, .modal-form-social .button-vk, .modal-form-social .button-fb, .modal-form-social .button-favorite, .modal-form-social .button-complain, .modal-form-social .uploadzone-button, .modal-form-social .subscription-plan-button, .modal-form-social .filter-action-button, .modal-form-social .filter-apply-button, .modal-form-social .filter-trigger-button, .modal-form-social .order-service .btn-repost, .order-service .modal-form-social .btn-repost, .modal-form-social .promo-services-card-button, .modal-form-social .subscription-filter-button {
-        margin: 7px
-    }
-
-    .modal-form-text-social {
-        margin: 18px 0
-    }
-
-    .modal-form-text-or {
-        margin: 35px 0 45px
-    }
-
-    .modal-form-item-actions {
-        zoom: 1;
-        margin-top: 34px
-    }
-
-    .modal-form-item-actions:before, .modal-form-item-actions:after {
-        content: "";
-        display: table
-    }
-
-    .modal-form-item-actions:after {
-        clear: both
-    }
-
-    .modal-form-item-actions .modal-form-item-cell {
-        float: left
-    }
-
-    .modal-form-item-actions .modal-form-item-cell + .modal-form-item-cell {
-        margin-top: 0;
-        padding-top: 0;
-        padding-left: 30px;
-        float: none;
-        border: 0;
-        overflow: hidden
-    }
-
-    .modal-form-item-actions .modal-form-item-cell + .modal-form-item-cell .modal-form-text {
-        margin-top: 6px
-    }
-}
-
-.modal-payment .modal-dialog {
-    max-width: 928px
-}
-
-@media screen and (min-width: 1200px) {
-    .modal-payment .modal-header, .modal-payment .modal-content, .modal-payment .modal-footer {
-        padding-right: 104px;
-        padding-left: 104px
-    }
-}
-
-.modal-promo-services .modal-dialog {
-    max-width: 480px;
-    background: none;
-    color: #fff
-}
-
-.modal-promo-services .modal-close {
-    position: fixed;
-    top: 20px;
-    right: 20px
-}
-
-.modal-promo-services .modal-content {
-    padding: 0
-}
-
-@media screen and (min-width: 992px) {
-    .modal-promo-services .modal-dialog {
-        max-width: 930px
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .modal-promo-services .modal-close {
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        padding: 8px;
-        background-color: #fff;
-        z-index: 1000
-    }
-}
-
-.modal-contact-owner .modal-dialog {
-    max-width: 690px;
-    background: none
-}
-
-.modal-contact-owner .modal-dialog .modal-content {
-    padding: 0
-}
-
-.modal-profile-settings .modal-dialog {
-    max-width: 690px
-}
-
-.modal-early-access .modal-dialog {
-    max-width: 680px;
-    background: none
-}
-
-.modal-early-access .modal-content {
-    padding: 0
-}
-
-@media screen and (max-width: 991px) {
-    .modal-early-access .modal-close {
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        padding: 8px;
-        background-color: #fff;
-        z-index: 1000
-    }
-}
-
-.modal-auth .modal-dialog {
-    max-width: 690px
-}
-
-.modal-auth .modal-content {
-    padding: 15px
-}
-
-@media screen and (min-width: 760px) {
-    .modal-auth .modal-content {
-        padding: 38px 50px
-    }
-}
-
-.modal-subscription .modal-dialog {
-    max-width: 600px
-}
-
-.modal-info-create .modal-dialog {
-    max-width: 600px
-}
-
-.modal-request .modal-dialog {
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    width: 610px;
-    background: #fff
-}
-
-.modal-request .modal-content {
-    padding: 0
-}
-
 .filter-chooser {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -9261,7 +8607,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     text-align: center
 }
 
-.metro-scheme-footer .button, .metro-scheme-footer .testimonials-more-button, .metro-scheme-footer .testimonials-add-button, .metro-scheme-footer .button-service, .metro-scheme-footer .button-social, .metro-scheme-footer .button-vk, .metro-scheme-footer .button-fb, .metro-scheme-footer .button-favorite, .metro-scheme-footer .button-complain, .metro-scheme-footer .uploadzone-button, .metro-scheme-footer .subscription-plan-button, .metro-scheme-footer .filter-action-button, .metro-scheme-footer .filter-apply-button, .metro-scheme-footer .filter-trigger-button, .metro-scheme-footer .order-service .btn-repost, .order-service .metro-scheme-footer .btn-repost, .metro-scheme-footer .promo-services-card-button, .metro-scheme-footer .subscription-filter-button {
+.metro-scheme-footer .button, .metro-scheme-footer .testimonials-more-button, .metro-scheme-footer .testimonials-add-button, .metro-scheme-footer .button-service, .metro-scheme-footer .button-social, .metro-scheme-footer .button-vk, .metro-scheme-footer .button-fb, .metro-scheme-footer .button-favorite, .metro-scheme-footer .button-complain, .metro-scheme-footer .uploadzone-button, .metro-scheme-footer .subscription-plan-button, .metro-scheme-footer .filter-action-button, .metro-scheme-footer .filter-apply-button, .metro-scheme-footer .filter-trigger-button, .metro-scheme-footer .order-service .btn-repost, .order-service .metro-scheme-footer .btn-repost, .metro-scheme-footer .subscription-filter-button {
     height: 34px;
     padding-right: 16px;
     padding-left: 16px;
@@ -9515,7 +8861,7 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
 }
 
 @media screen and (min-width: 992px) {
-    .metro-scheme-footer .button, .metro-scheme-footer .testimonials-more-button, .metro-scheme-footer .testimonials-add-button, .metro-scheme-footer .button-service, .metro-scheme-footer .button-social, .metro-scheme-footer .button-vk, .metro-scheme-footer .button-fb, .metro-scheme-footer .button-favorite, .metro-scheme-footer .button-complain, .metro-scheme-footer .uploadzone-button, .metro-scheme-footer .subscription-plan-button, .metro-scheme-footer .filter-action-button, .metro-scheme-footer .filter-apply-button, .metro-scheme-footer .filter-trigger-button, .metro-scheme-footer .order-service .btn-repost, .order-service .metro-scheme-footer .btn-repost, .metro-scheme-footer .promo-services-card-button, .metro-scheme-footer .subscription-filter-button {
+    .metro-scheme-footer .button, .metro-scheme-footer .testimonials-more-button, .metro-scheme-footer .testimonials-add-button, .metro-scheme-footer .button-service, .metro-scheme-footer .button-social, .metro-scheme-footer .button-vk, .metro-scheme-footer .button-fb, .metro-scheme-footer .button-favorite, .metro-scheme-footer .button-complain, .metro-scheme-footer .uploadzone-button, .metro-scheme-footer .subscription-plan-button, .metro-scheme-footer .filter-action-button, .metro-scheme-footer .filter-apply-button, .metro-scheme-footer .filter-trigger-button, .metro-scheme-footer .order-service .btn-repost, .order-service .metro-scheme-footer .btn-repost, .metro-scheme-footer .subscription-filter-button {
         height: 44px;
         padding-right: 30px;
         padding-left: 30px;
@@ -9945,7 +9291,6 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     background: none;
     font-size: 15px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000
 }
 
@@ -12351,7 +11696,6 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     margin-bottom: .773em;
     font-size: 2em;
     line-height: 1.067em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .form-verificator-title-message, .section .form-verificator-title-message {
@@ -12359,7 +11703,6 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     font-weight: normal;
     font-size: 1.733em;
     line-height: 1.231em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .form-verificator-text, .section .form-verificator-text {
@@ -12988,7 +12331,6 @@ a.social-group-ok:hover {
 }
 
 .navigation-subscription-status b {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold
 }
 
@@ -13215,7 +12557,6 @@ a.social-group-ok:hover {
 .main-phone-number {
     margin-bottom: 4px;
     font-size: 18px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     white-space: nowrap
 }
 
@@ -13299,7 +12640,6 @@ a.social-group-ok:hover {
     margin-bottom: .773em;
     font-size: 2em;
     line-height: 1.067em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     text-align: center
 }
 
@@ -13315,7 +12655,7 @@ a.social-group-ok:hover {
     margin-bottom: 20px
 }
 
-.features .row + .button, .features .row + .testimonials-more-button, .features .row + .testimonials-add-button, .features .row + .button-service, .features .row + .button-social, .features .row + .button-vk, .features .row + .button-fb, .features .row + .button-favorite, .features .row + .button-complain, .features .row + .uploadzone-button, .features .row + .subscription-plan-button, .features .row + .filter-action-button, .features .row + .filter-apply-button, .features .row + .filter-trigger-button, .features .order-service .row + .btn-repost, .order-service .features .row + .btn-repost, .features .row + .promo-services-card-button, .features .row + .subscription-filter-button {
+.features .row + .button, .features .row + .testimonials-more-button, .features .row + .testimonials-add-button, .features .row + .button-service, .features .row + .button-social, .features .row + .button-vk, .features .row + .button-fb, .features .row + .button-favorite, .features .row + .button-complain, .features .row + .uploadzone-button, .features .row + .subscription-plan-button, .features .row + .filter-action-button, .features .row + .filter-apply-button, .features .row + .filter-trigger-button, .features .order-service .row + .btn-repost, .order-service .features .row + .btn-repost, .features .row + .subscription-filter-button {
     margin-top: 30px
 }
 
@@ -13813,7 +13153,6 @@ a.social-group-ok:hover {
 .reviews-item-quote {
     font-size: 15px;
     line-height: 25px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .reviews-item-quote + .reviews-item-author {
@@ -14001,7 +13340,6 @@ a.subscription-plan {
     background-color: #fff;
     font-size: 12px;
     line-height: 39px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: .14em;
     text-align: center
@@ -14016,7 +13354,6 @@ a.subscription-plan {
     margin-bottom: 10px;
     font-size: 21px;
     line-height: 24px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     color: #18a24b
 }
 
@@ -14057,7 +13394,6 @@ a.subscription-plan {
     margin-bottom: 24px;
     font-size: 58px;
     line-height: 1;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     color: #18a24b;
     white-space: nowrap
 }
@@ -14073,7 +13409,6 @@ a.subscription-plan {
     margin-top: 4px;
     font-size: 13px;
     line-height: 18px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #b1b1b1;
     white-space: normal
 }
@@ -14514,7 +13849,7 @@ a.subscription-plan {
     z-index: 100
 }
 
-.catalog.__map .button-group-view .button:not(.__active), .catalog.__map .button-group-view .testimonials-more-button:not(.__active), .catalog.__map .button-group-view .testimonials-add-button:not(.__active), .catalog.__map .button-group-view .button-service:not(.__active), .catalog.__map .button-group-view .button-social:not(.__active), .catalog.__map .button-group-view .button-vk:not(.__active), .catalog.__map .button-group-view .button-fb:not(.__active), .catalog.__map .button-group-view .button-favorite:not(.__active), .catalog.__map .button-group-view .button-complain:not(.__active), .catalog.__map .button-group-view .uploadzone-button:not(.__active), .catalog.__map .button-group-view .subscription-plan-button:not(.__active), .catalog.__map .button-group-view .filter-action-button:not(.__active), .catalog.__map .button-group-view .filter-apply-button:not(.__active), .catalog.__map .button-group-view .filter-trigger-button:not(.__active), .catalog.__map .button-group-view .order-service .btn-repost:not(.__active), .order-service .catalog.__map .button-group-view .btn-repost:not(.__active), .catalog.__map .button-group-view .promo-services-card-button:not(.__active), .catalog.__map .button-group-view .subscription-filter-button:not(.__active) {
+.catalog.__map .button-group-view .button:not(.__active), .catalog.__map .button-group-view .testimonials-more-button:not(.__active), .catalog.__map .button-group-view .testimonials-add-button:not(.__active), .catalog.__map .button-group-view .button-service:not(.__active), .catalog.__map .button-group-view .button-social:not(.__active), .catalog.__map .button-group-view .button-vk:not(.__active), .catalog.__map .button-group-view .button-fb:not(.__active), .catalog.__map .button-group-view .button-favorite:not(.__active), .catalog.__map .button-group-view .button-complain:not(.__active), .catalog.__map .button-group-view .uploadzone-button:not(.__active), .catalog.__map .button-group-view .subscription-plan-button:not(.__active), .catalog.__map .button-group-view .filter-action-button:not(.__active), .catalog.__map .button-group-view .filter-apply-button:not(.__active), .catalog.__map .button-group-view .filter-trigger-button:not(.__active), .catalog.__map .button-group-view .order-service .btn-repost:not(.__active), .order-service .catalog.__map .button-group-view .btn-repost:not(.__active), .catalog.__map .button-group-view .subscription-filter-button:not(.__active) {
     background-color: #fff
 }
 
@@ -14542,7 +13877,7 @@ a.subscription-plan {
     position: absolute
 }
 
-.catalog .button-group-view .button, .catalog .button-group-view .testimonials-more-button, .catalog .button-group-view .testimonials-add-button, .catalog .button-group-view .button-service, .catalog .button-group-view .button-social, .catalog .button-group-view .button-vk, .catalog .button-group-view .button-fb, .catalog .button-group-view .button-favorite, .catalog .button-group-view .button-complain, .catalog .button-group-view .uploadzone-button, .catalog .button-group-view .subscription-plan-button, .catalog .button-group-view .filter-action-button, .catalog .button-group-view .filter-apply-button, .catalog .button-group-view .filter-trigger-button, .catalog .button-group-view .order-service .btn-repost, .order-service .catalog .button-group-view .btn-repost, .catalog .button-group-view .promo-services-card-button, .catalog .button-group-view .subscription-filter-button {
+.catalog .button-group-view .button, .catalog .button-group-view .testimonials-more-button, .catalog .button-group-view .testimonials-add-button, .catalog .button-group-view .button-service, .catalog .button-group-view .button-social, .catalog .button-group-view .button-vk, .catalog .button-group-view .button-fb, .catalog .button-group-view .button-favorite, .catalog .button-group-view .button-complain, .catalog .button-group-view .uploadzone-button, .catalog .button-group-view .subscription-plan-button, .catalog .button-group-view .filter-action-button, .catalog .button-group-view .filter-apply-button, .catalog .button-group-view .filter-trigger-button, .catalog .button-group-view .order-service .btn-repost, .order-service .catalog .button-group-view .btn-repost, .catalog .button-group-view .subscription-filter-button {
     padding-right: 15px
 }
 
@@ -14831,7 +14166,6 @@ a.subscription-plan {
     background-color: #fff;
     font-size: 15px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #0a0a0a;
     z-index: 1000
 }
@@ -14910,7 +14244,6 @@ a.subscription-plan {
 .filter-title {
     font-size: 1.2em;
     line-height: 1.333em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .filter-row.__disabled .filter-label {
@@ -15920,7 +15253,6 @@ a.subscription-plan {
 .card-options-item-value {
     font-size: 1.6em;
     line-height: 1.25em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .card-title, .offers .card-title {
@@ -16506,7 +15838,6 @@ a.subscription-plan {
     display: inline-block;
     font-size: 14px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #18a24b;
     cursor: default
 }
@@ -16801,7 +16132,7 @@ a.subscription-plan {
     padding-bottom: 6px
 }
 
-.main-card-interest .button, .main-card-interest .testimonials-more-button, .main-card-interest .testimonials-add-button, .main-card-interest .button-service, .main-card-interest .button-social, .main-card-interest .button-vk, .main-card-interest .button-fb, .main-card-interest .button-favorite, .main-card-interest .button-complain, .main-card-interest .uploadzone-button, .main-card-interest .subscription-plan-button, .main-card-interest .filter-action-button, .main-card-interest .filter-apply-button, .main-card-interest .filter-trigger-button, .main-card-interest .order-service .btn-repost, .order-service .main-card-interest .btn-repost, .main-card-interest .promo-services-card-button, .main-card-interest .subscription-filter-button {
+.main-card-interest .button, .main-card-interest .testimonials-more-button, .main-card-interest .testimonials-add-button, .main-card-interest .button-service, .main-card-interest .button-social, .main-card-interest .button-vk, .main-card-interest .button-fb, .main-card-interest .button-favorite, .main-card-interest .button-complain, .main-card-interest .uploadzone-button, .main-card-interest .subscription-plan-button, .main-card-interest .filter-action-button, .main-card-interest .filter-apply-button, .main-card-interest .filter-trigger-button, .main-card-interest .order-service .btn-repost, .order-service .main-card-interest .btn-repost,.main-card-interest .subscription-filter-button {
     margin: 8px
 }
 
@@ -16927,7 +16258,6 @@ a.subscription-plan {
     .main-card-options-bar-value {
         font-size: 32px;
         line-height: 42px;
-        font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
     }
 
     .main-card-title {
@@ -17155,7 +16485,6 @@ a.subscription-plan {
     .main-card-options-bar-value {
         font-size: 32px;
         line-height: 42px;
-        font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
     }
 
     .main-card-contacts {
@@ -17211,7 +16540,7 @@ a.subscription-plan {
         z-index: 100
     }
 
-    .main-card-contacts-line-fixed .button, .main-card-contacts-line-fixed .testimonials-more-button, .main-card-contacts-line-fixed .testimonials-add-button, .main-card-contacts-line-fixed .button-service, .main-card-contacts-line-fixed .button-social, .main-card-contacts-line-fixed .button-vk, .main-card-contacts-line-fixed .button-fb, .main-card-contacts-line-fixed .button-favorite, .main-card-contacts-line-fixed .button-complain, .main-card-contacts-line-fixed .uploadzone-button, .main-card-contacts-line-fixed .subscription-plan-button, .main-card-contacts-line-fixed .filter-action-button, .main-card-contacts-line-fixed .filter-apply-button, .main-card-contacts-line-fixed .filter-trigger-button, .main-card-contacts-line-fixed .order-service .btn-repost, .order-service .main-card-contacts-line-fixed .btn-repost, .main-card-contacts-line-fixed .promo-services-card-button, .main-card-contacts-line-fixed .subscription-filter-button {
+    .main-card-contacts-line-fixed .button, .main-card-contacts-line-fixed .testimonials-more-button, .main-card-contacts-line-fixed .testimonials-add-button, .main-card-contacts-line-fixed .button-service, .main-card-contacts-line-fixed .button-social, .main-card-contacts-line-fixed .button-vk, .main-card-contacts-line-fixed .button-fb, .main-card-contacts-line-fixed .button-favorite, .main-card-contacts-line-fixed .button-complain, .main-card-contacts-line-fixed .uploadzone-button, .main-card-contacts-line-fixed .subscription-plan-button, .main-card-contacts-line-fixed .filter-action-button, .main-card-contacts-line-fixed .filter-apply-button, .main-card-contacts-line-fixed .filter-trigger-button, .main-card-contacts-line-fixed .order-service .btn-repost, .order-service .main-card-contacts-line-fixed .btn-repost, .main-card-contacts-line-fixed .subscription-filter-button {
         -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
         -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
@@ -17237,7 +16566,6 @@ a.subscription-plan {
     left: -18px;
     font-size: 15px;
     line-height: 47px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
     text-align: center
 }
@@ -17347,7 +16675,6 @@ a.subscription-plan {
     left: -28px;
     font-size: 19px;
     line-height: 58px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #04a749;
     text-align: center
 }
@@ -17713,7 +17040,6 @@ a.subscription-plan {
 .ymaps-card-options-item-value {
     font-size: 1.6em;
     line-height: 1.25em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .ymaps-card-title {
@@ -17908,7 +17234,6 @@ a.subscription-plan {
 
 .ymaps-horiz-card-desc {
     padding: 10px 8px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: hidden
 }
 
@@ -17964,7 +17289,6 @@ a.subscription-plan {
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: hidden
 }
 
@@ -18306,7 +17630,6 @@ a.subscription-plan {
     margin-bottom: 25px;
     font-size: 21px;
     line-height: 24px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     color: #18a24b
 }
 
@@ -18318,7 +17641,7 @@ a.subscription-plan {
 }
 
 @media screen and (max-width: 479px) {
-    .info-content .button, .info-content .testimonials-more-button, .info-content .testimonials-add-button, .info-content .button-service, .info-content .button-social, .info-content .button-vk, .info-content .button-fb, .info-content .button-favorite, .info-content .button-complain, .info-content .uploadzone-button, .info-content .subscription-plan-button, .info-content .filter-action-button, .info-content .filter-apply-button, .info-content .filter-trigger-button, .info-content .order-service .btn-repost, .order-service .info-content .btn-repost, .info-content .promo-services-card-button, .info-content .subscription-filter-button {
+    .info-content .button, .info-content .testimonials-more-button, .info-content .testimonials-add-button, .info-content .button-service, .info-content .button-social, .info-content .button-vk, .info-content .button-fb, .info-content .button-favorite, .info-content .button-complain, .info-content .uploadzone-button, .info-content .subscription-plan-button, .info-content .filter-action-button, .info-content .filter-apply-button, .info-content .filter-trigger-button, .info-content .order-service .btn-repost, .order-service .info-content .btn-repost, .info-content .subscription-filter-button {
         width: 100%;
         padding-right: 0;
         padding-left: 0
@@ -18379,7 +17702,6 @@ a.subscription-plan {
     background: none;
     font-size: 16px;
     line-height: 24px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: inherit;
     text-align: center;
     vertical-align: top;
@@ -18947,7 +18269,6 @@ a.subscription-plan {
     clear: both;
     font-size: 12px;
     line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d82d2d
 }
 
@@ -19079,7 +18400,6 @@ a.subscription-plan {
     background-color: #01a242;
     font-size: 22px;
     line-height: 42px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     color: #fff;
     text-align: center
 }
@@ -19187,7 +18507,6 @@ a.subscription-plan {
     font-weight: normal;
     font-size: 20px;
     line-height: 26px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .service-request-form-title-success {
@@ -19256,7 +18575,7 @@ a.subscription-plan {
         margin-top: 56px
     }
 
-    .service-request-compact-form .form-row-actions .button, .service-request-compact-form .form-row-actions .testimonials-more-button, .service-request-compact-form .form-row-actions .testimonials-add-button, .service-request-compact-form .form-row-actions .button-service, .service-request-compact-form .form-row-actions .button-social, .service-request-compact-form .form-row-actions .button-vk, .service-request-compact-form .form-row-actions .button-fb, .service-request-compact-form .form-row-actions .button-favorite, .service-request-compact-form .form-row-actions .button-complain, .service-request-compact-form .form-row-actions .uploadzone-button, .service-request-compact-form .form-row-actions .subscription-plan-button, .service-request-compact-form .form-row-actions .filter-action-button, .service-request-compact-form .form-row-actions .filter-apply-button, .service-request-compact-form .form-row-actions .filter-trigger-button, .service-request-compact-form .form-row-actions .order-service .btn-repost, .order-service .service-request-compact-form .form-row-actions .btn-repost, .service-request-compact-form .form-row-actions .promo-services-card-button, .service-request-compact-form .form-row-actions .subscription-filter-button {
+    .service-request-compact-form .form-row-actions .button, .service-request-compact-form .form-row-actions .testimonials-more-button, .service-request-compact-form .form-row-actions .testimonials-add-button, .service-request-compact-form .form-row-actions .button-service, .service-request-compact-form .form-row-actions .button-social, .service-request-compact-form .form-row-actions .button-vk, .service-request-compact-form .form-row-actions .button-fb, .service-request-compact-form .form-row-actions .button-favorite, .service-request-compact-form .form-row-actions .button-complain, .service-request-compact-form .form-row-actions .uploadzone-button, .service-request-compact-form .form-row-actions .subscription-plan-button, .service-request-compact-form .form-row-actions .filter-action-button, .service-request-compact-form .form-row-actions .filter-apply-button, .service-request-compact-form .form-row-actions .filter-trigger-button, .service-request-compact-form .form-row-actions .order-service .btn-repost, .order-service .service-request-compact-form .form-row-actions .btn-repost, .service-request-compact-form .form-row-actions .subscription-filter-button {
         min-width: 0
     }
 }
@@ -19315,7 +18634,6 @@ a.subscription-plan {
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left
 }
 
@@ -19406,7 +18724,6 @@ a.subscription-plan {
     background-color: #ff3000;
     font-size: 30px;
     line-height: 50px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     color: #fff
 }
 
@@ -19635,253 +18952,6 @@ a.subscription-plan {
     }
 }
 
-.promo-services {
-    color: #fff;
-    text-align: center
-}
-
-.promo-services-header {
-    max-width: 700px;
-    margin: 0 auto;
-    padding-top: 20px
-}
-
-.promo-services-header-subtitle {
-    margin-bottom: 16px;
-    font-size: 15px;
-    line-height: 20px
-}
-
-.promo-services-header-title {
-    margin-bottom: 26px;
-    font-size: 24px;
-    line-height: 30px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
-}
-
-.promo-services-footer {
-    padding: 14px
-}
-
-.promo-services-footer .button, .promo-services-footer .testimonials-more-button, .promo-services-footer .testimonials-add-button, .promo-services-footer .button-service, .promo-services-footer .button-social, .promo-services-footer .button-vk, .promo-services-footer .button-fb, .promo-services-footer .button-favorite, .promo-services-footer .button-complain, .promo-services-footer .uploadzone-button, .promo-services-footer .subscription-plan-button, .promo-services-footer .filter-action-button, .promo-services-footer .filter-apply-button, .promo-services-footer .filter-trigger-button, .promo-services-footer .order-service .btn-repost, .order-service .promo-services-footer .btn-repost, .promo-services-footer .promo-services-card-button, .promo-services-footer .subscription-filter-button {
-    margin: 14px 8px
-}
-
-.promo-services-footer-text {
-    margin: 14px 8px;
-    font-size: 15px;
-    line-height: 20px
-}
-
-.promo-services-grid-col {
-    width: 100%;
-    padding: 5px 0;
-    display: inline-block;
-    vertical-align: top
-}
-
-.promo-services-card {
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    padding: 35px 20px;
-    position: relative;
-    display: block;
-    background-color: #fff;
-    color: #000;
-    text-align: center
-}
-
-.promo-services-card-desc {
-    height: 160px;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden
-}
-
-.promo-services-card-desc:after {
-    width: 100%;
-    height: 34px;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iOTAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 40%, #fff 90%, #fff 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.7)), color-stop(90%, #fff), color-stop(100%, #fff));
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 40%, #fff 90%, #fff 100%);
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 40%, #fff 90%, #fff 100%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 40%, #fff 90%, #fff 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 40%, #fff 90%, #fff 100%)
-}
-
-.promo-services-card-title {
-    height: 48px;
-    margin-bottom: 1.2em;
-    font-size: 21px;
-    line-height: 24px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
-    color: #18a24b
-}
-
-.promo-services-card-title b {
-    font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-}
-
-.promo-services-card-text {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 20px
-}
-
-.promo-services-card-list {
-    margin-bottom: 20px;
-    list-style-type: none;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: left
-}
-
-.promo-services-card-list-item {
-    margin-bottom: 10px;
-    padding-left: 16px;
-    position: relative
-}
-
-.promo-services-card-list-item:before {
-    content: "+";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    font-size: 14px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #18a24b
-}
-
-.promo-services-card-price {
-    height: 98px;
-    margin-bottom: 10px;
-    font-size: 58px;
-    line-height: 1;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
-    color: #18a24b;
-    white-space: nowrap
-}
-
-.promo-services-card-price sup {
-    margin-left: -6px;
-    position: relative;
-    top: 4px;
-    font-size: 22px
-}
-
-.promo-services-card-price-note {
-    height: 40px;
-    position: relative;
-    font-size: 14px;
-    line-height: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #b1b1b1;
-    white-space: normal;
-    overflow: hidden
-}
-
-.promo-services-card-price-note:after {
-    content: "";
-    width: 80px;
-    height: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #fff));
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 100%)
-}
-
-.promo-services-card-price-free {
-    padding-top: 6px;
-    font-size: 24px;
-    line-height: 30px;
-    font-size: 33px;
-    line-height: 41px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
-}
-
-.promo-services-card-button {
-    max-width: 200px;
-    position: static
-}
-
-.promo-services-card-button:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0
-}
-
-.promo-services-card-start .promo-services-card-desc {
-    height: 70px
-}
-
-@media screen and (min-width: 480px) {
-    .promo-services-grid-col {
-        padding-top: 15px
-    }
-
-    .promo-services-card {
-        padding: 20px 22px
-    }
-}
-
-@media screen and (min-width: 760px) {
-    .promo-services-header-subtitle {
-        margin-bottom: 24px;
-        font-size: 18px;
-        line-height: 24px
-    }
-
-    .promo-services-header-title {
-        margin-bottom: 40px;
-        font-size: 36px;
-        line-height: 43px
-    }
-
-    .promo-services-card-title {
-        font-size: 33px;
-        line-height: 41px
-    }
-
-    .promo-services-card-title {
-        height: 82px
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .promo-services-footer-text {
-        display: inline
-    }
-
-    .promo-services-grid-col {
-        width: 33.3333%;
-        padding: 15px
-    }
-
-    .promo-services-card {
-        min-height: 386px
-    }
-
-    .promo-services-card-priced {
-        height: 484px
-    }
-}
-
 .promo-page {
     position: relative
 }
@@ -19997,7 +19067,7 @@ a.subscription-plan {
     text-align: center
 }
 
-.fly-subscription-plan .button, .fly-subscription-plan .testimonials-more-button, .fly-subscription-plan .testimonials-add-button, .fly-subscription-plan .button-service, .fly-subscription-plan .button-social, .fly-subscription-plan .button-vk, .fly-subscription-plan .button-fb, .fly-subscription-plan .button-favorite, .fly-subscription-plan .button-complain, .fly-subscription-plan .uploadzone-button, .fly-subscription-plan .subscription-plan-button, .fly-subscription-plan .filter-action-button, .fly-subscription-plan .filter-apply-button, .fly-subscription-plan .filter-trigger-button, .fly-subscription-plan .order-service .btn-repost, .order-service .fly-subscription-plan .btn-repost, .fly-subscription-plan .promo-services-card-button, .fly-subscription-plan .subscription-filter-button {
+.fly-subscription-plan .button, .fly-subscription-plan .testimonials-more-button, .fly-subscription-plan .testimonials-add-button, .fly-subscription-plan .button-service, .fly-subscription-plan .button-social, .fly-subscription-plan .button-vk, .fly-subscription-plan .button-fb, .fly-subscription-plan .button-favorite, .fly-subscription-plan .button-complain, .fly-subscription-plan .uploadzone-button, .fly-subscription-plan .subscription-plan-button, .fly-subscription-plan .filter-action-button, .fly-subscription-plan .filter-apply-button, .fly-subscription-plan .filter-trigger-button, .fly-subscription-plan .order-service .btn-repost, .order-service .fly-subscription-plan .btn-repost, .fly-subscription-plan .subscription-filter-button {
     margin: 5px 6px
 }
 
@@ -20105,7 +19175,6 @@ a.subscription-plan {
     position: relative;
     font-size: 67px;
     line-height: 1;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .no-touch .contact-owner-number a:hover {
@@ -20184,7 +19253,6 @@ a.subscription-plan {
     margin-bottom: 20px;
     font-size: 29px;
     line-height: 35px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center
 }
 
@@ -20245,7 +19313,6 @@ a.subscription-plan {
 .contact-owner-service-desc {
     font-size: 15px;
     line-height: 21px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow: hidden
 }
 
@@ -20557,7 +19624,6 @@ a.subscription-plan {
     margin: 5px 0 18px;
     font-size: 22px;
     line-height: 30px;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .settings-item-avatar {
@@ -21096,7 +20162,6 @@ a.subscription-plan {
     position: relative;
     display: inline-block;
     color: #252525;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0;
     white-space: normal;
     text-align: center;
@@ -21416,7 +20481,6 @@ a.subscription-plan {
     color: #252525;
     font-size: 12px;
     line-height: 40px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center
 }
 
@@ -21596,7 +20660,6 @@ a.subscription-plan {
         border-radius: 3px;
         max-width: none;
         padding: 10px 10px 10px 5px;
-        display: table;
         background-color: rgba(255, 255, 255, 0.2)
     }
 
@@ -21812,7 +20875,6 @@ a.subscription-plan {
     font-weight: normal;
     font-size: 15px;
     line-height: 22px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #252525
 }
 
@@ -22756,7 +21818,6 @@ a.subscription-plan {
     font-weight: normal;
     font-size: 1.7142857143em;
     line-height: 1.25em;
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     text-align: center
 }
 
@@ -22916,15 +21977,12 @@ a.subscription-plan {
 
 .f-bold {
     font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 .f-light {
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif
 }
 
 .f-thin {
-    font-family: "Helvetica Neue Thin", Helvetica, Arial, sans-serif
 }
 
 body.landing .container-fluid, body.landing .profile-nav-inner {
@@ -23185,7 +22243,6 @@ body.landing .search {
 
 body.landing b, body.landing strong, body.landing .strong {
     font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 body.landing .gw {
@@ -23220,7 +22277,6 @@ body.landing section {
 }
 
 body.landing h2 {
-    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
     font-size: 44px;
     font-weight: normal;
     margin-bottom: 79px;
@@ -26997,7 +26053,6 @@ i.label {
         position: relative;
         padding: 10px 8px;
         display: table-cell;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         vertical-align: top
     }
 

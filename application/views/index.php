@@ -6,81 +6,35 @@
         <div class="header-main">
             <div class="header-main-cell">
                 <div class="container-fluid">
-                    <h1 class="header-main-title">Аренда квартир<br> без&nbsp;комиссии</h1>
+                    <h1 class="header-main-title">Аренда квартиры</h1>
                     <div class="header-main-search-form">
                         <div>
-                            <div class="search-form" data-reactid=".d1z9wdl340" data-react-checksum="-1897560714">
-                                <div class="search-form-item" data-reactid=".d1z9wdl340.1">
-                                    <div class="search-form-item-inner" data-reactid=".d1z9wdl340.1.0">
-                                        <div class="search-form-item-cell" data-reactid=".d1z9wdl340.1.0.0">
-                                            <label
-                                                class="search-form-checkbox"
-                                                data-reactid=".d1z9wdl340.1.0.0.0">
-                                                <input
-                                                    class="search-form-checkbox-control" type="checkbox"
-                                                    data-reactid=".d1z9wdl340.1.0.0.0.0">
-                                                <span
-                                                    class="search-form-checkbox-content"
-                                                    data-reactid=".d1z9wdl340.1.0.0.0.1">Комната</span>
-                                            </label>
+                            <div class="search-form">
+                                <div class="row">
+                                    <div class="col-lg-5 col-sm-12">
+                                        <div class="col-lg-4 col-sm-4 search-form-title">
+                                            Район города
                                         </div>
-                                        <div class="search-form-item-cell" data-reactid=".d1z9wdl340.1.0.1">
-                                            <div class="search-form-checkbox-group"
-                                                 data-reactid=".d1z9wdl340.1.0.1.0">
-                                                <label
-                                                    class="search-form-checkbox search-form-checkbox-rooms"
-                                                    data-original-title="Однокомнатные квартиры"
-                                                    data-reactid=".d1z9wdl340.1.0.1.0.$1">
-                                                    <input
-                                                        class="search-form-checkbox-control" type="checkbox"
-                                                        value="1" data-reactid=".d1z9wdl340.1.0.1.0.$1.0">
-                                                    <span
-                                                        class="search-form-checkbox-content"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$1.1">1</span>
-                                                </label>
-                                                <label
-                                                    class="search-form-checkbox search-form-checkbox-rooms"
-                                                    data-original-title="Двухкомнатные квартиры"
-                                                    data-reactid=".d1z9wdl340.1.0.1.0.$2">
-                                                    <input
-                                                        class="search-form-checkbox-control" type="checkbox"
-                                                        value="2" data-reactid=".d1z9wdl340.1.0.1.0.$2.0">
-                                                    <span
-                                                        class="search-form-checkbox-content"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$2.1">2</span>
-                                                </label>
-                                                <label
-                                                    class="search-form-checkbox search-form-checkbox-rooms"
-                                                    data-original-title="Трехкомнатные квартиры"
-                                                    data-reactid=".d1z9wdl340.1.0.1.0.$3">
-                                                    <input
-                                                        class="search-form-checkbox-control" type="checkbox"
-                                                        value="3" data-reactid=".d1z9wdl340.1.0.1.0.$3.0">
-                                                    <span
-                                                        class="search-form-checkbox-content"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$3.1">3</span>
-                                                </label>
-                                                <label
-                                                    class="search-form-checkbox search-form-checkbox-rooms"
-                                                    data-original-title="Многокомнатные квартиры"
-                                                    data-reactid=".d1z9wdl340.1.0.1.0.$4">
-                                                    <input
-                                                        class="search-form-checkbox-control" type="checkbox"
-                                                        value="4" data-reactid=".d1z9wdl340.1.0.1.0.$4.0">
-                                                    <span
-                                                        class="search-form-checkbox-content"
-                                                        data-reactid=".d1z9wdl340.1.0.1.0.$4.1">4+</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-8 col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Введите район города" name="district" autocomplete="off">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="search-form-item search-form-item-submit">
-                                    <div class="search-form-item-inner">
-                                        <div class="search-form-item-cell">
-                                            <button class="button button-blue search-form-submit" onclick="document.location='/search';">Найти объявления
-                                            </button>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <div class="col-lg-3 col-sm-3 search-form-title">
+                                            Цена от
                                         </div>
+                                        <div class="col-lg-4 col-sm-4">
+                                            <input type="text" class="form-control" placeholder="0">
+                                        </div>
+                                        <div class="col-lg-1 col-sm-1 search-form-title">
+                                            до
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4">
+                                            <input type="text" class="form-control" placeholder="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12">
+                                        <button class="btn button-blue search-form-btn" onclick="window.location.href='/search'">Найти</button>
                                     </div>
                                 </div>
                             </div>
@@ -90,59 +44,18 @@
             </div>
         </div>
     </div>
+    <section class="service-list">
+        <div class="services container">
+            <a href="/insurance" class="service-link col-sm-12 col-lg-3">Страхование</a>
+            <a href="/apartment-crossing" class="service-link col-sm-12 col-lg-3">Квартирный переезд</a>
+            <a href="/small-repair" class="service-link col-sm-12 col-lg-3">Мелкий ремонт</a>
+            <a href="/clean-apartment" class="service-link last col-sm-12 col-lg-3">Уборка квартир</a>
+        </div>
+    </section>
     <div class="body">
-        <section class="features">
-            <div class="container">
-                <h2 class="section-title">Наши преимущества</h2>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 feature">
-                        <div class="feature-icon-wrapper">
-                            <div class="grid-table grid-table-h grid-table-v">
-                                <div class="grid-table-cell grid-table-cell-middle">
-                                    <i
-                                        class="feature-icon feature-icon-checking-classified">
-
-                                    </i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Без комиссии</h4>
-                        <p>Мы&nbsp;проверяем каждое объявление и&nbsp;гарантируем, что у&nbsp;нас нет комиссии!</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 feature">
-                        <div class="feature-icon-wrapper">
-                            <div class="grid-table grid-table-h grid-table-v">
-                                <div class="grid-table-cell grid-table-cell-middle">
-                                    <i
-                                        class="feature-icon feature-icon-classifieds">
-
-                                    </i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Большая база</h4>
-                        <p>До&nbsp;100&nbsp;новых объявлений ежедневно!</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 feature">
-                        <div class="feature-icon-wrapper">
-                            <div class="grid-table grid-table-h grid-table-v">
-                                <div class="grid-table-cell grid-table-cell-middle">
-                                    <i
-                                        class="feature-icon feature-icon-newsletter">
-
-                                    </i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Удобная рассылка</h4>
-                        <p>Ловите свежие объявления в&nbsp;своем почтовом ящике!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="offers padding-top-no">
             <div class="container-fluid">
-                <h2 class="section-title">Последние предложения</h2>
+                <h2 class="section-title">Популярные предложения</h2>
                 <div class="cards-container">
                     <div class="cards">
                         <div class="cards-list row">
@@ -474,10 +387,59 @@
                         </div>
                     </div>
                 </div>
-                <a class="button button-blue button-xl button-offers" href="/rooms">Все предложения</a></div>
+                <a class="btn button-blue btn-lg" href="/rooms">Посмотреть все</a></div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Наши преимущества</h2>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 feature">
+                        <div class="feature-icon-wrapper">
+                            <div class="grid-table grid-table-h grid-table-v">
+                                <div class="grid-table-cell grid-table-cell-middle">
+                                    <i
+                                        class="feature-icon feature-icon-checking-classified">
+
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Без комиссии</h4>
+                        <p>Мы&nbsp;проверяем каждое объявление и&nbsp;гарантируем, что у&nbsp;нас нет комиссии!</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 feature">
+                        <div class="feature-icon-wrapper">
+                            <div class="grid-table grid-table-h grid-table-v">
+                                <div class="grid-table-cell grid-table-cell-middle">
+                                    <i
+                                        class="feature-icon feature-icon-classifieds">
+
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Большая база</h4>
+                        <p>До&nbsp;100&nbsp;новых объявлений ежедневно!</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 feature">
+                        <div class="feature-icon-wrapper">
+                            <div class="grid-table grid-table-h grid-table-v">
+                                <div class="grid-table-cell grid-table-cell-middle">
+                                    <i
+                                        class="feature-icon feature-icon-newsletter">
+
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Удобная рассылка</h4>
+                        <p>Ловите свежие объявления в&nbsp;своем почтовом ящике!</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="reviews reviews-bubbly bg-gray">
-            <div class="container"><h2 class="section-title">Отзывы наших клиентов</h2>
+            <div class="container"><h2 class="section-title">Отзывы</h2>
                 <div class="reviews-list">
                     <div class="reviews-item">
                         <blockquote class="reviews-item-quote">23.03.2015 разместил объявление на сайте, прошёл проверку
@@ -562,15 +524,7 @@
                     </div>
 
                 </div>
-                <a class="button button-blue button-xl" href="/notice/new">Сдать квартиру бесплатно</a></div>
-        </section>
-        <section class="service-list">
-            <div class="services container">
-                <a href="/insurance" class="service-link col-sm-12 col-lg-3">Страхование</a>
-                <a href="/apartment-crossing" class="service-link col-sm-12 col-lg-3">Квартирный переезд</a>
-                <a href="/small-repair" class="service-link col-sm-12 col-lg-3">Мелкий ремонт</a>
-                <a href="/clean-apartment" class="service-link last col-sm-12 col-lg-3">Уборка квартир</a>
-            </div>
+                <a class="btn button-blue btn-lg" href="/notice/new">Сдать квартиру бесплатно</a></div>
         </section>
     </div>
     <?=View::factory('footer');?>

@@ -7,6 +7,7 @@
     <meta name="description"
           content="Снять недвижимость в Москве без комиссии. Новые проверенные объявления каждый день. Сдавайте и снимайте жилье на самой большой доске объявлений от собственников.">
     <link href="/public/i/logo.png" rel="shortcut icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,900,900i" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="/public/css/bootstrap.css">
     <link rel="stylesheet" media="screen" href="/public/css/base.css">
     <style type="text/css">
@@ -34,45 +35,25 @@
 <div class="modal fade" id="loginModal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <form accept-charset="UTF-8" method="post" class="modal-form" novalidate="novalidate">
-                <div class="modal-form-header">
-                    <div class="modal-form-title">
-                        Регистрация
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Войти</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form" method="post">
+                    <div style="margin-bottom: 25px" class="form-group">
+                        <input name="username" class="form-control" placeholder="Ваш логин" required="" autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
                     </div>
-                </div>
-                <div class="modal-form-content">
-                    <div class="modal-form-item">
-                        <div class="input">
-                            <input type="text" name="user[email]" placeholder="Электронная почта" required="" class="input-control" value="" autocomplete="off">
-                        </div>
+                    <div style="margin-bottom: 25px" class="form-group">
+                        <input name="password" type="password" class="form-control" placeholder="Ваш пароль" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
                     </div>
-                    <div class="modal-form-item">
-                        <div class="input">
-                            <input type="password" name="user[password]" placeholder="Пароль" required="" class="input-control" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="modal-form-item modal-form-item-actions">
-                        <div class="modal-form-item-cell">
-                            <button type="submit" class="button button-blue modal-form-submit">
-                                Зарегистрироваться
-                            </button>
-                        </div>
-                        <div class="modal-form-item-cell">
-                            <div class="modal-form-text modal-form-text-terms">
-                                <span>
-                                    <span>Регистрируясь, вы принимаете условия</span>
-                                    <span> </span>
-                                </span>
-                                <a href="/pages/agreement" class="link" title="пользовательского соглашения">
-                                    <b>пользовательского соглашения</b>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+                    <button class="btn btn-lg btn-primary btn-block filled-button" type="submit" name="login">Вход</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </html>

@@ -343,33 +343,13 @@
     background-image:url(/public/i/background-apartment.jpg);
 }
 
-#loginModal {
-    padding: 0;
-    position: absolute;
-    top: -1000px;
-}
-
-#loginModal .modal-dialog {
-    width: 100%
-}
-
-#loginModal .modal-content {
-    position: relative;
-}
-
-#loginModal .modal-content .close {
-    position: absolute;
-    font-size: 36px;
-    right: 10px;
-    top: 10px;
-}
-
 .reviews-item {
     width: 30%;
 }
 
 .service-list {
     background-color: #313131!important;
+    margin-bottom: 40px;
 }
 
 .service-list a,
@@ -393,4 +373,16 @@
 .form-offer .input-control {
     height: 30px;
     padding: 10px;
+}
+
+.search-form {
+    font-size: 17px;
+}
+
+.search-form .search-form-title {
+    margin-top: 5px;
+}
+
+.search-form .search-form-btn {
+    width: 100%;
 }
