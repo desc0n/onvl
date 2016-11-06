@@ -386,3 +386,7 @@
 .search-form .search-form-btn {
     width: 100%;
 }
+
+.typeahead.dropdown-menu li a {
+    text-align: left!important;
+}
