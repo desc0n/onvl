@@ -6,17 +6,32 @@
         <div class="header-main">
             <div class="header-main-cell">
                 <div class="container-fluid">
-                    <h1 class="header-main-title">Аренда квартиры</h1>
+                    <h1 class="header-main-title">Аренда без посредников</h1>
                     <div class="header-main-search-form">
                         <div>
                             <div class="search-form">
                                 <div class="row">
                                     <div class="col-lg-5 col-sm-12">
-                                        <div class="col-lg-4 col-sm-4 search-form-title">
-                                            Район города
+                                        <div class="col-lg-6 col-sm-6 search-form-title">
+                                            Количество комнат
                                         </div>
-                                        <div class="col-lg-8 col-sm-8">
-                                            <input type="text" class="form-control" placeholder="Введите район города" name="district" autocomplete="off">
+                                        <div class="col-lg-6 col-sm-6 search-form-checkbox-group">
+                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                                <input class="search-form-checkbox-control" type="checkbox" value="1">
+                                                <span class="search-form-checkbox-content">1</span>
+                                            </label>
+                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                                <input class="search-form-checkbox-control" type="checkbox" value="2">
+                                                <span class="search-form-checkbox-content">2</span>
+                                            </label>
+                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                                <input class="search-form-checkbox-control" type="checkbox" value="3">
+                                                <span class="search-form-checkbox-content">3</span>
+                                            </label>
+                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                                <input class="search-form-checkbox-control" type="checkbox" value="4">
+                                                <span class="search-form-checkbox-content">4</span>
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-12">
@@ -111,7 +126,6 @@
                                                 <h4 class="card-title">
                                                     Трешка в пяти минутах ходьбы от пляжей</h4>
                                                 <div class="card-metro">
-                                                    <i class="card-metro-icon"></i>
                                                     <span>Строгино, Спартак</span>
                                                 </div>
                                             </div>
@@ -195,9 +209,7 @@
                                                 <h4 class="card-title" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.2">
                                                     Стильная однушка.</h4>
                                                 <div class="card-metro" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.3">
-                                                    <i class="card-metro-icon"
-                                                       data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.3.0"></i><span
-                                                        data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.3.1">Румянцево, Саларьево</span>
+                                                    <span>Румянцево, Саларьево</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -282,12 +294,7 @@
                                                 <h4 class="card-title">
                                                     Квартира рядом с небоскребами :-)))</h4>
                                                 <div class="card-metro">
-                                                    <i class="card-metro-icon"
-                                                    >
-
-                                                    </i>
-                                                    <span
-                                                    >Киевская, Деловой центр, Студенческая</span>
+                                                    <span>Киевская, Деловой центр, Студенческая</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -372,12 +379,7 @@
                                                 <h4 class="card-title">
                                                     Квартира рядом с небоскребами :-)))</h4>
                                                 <div class="card-metro">
-                                                    <i class="card-metro-icon"
-                                                    >
-
-                                                    </i>
-                                                    <span
-                                                    >Киевская, Деловой центр, Студенческая</span>
+                                                    <span>Киевская, Деловой центр, Студенческая</span>
                                                 </div>
                                             </div>
                                         </div>
