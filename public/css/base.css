@@ -11411,7 +11411,8 @@ a.button, a.testimonials-more-button, a.testimonials-add-button, a.button-servic
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
     position: relative;
-    opacity: 1
+    opacity: 1;
+    margin: 20px 0;
 }
 
 .form-step.__fade {
