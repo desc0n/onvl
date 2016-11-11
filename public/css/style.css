@@ -357,6 +357,18 @@
 .service-list a:visited {
     color: #fff;
     text-decoration: none;
+    padding: 10px 0;
+    vertical-align: top;
+}
+
+.service-list a img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.service-list a span {
+    text-decoration: underline;
+    vertical-align: super;
 }
 
 .service-link {

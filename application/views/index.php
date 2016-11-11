@@ -30,11 +30,11 @@
                                             </label>
                                             <label class="search-form-checkbox search-form-checkbox-rooms">
                                                 <input class="search-form-checkbox-control" type="checkbox" value="4">
-                                                <span class="search-form-checkbox-content">4</span>
+                                                <span class="search-form-checkbox-content">4+</span>
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-12">
+                                    <div class="col-lg-5 col-sm-12">
                                         <div class="col-lg-3 col-sm-3 search-form-title">
                                             Цена от
                                         </div>
@@ -48,7 +48,7 @@
                                             <input type="text" class="form-control" placeholder="0">
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-sm-12">
+                                    <div class="col-lg-2 col-sm-12">
                                         <button class="btn button-blue search-form-btn" onclick="window.location.href='/search'">Найти</button>
                                     </div>
                                 </div>
@@ -61,10 +61,10 @@
     </div>
     <section class="service-list">
         <div class="services container">
-            <a href="/insurance" class="service-link col-sm-12 col-lg-3">Страхование</a>
-            <a href="/apartment-crossing" class="service-link col-sm-12 col-lg-3">Квартирный переезд</a>
-            <a href="/small-repair" class="service-link col-sm-12 col-lg-3">Мелкий ремонт</a>
-            <a href="/clean-apartment" class="service-link last col-sm-12 col-lg-3">Уборка квартир</a>
+            <a href="/insurance" class="service-link col-sm-12 col-lg-3"><img src="/public/i/insurance.png"><span>Страхование</span></a>
+            <a href="/apartment-crossing" class="service-link col-sm-12 col-lg-3"><img src="/public/i/apartment-crossing.png"><span>Квартирный переезд</span></a>
+            <a href="/small-repair" class="service-link col-sm-12 col-lg-3"><img src="/public/i/small-repair.png"><span>Мелкий ремонт</span></a>
+            <a href="/clean-apartment" class="service-link last col-sm-12 col-lg-3"><img src="/public/i/clean-apartment.png"><span>Уборка квартир</span></a>
         </div>
     </section>
     <div class="body">

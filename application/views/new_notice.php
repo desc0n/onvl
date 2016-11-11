@@ -17,35 +17,7 @@
         <div class="content">
             <div class="container">
                 <div class="form form-offer">
-                    <input type="hidden" value="long" name="ad[period_kind]"
-                           id="ad_period_kind">
-                    <div class="form-step">
-                        <div class="form-row">
-                            <div class="form-row-label">Выберите что вы сдаете</div>
-                            <div class="form-row-content">
-                                <div class="radio-group radio-group-two-cols radio-group-offerkind __success">
-                                    <label class="radio radio-flat">
-                                        <input class="radio-control" data-switch-target="room" required="required" type="radio" value="room" name="ad[kind]" id="ad_kind_room">
-                                        <span class="radio-content">
-                                            <i class="radio-icon radio-icon-room">
-
-                                            </i>
-                                            <span class="radio-text">Комнату</span>
-                                        </span>
-                                    </label>
-                                    <label class="radio radio-flat">
-                                        <input class="radio-control __error" data-switch-target="apartment" required="required" type="radio" value="apartment" name="ad[kind]" id="ad_kind_apartment">
-                                        <span class="radio-content">
-                                            <i class="radio-icon radio-icon-apartment">
-
-                                            </i>
-                                            <span class="radio-text">Квартиру</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <input type="hidden" value="long" name="ad[period_kind]" id="ad_period_kind">
                     <div class="form-step">
                         <div class="form-row">
                             <div class="form-row-label">Введите адрес</div>
