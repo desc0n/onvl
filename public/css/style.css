@@ -344,7 +344,7 @@
 }
 
 .reviews-item {
-    width: 30%;
+
 }
 
 .service-list {
@@ -395,8 +395,17 @@
     margin-top: 5px;
 }
 
-.search-form .search-form-btn {
-    width: 100%;
+.search-form-checkbox-btn-group .btn {
+    padding: 0;
+}
+
+.search-form-checkbox-content {
+    padding: 6px 12px;
+    font-size: 16px;
+}
+
+.search-form-btn-block {
+    padding: 0 30px;
 }
 
 .typeahead.dropdown-menu li a {

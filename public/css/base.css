@@ -20453,7 +20453,6 @@ a.subscription-plan {
     user-select: none;
     position: relative;
     display: inline-block;
-    display: block;
     vertical-align: middle;
     cursor: pointer
 }

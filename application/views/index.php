@@ -11,45 +11,48 @@
                         <div>
                             <div class="search-form">
                                 <div class="row">
-                                    <div class="col-lg-5 col-sm-12">
-                                        <div class="col-lg-6 col-sm-6 search-form-title">
+                                    <div class="col-lg-5 col-sm-12 col-xs-12 col-md-5">
+                                        <div class="col-lg-6 col-sm-12  col-xs-12 col-md-6 search-form-title">
                                             Количество комнат
                                         </div>
-                                        <div class="col-lg-6 col-sm-6 search-form-checkbox-group">
-                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                        <div class="col-lg-6 col-sm-12  col-xs-12 col-md-6 search-form-checkbox-btn-group text-center">
+                                            <span class="btn-group">
+                                            <label class="btn btn-default">
                                                 <input class="search-form-checkbox-control" type="checkbox" value="1">
                                                 <span class="search-form-checkbox-content">1</span>
                                             </label>
-                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                            <label class="btn btn-default">
                                                 <input class="search-form-checkbox-control" type="checkbox" value="2">
                                                 <span class="search-form-checkbox-content">2</span>
                                             </label>
-                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                            <label class="btn btn-default">
                                                 <input class="search-form-checkbox-control" type="checkbox" value="3">
                                                 <span class="search-form-checkbox-content">3</span>
                                             </label>
-                                            <label class="search-form-checkbox search-form-checkbox-rooms">
+                                            <label class="btn btn-default">
                                                 <input class="search-form-checkbox-control" type="checkbox" value="4">
                                                 <span class="search-form-checkbox-content">4+</span>
                                             </label>
+                                            </span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-5 col-sm-12">
-                                        <div class="col-lg-3 col-sm-3 search-form-title">
+                                    <div class="col-lg-5 col-sm-12 col-xs-12 col-md-5">
+                                        <div class="col-lg-3 col-sm-12  col-xs-12 col-md-3 search-form-title">
                                             Цена от
                                         </div>
-                                        <div class="col-lg-4 col-sm-4">
+                                        <div class="col-lg-4 col-sm-12 col-xs-12 col-md-4">
                                             <input type="text" class="form-control" placeholder="0">
                                         </div>
-                                        <div class="col-lg-1 col-sm-1 search-form-title">
+                                        <div class="col-lg-1 col-sm-12 col-xs-12 col-md-1 search-form-title">
                                             до
                                         </div>
-                                        <div class="col-lg-4 col-sm-4">
+                                        <div class="col-lg-4 col-sm-12 col-xs-12 col-md-4">
                                             <input type="text" class="form-control" placeholder="0">
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-sm-12">
-                                        <button class="btn button-blue search-form-btn" onclick="window.location.href='/search'">Найти</button>
+                                    <p class="hidden-lg hidden-md">&nbsp;</p>
+                                    <div class="col-lg-2 col-sm-12 col-xs-12 col-md-2 search-form-btn-block">
+                                        <button class="btn button-blue search-form-btn col-lg-12 col-sm-12 col-xs-12 col-md-12" onclick="window.location.href='/search'">Найти</button>
                                     </div>
                                 </div>
                             </div>
@@ -61,10 +64,20 @@
     </div>
     <section class="service-list">
         <div class="services container">
-            <a href="/insurance" class="service-link col-sm-12 col-lg-3"><img src="/public/i/insurance.png"><span>Страхование</span></a>
-            <a href="/apartment-crossing" class="service-link col-sm-12 col-lg-3"><img src="/public/i/apartment-crossing.png"><span>Квартирный переезд</span></a>
-            <a href="/small-repair" class="service-link col-sm-12 col-lg-3"><img src="/public/i/small-repair.png"><span>Мелкий ремонт</span></a>
-            <a href="/clean-apartment" class="service-link last col-sm-12 col-lg-3"><img src="/public/i/clean-apartment.png"><span>Уборка квартир</span></a>
+            <div class="row">
+                <div  class="col-sm-12 col-lg-3 col-md-3 col-xs-12 text-center service-link">
+                    <a href="/insurance"><img src="/public/i/insurance.png"><span>Страхование</span></a>
+                </div>
+                <div  class="col-sm-12 col-lg-3 col-md-3 col-xs-12 text-center service-link">
+                    <a href="/apartment-crossing"><img src="/public/i/apartment-crossing.png"><span>Квартирный переезд</span></a>
+                </div>
+                <div  class="col-sm-12 col-lg-3 col-md-3 col-xs-12 text-center service-link">
+                    <a href="/small-repair"><img src="/public/i/small-repair.png"><span>Мелкий ремонт</span></a>
+                </div>
+                <div  class="col-sm-12 col-lg-3 col-md-3 col-xs-12 text-center service-link last">
+                    <a href="/clean-apartment"><img src="/public/i/clean-apartment.png"><span>Уборка квартир</span></a>
+                </div>
+            </div>
         </div>
     </section>
     <div class="body">
@@ -74,7 +87,7 @@
                 <div class="cards-container">
                     <div class="cards">
                         <div class="cards-list row">
-                            <div class="card col-sm-12 col-lg-3">
+                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12">
                                 <div class="card-inner">
                                     <a class="card-link" href="#" target="_blank">
                                         <div class="card-content">
@@ -133,7 +146,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card col-sm-12 col-lg-3" data-reactid=".pjmrs9y0hs.0.$202137">
+                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12" data-reactid=".pjmrs9y0hs.0.$202137">
                                 <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$202137.0"><a class="card-link"
                                                                                                   href="/stilnaya-odnushka-090efdde-1029-49dc-a472-7297e0ece1b1"
                                                                                                   target="_blank"
@@ -216,7 +229,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card col-sm-12 col-lg-3" data-reactid=".pjmrs9y0hs.0.$208338">
+                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12" data-reactid=".pjmrs9y0hs.0.$208338">
                                 <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$208338.0"><a class="card-link"
                                                                                                   href="/kvartira-ryadom-s-neboskrebami"
                                                                                                   target="_blank"
@@ -301,7 +314,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card col-sm-12 col-lg-3" data-reactid=".pjmrs9y0hs.0.$208338">
+                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12" data-reactid=".pjmrs9y0hs.0.$208338">
                                 <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$208338.0"><a class="card-link"
                                                                                                   href="/kvartira-ryadom-s-neboskrebami"
                                                                                                   target="_blank"
@@ -395,7 +408,7 @@
             <div class="container">
                 <h2 class="section-title">Наши преимущества</h2>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 feature">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle">
@@ -409,7 +422,7 @@
                         <h4>Без комиссии</h4>
                         <p>Мы&nbsp;проверяем каждое объявление и&nbsp;гарантируем, что у&nbsp;нас нет комиссии!</p>
                     </div>
-                    <div class="col-xs-12 col-sm-4 feature">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle">
@@ -423,7 +436,7 @@
                         <h4>Большая база</h4>
                         <p>До&nbsp;100&nbsp;новых объявлений ежедневно!</p>
                     </div>
-                    <div class="col-xs-12 col-sm-4 feature">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle">
@@ -479,7 +492,7 @@
             <div class="section-overlay" style="background-image: url('/public/i/background-apartment.jpg');"></div>
             <div class="container"><h2 class="section-title">Сдать квартиру?</h2>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 feature">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle"><i
@@ -490,7 +503,7 @@
                         <p>80% квартир на&nbsp;Onvl сдаются в&nbsp;первую неделю. Разумеется, при том условии, что вы&nbsp;выставили
                             адекватную цену. Кому нужна «двушка» за&nbsp;85&nbsp;тысяч рублей в&nbsp;месяц? Никому.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 feature">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle"><i
@@ -501,7 +514,7 @@
                         <p>Мы&nbsp;составили для вас типовой договор аренды,&nbsp;— можете скачивать его и&nbsp;подписывать
                             с&nbsp;арендатором.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 feature">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle"><i
@@ -513,7 +526,7 @@
                             подозрительные личности. У&nbsp;нас сайт «для своих» и&nbsp;публика&nbsp;— соответствующая,
                             приличная.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 feature">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-xs-12 feature">
                         <div class="feature-icon-wrapper">
                             <div class="grid-table grid-table-h grid-table-v">
                                 <div class="grid-table-cell grid-table-cell-middle">
