@@ -14699,7 +14699,7 @@ a.subscription-plan {
 
 .filter-range-slider {
     zoom: 1;
-    padding: 15px 10px 0
+    padding: 0 10px;
 }
 
 .filter-range-slider:before, .filter-range-slider:after {

@@ -80,4 +80,14 @@ $(document).ready(function() {
     $('.search-form input[type=text][name=district]').typeahead({
         source: districts
     });
+
+    $('.filter-extra-trigger').click(function () {
+        if($('.filter-extra-body').css('display') == 'none') {
+            $('.filter-extra-body').show('slow');
+            $(this).parent().addClass('__open');
+        } else {
+            $('.filter-extra-body').hide('slow');
+            $(this).parent().removeClass('__open');
+        }
+    });
 });

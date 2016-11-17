@@ -46,6 +46,46 @@
                         <h1 class="catalog-title" data-reactid=".1vz5g377mdc.1.0.3">Аренда квартир без посредников</h1>
                     </div>
                 </div>
+                <div id="map">
+
+                    <script type="text/javascript">
+                        ymaps.ready(function () {
+                            var properties = [
+                                {
+                                    "lat":"43.143568",
+                                    "lng":"131.907499",
+                                },
+                                {
+                                    "lat":"43.15019",
+                                    "lng":"131.906254",
+                                }
+                            ];
+
+                            var myMap = new ymaps.Map('map', {
+                                    center: [43.114894, 131.90443],
+                                    zoom: 12,
+                                    type: "yandex#map"
+                                }, {
+                                }),
+                                BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                    '<div id="listing-map">' +
+                                    '</div>' );
+
+                            jQuery.each(properties,function(e, f){
+                                var placemark = new ymaps.Placemark([f.lat, f.lng], {
+                                }, {
+                                    balloonContentLayout: BalloonContentLayout,
+                                    balloonPanelMaxMapArea: 0
+                                });
+
+                                myMap.geoObjects.add(placemark);
+                            });
+
+
+
+                        });
+                    </script>
+                </div>
                 <div class="catalog-content" data-reactid=".1vz5g377mdc.2">
                     <div class="catalog-results-count" data-reactid=".1vz5g377mdc.2.0">
                         <span data-reactid=".1vz5g377mdc.2.0.0">663</span>
@@ -74,372 +114,225 @@
                                                     Фильтр
                                                 </div>
                                             </div>
-                                            <div class="filter-body" data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1">
-                                                <div class="filter-row filter-row-view"
-                                                     data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.0">
-                                                    <div class="filter-view filter-view-list"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.0.1">
-                                                        <div class="filter-view-caption"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.0.1.0">Показать
-                                                            списком
+                                            <div class="filter-body">
+                                                <div class="filter-row">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                            <span>Цена от</span>
+                                                            <input class="form-control" type="text" value="0">
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                            <span>до</span>
+                                                            <input class="form-control" type="text" value="30000">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="filter-row" data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1">
-                                                    <div class="filter-radio-group"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0">
-                                                        <label class="filter-radio"
-                                                               data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0.0">
-                                                            <input class="filter-radio-control" name="type" type="radio"
-                                                                   value="apartment"
-                                                                   data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0.0.0">
-                                                            <span class="filter-radio-text"
-                                                                  data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0.0.1">Квартиры</span>
-                                                        </label>
-                                                        <label class="filter-radio"
-                                                                       data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0.1">
-                                                            <input
-                                                                class="filter-radio-control" name="type" type="radio"
-                                                                value="room"
-                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0.1.0">
-                                                            <span
-                                                                class="filter-radio-text"
-                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.1.0.1.1">Комнаты</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-row" data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4">
-                                                    <div class="filter-label"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.0">Цена
-                                                    </div>
-                                                    <div class="filter-range-slider"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1">
-                                                        <div id="filter_slider"
-                                                             class="filter-range-slider-ui noUi-target noUi-ltr noUi-horizontal noUi-background"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.0">
-                                                            <div class="noUi-base">
-                                                                <div class="noUi-origin noUi-connect" style="left: 0%;">
-                                                                    <div class="noUi-handle noUi-handle-lower">
-
-                                                                    </div>
-                                                                </div>
-                                                                <div class="noUi-origin noUi-background"
-                                                                     style="left: 100%;">
-                                                                    <div class="noUi-handle noUi-handle-upper">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <label class="filter-range-slider-min"
-                                                               data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.1">
-                                                            <span
-                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.1.0">от</span>
-                                                            <input
-                                                                class="filter-range-slider-input filter-input filter-input-sm"
-                                                                type="text" value="0"
-                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.1.1">
-                                                        </label>
-                                                        <label
-                                                            class="filter-range-slider-max"
-                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.2">
-                                                            <span
-                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.2.0">до</span>
-                                                            <input
-                                                                class="filter-range-slider-input filter-input filter-input-sm"
-                                                                type="text" value="260 000"
-                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.4.1.2.1">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-row" data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5">
-                                                    <div class="filter-extra"
-                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0">
-                                                        <div class="filter-extra-trigger"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.0">
+                                                <div class="filter-row">
+                                                    <div class="filter-extra">
+                                                        <div class="filter-extra-trigger">
                                                             Дополнительно
                                                         </div>
-                                                        <div class="filter-extra-body"
-                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1">
-                                                            <div class="filter-row"
-                                                                 data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0">
-                                                                <div class="filter-grid"
-                                                                     data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0">
-                                                                    <div class="filter-grid-cell filter-grid-cell-50p"
-                                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0">
-                                                                        <div class="filter-label"
-                                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.0">
+                                                        <div class="filter-extra-body">
+                                                            <div class="filter-row">
+                                                                <div class="filter-grid">
+                                                                    <div class="filter-grid-cell filter-grid-cell-50p">
+                                                                        <div class="filter-label">
                                                                             Площадь в м<sup>2</sup>
                                                                         </div>
-                                                                        <div class="filter-grid"
-                                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.1">
-                                                                            <div
-                                                                                class="filter-grid-cell filter-grid-cell-50p"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.1.0">
-                                                                                <input
-                                                                                    class="filter-input filter-input-sm text-center"
-                                                                                    type="text"
-                                                                                    data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.1.0.0">
+                                                                        <div class="filter-grid">
+                                                                            <div class="filter-grid-cell filter-grid-cell-50p">
+                                                                                <input class="filter-input filter-input-sm text-center" type="text">
                                                                             </div>
-                                                                            <div
-                                                                                class="filter-grid-cell filter-grid-cell-gap filter-grid-cell-gap-dash"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.1.1">
+                                                                            <div class="filter-grid-cell filter-grid-cell-gap filter-grid-cell-gap-dash">
                                                                                 -
                                                                             </div>
                                                                             <div
-                                                                                class="filter-grid-cell filter-grid-cell-50p"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.1.2">
+                                                                                class="filter-grid-cell filter-grid-cell-50p">
                                                                                 <input
                                                                                     class="filter-input filter-input-sm text-center"
-                                                                                    type="text"
-                                                                                    data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.0.1.2.0">
+                                                                                    type="text">
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div
-                                                                        class="filter-grid-cell filter-grid-cell-gap filter-grid-cell-gap-34"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.1">
+                                                                        class="filter-grid-cell filter-grid-cell-gap filter-grid-cell-gap-34">
                                                                         &nbsp;</div>
-                                                                    <div class="filter-grid-cell filter-grid-cell-50p"
-                                                                         data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2">
-                                                                        <div class="filter-label"
-                                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.0">
+                                                                    <div class="filter-grid-cell filter-grid-cell-50p">
+                                                                        <div class="filter-label">
                                                                             Этаж
                                                                         </div>
-                                                                        <div class="filter-grid"
-                                                                             data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.1">
+                                                                        <div class="filter-grid">
                                                                             <div
-                                                                                class="filter-grid-cell filter-grid-cell-50p"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.1.0">
+                                                                                class="filter-grid-cell filter-grid-cell-50p">
                                                                                 <input
                                                                                     class="filter-input filter-input-sm text-center"
-                                                                                    type="text"
-                                                                                    data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.1.0.0">
+                                                                                    type="text">
                                                                             </div>
                                                                             <div
-                                                                                class="filter-grid-cell filter-grid-cell-gap filter-grid-cell-gap-dash"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.1.1">
+                                                                                class="filter-grid-cell filter-grid-cell-gap filter-grid-cell-gap-dash">
                                                                                 -
                                                                             </div>
                                                                             <div
-                                                                                class="filter-grid-cell filter-grid-cell-50p"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.1.2">
+                                                                                class="filter-grid-cell filter-grid-cell-50p">
                                                                                 <input
                                                                                     class="filter-input filter-input-sm text-center"
-                                                                                    type="text"
-                                                                                    data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.0.0.2.1.2.0">
+                                                                                    type="text">
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="filter-row"
-                                                                 data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1">
-                                                                <div class="filter-label"
-                                                                     data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.0">
+                                                            <div class="filter-row">
+                                                                <div class="filter-label">
                                                                     Удобства
                                                                 </div>
-                                                                <ul class="filter-list"
-                                                                    data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1">
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.0">
+                                                                <ul class="filter-list">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.0.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.0.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.0.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.0.0.2">Балкон</span>
+                                                                                class="filter-checkbox-text">Балкон</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.1">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.1.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.1.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.1.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.1.0.2">Посудомоечная машина</span>
+                                                                                class="filter-checkbox-text">Посудомоечная машина</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.2">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.2.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.2.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.2.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.2.0.2">Холодильник</span>
+                                                                                class="filter-checkbox-text">Холодильник</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.3">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.3.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.3.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.3.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.3.0.2">Стиральная машина</span>
+                                                                                class="filter-checkbox-text">Стиральная машина</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.4">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.4.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.4.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.4.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.4.0.2">Телевизор</span>
+                                                                                class="filter-checkbox-text">Телевизор</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.5">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.5.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.5.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.5.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.5.0.2">Нагреватель воды</span>
+                                                                                class="filter-checkbox-text">Нагреватель воды</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.6">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.6.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.6.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.6.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.1.6.0.2">Кондиционер</span>
+                                                                                class="filter-checkbox-text">Кондиционер</span>
                                                                         </label>
                                                                     </li>
                                                                 </ul>
-                                                                <div class="filter-label"
-                                                                     data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.2">
+                                                                <div class="filter-label">
                                                                     Особенности
                                                                 </div>
-                                                                <ul class="filter-list"
-                                                                    data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3">
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.0">
+                                                                <ul class="filter-list">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.0.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.0.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.0.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.0.0.2">Можно курить</span>
+                                                                                class="filter-checkbox-text">Можно курить</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.1">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.1.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.1.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.1.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.1.0.2">Подходит для мероприятий</span>
+                                                                                class="filter-checkbox-text">Подходит для мероприятий</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.2">
+                                                                    <li class="filter-list-item">
                                                                         <label
-                                                                            class="filter-checkbox filter-checkbox-normal"
-                                                                            data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.2.0">
+                                                                            class="filter-checkbox filter-checkbox-normal">
                                                                             <input
                                                                                 class="filter-checkbox-control"
-                                                                                type="checkbox"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.2.0.0">
+                                                                                type="checkbox">
                                                                             <span
-                                                                                class="filter-checkbox-fake"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.2.0.1">
+                                                                                class="filter-checkbox-fake">
 
                                                                             </span>
                                                                             <span
-                                                                                class="filter-checkbox-text"
-                                                                                data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.2.0.2">Можно с животными</span>
+                                                                                class="filter-checkbox-text">Можно с животными</span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item"
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.0.0.0.0.1.5.0.1.1.3.3">
+                                                                    <li class="filter-list-item">
                                                                         <label
                                                                             class="filter-checkbox filter-checkbox-normal">
                                                                             <input
@@ -591,14 +484,8 @@
                                                                 <h4 class="card-title"
                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.0.0.1.2">
                                                                     Двушка в новом жк бизнес-класса «Да Винчи»</h4>
-                                                                <div class="card-metro"
-                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.0.0.1.3">
-                                                                    <i class="card-metro-icon"
-                                                                       data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.0.0.1.3.0">
-
-                                                                    </i>
-                                                                    <span
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.0.0.1.3.1">Кунцевская, Молодёжная</span>
+                                                                <div class="card-metro">
+                                                                    <span>Кунцевская, Молодёжная</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -727,14 +614,8 @@
                                                                 <h4 class="card-title"
                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.2">
                                                                     Большая трешка с отличным свежим ремонтом</h4>
-                                                                <div class="card-metro"
-                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3">
-                                                                    <i class="card-metro-icon"
-                                                                       data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3.0">
-
-                                                                    </i>
-                                                                    <span
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3.1">Волжская, Кузьминки</span>
+                                                                <div class="card-metro">
+                                                                    <span>Волжская, Кузьминки</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -863,14 +744,8 @@
                                                                 <h4 class="card-title"
                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.2">
                                                                     Большая трешка с отличным свежим ремонтом</h4>
-                                                                <div class="card-metro"
-                                                                     data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3">
-                                                                    <i class="card-metro-icon"
-                                                                       data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3.0">
-
-                                                                    </i>
-                                                                    <span
-                                                                        data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0.0.1.3.1">Волжская, Кузьминки</span>
+                                                                <div class="card-metro">
+                                                                    <span>Волжская, Кузьминки</span>
                                                                 </div>
                                                             </div>
                                                         </div>
