@@ -106,162 +106,8 @@
                                 </div>
                                 <div class="main-card-contacts">
                                     <div class="main-card-contacts-line main-card-contacts-line-fixed">
-                                        <div data-react-class="AdContactsButton"
-                                             data-react-props="{&quot;id&quot;:9169,&quot;subscribed&quot;:false,&quot;from_realtor&quot;:false}">
-                                            <a id="ad_contacts_button"
-                                               class="button button-large button-contacts button-orange"
-                                               data-reactid=".16j2kj2jev4">Телефон собственника</a></div>
-                                    </div>
-                                    <div class="main-card-contacts-line">
-                                        <div data-react-class="AdFavoriteButton"
-                                             data-react-props="{&quot;ad&quot;:{&quot;id&quot;:9169,&quot;title&quot;:&quot;Большая трешка с отличным свежим ремонтом&quot;,&quot;path&quot;:&quot;/bolshaya-treshka-s-otlichnym-svezhim-remontom&quot;,&quot;space&quot;:&quot;74&quot;,&quot;price&quot;:&quot;65 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1620199/thumb_d1bd366c.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Волжская, Кузьминки&quot;,&quot;date&quot;:&quot;3 дня назад&quot;,&quot;featured&quot;:true,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},&quot;signedIn&quot;:false}">
-                                            <a href="#" class="button-favorite" data-reactid=".lg65aq914w"><i
-                                                    class="button-favorite-icon" data-reactid=".lg65aq914w.0"></i><span
-                                                    data-reactid=".lg65aq914w.1">В избранное</span></a></div>
-                                    </div>
-                                </div>
-                                <div class="main-card-map">
-                                    <div class="map-wrap" style="background: #ccc;">
-                                        <div class="map" data-address="Юных Ленинцев дом 47 корп3" data-city="Москва"
-                                             data-lat="55.702536" data-lng="37.756865"
-                                             data-subways="Волжская, Кузьминки" id="map">
-                                            <ymaps
-                                                class="ymaps-2-1-45-map ymaps-2-1-45-i-ua_js_yes ymaps-2-1-45-map-bg-ru ymaps-2-1-45-islets_map-lang-ru"
-                                                style="width: 339px; height: 350px;">
-                                                <ymaps class="ymaps-2-1-45-inner-panes">
-                                                    <ymaps
-                                                        class="ymaps-2-1-45-events-pane ymaps-2-1-45-user-selection-none"
-                                                        unselectable="on"
-                                                        style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 3000; cursor: url(&quot;https://api-maps.yandex.ru/2.1.45/./build/release//images/util_cursor_storage_grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.45/./build/release//images/util_cursor_storage_grab.cur&quot;), move;"></ymaps>
-                                                    <ymaps class="ymaps-2-1-45-ground-pane"
-                                                           style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); transition-duration: 0ms; z-index: 601; transition-timing-function: ease-in-out;">
-                                                        <ymaps style="position: absolute; z-index: 150;">
-                                                            <canvas height="606" width="595"
-                                                                    style="position: absolute; width: 595px; height: 606px; left: -128px; top: -128px;"></canvas>
-                                                        </ymaps>
-                                                    </ymaps>
-                                                    <ymaps class="ymaps-2-1-45-copyrights-pane"
-                                                           style="height: 0px; bottom: 5px; right: 3px; top: auto; left: 10px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 6002;">
-                                                        <ymaps>
-                                                            <ymaps
-                                                                class="ymaps-2-1-45-copyright ymaps-2-1-45-copyright_logo_no">
-                                                                <ymaps class="ymaps-2-1-45-copyright__fog">…</ymaps>
-                                                                <ymaps class="ymaps-2-1-45-copyright__wrap">
-                                                                    <ymaps class="ymaps-2-1-45-copyright__layout">
-                                                                        <ymaps
-                                                                            class="ymaps-2-1-45-copyright__content-cell">
-                                                                            <ymaps
-                                                                                class="ymaps-2-1-45-copyright__content">
-                                                                                <ymaps
-                                                                                    class="ymaps-2-1-45-copyright__text">
-                                                                                    © Яндекс
-                                                                                </ymaps>
-                                                                                <ymaps
-                                                                                    class="ymaps-2-1-45-copyright__agreement">
-                                                                                    &nbsp;<a
-                                                                                        class="ymaps-2-1-45-copyright__link"
-                                                                                        target="_blank"
-                                                                                        href="http://yandex.ru/legal/maps_termsofuse/">Условия</a>
-                                                                                </ymaps>
-                                                                            </ymaps>
-                                                                        </ymaps>
-                                                                        <ymaps
-                                                                            class="ymaps-2-1-45-copyright__logo-cell"><a
-                                                                                class="ymaps-2-1-45-copyright__logo"
-                                                                                href="" target="_blank"></a></ymaps>
-                                                                    </ymaps>
-                                                                </ymaps>
-                                                            </ymaps>
-                                                        </ymaps>
-                                                        <ymaps class="ymaps-2-1-45-map-copyrights-promo"
-                                                               style="bottom: -4px; position: absolute;">
-                                                            <iframe
-                                                                src="https://api-maps.yandex.ru/services/inception/?lang=ru_RU&amp;iframe_id=2274&amp;url=%2Fmap&amp;api_version=2.1.45&amp;mode=release"
-                                                                width="113" height="29" scrolling="no" frameborder="0"
-                                                                style="overflow: hidden;"></iframe>
-                                                        </ymaps>
-                                                    </ymaps>
-                                                    <ymaps class="ymaps-2-1-45-controls-pane"
-                                                           style="width: 100%; top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 5403;">
-                                                        <ymaps class="ymaps-2-1-45-controls__toolbar"
-                                                               style="margin-top: 10px;">
-                                                            <ymaps class="ymaps-2-1-45-controls__toolbar_left"></ymaps>
-                                                            <ymaps class="ymaps-2-1-45-controls__toolbar_right"></ymaps>
-                                                        </ymaps>
-                                                        <ymaps class="ymaps-2-1-45-controls__bottom"
-                                                               style="top: 350px;"></ymaps>
-                                                        <ymaps class="ymaps-2-1-45-controls__control"
-                                                               style="margin-right: 0px; margin-left: 0px; bottom: auto; top: 5px; right: auto; left: 5px;">
-                                                            <ymaps>
-                                                                <ymaps class="ymaps-2-1-45-zoom" style="height: 150px">
-                                                                    <ymaps
-                                                                        class="ymaps-2-1-45-zoom__plus ymaps-2-1-45-zoom__button ymaps-2-1-45-button ymaps-2-1-45-button_size_s ymaps-2-1-45-button_theme_normal ymaps-2-1-45-user-selection-none"
-                                                                        unselectable="on">
-                                                                        <ymaps
-                                                                            class="ymaps-2-1-45-zoom__icon ymaps-2-1-45-button__icon"></ymaps>
-                                                                    </ymaps>
-                                                                    <ymaps
-                                                                        class="ymaps-2-1-45-zoom__minus ymaps-2-1-45-zoom__button ymaps-2-1-45-button ymaps-2-1-45-button_size_s ymaps-2-1-45-button_theme_normal ymaps-2-1-45-user-selection-none"
-                                                                        unselectable="on">
-                                                                        <ymaps
-                                                                            class="ymaps-2-1-45-zoom__icon ymaps-2-1-45-button__icon"></ymaps>
-                                                                    </ymaps>
-                                                                    <ymaps class="ymaps-2-1-45-zoom__scale">
-                                                                        <ymaps
-                                                                            class="ymaps-2-1-45-zoom__runner ymaps-2-1-45-zoom__button ymaps-2-1-45-button ymaps-2-1-45-button_size_s ymaps-2-1-45-button_theme_normal ymaps-2-1-45-zoom__runner__transition ymaps-2-1-45-touch-action-none ymaps-2-1-45-user-selection-none"
-                                                                            unselectable="on" style="top: 36px;">
-                                                                            <ymaps
-                                                                                class="ymaps-2-1-45-zoom__icon ymaps-2-1-45-button__icon ymaps-2-1-45-button__icon_icon_runner"></ymaps>
-                                                                        </ymaps>
-                                                                    </ymaps>
-                                                                </ymaps>
-                                                            </ymaps>
-                                                        </ymaps>
-                                                    </ymaps>
-                                                    <ymaps class="ymaps-2-1-45-balloon-pane"
-                                                           style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); transition-duration: 0ms; z-index: 4204; transition-timing-function: ease-in-out;">
-                                                        <ymaps class="ymaps-2-1-45-balloon-overlay"
-                                                               style="z-index: 760; height: 0px; width: 0px; position: absolute; left: 91px; top: 175px; cursor: inherit;">
-                                                            <ymaps>
-                                                                <ymaps
-                                                                    class="ymaps-2-1-45-balloon ymaps-2-1-45-balloon_layout_normal ymaps-2-1-45-balloon_to_top ymaps-2-1-45-i-custom-scroll"
-                                                                    style="top: -88px; left: -57px; position: absolute;">
-                                                                    <ymaps class="ymaps-2-1-45-balloon__layout">
-                                                                        <ymaps class="ymaps-2-1-45-balloon__close">
-                                                                            <ymaps
-                                                                                class="ymaps-2-1-45-balloon__close-button"></ymaps>
-                                                                        </ymaps>
-                                                                        <ymaps class="ymaps-2-1-45-balloon__content">
-                                                                            <ymaps id="id_147791184785497762325"
-                                                                                   class=""
-                                                                                   style="overflow: hidden; height: 56px; width: 243px; display: block;">
-                                                                                <ymaps>
-                                                                                    <div class="ymaps-object-info">
-                                                                                        <div
-                                                                                            class="ymaps-object-info-item">
-                                                                                            <i class="ymaps-object-info-icon ymaps-object-info-icon-marker"></i><span
-                                                                                                class="ymaps-object-info-text">Юных Ленинцев дом 47 корп3</span>
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="ymaps-object-info-item">
-                                                                                            <i class="ymaps-object-info-icon ymaps-object-info-icon-metro"></i><span
-                                                                                                class="ymaps-object-info-text">Волжская, Кузьминки</span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </ymaps>
-                                                                            </ymaps>
-                                                                        </ymaps>
-                                                                    </ymaps>
-                                                                    <ymaps class="ymaps-2-1-45-balloon__tail"></ymaps>
-                                                                </ymaps>
-                                                            </ymaps>
-                                                        </ymaps>
-                                                    </ymaps>
-                                                    <ymaps class="ymaps-2-1-45-places-pane"
-                                                           style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); transition-duration: 0ms; z-index: 2405; transition-timing-function: ease-in-out;"></ymaps>
-                                                </ymaps>
-                                            </ymaps>
-                                        </div>
+                                        <div>
+                                            <a id="ad_contacts_button" class="btn button-blue">Телефон собственника</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -387,9 +233,8 @@
                             </div>
                             <div class="main-card-interest">
                                 <div class="main-card-interest-title">Понравилась квартира?</div>
-                                <div data-react-class="AdContactsButton"
-                                     data-react-props="{&quot;id&quot;:9169,&quot;subscribed&quot;:false,&quot;from_realtor&quot;:false}">
-                                    <a id="ad_contacts_button" class="button button-large button-contacts button-orange"
+                                <div>
+                                    <a id="ad_contacts_button" class="btn button-blue"
                                        data-reactid=".6ixcqu7oxs">Телефон собственника</a></div>
                             </div>
                         </div>
@@ -404,7 +249,7 @@
                      class="cards-container">
                     <section class="cards" data-reactid=".1ln2bw9x81s">
                         <div class="cards-list" data-reactid=".1ln2bw9x81s.0">
-                            <article class="card" data-reactid=".1ln2bw9x81s.0.$212157">
+                            <div class="card" data-reactid=".1ln2bw9x81s.0.$212157">
                                 <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$212157.0"><a class="card-link"
                                                                                                    href="/sdaetsya-trehkomnatnaya-kvartira-v-stalinskom-dome"
                                                                                                    target="_blank"
@@ -486,25 +331,15 @@
                                                 </div>
                                                 <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.2">
                                                     Сдается трехкомнатная квартира в сталинском доме</h4>
-                                                <div class="card-metro" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.3">
-                                                    <i class="card-metro-icon"
-                                                       data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.3.0"></i><span
-                                                        data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.3.1">Нагатинская, Тульская</span>
+                                                <div class="card-metro">
+                                                    <span>Нагатинская, Тульская</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite" data-reactid=".1ln2bw9x81s.0.$212157.0.1">
-                                        <div class="control-favorite-text" data-reactid=".1ln2bw9x81s.0.$212157.0.1.0">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon"
-                                             data-reactid=".1ln2bw9x81s.0.$212157.0.1.1"></div>
-                                    </div>
-                                    <noscript data-reactid=".1ln2bw9x81s.0.$212157.0.2"></noscript>
                                 </div>
-                            </article>
-                            <article class="card" data-reactid=".1ln2bw9x81s.0.$194082">
+                            </div>
+                            <div class="card" data-reactid=".1ln2bw9x81s.0.$194082">
                                 <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$194082.0"><a class="card-link"
                                                                                                    href="/komfortabelnaya-treshka"
                                                                                                    target="_blank"
@@ -587,24 +422,14 @@
                                                 <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.2">
                                                     Комфортабельная трешка</h4>
                                                 <div class="card-metro" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.3">
-                                                    <i class="card-metro-icon"
-                                                       data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.3.0"></i><span
-                                                        data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.3.1">Семёновская</span>
+                                                    <span>Семёновская</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite" data-reactid=".1ln2bw9x81s.0.$194082.0.1">
-                                        <div class="control-favorite-text" data-reactid=".1ln2bw9x81s.0.$194082.0.1.0">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon"
-                                             data-reactid=".1ln2bw9x81s.0.$194082.0.1.1"></div>
-                                    </div>
-                                    <noscript data-reactid=".1ln2bw9x81s.0.$194082.0.2"></noscript>
                                 </div>
-                            </article>
-                            <article class="card" data-reactid=".1ln2bw9x81s.0.$214309">
+                            </div>
+                            <div class="card" data-reactid=".1ln2bw9x81s.0.$214309">
                                 <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$214309.0"><a class="card-link"
                                                                                                    href="/treshka-na-akademicheskoy-e4614b20-8be9-4f59-be8c-8f4c89a69aad"
                                                                                                    target="_blank"
@@ -687,24 +512,14 @@
                                                 <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.2">
                                                     Трешка на Академической</h4>
                                                 <div class="card-metro" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.3">
-                                                    <i class="card-metro-icon"
-                                                       data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.3.0"></i><span
-                                                        data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.3.1">Академическая, Профсоюзная</span>
+                                                    <span>Академическая, Профсоюзная</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite" data-reactid=".1ln2bw9x81s.0.$214309.0.1">
-                                        <div class="control-favorite-text" data-reactid=".1ln2bw9x81s.0.$214309.0.1.0">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon"
-                                             data-reactid=".1ln2bw9x81s.0.$214309.0.1.1"></div>
-                                    </div>
-                                    <noscript data-reactid=".1ln2bw9x81s.0.$214309.0.2"></noscript>
                                 </div>
-                            </article>
-                            <article class="card" data-reactid=".1ln2bw9x81s.0.$183835">
+                            </div>
+                            <div class="card" data-reactid=".1ln2bw9x81s.0.$183835">
                                 <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$183835.0"><a class="card-link"
                                                                                                    href="/trehkomnatnaya-kvartira-posle-kapitalnogo-remonta-m-kahovskaya"
                                                                                                    target="_blank"
@@ -786,24 +601,14 @@
                                                 </div>
                                                 <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.2">
                                                     Трехкомнатная квартира после капитального ремонта м.Каховская </h4>
-                                                <div class="card-metro" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.3">
-                                                    <i class="card-metro-icon"
-                                                       data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.3.0"></i><span
-                                                        data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.3.1">Каховская, Севастопольская</span>
+                                                <div class="card-metro">
+                                                    <span>Каховская, Севастопольская</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="control-favorite" data-reactid=".1ln2bw9x81s.0.$183835.0.1">
-                                        <div class="control-favorite-text" data-reactid=".1ln2bw9x81s.0.$183835.0.1.0">
-                                            Добавить в избранное
-                                        </div>
-                                        <div class="control-favorite-icon"
-                                             data-reactid=".1ln2bw9x81s.0.$183835.0.1.1"></div>
-                                    </div>
-                                    <noscript data-reactid=".1ln2bw9x81s.0.$183835.0.2"></noscript>
                                 </div>
-                            </article>
+                            </div>
                         </div>
                     </section>
                 </div>
