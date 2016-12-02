@@ -1,89 +1,40 @@
+<?php
+/** @var $noticeModel Model_Notice */
+$noticeModel = Model::factory('Notice');
+?>
 <?= View::factory('navigation'); ?>
 <div class="layout">
     <?= View::factory('header'); ?>
     <div class="content">
         <div class="main-card">
-            <div class="main-card-gallery">
-                <div class="photogallery" photogallery="">
-                    <div class="photogallery-cover"
-                         style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1620199/thumb640_d1bd366c.jpg);">
-                        <div class="photogallery-cover-overlay"></div>
+            <div class="main-card-carousel">
+                <!-- Slider Starts -->
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators hidden-xs">
+                        <?
+                        $indicatorActive = null;
+
+                        foreach($noticeModel->getNoticeImg($notice['id']) as $i => $img){
+                            $indicatorActive = $indicatorActive === null ? 'active' : '';?>
+                            <li data-target="#carousel" data-slide-to="<?=$i;?>" class="<?=$indicatorActive;?>"></li>
+                        <?}?>
+                    </ol>
+                    <div class="carousel-inner">
+                        <?
+                        $itemActive = null;
+
+                        foreach($noticeModel->getNoticeImg($notice['id']) as $i => $img){
+                            $itemActive = $itemActive === null ? 'active' : '';?>
+                            <div class="item <?=$itemActive;?>">
+                                <img src="/public/img/original/<?=$img['src'];?>" class="properties" alt="properties" />
+                            </div>
+                        <?}?>
                     </div>
-                    <div class="photogallery-content">
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620210/thumb640_ddfcf059.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620211/thumb640_9e509f5a.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620208/thumb640_e75afddb.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620206/thumb640_70f306a2.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620205/thumb640_cc76bda7.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620207/thumb640_90f6ba90.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620204/thumb640_01931cc3.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620203/thumb640_b8ba7bf8.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620200/thumb640_642457f5.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620201/thumb640_0b7bc2e7.jpg">
-                        </div>
-                        <div class="photogallery-item"><img alt="Большая трешка с отличным свежим ремонтом"
-                                                            class="photogallery-item-img"
-                                                            src="https://assets.thelocals.ru/uploads/image/file/1620199/thumb640_d1bd366c.jpg">
-                        </div>
-                    </div>
-                    <div class="photogallery-prev"><i class="photogallery-prev-icon"></i></div>
-                    <div class="photogallery-next"><i class="photogallery-next-icon"></i></div>
-                    <div class="photogallery-info">
-                        <div class="photogallery-info-inner">
-                            <div class="photogallery-info-title">Большая трешка с отличным свежим ремонтом</div>
-                        </div>
-                    </div>
-                    <a class="photogallery-anchor" photogallery-fancybox="" rel="photogallery"
-                       href="https://assets.thelocals.ru/uploads/image/file/1620210/full_ddfcf059.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620211/full_9e509f5a.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620208/full_e75afddb.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620206/full_70f306a2.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620205/full_cc76bda7.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620207/full_90f6ba90.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620204/full_01931cc3.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620203/full_b8ba7bf8.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620200/full_642457f5.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620201/full_0b7bc2e7.jpg"></a><a
-                        photogallery-fancybox="" rel="photogallery"
-                        href="https://assets.thelocals.ru/uploads/image/file/1620199/full_d1bd366c.jpg"></a></div>
+                    <a class="left carousel-control" href="#carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <!-- #Slider Ends -->
             </div>
             <div class="main-card-content" data-js="sticky-parent">
                 <div class="container">
@@ -107,7 +58,11 @@
                                 <div class="main-card-contacts">
                                     <div class="main-card-contacts-line main-card-contacts-line-fixed">
                                         <div>
-                                            <a id="ad_contacts_button" class="btn button-blue">Телефон собственника</a></div>
+                                            <a class="btn button-blue">Телефон собственника</a>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-danger"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -615,6 +570,7 @@
             </div>
         </section>
     </div>
+    <?=View::factory('service_list');?>
     <?= View::factory('footer'); ?>
 </div>
 

@@ -5,6 +5,9 @@
  */
 class Model_Content extends Kohana_Model
 {
+    /**
+     * @return View
+     */
     public function getBaseTemplate()
     {
         /** @var $noticeModel Model_Notice */
@@ -13,7 +16,7 @@ class Model_Content extends Kohana_Model
         return View::factory('template')
             ->set('menu', $this->getMenu())
             ->set('categories', $this->getCategory())
-            ->set('lastSeeItems', $noticeModel->findLastSeeItems())
+            ->set('noticeTypes', $noticeModel->findAllTypes())
             ;
     }
     
@@ -144,5 +147,23 @@ class Model_Content extends Kohana_Model
             ->execute()
             ->current()
         ;
+    }
+
+    public function findAllDistricts()
+    {
+        return DB::select()
+            ->from('districts')
+            ->execute()
+            ->as_array('id', 'name')
+            ;
+    }
+
+    public function findAllStreets()
+    {
+        return DB::select()
+            ->from('streets')
+            ->execute()
+            ->as_array(null, 'name')
+            ;
     }
 }

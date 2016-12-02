@@ -11,94 +11,6 @@ class Model_Notice extends Kohana_Model
 	    DB::query(Database::UPDATE,"SET time_zone = '+10:00'")->execute();
     }
 
-	/**
-	 * @param array $params
-	 *
-	 * @return array
-	 */
-	public function getNotice($params = [])
-	{
-		$name = Arr::get($params, 'name');
-		$page = Arr::get($params, 'page', 1);
-
-		$rowLimit = Arr::get($params, 'limit', 0);
-		$startLimit = ($page - 1) * $rowLimit;
-		$limit = empty($rowLimit) ? '' : "limit $startLimit, $rowLimit";
-		
-		$price = Arr::get($params, 'price', 0);
-		$priceSql = empty($price) ? '' : ' and `n`.`price` <= :price ';
-		$priceCountSql = empty($price) ? '' : ' and `nt`.`price` <= :price ';
-		$names =  !empty($name) ? explode(' ', $name) : [];
-		$nameSql = '';
-		$nameCountSql = '';
-		
-		foreach ($names as $name) {
-			$nameSql .= " and `n`.`name` like '%$name%' ";
-			$nameCountSql .= " and `nt`.`name` like '%$name%' ";
-		}
-		
-		$sort = Arr::get($params, 'sort', 'sort');
-		$order = Arr::get($params, 'order', 'asc');
-		
-		$id = Arr::get($params, 'id', 0);
-		$categoryId = Arr::get($params, 'category_id', 0);
-		
-		if (!empty($id)) {
-			$sql = "select `n`.*,
-            (select `c`.`name` from `category` `c` where `c`.`id` = `n`.`category`) as `category_name`
-            from `notice` `n`
-            where `n`.`id` = :id
-            and `n`.`status_id` = 1
-            LIMIT 0,1";
-		} else if (!empty($categoryId)) {
-			$sql = "select `n`.*,
-			(select ceil(count(`nt`.`id`) / $rowLimit) from `notice` `nt` where `nt`.`category` = :category_id and `nt`.`status_id` = 1 $priceCountSql $nameCountSql) as `page_count`,
-			(select `c`.`name` from `category` `c` where `c`.`id` = `n`.`category`) as `category_name`
-			from `notice` `n`
-			where (
-			    `n`.`category` = :category_id
-			    or `n`.`category` in (select `c`.`id` from `category` `c` where `c`.`parent_id` = :category_id)
-            )
-			and `n`.`status_id` = 1
-			$priceSql
-			$nameSql
-			order by `$sort` $order
-			$limit";
-		} else {
-			$sql = "select `n`.*,
-			(select ceil(count(`nt`.`id`) / $rowLimit) from `notice` `nt` where `nt`.`status_id` = 1 $priceCountSql $nameCountSql) as `page_count`,
-			(select `c`.`name` from `category` `c` where `c`.`id` = `n`.`category`) as `category_name`
-			from `notice` `n`
-			where `n`.`status_id` = 1
-			$priceSql
-			$nameSql
-			order by `$sort` $order
-			$limit";
-		}
-
-		$noticeData = [];
-		$i = 0;
-
-		$res = DB::query(Database::SELECT, $sql)
-			->parameters([
-				':id' => $id,
-				':category_id' => $categoryId,
-				':price' => $price
-			])
-			->execute()
-			->as_array()
-		;
-
-		foreach ($res as $row) {
-			$noticeData[$i] = $row;
-			$noticeData[$i]['imgs'] = $this->getNoticeImg($row);
-			$noticeData[$i]['files'] = $this->getNoticeFile($row);
-			$i++;
-		}
-
-		return $noticeData;
-	}
-
 	public function setNotice($params = [])
 	{
 		DB::update('notice')
@@ -154,15 +66,6 @@ class Model_Notice extends Kohana_Model
             ->param(':id', Arr::get($params,'removeProductParam',0))
             ->execute();
     }
-
-    public function getNoticeImg($params = [])
-	{
-		$sql = "select * from `notice_img` where `notice_id` = :id and `status_id` = 1";
-		return DB::query(Database::SELECT, $sql)
-			->param(':id', Arr::get($params, 'id', 0))
-			->execute()
-			->as_array();
-	}
 
 	public function removeNoticeImg($params = [])
 	{
@@ -280,6 +183,87 @@ class Model_Notice extends Kohana_Model
 				->execute()
 			;
 		}
+	}
+
+	/**
+	 * @param int $id
+	 *
+	 * @return array
+	 */
+	public function findById($id)
+	{
+		$result = DB::select(
+			'n.*',
+			[DB::select('d.name')->from(['districts', 'd'])->where('d.id', '=', DB::expr('n.district')), 'district_name'],
+			[DB::select('t.name')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'type_name']
+		)
+			->from(['notice', 'n'])
+			->where('n.id', '=', $id)
+			->and_where('n.status_id', '=', 1)
+			->limit(1)
+			->execute()
+			->current()
+		;
+
+		return !$result ? [] : $result;
+	}
+
+	/**
+	 * @param int $limit
+	 *
+	 * @return array
+	 */
+	public function findPopular($limit = 4)
+	{
+		$data = [];
+
+		$views = DB::select()
+			->from('notice__views')
+			->limit($limit)
+			->order_by('id', 'DESC')
+			->group_by('notice_id')
+			->execute()
+			->as_array()
+		;
+
+		foreach ($views as $view) {
+			$noticeData = $this->findById($view['notice_id']);
+
+			if (!empty($noticeData)) {
+				$data[] = $noticeData;
+			}
+		}
+
+		return $data;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function findAllTypes()
+	{
+		return DB::select()
+			->from('notice__type')
+			->order_by('id', 'ASC')
+			->execute()
+			->as_array('id', 'name')
+			;
+	}
+
+	/**
+	 * @param $id
+	 *
+	 * @return array
+	 */
+	public function getNoticeImg($id)
+	{
+		return DB::select()
+			->from('notice_img')
+			->where('notice_id', '=', $id)
+			->and_where('status_id', '=', 1)
+			->execute()
+			->as_array()
+			;
 	}
 }
 ?>

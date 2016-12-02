@@ -349,7 +349,6 @@
 
 .service-list {
     background-color: #313131!important;
-    margin-bottom: 40px;
 }
 
 .service-list a,
@@ -416,4 +415,52 @@
     width: 100%;
     height: 350px;
     margin-bottom: 30px;
+}
+
+.main-card-carousel {
+    height: 350px;
+}
+
+.carousel-inner {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+}
+
+.carousel-inner .item{
+    height: 350px!important;
+}
+
+.carousel-inner img{
+    height: 100%!important;
+    width: 100%!important;
+}
+
+
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left, color-stop(rgba(49, 49, 49, 0.8) 0), color-stop(rgba(49, 49, 49, 0.01) 100%));
+    background-image: linear-gradient(to right, rgba(49, 49, 49, 0.8) 0, rgba(49, 49, 49, 0.01) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left, color-stop(rgba(49, 49, 49, 0.01) 0), color-stop(rgba(49, 49, 49, 0.8) 100%));
+    background-image: linear-gradient(to right, rgba(49, 49, 49, 0.01) 0, rgba(49, 49, 49, 0.8) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+
+#carousel {
+    background: #aaa;
+}
+
+.main-card-contacts-line div:first-child {
+    margin-bottom: 20px;
+}
+
+.body {
+    padding-top: 20px;
 }
