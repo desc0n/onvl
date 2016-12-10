@@ -367,7 +367,7 @@
                                                      data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0">
                                                     <a
                                                         class="card-link"
-                                                        href="/notice/1"
+                                                        href="/notice/2"
                                                         target="_blank"
                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:$19659.0.0">
                                                         <div class="card-content"
@@ -497,7 +497,7 @@
                                                      data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0">
                                                     <a
                                                         class="card-link"
-                                                        href="/notice/1"
+                                                        href="/notice/2"
                                                         target="_blank"
                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0">
                                                         <div class="card-content"
@@ -627,7 +627,7 @@
                                                      data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0">
                                                     <a
                                                         class="card-link"
-                                                        href="/notice/1"
+                                                        href="/notice/2"
                                                         target="_blank"
                                                         data-reactid=".1vz5g377mdc.2.1.0.1.0.0.0.1:1:$9169.0.0">
                                                         <div class="card-content"
