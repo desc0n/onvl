@@ -1,6 +1,9 @@
 <?php
 /** @var $noticeModel Model_Notice */
 $noticeModel = Model::factory('Notice');
+
+/** @var $contentModel Model_Content */
+$contentModel = Model::factory('Content');
 ?>
 <?= View::factory('navigation'); ?>
 <div class="layout">
@@ -38,20 +41,20 @@ $noticeModel = Model::factory('Notice');
             </div>
             <div class="main-card-content" data-js="sticky-parent">
                 <div class="container">
-                    <div class="main-card-content-grid">
-                        <div class="main-card-content-grid-col main-card-content-grid-col-1">
-                            <div data-js="sticky" data-offset-top="20" class="">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div>
                                 <div class="main-card-options-bar">
                                     <div class="main-card-options-bar-item">
                                         <div class="main-card-options-bar-value">3</div>
                                         <div class="main-card-options-bar-label">Комнат</div>
                                     </div>
                                     <div class="main-card-options-bar-item">
-                                        <div class="main-card-options-bar-value">74</div>
+                                        <div class="main-card-options-bar-value"><?=Arr::get($notice, 'area');?></div>
                                         <div class="main-card-options-bar-label">Площадь, м<sup>2</sup></div>
                                     </div>
                                     <div class="main-card-options-bar-item">
-                                        <div class="main-card-options-bar-value">65 000</div>
+                                        <div class="main-card-options-bar-value"><?=Arr::get($notice, 'price');?></div>
                                         <div class="main-card-options-bar-label">руб</div>
                                     </div>
                                 </div>
@@ -65,124 +68,95 @@ $noticeModel = Model::factory('Notice');
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="main-card-content-grid-col main-card-content-grid-col-2">
-                            <div data-js="sticky" data-offset-top="20" class="">
-                                <div class="main-card-informers">
-                                    <div class="main-card-informer main-card-informer-left"><i
-                                            class="main-card-informer-icon main-card-informer-icon-check"></i>
-                                        <div class="main-card-informer-text">Проверeно 3 дня назад</div>
-                                    </div>
-                                    <div class="main-card-informer main-card-informer-right"><i
-                                            class="main-card-informer-icon main-card-informer-icon-commission"></i>
-                                        <div class="main-card-informer-text">Без&nbsp;комиссии</div>
-                                    </div>
-                                </div>
-                                <div class="main-card-options">
-                                    <div class="main-card-options-item">
-                                        <div class="main-card-options-cell">Размещено</div>
-                                        <div class="main-card-options-cell text-right">20 октября 2016</div>
-                                    </div>
-                                    <div class="main-card-options-item">
-                                        <div class="main-card-options-cell">Этаж</div>
-                                        <div class="main-card-options-cell text-right">3 / 7</div>
-                                    </div>
-                                    <div class="main-card-options-item">
-                                        <div class="main-card-options-cell">Комнат</div>
-                                        <div class="main-card-options-cell text-right">3</div>
-                                    </div>
-                                    <div class="main-card-options-item">
-                                        <div class="main-card-options-cell">Площадь, м<sup>2</sup></div>
-                                        <div class="main-card-options-cell text-right">74</div>
-                                    </div>
-                                    <div class="main-card-options-item">
-                                        <div class="main-card-options-cell">Цена в месяц, руб</div>
-                                        <div class="main-card-options-cell text-right">65 000</div>
+                                <div class="main-card-contacts row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="map">
+                                        <script type="text/javascript">
+                                            ymaps.ready(function () {
+                                                var properties = [
+                                                    {
+                                                        "lat":"43.143568",
+                                                        "lng":"131.907499"
+                                                    }
+                                                ];
+
+                                                var myMap = new ymaps.Map('map', {
+                                                        center: [43.143568, 131.907499],
+                                                        zoom: 13,
+                                                        type: "yandex#map"
+                                                    }, {
+                                                    }),
+                                                    BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                        '<div id="listing-map">' +
+                                                        '</div>' );
+
+                                                jQuery.each(properties,function(e, f){
+                                                    var placemark = new ymaps.Placemark([f.lat, f.lng], {
+                                                    }, {
+                                                        balloonContentLayout: BalloonContentLayout,
+                                                        balloonPanelMaxMapArea: 0
+                                                    });
+
+                                                    myMap.geoObjects.add(placemark);
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="main-card-content-grid-col main-card-content-grid-col-3">
-                            <div class="main-card-breadcrumbs">
-                                <div class="breadcrumbs">
-                                    <ul class="breadcrumbs-list">
-                                        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="/rooms"
-                                                                        title="Все объявления">Все объявления</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h1 class="main-card-title">Большая трешка с отличным свежим ремонтом</h1>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                            <h1 class="main-card-title"><?=Arr::get($notice, 'name');?></h1>
                             <div class="main-card-desc"><p></p>
-                                <p>Просторная трешка в новом доме в пяти минутах пешком от метро. Полностью оборудована
-                                    для комфортного проживания семьи, с мебелью и бытовой техникой. Гостиная-студия с
-                                    кухней, две спальни, вместительная гардеробная. Тихий район, рядом с парком. </p>
-                                <p></p></div>
-                            <div class="main-card-features"><h5 class="main-card-features-title">Удобства</h5>
-                                <ul class="main-card-features-list">
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/2/balcony.png"
-                                                alt="Balcony"></i>Балкон
-                                    </li>
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/4/dishwasher.png"
-                                                alt="Dishwasher"></i>Посудомоечная машина
-                                    </li>
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/6/fridge.png"
-                                                alt="Fridge"></i>Холодильник
-                                    </li>
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/8/washer.png"
-                                                alt="Washer"></i>Стиральная машина
-                                    </li>
-                                </ul>
-                                <ul class="main-card-features-list">
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/10/tv.png"
-                                                alt="Tv"></i>Телевизор
-                                    </li>
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/12/water-heater.png"
-                                                alt="Water heater"></i>Нагреватель воды
-                                    </li>
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/14/conditioner.png"
-                                                alt="Conditioner"></i>Кондиционер
-                                    </li>
-                                </ul>
+                                <p>
+                                    <?=Arr::get($notice, 'description');?>
+                                </p>
                             </div>
-                            <div class="main-card-features"><h5 class="main-card-features-title">Особенности</h5>
+                            <div class="main-card-features">
+                                <h5 class="main-card-features-title">Дополнительные характеристики</h5>
                                 <ul class="main-card-features-list">
-                                    <li class="main-card-features-item __disabled"><i
-                                            class="main-card-features-icon"><img class="main-card-features-icon-img"
-                                                                                 src="https://assets.thelocals.ru/uploads/image_attachment/data_file/16/smoking.png"
-                                                                                 alt="Smoking"></i>Можно курить
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Балкон
                                     </li>
-                                    <li class="main-card-features-item __disabled"><i
-                                            class="main-card-features-icon"><img class="main-card-features-icon-img"
-                                                                                 src="https://assets.thelocals.ru/uploads/image_attachment/data_file/18/events.png"
-                                                                                 alt="Events"></i>Подходит для
-                                        мероприятий
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Посудомоечная машина
                                     </li>
-                                </ul>
-                                <ul class="main-card-features-list">
-                                    <li class="main-card-features-item __disabled"><i
-                                            class="main-card-features-icon"><img class="main-card-features-icon-img"
-                                                                                 src="https://assets.thelocals.ru/uploads/image_attachment/data_file/20/animals.png"
-                                                                                 alt="Animals"></i>Можно с животными
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Холодильник
                                     </li>
-                                    <li class="main-card-features-item"><i class="main-card-features-icon"><img
-                                                class="main-card-features-icon-img"
-                                                src="https://assets.thelocals.ru/uploads/image_attachment/data_file/22/family.png"
-                                                alt="Family"></i>Подходит для семьи с детьми
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Стиральная машина
+                                    </li>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Телевизор
+                                    </li>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Нагреватель воды
+                                    </li>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Кондиционер
+                                    </li>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Можно курить
+                                    </li>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Подходит для мероприятий
+                                    </li>
+                                    <li class="main-card-features-item __disabled">
+                                        <span class="glyphicon glyphicon-remove-circle"></span>
+                                        Можно с животными
+                                    </li>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        Подходит для семьи с детьми
                                     </li>
                                 </ul>
                             </div>
