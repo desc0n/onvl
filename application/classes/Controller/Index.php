@@ -7,6 +7,16 @@ class Controller_Index extends Controller_Base
         /** @var $contentModel Model_Content */
         $contentModel = Model::factory('Content');
 
+        if (Auth::instance()->logged_in() && isset($_POST['logout'])) {
+            Auth::instance()->logout();
+            HTTP::redirect('/');
+        }
+
+        if (!Auth::instance()->logged_in() && isset($_POST['login'])) {
+            Auth::instance()->login($this->request->post('username'), $this->request->post('password'),true);
+            HTTP::redirect('/');
+        }
+
         View::set_global('title', 'Главная');
         View::set_global('rootPage', 'main');
 

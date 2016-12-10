@@ -44,9 +44,7 @@ class Controller_Ajax extends Controller
 
     public function action_add_review()
 	{
-        /**
-         * @var $adminModel Model_Admin
-         */
+        /** @var $adminModel Model_Admin */
         $adminModel = Model::factory('Admin');
 
 		$this->response->body($adminModel->addReview($_POST));
@@ -63,5 +61,29 @@ class Controller_Ajax extends Controller
         $email = (string)$this->request->post('email');
 
         $this->response->body($cartModel->sendOrder($name, $phone, $address, $email));
+    }
+
+    public function action_check_isset_username()
+    {
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
+        $this->response->body(!$adminModel->findUserByUsername($this->request->post('username')) ? 0 : 1);
+    }
+
+    public function action_check_isset_email()
+    {
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
+        $this->response->body(!$adminModel->findUserByEmail($this->request->post('email')) ? 0 : 1);
+    }
+
+    public function action_registration()
+    {
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
+        $adminModel->registerUser($this->request->post('username'), $this->request->post('email'), $this->request->post('password'));
     }
 }

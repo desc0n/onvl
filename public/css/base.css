@@ -5935,11 +5935,13 @@ body.blog-item .article-preview {
     -webkit-transition: color 0.15s ease;
     transition: color 0.15s ease;
     display: inline-block;
-    color: #fff
+    color: #fff;
+    margin-left: 5px;
 }
 
-.header-topline-link:hover {
-    color: #1b75b6
+a .header-topline-link:hover {
+    color: #1b75b6;
+    text-decoration: none;
 }
 
 .header-topline-link-block {

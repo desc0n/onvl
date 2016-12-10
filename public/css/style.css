@@ -474,3 +474,19 @@
     margin: 0;
     padding: 5px;
 }
+
+.modal-body .tab-content .tab-pane {
+    padding-top: 20px;
+}
+
+span.header-topline-link-block {
+    display: inline-block;
+}
+
+.logout-form .btn,
+.logout-form .btn:hover,
+.logout-form .btn:focus {
+    border: none;
+    background: none;
+    color: #fff;
+}

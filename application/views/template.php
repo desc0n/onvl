@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
     <title>Аренда недвижимости без комиссии во Владивостоке</title>
-    <meta name="description"
-          content="Снять недвижимость в Москве без комиссии. Новые проверенные объявления каждый день. Сдавайте и снимайте жилье на самой большой доске объявлений от собственников.">
+    <meta name="description" content="Снять недвижимость во Владивостоке без комиссии.">
     <link href="/public/i/logo.png" rel="shortcut icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,900,900i" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="/public/css/bootstrap.css">
@@ -43,15 +42,46 @@
                 <h4 class="modal-title">Войти</h4>
             </div>
             <div class="modal-body">
-                <form class="form" method="post">
-                    <div style="margin-bottom: 25px" class="form-group">
-                        <input name="username" class="form-control" placeholder="Ваш логин" required="" autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab">Вход</a></li>
+                    <li><a href="#tab2" data-toggle="tab">Регистрация</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <form class="form" method="post" action="/">
+                                    <div style="margin-bottom: 25px" class="form-group">
+                                        <input name="username" class="form-control" placeholder="Ваш логин" required="">
+                                    </div>
+                                    <div style="margin-bottom: 25px" class="form-group">
+                                        <input name="password" type="password" class="form-control" placeholder="Ваш пароль" required="">
+                                    </div>
+                                    <button class="btn btn-lg btn-primary btn-block filled-button" type="submit" name="login">Вход</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-bottom: 25px" class="form-group">
-                        <input name="password" type="password" class="form-control" placeholder="Ваш пароль" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+                    <div class="tab-pane" id="tab2">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12" id="regForm">
+                                <div style="margin-bottom: 25px" class="form-group">
+                                    <input id="username" class="form-control" placeholder="Логин" required="">
+                                </div>
+                                <div style="margin-bottom: 25px" class="form-group">
+                                    <input id="email" class="form-control" placeholder="E-mail" required="">
+                                </div>
+                                <div style="margin-bottom: 25px" class="form-group">
+                                    <input id="password" type="password" class="form-control" placeholder="Пароль" required="">
+                                </div>
+                                <div style="margin-bottom: 25px" class="form-group">
+                                    <input id="rePassword" type="password" class="form-control" placeholder="Подтвердить пароль" required="">
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block filled-button" id="regBtn">Зарегистрироваться</button>
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block filled-button" type="submit" name="login">Вход</button>
-                </form>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
