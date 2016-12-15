@@ -28,4 +28,26 @@ class Controller_Notice extends Controller_Base
 
         $this->response->body($template);
     }
+
+    public function action_new()
+    {
+        /** @var $contentModel Model_Content */
+        $contentModel = Model::factory('Content');
+
+        /** @var $noticeModel Model_Notice */
+        $noticeModel = Model::factory('Notice');
+
+
+        View::set_global('title', 'Добавить объявление');
+        View::set_global('rootPage', 'newNotice');
+
+        $template = $contentModel->getBaseTemplate();
+
+        $template->content=View::factory('new_notice')
+            ->set('popularNotices', $noticeModel->findPopular())
+            ->set('types', $noticeModel->findAllTypes())
+        ;
+
+        $this->response->body($template);
+    }
 }
