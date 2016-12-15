@@ -46,7 +46,11 @@ $contentModel = Model::factory('Content');
                             <div>
                                 <div class="main-card-options-bar">
                                     <div class="main-card-options-bar-item">
-                                        <div class="main-card-options-bar-value">3</div>
+                                        <div class="main-card-options-bar-value"><?=Arr::get($notice, 'floor');?></div>
+                                        <div class="main-card-options-bar-label">Этаж</div>
+                                    </div>
+                                    <div class="main-card-options-bar-item">
+                                        <div class="main-card-options-bar-value"><?=Arr::get($notice, 'room_count');?></div>
                                         <div class="main-card-options-bar-label">Комнат</div>
                                     </div>
                                     <div class="main-card-options-bar-item">
@@ -61,10 +65,18 @@ $contentModel = Model::factory('Content');
                                 <div class="main-card-contacts">
                                     <div class="main-card-contacts-line main-card-contacts-line-fixed">
                                         <div>
-                                            <a class="btn button-blue">Телефон собственника</a>
+                                            <?if(!Auth::instance()->logged_in()) {?>
+                                                <a class="btn button-blue" data-toggle="modal" href="#loginModal">Телефон собственника</a>
+                                            <?} else {?>
+                                                <a class="btn button-blue">Телефон собственника</a>
+                                            <?}?>
                                         </div>
                                         <div>
-                                            <button class="btn btn-danger"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
+                                            <?if(!Auth::instance()->logged_in()) {?>
+                                                <button class="btn btn-danger" data-toggle="modal" href="#loginModal"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
+                                            <?} else {?>
+                                                <button class="btn btn-danger"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
+                                            <?}?>
                                         </div>
                                     </div>
                                 </div>
@@ -111,60 +123,64 @@ $contentModel = Model::factory('Content');
                                     <?=Arr::get($notice, 'description');?>
                                 </p>
                             </div>
-                            <div class="main-card-features">
-                                <h5 class="main-card-features-title">Дополнительные характеристики</h5>
-                                <ul class="main-card-features-list">
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Балкон
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Посудомоечная машина
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Холодильник
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Стиральная машина
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Телевизор
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Нагреватель воды
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Кондиционер
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Можно курить
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Подходит для мероприятий
-                                    </li>
-                                    <li class="main-card-features-item __disabled">
-                                        <span class="glyphicon glyphicon-remove-circle"></span>
-                                        Можно с животными
-                                    </li>
-                                    <li class="main-card-features-item">
-                                        <span class="glyphicon glyphicon-ok-circle"></span>
-                                        Подходит для семьи с детьми
-                                    </li>
-                                </ul>
-                            </div>
+<!--                            <div class="main-card-features">-->
+<!--                                <h5 class="main-card-features-title">Дополнительные характеристики</h5>-->
+<!--                                <ul class="main-card-features-list">-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Балкон-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Посудомоечная машина-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Холодильник-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Стиральная машина-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Телевизор-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Нагреватель воды-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Кондиционер-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Можно курить-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Подходит для мероприятий-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item __disabled">-->
+<!--                                        <span class="glyphicon glyphicon-remove-circle"></span>-->
+<!--                                        Можно с животными-->
+<!--                                    </li>-->
+<!--                                    <li class="main-card-features-item">-->
+<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
+<!--                                        Подходит для семьи с детьми-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                             <div class="main-card-interest">
                                 <div class="main-card-interest-title">Понравилась квартира?</div>
                                 <div>
-                                    <a id="ad_contacts_button" class="btn button-blue"
-                                       data-reactid=".6ixcqu7oxs">Телефон собственника</a></div>
+                                    <?if(!Auth::instance()->logged_in()) {?>
+                                    <a class="btn button-blue" data-toggle="modal" href="#loginModal">Телефон собственника</a>
+                                    <?} else {?>
+                                    <a class="btn button-blue">Телефон собственника</a>
+                                    <?}?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,7 +188,7 @@ $contentModel = Model::factory('Content');
             </div>
         </div>
         <section class="offers offers-similar">
-            <div class="container-fluid"><h2 class="section-title">Другие 3-х комнатные квартиры</h2>
+            <div class="container-fluid"><h2 class="section-title">Другие 1-х комнатные квартиры</h2>
                 <div data-react-class="AdCards"
                      data-react-props="{&quot;ads&quot;:[{&quot;id&quot;:212157,&quot;title&quot;:&quot;Сдается трехкомнатная квартира в сталинском доме&quot;,&quot;path&quot;:&quot;/sdaetsya-trehkomnatnaya-kvartira-v-stalinskom-dome&quot;,&quot;space&quot;:&quot;85&quot;,&quot;price&quot;:&quot;70 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1625742/thumb_71cfada2.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Нагатинская, Тульская&quot;,&quot;date&quot;:&quot;6 дней назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},{&quot;id&quot;:194082,&quot;title&quot;:&quot;Комфортабельная трешка&quot;,&quot;path&quot;:&quot;/komfortabelnaya-treshka&quot;,&quot;space&quot;:&quot;79&quot;,&quot;price&quot;:&quot;65 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1493363/thumb_2c92a069.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Семёновская&quot;,&quot;date&quot;:&quot;7 дней назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},{&quot;id&quot;:214309,&quot;title&quot;:&quot;Трешка на Академической&quot;,&quot;path&quot;:&quot;/treshka-na-akademicheskoy-e4614b20-8be9-4f59-be8c-8f4c89a69aad&quot;,&quot;space&quot;:&quot;90&quot;,&quot;price&quot;:&quot;70 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1642028/thumb_d7b7070a.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Академическая, Профсоюзная&quot;,&quot;date&quot;:&quot;20 минут назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},{&quot;id&quot;:183835,&quot;title&quot;:&quot;Трехкомнатная квартира после капитального ремонта м.Каховская &quot;,&quot;path&quot;:&quot;/trehkomnatnaya-kvartira-posle-kapitalnogo-remonta-m-kahovskaya&quot;,&quot;space&quot;:&quot;60&quot;,&quot;price&quot;:&quot;60 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1417437/thumb_68540194.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Каховская, Севастопольская&quot;,&quot;date&quot;:&quot;7 дней назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false}],&quot;signedIn&quot;:false,&quot;hasStatusViewed&quot;:false}"
                      class="cards-container">
