@@ -490,3 +490,18 @@ span.header-topline-link-block {
     background: none;
     color: #fff;
 }
+
+.form-row-label {
+    position: relative;
+}
+
+.validate-form {
+    position: absolute;
+    width: 21px;
+    right: -30px;
+    top: 8px;
+}
+
+.validate-form .glyphicon-remove {
+    color: #ff0000;
+}
