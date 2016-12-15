@@ -195,7 +195,8 @@ class Model_Notice extends Kohana_Model
 		$result = DB::select(
 			'n.*',
 			[DB::select('d.name')->from(['districts', 'd'])->where('d.id', '=', DB::expr('n.district')), 'district_name'],
-			[DB::select('t.name')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'type_name']
+			[DB::select('t.name')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'type_name'],
+			[DB::select('t.room_count')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'room_count']
 		)
 			->from(['notice', 'n'])
 			->where('n.id', '=', $id)
