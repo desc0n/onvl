@@ -135,6 +135,14 @@ $(document).ready(function() {
             }
         );
     });
+
+    $('#newNoticeBtn').click(function () {
+        if ($('.address-label .validate-form .glyphicon-remove').length) {
+            alert('Координаты адреса не определены!');
+
+            return false;
+        }
+    });
 });
 
 function isValidEmailAddress(email) {
