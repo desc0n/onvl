@@ -5,7 +5,6 @@ $noticeModel = Model::factory('Notice');
 /** @var $contentModel Model_Content */
 $contentModel = Model::factory('Content');
 ?>
-<?= View::factory('navigation'); ?>
 <div class="layout">
     <?= View::factory('header'); ?>
     <div class="content">

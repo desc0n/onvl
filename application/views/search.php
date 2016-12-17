@@ -1,4 +1,3 @@
-<?= View::factory('navigation'); ?>
 <div class="layout">
     <?= View::factory('header'); ?>
     <div class="body">

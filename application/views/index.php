@@ -1,4 +1,3 @@
-<?=View::factory('navigation');?>
 <div class="layout">
     <?=View::factory('header');?>
     <div class="header-hero">
@@ -522,7 +521,12 @@
                     </div>
 
                 </div>
-                <a class="btn button-blue btn-lg" href="/notice/new">Сдать квартиру бесплатно</a></div>
+                <?if(!Auth::instance()->logged_in()) {?>
+                    <a class="btn button-blue btn-lg" data-toggle="modal" href="#loginModal">Сдать квартиру бесплатно</a>
+                <?} else {?>
+                    <a class="btn button-blue btn-lg" href="/notice/new">Сдать квартиру бесплатно</a>
+                <?}?>
+            </div>
         </section>
     </div>
     <?=View::factory('footer');?>
