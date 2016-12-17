@@ -23,9 +23,11 @@
                         </div>
                         <div class="form-row-content">
                             <div class="input input-group">
-                                <input placeholder="Например, Русская, 7" class="form-control">
+                                <input placeholder="Например, Светланская, 10" id="address" class="form-control">
+                                <input type="hidden" id="latitude">
+                                <input type="hidden" id="longitude">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default">
+                                    <button class="btn btn-default" id="findCoordBtn">
                                         <i class="glyphicon glyphicon-search" title="Найти координаты"></i>
                                     </button>
                                 </span>
@@ -35,7 +37,7 @@
                 </div>
                 <div class="form-step">
                     <div class="form-row">
-                        <div class="form-row-label">
+                        <div class="form-row-label name-label">
                             Заголовок
                             <div class="validate-form">
                                 <i class="glyphicon glyphicon-remove"></i>
@@ -43,12 +45,12 @@
                         </div>
                         <div class="form-row-content">
                             <div class="input">
-                                <input class="form-control" placeholder="Например: «Трёшка на Русской»." type="text" name="name">
+                                <input class="form-control" placeholder="Например: «Трёшка на Русской»." type="text" id="name">
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-row-label">
+                        <div class="form-row-label description-label">
                             Описание
                             <div class="validate-form">
                                 <i class="glyphicon glyphicon-remove"></i>
@@ -56,9 +58,7 @@
                         </div>
                         <div class="form-row-content">
                             <div class="textarea">
-                                <textarea class="form-control" name="description">
-
-                                </textarea>
+                                <textarea class="form-control" id="description"></textarea>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <div class="form-row-content">
                             <div class="uploadzone dropzone-previews">
                                 <div class="uploadzone-content">
-                                    <input type="file" name="imgname[]" id="exampleInputFile" multiple>
+                                    <input type="file" id="uploadImages" multiple>
                                 </div>
                             </div>
                         </div>
@@ -75,14 +75,14 @@
                 </div>
                 <div class="form-step">
                     <div class="form-row" data-switch-block="apartment">
-                        <div class="form-row-label">
+                        <div class="form-row-label type-label">
                             Тип квартиры
                             <div class="validate-form">
                                 <i class="glyphicon glyphicon-remove"></i>
                             </div>
                         </div>
                         <div class="form-row-content">
-                            <?=Form::select('type', ([null=> 'не выбрано'] + $types), null, ['class' => 'form-control']);?>
+                            <?=Form::select('type', ([null=> 'не выбрано'] + $types), null, ['class' => 'form-control', 'id' => 'type']);?>
                         </div>
                     </div>
                     <div class="form-row form-row-options">
@@ -92,7 +92,7 @@
                                 <div class="grid-item grid-item-option grid-item-option-area">
                                     <label class="control-label">Площадь квартиры</label>
                                     <div class="input input-option input-inline">
-                                        <input class="form-control" type="text" name="area" value="0">
+                                        <input class="form-control" type="text" id="area" value="0">
                                     </div>
                                     <span class="form-text">м<sup>2</sup>
                                     </span>
@@ -100,7 +100,7 @@
                                 <div class="grid-item grid-item-option grid-item-option-floor">
                                     <label class="control-label">Этаж</label>
                                     <div class="input input-option input-inline">
-                                        <input class="form-control" type="text" name="floor" value="1">
+                                        <input class="form-control" type="text" id="floor" value="1">
                                     </div>
                                 </div>
                             </div>
@@ -110,13 +110,13 @@
                         <div class="form-row-label">Цена в месяц</div>
                         <div class="form-row-content">
                             <div class="input input-inline input-price">
-                                <input class="form-control" placeholder="0" type="text" name="price">
+                                <input class="form-control" placeholder="0" type="text" id="price">
                             </div>
                             <span class="form-text">руб</span>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-row-label">
+                        <div class="form-row-label phone-label">
                             Телефон
                             <div class="validate-form">
                                 <i class="glyphicon glyphicon-remove"></i>
@@ -125,7 +125,7 @@
                         <div class="form-row-content">
                             <div>
                                 <div class="input">
-                                    <input class="form-control" placeholder="+7" type="text" name="phone">
+                                    <input class="form-control" placeholder="+71234567890" type="text" id="phone">
                                 </div>
                             </div>
                         </div>
