@@ -86,4 +86,34 @@ class Controller_Ajax extends Controller
 
         $adminModel->registerUser($this->request->post('username'), $this->request->post('email'), $this->request->post('password'));
     }
+
+    public function action_find_address_coords()
+    {
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
+        $this->response->body($adminModel->findCoords($this->request->query('address')));
+    }
+
+    public function action_load_images()
+    {
+        /** @var $noticeModel Model_Notice */
+        $noticeModel = Model::factory('Notice');
+
+        $filename=Arr::get($_FILES, 'imgname', []);
+
+        if (!empty($filename)) {
+            $noticeModel->loadNoticeImg($_FILES, $this->request->param('id'));
+        }
+
+        $this->response->body(json_encode(['result' => 'success']));
+    }
+
+    public function action_add_notice()
+    {
+        /** @var $noticeModel Model_Notice */
+        $noticeModel = Model::factory('Notice');
+
+        $this->response->body(json_encode(['id' => $noticeModel->addNotice($_POST)]));
+    }
 }
