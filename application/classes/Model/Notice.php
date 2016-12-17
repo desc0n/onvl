@@ -83,64 +83,6 @@ class Model_Notice extends Kohana_Model
 			->execute();
 	}
 
-	public function getNoticeFile($params = [])
-	{
-		$sql = "select * from `notice_file` where `notice_id` = :id and `status_id` = 1";
-		return DB::query(Database::SELECT, $sql)
-			->param(':id', Arr::get($params, 'id', 0))
-			->execute()
-			->as_array();
-	}
-
-
-    public function loadNoticeFile($filesGlobal, $notice_id)
-    {
-        $filesData = [];
-
-        foreach ($filesGlobal['filename']['name'] as $key => $data) {
-            $filesData[$key]['name'] = $filesGlobal['filename']['name'][$key];
-            $filesData[$key]['type'] = $filesGlobal['filename']['type'][$key];
-            $filesData[$key]['tmp_name'] = $filesGlobal['filename']['tmp_name'][$key];
-            $filesData[$key]['error'] = $filesGlobal['filename']['error'][$key];
-            $filesData[$key]['size'] = $filesGlobal['filename']['size'][$key];
-        }
-
-        foreach ($filesData as $files) {
-            $sql = "insert into `notice_file` (`notice_id`) values (:id)";
-            $res = DB::query(Database::INSERT,$sql)
-                ->param(':id', $notice_id)
-                ->execute();
-
-            $new_id = $res[0];
-            $imageName = Arr::get($files,'name','');
-            //$imageName = preg_replace("/[^0-9a-z.]+/i", "0", Arr::get($files,'name',''));
-            $file_name = 'public/files/'.$new_id.'_'.$imageName;
-            if (copy($files['tmp_name'], $file_name))	{
-                $sql = "update `notice_file` set `src` = :src,`status_id` = 1 where `id` = :id";
-                DB::query(Database::UPDATE,$sql)
-                    ->param(':id', $new_id)
-                    ->param(':src', $new_id.'_'.$imageName)
-                    ->execute();
-            }
-        }
-    }
-
-	public function removeNoticeFile($params = [])
-	{
-		$sql = "update `notice_file` set `status_id` = 0 where `id` = :id";
-		DB::query(Database::UPDATE,$sql)
-			->param(':id', Arr::get($params,'removefile',0))
-			->execute();
-	}
-
-	public function deleteNoticeSale($params)
-	{
-		$sql = "update `notice_sale` set `status_id` = 0 where `id` = :id";
-		DB::query(Database::UPDATE,$sql)
-			->param(':id', Arr::get($params,'id',0))
-			->execute();
-	}
-
 	public function findLastSeeItems()
 	{
 		$data = [];
@@ -194,7 +136,6 @@ class Model_Notice extends Kohana_Model
 	{
 		$result = DB::select(
 			'n.*',
-			[DB::select('d.name')->from(['districts', 'd'])->where('d.id', '=', DB::expr('n.district')), 'district_name'],
 			[DB::select('t.name')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'type_name'],
 			[DB::select('t.room_count')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'room_count']
 		)
@@ -276,7 +217,6 @@ class Model_Notice extends Kohana_Model
 	{
 		$page = Arr::get($query, 'page', 1);
 		$limit = Arr::get($query, 'limit', 30);
-		$district = Arr::get($query, 'district');
 		$type = Arr::get($query, 'type');
 		$priceFrom = Arr::get($query, 'price_from', 0);
 		$priceTo = Arr::get($query, 'price_to', 0);
@@ -284,17 +224,14 @@ class Model_Notice extends Kohana_Model
 
 		$notices = [];
 
-		$query = DB::select('n.*', ['d.name', 'district_name'], ['t.name', 'type_name'])
+		$query = DB::select('n.*', ['t.name', 'type_name'])
 			->from(['notice', 'n'])
-			->join(['districts', 'd'], 'left')
-			->on('d.id', '=', 'n.district')
 			->join(['notice__type', 't'], 'left')
 			->on('t.id', '=', 'n.type')
 			->where('n.status_id', '=', 1)
 			->and_where('n.price', '>=', $priceFrom)
 		;
 
-		$query = !empty($district) ? $query->and_where('d.id', '=', $district) : $query;
 		$query = !empty($type) ? $query->and_where('t.id', '=', $type) : $query;
 		$query = !empty($priceTo) ? $query->and_where('n.price', '<=', $priceTo) : $query;
 
@@ -336,6 +273,94 @@ class Model_Notice extends Kohana_Model
 		}
 
 		return $notices;
+	}
+
+	public function loadNoticeImg($filesGlobal, $noticeId)
+	{
+		$filesData = [];
+
+		foreach ($filesGlobal['imgname']['name'] as $key => $data) {
+			$filesData[$key]['name'] = $filesGlobal['imgname']['name'][$key];
+			$filesData[$key]['type'] = $filesGlobal['imgname']['type'][$key];
+			$filesData[$key]['tmp_name'] = $filesGlobal['imgname']['tmp_name'][$key];
+			$filesData[$key]['error'] = $filesGlobal['imgname']['error'][$key];
+			$filesData[$key]['size'] = $filesGlobal['imgname']['size'][$key];
+		}
+
+		foreach ($filesData as $files) {
+			$res = DB::insert('notice_img', ['notice_id'])
+				->values([$noticeId])
+				->execute()
+			;
+
+			$newId = $res[0];
+			$imageName = preg_replace("/[^0-9a-z.]+/i", "0", Arr::get($files,'name',''));
+			$file_name = 'public/img/original/'.$newId.'_'.$imageName;
+			if (copy($files['tmp_name'], $file_name))	{
+				$image=Image::factory($file_name);
+				$image->resize(500, NULL);
+				$image->save($file_name,100);
+				$thumb_file_name = 'public/img/thumb/'.$newId.'_'.$imageName;
+
+				if (copy($files['tmp_name'], $thumb_file_name))	{
+					$thumb_image=Image::factory($thumb_file_name);
+					$thumb_image->resize(300, NULL);
+					$thumb_image->save($thumb_file_name,100);
+
+					DB::update('notice_img')
+						->set(['src' => $newId.'_'.$imageName, 'status_id' => 1])
+						->where('id', '=', $newId)
+						->execute();
+				}
+			}
+		}
+	}
+
+	/**
+	 * @param array $params
+	 *
+	 * @return int
+	 */
+	public function addNotice($params = [])
+	{
+		$res = DB::insert('notice', [
+				'type',
+				'area',
+				'address',
+				'floor',
+				'longitude',
+				'latitude',
+				'name',
+				'price',
+				'description',
+				'phone',
+				'created_at',
+			])
+			->values([
+				Arr::get($params, 'type'),
+				Arr::get($params, 'area', 0),
+				Arr::get($params, 'address'),
+				Arr::get($params, 'floor'),
+				Arr::get($params, 'longitude'),
+				Arr::get($params, 'latitude'),
+				Arr::get($params, 'name', ''),
+				Arr::get($params, 'price', 0),
+				Arr::get($params, 'description', ''),
+				Arr::get($params, 'phone', ''),
+				DB::expr('NOW()')
+			])
+			->execute()
+		;
+
+		$noticeId = $res[0];
+
+		DB::update('notice')
+			->set(['sort' => $noticeId])
+			->where('id', '=', $noticeId)
+			->execute()
+		;
+
+		return $noticeId;
 	}
 }
 ?>
