@@ -52,112 +52,6 @@ class Model_Admin extends Kohana_Model
         return $noticeId;
 	}
 
-
-	public function loadNoticeImg($filesGlobal, $notice_id)
-	{
-		$filesData = [];
-
-		foreach ($filesGlobal['imgname']['name'] as $key => $data) {
-			$filesData[$key]['name'] = $filesGlobal['imgname']['name'][$key];
-			$filesData[$key]['type'] = $filesGlobal['imgname']['type'][$key];
-			$filesData[$key]['tmp_name'] = $filesGlobal['imgname']['tmp_name'][$key];
-			$filesData[$key]['error'] = $filesGlobal['imgname']['error'][$key];
-			$filesData[$key]['size'] = $filesGlobal['imgname']['size'][$key];
-		}
-
-		foreach ($filesData as $files) {
-			$sql = "insert into `notice_img` (`notice_id`) values (:id)";
-			$res = DB::query(Database::INSERT,$sql)
-                ->param(':id', $notice_id)
-                ->execute();
-
-			$new_id = $res[0];
-			$imageName = preg_replace("/[^0-9a-z.]+/i", "0", Arr::get($files,'name',''));
-			$file_name = 'public/img/original/'.$new_id.'_'.$imageName;
-			if (copy($files['tmp_name'], $file_name))	{
-				$image=Image::factory($file_name);
-				$image->resize(500, NULL);
-				$image->save($file_name,100);
-				$thumb_file_name = 'public/img/thumb/'.$new_id.'_'.$imageName;
-
-				if (copy($files['tmp_name'], $thumb_file_name))	{
-					$thumb_image=Image::factory($thumb_file_name);
-					$thumb_image->resize(300, NULL);
-					$thumb_image->save($thumb_file_name,100);
-
-					$sql = "update `notice_img` set `src` = :src,`status_id` = 1 where `id` = :id";
-					DB::query(Database::UPDATE,$sql)
-                        ->param(':id', $new_id)
-                        ->param(':src', $new_id.'_'.$imageName)
-                        ->execute();
-				}
-			}
-		}
-	}
-
-	public function addNoticeSale($params = [])
-	{
-		DB::query(Database::INSERT, "insert into `notice_sale` (`name`, `category`) values (:name, :category)")
-			->param(':name', Arr::get($params, 'name', ''))
-			->param(':category', Arr::get($params, 'category', null))
-			->execute();
-		$res = DB::query(Database::SELECT, "select last_insert_id() as `id` from `notice_sale`")
-			->execute()
-			->as_array();
-		return $res[0]['id'];
-	}
-
-	public function loadNoticeSaleImg($filesGlobal, $notice_id)
-	{
-		$filesData = [];
-		foreach ($filesGlobal['imgname']['name'] as $key => $data) {
-			$filesData[$key]['name'] = $filesGlobal['imgname']['name'][$key];
-			$filesData[$key]['type'] = $filesGlobal['imgname']['type'][$key];
-			$filesData[$key]['tmp_name'] = $filesGlobal['imgname']['tmp_name'][$key];
-			$filesData[$key]['error'] = $filesGlobal['imgname']['error'][$key];
-			$filesData[$key]['size'] = $filesGlobal['imgname']['size'][$key];
-		}
-		foreach ($filesData as $files) {
-			$sql = "insert into `notice_sale_img` (`notice_id`) values (:id)";
-			$query = DB::query(Database::INSERT,$sql);
-			$query->param(':id', $notice_id);
-			$query->execute();
-			$sql = "select last_insert_id() as `new_id` from `notice_sale_img`";
-			$query = DB::query(Database::SELECT,$sql);
-			$res = $query->execute()->as_array();
-			$new_id = $res[0]['new_id'];
-			$imageName = preg_replace("/[^0-9a-z.]+/i", "0", Arr::get($files,'name',''));
-			$file_name = 'public/img/sale/original/'.$new_id.'_'.$imageName;
-			if (copy($files['tmp_name'], $file_name))	{
-				//$this->setWaterMark('original/'.$new_id.'_'.Arr::get($files,'name',''));
-				//$new_image = $this->picture($files['tmp_name']);
-				//$this->imageresizewidth(120);
-				//$this->imagesave('jpeg', 'public/img/thumb/'.$new_id.'_'.Arr::get($files,'name',''));
-				$image=Image::factory($file_name);
-				$image->resize(800, NULL);
-				$watermark=Image::factory('public/i/watermark.png');
-				$watermark->rotate(-45);
-				$image->watermark($watermark, $offset_x = null, $offset_y = null, $opacity = 100);
-				$image->save($file_name,100);
-				$thumb_file_name = 'public/img/sale/thumb/'.$new_id.'_'.$imageName;
-				if (copy($files['tmp_name'], $thumb_file_name))	{
-					$thumb_image=Image::factory($thumb_file_name);
-					$thumb_image->resize(300, NULL);
-					$thumb_watermark=Image::factory('public/i/watermark.png');
-					$thumb_watermark->rotate(-45);
-					$thumb_watermark->resize(100, NULL);
-					$thumb_image->watermark($thumb_watermark, $offset_x = null, $offset_y = null, $opacity = 100);
-					$thumb_image->save($thumb_file_name,100);
-					$sql = "update `notice_sale_img` set `src` = :src,`status_id` = 1 where `id` = :id";
-					$query=DB::query(Database::UPDATE,$sql);
-					$query->param(':id', $new_id);
-					$query->param(':src', $new_id.'_'.$imageName);
-					$query->execute();
-				}
-			}
-		}
-	}
-
 	//Готовое решение с картинками
 	public function picture($image_file)
 	{
@@ -777,6 +671,33 @@ class Model_Admin extends Kohana_Model
         if (!Auth::instance()->logged_in()) {
             Auth::instance()->login($username, $password,true);
         }
+    }
+
+    public function findCoords($address)
+    {
+        $yandexApiMapResponse = file_get_contents('https://geocode-maps.yandex.ru/1.x/?format=json&geocode=Владивосток+' . urlencode($address));
+        $response = json_decode($yandexApiMapResponse, true);
+
+        $coords = array_key_exists('response', $response)
+            && array_key_exists('GeoObjectCollection', $response['response'])
+            && array_key_exists('featureMember', $response['response']['GeoObjectCollection'])
+            && array_key_exists(0, $response['response']['GeoObjectCollection']['featureMember'])
+            && array_key_exists('GeoObject', $response['response']['GeoObjectCollection']['featureMember'][0])
+            && array_key_exists('Point', $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject'])
+            && array_key_exists('pos', $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point'])
+            ? explode(' ', $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'])
+            : null
+        ;
+
+        if(empty($coords)) {
+            return json_encode(['result' => 'error']);
+        }
+
+        return json_encode([
+            'result' => 'success',
+            'longitude' => Arr::get($coords, 0),
+            'latitude' => Arr::get($coords, 1)
+        ]);
     }
 }
 ?>
