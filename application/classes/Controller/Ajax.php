@@ -103,7 +103,7 @@ class Controller_Ajax extends Controller
         $filename=Arr::get($_FILES, 'imgname', []);
 
         if (!empty($filename)) {
-            $noticeModel->loadNoticeImg($_FILES, $this->request->param('id'));
+            $noticeModel->loadNoticeImg($_FILES, $this->request->post('id'));
         }
 
         $this->response->body(json_encode(['result' => 'success']));
