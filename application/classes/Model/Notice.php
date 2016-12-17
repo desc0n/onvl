@@ -151,6 +151,28 @@ class Model_Notice extends Kohana_Model
 	}
 
 	/**
+	 * @param int $typeId
+	 *
+	 * @return array
+	 */
+	public function findLastAddedByType($typeId)
+	{
+		return DB::select(
+			'n.*',
+			[DB::select('t.name')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'type_name'],
+			[DB::select('t.room_count')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'room_count']
+		)
+			->from(['notice', 'n'])
+			->where('n.type', '=', $typeId)
+			->and_where('n.status_id', '=', 1)
+			->order_by('n.created_at', 'desc')
+			->limit(3)
+			->execute()
+			->as_array()
+		;
+	}
+
+	/**
 	 * @param int $limit
 	 *
 	 * @return array
@@ -362,5 +384,28 @@ class Model_Notice extends Kohana_Model
 
 		return $noticeId;
 	}
+
+	/**
+	 * @param int $noticeId
+	 * @return string
+	 */
+	public function getNoticeMainOriginalImg($noticeId)
+	{
+		$noticeImgs = $this->getNoticeImg($noticeId);
+
+		return count($noticeImgs) === 0 ? '/public/img/original/nopic.jpg' : '/public/img/original/' . $noticeImgs[0]['src'];
+	}
+
+	/**
+	 * @param int $noticeId
+	 * @return string
+	 */
+	public function getNoticeMainThumbImg($noticeId)
+	{
+		$noticeImgs = $this->getNoticeImg($noticeId);
+
+		return count($noticeImgs) === 0 ? '/public/img/thumb/nopic.jpg' : '/public/img/thumb/' . $noticeImgs[0]['src'];
+	}
+
 }
 ?>
