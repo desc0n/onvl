@@ -136,11 +136,104 @@ $(document).ready(function() {
         );
     });
 
-    $('#newNoticeBtn').click(function () {
+    $('.form-offer #findCoordBtn').click(function () {
+        $.get('/ajax/find_address_coords', {address : $('#address').val()}, function(response) {
+            var data = JSON.parse(response);
+
+            if (data.result == 'success') {
+                $('.address-label .validate-form .glyphicon').remove();
+                $('.address-label .validate-form').append('<i class="glyphicon glyphicon-ok"></i>');
+
+                $('.form-offer #latitude').val(data.latitude);
+                $('.form-offer #longitude').val(data.longitude);
+            } else {
+                $('.address-label .validate-form .glyphicon').remove();
+                $('.address-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
+
+                $('.form-offer #latitude').val('');
+                $('.form-offer #longitude').val('');
+
+                alert('Ошибка в определении координат адреса!');
+            }
+        });
+    });
+
+    $('.form-offer #newNoticeBtn').click(function () {
+        $(this).attr('disabled', 'disabled');
+
         if ($('.address-label .validate-form .glyphicon-remove').length) {
             alert('Координаты адреса не определены!');
+            $(this).removeAttr('disabled');
 
             return false;
+        }
+
+        if ($('.validate-form .glyphicon-remove').length) {
+            alert('Заполнены не все обязательные поля!');
+            $(this).removeAttr('disabled');
+
+            return false;
+        }
+
+        $.post(
+            '/ajax/add_notice',
+            {
+                type : $('.form-offer #type').val(),
+                area : $('.form-offer #area').val(),
+                address : $('.form-offer #address').val(),
+                floor : $('.form-offer #floor').val(),
+                longitude : $('.form-offer #longitude').val(),
+                latitude : $('.form-offer #latitude').val(),
+                name : $('.form-offer #name').val(),
+                price : $('.form-offer #price').val(),
+                description : $('.form-offer #description').val(),
+                phone : $('.form-offer #phone').val()
+            },
+            function (response) {
+                var data = JSON.parse(response);
+
+                loadImages(data.id);
+            }
+        );
+    });
+
+    $('.form-offer #name').on('keyup blur focus', function () {
+        if($(this).val().length > 1) {
+            $('.name-label .validate-form .glyphicon').remove();
+            $('.name-label .validate-form').append('<i class="glyphicon glyphicon-ok"></i>');
+        } else {
+            $('.name-label .validate-form .glyphicon').remove();
+            $('.name-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
+        }
+    });
+
+    $('.form-offer #description').on('keyup blur focus', function () {
+        if($(this).val().length > 1) {
+            $('.description-label .validate-form .glyphicon').remove();
+            $('.description-label .validate-form').append('<i class="glyphicon glyphicon-ok"></i>');
+        } else {
+            $('.description-label .validate-form .glyphicon').remove();
+            $('.description-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
+        }
+    });
+
+    $('.form-offer #type').on('change', function () {
+        if($(this).val() != '') {
+            $('.type-label .validate-form .glyphicon').remove();
+            $('.type-label .validate-form').append('<i class="glyphicon glyphicon-ok"></i>');
+        } else {
+            $('.type-label .validate-form .glyphicon').remove();
+            $('.type-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
+        }
+    });
+
+    $('.form-offer #phone').on('keyup blur focus', function () {
+        if(isValidPhone($(this).val())) {
+            $('.phone-label .validate-form .glyphicon').remove();
+            $('.phone-label .validate-form').append('<i class="glyphicon glyphicon-ok"></i>');
+        } else {
+            $('.phone-label .validate-form .glyphicon').remove();
+            $('.phone-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
         }
     });
 });
@@ -150,10 +243,38 @@ function isValidEmailAddress(email) {
     return pattern.test(email);
 }
 
+function isValidPhone(phone) {
+    var pattern = new RegExp(/^[+7]{2}\d{10}$/i);
+    return pattern.test(phone);
+}
+
 function checkIssetUsername(username) {
     return $.ajax({url: '/ajax/check_isset_username', data: {username: username}, type: 'POST', async: false}).responseText;
 }
 
 function checkIssetEmail(email) {
     return $.ajax({url: '/ajax/check_isset_email', data: {email: email}, type: 'POST', async: false}).responseText;
+}
+
+function loadImages(id) {
+    var $input = $("#uploadImages");
+    var fd = new FormData;
+
+    for (i = 0; i < $input.prop('files').length; i++) {
+        fd.append('imgname[]', $input.prop('files')[i]);
+    }
+
+    fd.append('id', id);
+
+    $.ajax({
+        url: '/ajax/load_images',
+        data: fd,
+        processData: false,
+        contentType: false,
+        type: 'POST'
+    }).done(function () {
+        $('#errorModal #errorModalLabel').html('Успех');
+        $('#errorModal #errorModalBody').html('<div class="alert alert-success"><strong>Успех!</strong> Запрос успешно отправлен.</div>');
+        $('#errorModal').modal('toggle');
+    });
 }
