@@ -505,3 +505,7 @@ span.header-topline-link-block {
 .validate-form .glyphicon-remove {
     color: #ff0000;
 }
+
+.validate-form .glyphicon-ok {
+    color: #008800;
+}
