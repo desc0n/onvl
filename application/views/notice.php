@@ -86,14 +86,14 @@ $contentModel = Model::factory('Content');
                                             ymaps.ready(function () {
                                                 var properties = [
                                                     {
-                                                        "lat":"43.143568",
-                                                        "lng":"131.907499"
+                                                        "lat":"<?=$notice['latitude'];?>",
+                                                        "lng":"<?=$notice['longitude'];?>"
                                                     }
                                                 ];
 
                                                 var myMap = new ymaps.Map('map', {
-                                                        center: [43.143568, 131.907499],
-                                                        zoom: 13,
+                                                        center: [<?=$notice['latitude'];?>, <?=$notice['longitude'];?>],
+                                                        zoom: 15,
                                                         type: "yandex#map"
                                                     }, {
                                                     }),
