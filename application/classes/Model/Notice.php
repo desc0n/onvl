@@ -407,5 +407,41 @@ class Model_Notice extends Kohana_Model
 		return count($noticeImgs) === 0 ? '/public/img/thumb/nopic.jpg' : '/public/img/thumb/' . $noticeImgs[0]['src'];
 	}
 
+    /**
+     * @param int $page
+     * @param int $limit
+     * @return array
+     */
+    public function getList($page, $limit)
+    {
+        return DB::select('n.*', ['t.name', 'type_name'])
+            ->from(['notice', 'n'])
+            ->join(['notice__type', 't'], 'left')
+            ->on('t.id', '=', 'n.type')
+            ->where('n.status_id', '=', 1)
+            ->offset((($page - 1) * $limit))
+            ->limit(($page * $limit))
+            ->order_by('n.id', 'DESC')
+            ->execute()
+            ->as_array()
+            ;
+    }
+
+    /**
+     * @param int $limit
+     *
+     * @return int
+     */
+    public function getListPaginationCount($limit)
+    {
+        $count = DB::select()
+            ->from('notice')
+            ->where('status_id', '=', 1)
+            ->execute()
+            ->count()
+        ;
+
+        return ceil($count / $limit);
+    }
 }
 ?>

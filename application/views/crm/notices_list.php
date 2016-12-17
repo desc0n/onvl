@@ -22,31 +22,11 @@
                     <tr id="noticeRow<?=$notice['id'];?>">
                         <td><?=$notice['type_name'];?></td>
                         <td>
-                            <?=(empty($notice['district_name']) ? null : $notice['district_name'] . ', ');?>
-                            <?=(empty($notice['street']) ? null : $notice['street'] . ', ');?>
-                            <?=$notice['house'];?>
+                            <?=$notice['address'];?>
                         </td>
                         <td><?=$notice['name'];?></td>
                         <td><?=$notice['price'];?></td>
                         <td class="text-center">
-                            <?if((int)$notice['index_top'] === 0) {?>
-                            <span class="change-index-top-btn">
-                                <button title="Отобразить в верхней части главной страницы" class="btn btn-sm btn-success" onclick="showOnIndexTop(<?=$notice['id'];?>);"><i class="fa fa-caret-square-o-up fa-fw"></i></button>
-                            </span>
-                            <?} else {?>
-                            <span class="change-index-top-btn">
-                                <button title="Не отображать в верхней части главной страницы" class="btn btn-sm btn-danger" onclick="hideOnIndexTop(<?=$notice['id'];?>);"><i class="fa fa-caret-square-o-up fa-fw"></i></button>
-                            </span>
-                            <?}?>
-                            <?if((int)$notice['index_bottom'] === 0) {?>
-                            <span class="change-index-bottom-btn">
-                                <button title="Отобразить в нижней части главной страницы" class="btn btn-sm btn-success" onclick="showOnIndexBottom(<?=$notice['id'];?>);"><i class="fa fa-caret-square-o-down fa-fw"></i></button>
-                            </span>
-                            <?} else {?>
-                            <span class="change-index-bottom-btn">
-                                <button title="Не отображать в нижней части главной страницы" class="btn btn-sm btn-danger" onclick="hideOnIndexBottom(<?=$notice['id'];?>);"><i class="fa fa-caret-square-o-down fa-fw"></i></button>
-                            </span>
-                            <?}?>
                             <a title="Редактировать объявление" class="btn btn-sm btn-default" href="/crm/redact_notice/<?=$notice['id'];?>"><i class="fa fa-pencil fa-fw"></i></a>
                             <button title="Удалить объявление" class="btn btn-sm btn-danger" onclick="removeNotice(<?=$notice['id'];?>);"><i class="fa fa-remove fa-fw"></i></button>
                         </td>

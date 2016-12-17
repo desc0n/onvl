@@ -31,6 +31,10 @@ class Controller_Notice extends Controller_Base
 
     public function action_new()
     {
+        if(!Auth::instance()->logged_in()) {
+            HTTP::redirect('/');
+        }
+
         /** @var $contentModel Model_Content */
         $contentModel = Model::factory('Content');
 
