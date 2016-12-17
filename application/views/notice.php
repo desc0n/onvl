@@ -188,372 +188,74 @@ $contentModel = Model::factory('Content');
             </div>
         </div>
         <section class="offers offers-similar">
-            <div class="container-fluid"><h2 class="section-title">Другие 1-х комнатные квартиры</h2>
-                <div data-react-class="AdCards"
-                     data-react-props="{&quot;ads&quot;:[{&quot;id&quot;:212157,&quot;title&quot;:&quot;Сдается трехкомнатная квартира в сталинском доме&quot;,&quot;path&quot;:&quot;/sdaetsya-trehkomnatnaya-kvartira-v-stalinskom-dome&quot;,&quot;space&quot;:&quot;85&quot;,&quot;price&quot;:&quot;70 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1625742/thumb_71cfada2.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Нагатинская, Тульская&quot;,&quot;date&quot;:&quot;6 дней назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},{&quot;id&quot;:194082,&quot;title&quot;:&quot;Комфортабельная трешка&quot;,&quot;path&quot;:&quot;/komfortabelnaya-treshka&quot;,&quot;space&quot;:&quot;79&quot;,&quot;price&quot;:&quot;65 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1493363/thumb_2c92a069.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Семёновская&quot;,&quot;date&quot;:&quot;7 дней назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},{&quot;id&quot;:214309,&quot;title&quot;:&quot;Трешка на Академической&quot;,&quot;path&quot;:&quot;/treshka-na-akademicheskoy-e4614b20-8be9-4f59-be8c-8f4c89a69aad&quot;,&quot;space&quot;:&quot;90&quot;,&quot;price&quot;:&quot;70 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1642028/thumb_d7b7070a.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Академическая, Профсоюзная&quot;,&quot;date&quot;:&quot;20 минут назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false},{&quot;id&quot;:183835,&quot;title&quot;:&quot;Трехкомнатная квартира после капитального ремонта м.Каховская &quot;,&quot;path&quot;:&quot;/trehkomnatnaya-kvartira-posle-kapitalnogo-remonta-m-kahovskaya&quot;,&quot;space&quot;:&quot;60&quot;,&quot;price&quot;:&quot;60 000&quot;,&quot;price_currency&quot;:&quot;руб&quot;,&quot;image&quot;:&quot;https://assets.thelocals.ru/uploads/image/file/1417437/thumb_68540194.jpg&quot;,&quot;rooms&quot;:3,&quot;subways&quot;:&quot;Каховская, Севастопольская&quot;,&quot;date&quot;:&quot;7 дней назад&quot;,&quot;featured&quot;:false,&quot;premium&quot;:false,&quot;favorite&quot;:false,&quot;owned&quot;:false}],&quot;signedIn&quot;:false,&quot;hasStatusViewed&quot;:false}"
-                     class="cards-container">
-                    <section class="cards" data-reactid=".1ln2bw9x81s">
-                        <div class="cards-list" data-reactid=".1ln2bw9x81s.0">
-                            <div class="card" data-reactid=".1ln2bw9x81s.0.$212157">
-                                <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$212157.0"><a class="card-link"
-                                                                                                   href="/sdaetsya-trehkomnatnaya-kvartira-v-stalinskom-dome"
-                                                                                                   target="_blank"
-                                                                                                   data-reactid=".1ln2bw9x81s.0.$212157.0.0">
-                                        <div class="card-content" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0">
-                                            <figure class="card-pic" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1625742/thumb_71cfada2.jpg"
-                                                    alt="Сдается трехкомнатная квартира в сталинском доме"
-                                                    data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1625742/thumb_71cfada2.jpg);"
-                                                     data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.0.2"></div>
-                                                <div class="card-date" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.0.3">6
-                                                    дней назад
-                                                </div>
-                                                <span data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.0.4"></span></figure>
-                                            <div class="card-desc" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.0.1">3
-                                                        </div>
+            <div class="container-fluid">
+                <h2 class="section-title">Другие квартиры этого типа</h2>
+                <div class="cards-container">
+                    <section class="cards">
+                        <div class="cards-list">
+                            <?foreach ($noticeModel->findLastAddedByType($notice['type']) as $lastAddedNotice) {?>
+                            <div class="card">
+                                <div class="card-inner">
+                                    <a class="card-link" href="/notice/<?=$lastAddedNotice['id'];?>" target="_blank">
+                                        <div class="card-content">
+                                            <figure class="card-pic">
+                                                <img class="card-pic-img" src="<?=$noticeModel->getNoticeMainThumbImg($lastAddedNotice['id']);?>" alt="<?=$lastAddedNotice['name'];?>">
+                                                <div class="card-pic-bg" style="background-image:url(<?=$noticeModel->getNoticeMainThumbImg($lastAddedNotice['id']);?>);"></div>
+                                                <div class="card-pic-overlay"></div>
+<!--                                                <div class="card-date">6 дней назад</div>-->
+                                            </figure>
+                                            <div class="card-desc">
+                                                <div class="card-options">
+                                                    <div class="card-options-item">
+                                                        <div class="card-options-item-label">Комнат</div>
+                                                        <div class="card-options-item-value"><?=$lastAddedNotice['room_count'];?></div>
                                                     </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1.0.0">Площадь</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1.0.2">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1.0.3">2</sup>
+                                                    <div class="card-options-item">
+                                                        <div class="card-options-item-label">
+                                                            <span>Площадь</span>
+                                                            <span>, </span>
+                                                            <span>м</span>
+                                                            <sup>2</sup>
                                                         </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.1.1">85
-                                                        </div>
+                                                        <div class="card-options-item-value"><?=$lastAddedNotice['area'];?></div>
                                                     </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.2">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.2.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.2.0.0">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.2.0.1">. / </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.2.0.2">месяц</span>
+                                                    <div class="card-options-item">
+                                                        <div class="card-options-item-label">
+                                                            <span>руб</span>
+                                                            <span>. / </span>
+                                                            <span>месяц</span>
                                                         </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.0.2.1">70 000
-                                                        </div>
+                                                        <div class="card-options-item-value"><?=number_format($lastAddedNotice['price'], 0, '.', ' ');?></div>
                                                     </div>
                                                 </div>
-                                                <div class="card-info" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1">
-                                                    <div class="card-info-item card-info-item-price"
-                                                         data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.0"><span
-                                                            class="card-price"
-                                                            data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.0.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.0.0.0">70 000</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.0.0.1"> </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.0.0.2">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.0.0.3">.</span></span>
+                                                <div class="card-info">
+                                                    <div class="card-info-item card-info-item-price">
+                                                        <span class="card-price">
+                                                            <span><?=number_format($lastAddedNotice['price'], 0, '.', ' ');?></span>
+                                                            <span> руб</span>
+                                                            <span>.</span>
+                                                        </span>
                                                     </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                         data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1"><span
-                                                            class="card-space"
-                                                            data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0.0">3-комн.</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0.2">85</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0.3">&nbsp;</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0.4">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.1.1.0.5">2</sup></span>
+                                                    <div class="card-info-item card-info-item-space">
+                                                        <span class="card-space">
+                                                            <span><?=$lastAddedNotice['type_name'];?></span>
+                                                            <span>, </span>
+                                                            <span><?=$lastAddedNotice['area'];?> </span>
+                                                            <span>м</span>
+                                                            <sup>2</sup>
+                                                        </span>
                                                     </div>
                                                 </div>
-                                                <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$212157.0.0.0.1.2">
-                                                    Сдается трехкомнатная квартира в сталинском доме</h4>
+                                                <h4 class="card-title"><?=$lastAddedNotice['description'];?></h4>
                                                 <div class="card-metro">
-                                                    <span>Нагатинская, Тульская</span>
+                                                    <span><?=$lastAddedNotice['address'];?></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <div class="card" data-reactid=".1ln2bw9x81s.0.$194082">
-                                <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$194082.0"><a class="card-link"
-                                                                                                   href="/komfortabelnaya-treshka"
-                                                                                                   target="_blank"
-                                                                                                   data-reactid=".1ln2bw9x81s.0.$194082.0.0">
-                                        <div class="card-content" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0">
-                                            <figure class="card-pic" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1493363/thumb_2c92a069.jpg"
-                                                    alt="Комфортабельная трешка"
-                                                    data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1493363/thumb_2c92a069.jpg);"
-                                                     data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.0.2"></div>
-                                                <div class="card-date" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.0.3">7
-                                                    дней назад
-                                                </div>
-                                                <span data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.0.4"></span></figure>
-                                            <div class="card-desc" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.0.1">3
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1.0.0">Площадь</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1.0.2">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1.0.3">2</sup>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.1.1">79
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.2">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.2.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.2.0.0">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.2.0.1">. / </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.2.0.2">месяц</span>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.0.2.1">65 000
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-info" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1">
-                                                    <div class="card-info-item card-info-item-price"
-                                                         data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.0"><span
-                                                            class="card-price"
-                                                            data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.0.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.0.0.0">65 000</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.0.0.1"> </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.0.0.2">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.0.0.3">.</span></span>
-                                                    </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                         data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1"><span
-                                                            class="card-space"
-                                                            data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0.0">3-комн.</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0.2">79</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0.3">&nbsp;</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0.4">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.1.1.0.5">2</sup></span>
-                                                    </div>
-                                                </div>
-                                                <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.2">
-                                                    Комфортабельная трешка</h4>
-                                                <div class="card-metro" data-reactid=".1ln2bw9x81s.0.$194082.0.0.0.1.3">
-                                                    <span>Семёновская</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card" data-reactid=".1ln2bw9x81s.0.$214309">
-                                <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$214309.0"><a class="card-link"
-                                                                                                   href="/treshka-na-akademicheskoy-e4614b20-8be9-4f59-be8c-8f4c89a69aad"
-                                                                                                   target="_blank"
-                                                                                                   data-reactid=".1ln2bw9x81s.0.$214309.0.0">
-                                        <div class="card-content" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0">
-                                            <figure class="card-pic" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1642028/thumb_d7b7070a.jpg"
-                                                    alt="Трешка на Академической"
-                                                    data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1642028/thumb_d7b7070a.jpg);"
-                                                     data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.0.2"></div>
-                                                <div class="card-date" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.0.3">
-                                                    20 минут назад
-                                                </div>
-                                                <span data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.0.4"></span></figure>
-                                            <div class="card-desc" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.0.1">3
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1.0.0">Площадь</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1.0.2">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1.0.3">2</sup>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.1.1">90
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.2">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.2.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.2.0.0">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.2.0.1">. / </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.2.0.2">месяц</span>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.0.2.1">70 000
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-info" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1">
-                                                    <div class="card-info-item card-info-item-price"
-                                                         data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.0"><span
-                                                            class="card-price"
-                                                            data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.0.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.0.0.0">70 000</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.0.0.1"> </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.0.0.2">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.0.0.3">.</span></span>
-                                                    </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                         data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1"><span
-                                                            class="card-space"
-                                                            data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0.0">3-комн.</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0.2">90</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0.3">&nbsp;</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0.4">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.1.1.0.5">2</sup></span>
-                                                    </div>
-                                                </div>
-                                                <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.2">
-                                                    Трешка на Академической</h4>
-                                                <div class="card-metro" data-reactid=".1ln2bw9x81s.0.$214309.0.0.0.1.3">
-                                                    <span>Академическая, Профсоюзная</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card" data-reactid=".1ln2bw9x81s.0.$183835">
-                                <div class="card-inner" data-reactid=".1ln2bw9x81s.0.$183835.0"><a class="card-link"
-                                                                                                   href="/trehkomnatnaya-kvartira-posle-kapitalnogo-remonta-m-kahovskaya"
-                                                                                                   target="_blank"
-                                                                                                   data-reactid=".1ln2bw9x81s.0.$183835.0.0">
-                                        <div class="card-content" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0">
-                                            <figure class="card-pic" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1417437/thumb_68540194.jpg"
-                                                    alt="Трехкомнатная квартира после капитального ремонта м.Каховская "
-                                                    data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1417437/thumb_68540194.jpg);"
-                                                     data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.0.2"></div>
-                                                <div class="card-date" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.0.3">7
-                                                    дней назад
-                                                </div>
-                                                <span data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.0.4"></span></figure>
-                                            <div class="card-desc" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.0.1">3
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1.0.0">Площадь</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1.0.2">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1.0.3">2</sup>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.1.1">60
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.2">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.2.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.2.0.0">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.2.0.1">. / </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.2.0.2">месяц</span>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.0.2.1">60 000
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-info" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1">
-                                                    <div class="card-info-item card-info-item-price"
-                                                         data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.0"><span
-                                                            class="card-price"
-                                                            data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.0.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.0.0.0">60 000</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.0.0.1"> </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.0.0.2">руб</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.0.0.3">.</span></span>
-                                                    </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                         data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1"><span
-                                                            class="card-space"
-                                                            data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0"><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0.0">3-комн.</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0.1">, </span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0.2">60</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0.3">&nbsp;</span><span
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0.4">м</span><sup
-                                                                data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.1.1.0.5">2</sup></span>
-                                                    </div>
-                                                </div>
-                                                <h4 class="card-title" data-reactid=".1ln2bw9x81s.0.$183835.0.0.0.1.2">
-                                                    Трехкомнатная квартира после капитального ремонта м.Каховская </h4>
-                                                <div class="card-metro">
-                                                    <span>Каховская, Севастопольская</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            <?}?>
                         </div>
                     </section>
                 </div>
