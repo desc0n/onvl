@@ -1,3 +1,10 @@
+<?php
+/** @var $noticeModel Model_Notice */
+$noticeModel = Model::factory('Notice');
+
+/** @var $contentModel Model_Content */
+$contentModel = Model::factory('Content');
+?>
 <div class="layout">
     <?=View::factory('header');?>
     <div class="header-hero">
@@ -69,13 +76,14 @@
                 <div class="cards-container">
                     <div class="cards">
                         <div class="cards-list row">
+                            <?foreach ($popularNotices as $notice) {?>
                             <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12">
                                 <div class="card-inner">
-                                    <a class="card-link" href="#" target="_blank">
+                                    <a class="card-link" href="/notice/<?=$notice['id'];?>" target="_blank">
                                         <div class="card-content">
                                             <figure class="card-pic">
-                                                <img class="card-pic-img" src="/public/img/thumb/1.jpg" alt="Трешка в пяти минутах ходьбы от пляжей">
-                                                <div class="card-pic-bg" style="background-image:url(/public/img/thumb/1.jpg);"></div>
+                                                <img class="card-pic-img" src="<?=$noticeModel->getNoticeMainThumbImg($notice['id']);?>" alt="<?=$notice['name'];?>">
+                                                <div class="card-pic-bg" style="background-image:url(<?=$noticeModel->getNoticeMainThumbImg($notice['id']);?>);"></div>
                                                 <div class="card-pic-overlay"></div>
                                                 <span></span>
                                             </figure>
@@ -83,27 +91,27 @@
                                                 <div class="card-options">
                                                     <div class="card-options-item">
                                                         <div class="card-options-item-label">Комнат</div>
-                                                        <div class="card-options-item-value">3</div>
+                                                        <div class="card-options-item-value"><?=$notice['room_count'];?></div>
                                                     </div>
                                                     <div class="card-options-item">
                                                         <div class="card-options-item-label">
                                                             <span>Площадь, м</span>
                                                             <sup>2</sup>
                                                         </div>
-                                                        <div class="card-options-item-value">85</div>
+                                                        <div class="card-options-item-value"><?=$notice['area'];?></div>
                                                     </div>
                                                     <div class="card-options-item">
                                                         <div class="card-options-item-label">
                                                             <span>руб</span>
                                                             <span>. / месяц</span>
                                                         </div>
-                                                        <div class="card-options-item-value">76 000</div>
+                                                        <div class="card-options-item-value"><?=number_format($notice['price'], 0, '.', ' ');?></div>
                                                     </div>
                                                 </div>
                                                 <div class="card-info">
                                                     <div class="card-info-item card-info-item-price">
                                                         <span class="card-price">
-                                                            <span>76 000</span>
+                                                            <span><?=number_format($notice['price'], 0, '.', ' ');?></span>
                                                             <span> </span>
                                                             <span>руб</span>
                                                             <span>.</span>
@@ -111,280 +119,27 @@
                                                     </div>
                                                     <div class="card-info-item card-info-item-space">
                                                         <span class="card-space">
-                                                            <span>3-комн.</span>
+                                                            <span><?=$notice['type_name'];?></span>
                                                             <span>, </span>
-                                                            <span>85</span>
+                                                            <span><?=$notice['area'];?></span>
                                                             <span>&nbsp;м</span>
                                                             <sup>2</sup></span>
                                                     </div>
                                                 </div>
-                                                <h4 class="card-title">
-                                                    Трешка в пяти минутах ходьбы от пляжей</h4>
+                                                <h4 class="card-title"><?=$notice['description'];?></h4>
                                                 <div class="card-metro">
-                                                    <span>Строгино, Спартак</span>
+                                                    <span><?=$notice['address'];?></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12" data-reactid=".pjmrs9y0hs.0.$202137">
-                                <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$202137.0"><a class="card-link"
-                                                                                                  href="/stilnaya-odnushka-090efdde-1029-49dc-a472-7297e0ece1b1"
-                                                                                                  target="_blank"
-                                                                                                  data-reactid=".pjmrs9y0hs.0.$202137.0.0">
-                                        <div class="card-content" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0">
-                                            <figure class="card-pic" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1552163/thumb_c8051be5.JPG"
-                                                    alt="Стильная однушка."
-                                                    data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1552163/thumb_c8051be5.JPG);"
-                                                     data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.0.2"></div>
-                                                <span data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.0.4"></span></figure>
-                                            <div class="card-desc" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.0.1">1
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.1.0"><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.1.0.0">Площадь, м</span><sup
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.1.0.1">2</sup>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.1.1">42
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.2">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.2.0"><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.2.0.0">руб</span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.2.0.1">. / месяц</span>
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.0.2.1">35 000
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-info" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1">
-                                                    <div class="card-info-item card-info-item-price"
-                                                         data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.0"><span
-                                                            class="card-price"
-                                                            data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.0.0"><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.0.0.0">35 000</span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.0.0.1"> </span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.0.0.2">руб</span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.0.0.3">.</span></span>
-                                                    </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                         data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1"><span
-                                                            class="card-space"
-                                                            data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1.0"><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1.0.0">1-комн.</span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1.0.1">, </span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1.0.2">42</span><span
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1.0.3">&nbsp;м</span><sup
-                                                                data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.1.1.0.4">2</sup></span>
-                                                    </div>
-                                                </div>
-                                                <h4 class="card-title" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.2">
-                                                    Стильная однушка.</h4>
-                                                <div class="card-metro" data-reactid=".pjmrs9y0hs.0.$202137.0.0.0.1.3">
-                                                    <span>Румянцево, Саларьево</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12" data-reactid=".pjmrs9y0hs.0.$208338">
-                                <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$208338.0"><a class="card-link"
-                                                                                                  href="/kvartira-ryadom-s-neboskrebami"
-                                                                                                  target="_blank"
-                                                                                                  data-reactid=".pjmrs9y0hs.0.$208338.0.0">
-                                        <div class="card-content" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0">
-                                            <figure class="card-pic" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1598054/thumb_22da85c4.jpg"
-                                                    alt="Квартира рядом с небоскребами :-)))"
-                                                    data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1598054/thumb_22da85c4.jpg);"
-                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.2"></div>
-                                                <span data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.4">
-
-                                                </span>
-                                            </figure>
-                                            <div class="card-desc" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0.1">2
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0">
-                                                            <span
-                                                                data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0.0">Площадь, м</span>
-                                                            <sup
-                                                                data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0.1">2</sup>
-                                                        </div>
-                                                        <div class="card-options-item-value">60
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                    >
-                                                        <div class="card-options-item-label">
-                                                            <span>руб</span>
-                                                            <span>. / месяц</span>
-                                                        </div>
-                                                        <div class="card-options-item-value">75 000</div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-info">
-                                                    <div class="card-info-item card-info-item-price">
-                                                        <span class="card-price">
-                                                            <span>75 000</span>
-                                                            <span> </span>
-                                                            <span>руб</span>
-                                                            <span>.</span>
-                                                        </span>
-                                                    </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                    >
-                                                        <span
-                                                            class="card-space"
-                                                        >
-                                                            <span>2-комн.</span>
-                                                            <span>, </span>
-                                                            <span>60</span>
-                                                            <span>&nbsp;м</span>
-                                                            <sup>2</sup>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <h4 class="card-title">
-                                                    Квартира рядом с небоскребами :-)))</h4>
-                                                <div class="card-metro">
-                                                    <span>Киевская, Деловой центр, Студенческая</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card col-sm-12 col-lg-3 col-md-3 col-xs-12" data-reactid=".pjmrs9y0hs.0.$208338">
-                                <div class="card-inner" data-reactid=".pjmrs9y0hs.0.$208338.0"><a class="card-link"
-                                                                                                  href="/kvartira-ryadom-s-neboskrebami"
-                                                                                                  target="_blank"
-                                                                                                  data-reactid=".pjmrs9y0hs.0.$208338.0.0">
-                                        <div class="card-content" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0">
-                                            <figure class="card-pic" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0"><img
-                                                    class="card-pic-img"
-                                                    src="https://assets.thelocals.ru/uploads/image/file/1598054/thumb_22da85c4.jpg"
-                                                    alt="Квартира рядом с небоскребами :-)))"
-                                                    data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.0">
-                                                <div class="card-pic-bg"
-                                                     style="background-image:url(https://assets.thelocals.ru/uploads/image/file/1598054/thumb_22da85c4.jpg);"
-                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.1"></div>
-                                                <div class="card-pic-overlay"
-                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.2"></div>
-                                                <span data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.0.4">
-
-                                                </span>
-                                            </figure>
-                                            <div class="card-desc" data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1">
-                                                <div class="card-options"
-                                                     data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0">
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0.0">Комнат
-                                                        </div>
-                                                        <div class="card-options-item-value"
-                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.0.1">2
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                         data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1">
-                                                        <div class="card-options-item-label"
-                                                             data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0">
-                                                            <span
-                                                                data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0.0">Площадь, м</span>
-                                                            <sup
-                                                                data-reactid=".pjmrs9y0hs.0.$208338.0.0.0.1.0.1.0.1">2</sup>
-                                                        </div>
-                                                        <div class="card-options-item-value">60
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-options-item"
-                                                    >
-                                                        <div class="card-options-item-label">
-                                                            <span>руб</span>
-                                                            <span>. / месяц</span>
-                                                        </div>
-                                                        <div class="card-options-item-value">75 000</div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-info">
-                                                    <div class="card-info-item card-info-item-price">
-                                                        <span class="card-price">
-                                                            <span>75 000</span>
-                                                            <span> </span>
-                                                            <span>руб</span>
-                                                            <span>.</span>
-                                                        </span>
-                                                    </div>
-                                                    <div class="card-info-item card-info-item-space"
-                                                    >
-                                                        <span
-                                                            class="card-space"
-                                                        >
-                                                            <span>2-комн.</span>
-                                                            <span>, </span>
-                                                            <span>60</span>
-                                                            <span>&nbsp;м</span>
-                                                            <sup>2</sup>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <h4 class="card-title">
-                                                    Квартира рядом с небоскребами :-)))</h4>
-                                                <div class="card-metro">
-                                                    <span>Киевская, Деловой центр, Студенческая</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            <?}?>
                         </div>
                     </div>
                 </div>
-                <a class="btn button-blue btn-lg" href="/rooms">Посмотреть все</a></div>
+                <a class="btn button-blue btn-lg" href="/search">Посмотреть все</a></div>
         </section>
         <section class="features">
             <div class="container">

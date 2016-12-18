@@ -7,6 +7,9 @@ class Controller_Index extends Controller_Base
         /** @var $contentModel Model_Content */
         $contentModel = Model::factory('Content');
 
+        /** @var $noticeModel Model_Notice */
+        $noticeModel = Model::factory('Notice');
+
         if (Auth::instance()->logged_in() && isset($_POST['logout'])) {
             Auth::instance()->logout();
             HTTP::redirect('/');
@@ -26,6 +29,7 @@ class Controller_Index extends Controller_Base
             ->set('get', $_GET)
             ->set('post', $_POST)
             ->set('districts', $contentModel->findAllDistricts())
+            ->set('popularNotices', $noticeModel->findPopular())
         ;
 
         $this->response->body($template);
