@@ -13,28 +13,23 @@ class Model_Notice extends Kohana_Model
 
 	public function setNotice($params = [])
 	{
-		DB::update('notice')
-        	->set([
-        		'article' => ':article',
-        		'name' => ':name',
-				'price' => ':price',
-				'description' => ':description',
-				'short_description' => ':short_description',
-				'status_id' => 1,
-				'sort' => ':sort'
-			])
-			->where('id', '=', ':id')
-			->parameters([
-				':id' => Arr::get($params,'redactnotice'),
-				':article' => Arr::get($params,'article',''),
-				':name' => Arr::get($params,'name',''),
-				':price' => Arr::get($params,'price',''),
-				':description' => Arr::get($params,'description',''),
-				':short_description' => Arr::get($params,'short_description',''),
-				':sort' => Arr::get($params, 'sort', 1)
-			])
-			->execute()
-		;
+        DB::update('notice')
+            ->set([
+                'type' => Arr::get($params, 'type'),
+                'area' => Arr::get($params, 'area'),
+                'name' => Arr::get($params, 'name', ''),
+                'address' => Arr::get($params, 'address'),
+                'floor' => Arr::get($params, 'floor'),
+                'longitude' => Arr::get($params, 'longitude'),
+                'latitude' => Arr::get($params, 'latitude'),
+                'phone' => Arr::get($params, 'phone'),
+                'price' => Arr::get($params, 'price', 0),
+                'description' => Arr::get($params, 'description', ''),
+                'updated_at' => DB::expr('NOW()'),
+            ])
+            ->where('id', '=', Arr::get($params,'redact_notice'))
+            ->execute()
+        ;
 	}
 
 	public function setNoticeParams($params = [])

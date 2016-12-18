@@ -26,7 +26,7 @@ $noticeModel = Model::factory('Notice');
             <h3>Описание</h3>
             <form method="post">
                 <div class="row form-group">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="text-muted col-md-12">Тип:</div>
                         <div class="col-md-12">
                             <?=Form::select('type', $types, Arr::get($noticeData, 'type'), ['class' => 'form-control']);?>
@@ -38,32 +38,10 @@ $noticeModel = Model::factory('Notice');
                             <input type="text" class="form-control"  name="floor" value="<?=Arr::get($noticeData, 'floor');?>">
                         </div>
                     </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <div class="text-muted col-md-12">Район города:</div>
+                    <div class="col-md-2">
+                        <div class="text-muted col-md-12">Площадь:</div>
                         <div class="col-md-12">
-                            <?=Form::select('district', $districts, Arr::get($noticeData, 'district'), ['class' => 'form-control']);?>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="text-muted col-md-12">Улица:</div>
-                        <div class="col-md-12">
-                            <input type="text" class="form-control"  name="street" id="street" value="<?=Arr::get($noticeData, 'street');?>" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="text-muted col-md-12">Дом:</div>
-                        <div class="col-md-12">
-                            <input type="text" class="form-control"  name="house" value="<?=Arr::get($noticeData, 'house');?>">
-                        </div>
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-md-8">
-                        <div class="text-muted col-md-12">Название:</div>
-                        <div class="col-md-12">
-                            <input type="text" class="form-control"  name="name" placeholder="Название" value="<?=Arr::get($noticeData, 'name');?>">
+                            <input type="text" class="form-control"  name="area" value="<?=Arr::get($noticeData, 'area');?>">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -72,6 +50,35 @@ $noticeModel = Model::factory('Notice');
                             <input type="text" class="form-control"  name="price" placeholder="Стоимость" value="<?=Arr::get($noticeData, 'price');?>">
                         </div>
                     </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <div class="text-muted col-md-12">Адрес:</div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control"  name="address" value="<?=Arr::get($noticeData, 'address');?>">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-muted col-md-12">Широта:</div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control"  name="latitude" value="<?=Arr::get($noticeData, 'latitude');?>">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-muted col-md-12">Долгота:</div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control"  name="longitude" value="<?=Arr::get($noticeData, 'longitude');?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <div class="text-muted col-md-12">Название:</div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control"  name="name" placeholder="Название" value="<?=Arr::get($noticeData, 'name');?>">
+                        </div>
+                    </div>
+
                 </div>
                 <div class="row form-group">
                     <div class="col-md-12">
@@ -83,7 +90,9 @@ $noticeModel = Model::factory('Notice');
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <button type="submit" class="btn btn-block btn-success" name="redact_notice" value="<?=Arr::get($noticeData, 'id');?>">Сохранить</button>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-block btn-success" name="redact_notice" value="<?=Arr::get($noticeData, 'id');?>">Сохранить</button>
+                        </div>
                     </div>
                 </div>
             </form>
