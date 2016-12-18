@@ -65,6 +65,7 @@
             </div>
         </div>
     </div>
+    <?=View::factory('service_list');?>
     <div class="row page-content">
         <div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8">
             <?= Arr::get($pageData, 'content'); ?>
