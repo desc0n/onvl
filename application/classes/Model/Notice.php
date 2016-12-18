@@ -62,13 +62,20 @@ class Model_Notice extends Kohana_Model
             ->execute();
     }
 
-	public function removeNoticeImg($params = [])
-	{
-		$sql = "update `notice_img` set `status_id` = 0 where `id` = :id";
-		DB::query(Database::UPDATE,$sql)
-			->param(':id', Arr::get($params,'removeimg',0))
-			->execute();
-	}
+    /**
+     * @param $id
+     */
+    public function removeNoticeImg($id)
+    {
+        DB::update('notice_img')
+            ->set([
+                'status_id' => 0,
+                'updated_at' => DB::expr('NOW()')
+            ])
+            ->where('id', '=', $id)
+            ->execute()
+        ;
+    }
 
 	public function deleteNotice($params)
 	{
