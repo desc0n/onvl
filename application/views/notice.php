@@ -191,7 +191,7 @@ $contentModel = Model::factory('Content');
                 <div class="cards-container">
                     <section class="cards">
                         <div class="cards-list">
-                            <?foreach ($noticeModel->findLastAddedByType($notice['type']) as $lastAddedNotice) {?>
+                            <?foreach ($noticeModel->findLastAddedByType((int)$notice['type'], (int)$notice['id']) as $lastAddedNotice) {?>
                             <div class="card">
                                 <div class="card-inner">
                                     <a class="card-link" href="/notice/<?=$lastAddedNotice['id'];?>" target="_blank">

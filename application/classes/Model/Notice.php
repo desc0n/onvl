@@ -154,10 +154,11 @@ class Model_Notice extends Kohana_Model
 
 	/**
 	 * @param int $typeId
+	 * @param int $ignoreId
 	 *
 	 * @return array
 	 */
-	public function findLastAddedByType($typeId)
+	public function findLastAddedByType($typeId, $ignoreId)
 	{
 		return DB::select(
 			'n.*',
@@ -166,6 +167,7 @@ class Model_Notice extends Kohana_Model
 		)
 			->from(['notice', 'n'])
 			->where('n.type', '=', $typeId)
+			->and_where('n.id', '!=', $ignoreId)
 			->and_where('n.status_id', '=', 1)
 			->order_by('n.created_at', 'desc')
 			->limit(3)
