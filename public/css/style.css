@@ -509,3 +509,11 @@ span.header-topline-link-block {
 .validate-form .glyphicon-ok {
     color: #008800;
 }
+.search-body {
+    padding: 0!important;
+}
+
+.main-card-address {
+    font-size: 20px;
+    margin-bottom: 20px;
+}

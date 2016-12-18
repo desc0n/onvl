@@ -117,10 +117,9 @@ $contentModel = Model::factory('Content');
                         </div>
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                             <h1 class="main-card-title"><?=Arr::get($notice, 'name');?></h1>
-                            <div class="main-card-desc"><p></p>
-                                <p>
-                                    <?=Arr::get($notice, 'description');?>
-                                </p>
+                            <h2 class="main-card-address"><?=Arr::get($notice, 'address');?></h2>
+                            <div class="main-card-desc">
+                                <p><?=Arr::get($notice, 'description');?></p>
                             </div>
 <!--                            <div class="main-card-features">-->
 <!--                                <h5 class="main-card-features-title">Дополнительные характеристики</h5>-->
