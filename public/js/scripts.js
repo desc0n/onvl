@@ -236,6 +236,46 @@ $(document).ready(function() {
             $('.phone-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
         }
     });
+
+    if ($('#filter-form').length) {
+        var inProgress = false;
+        var row = 1;
+        var page = 1;
+
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 200 && !inProgress) {
+                $.ajax({
+                    url: '/ajax/find_search_cards_notices',
+                    method: 'POST',
+                    data: {
+                        "row": row,
+                        "page": page,
+                        "price_from": $('#filter-form #price_from').val(),
+                        "price_to": $('#filter-form #price_to').val(),
+                        "area_from": $('#filter-form #area_from').val(),
+                        "area_to": $('#filter-form #area_to').val(),
+                        "floor": $('#filter-form #floor').val()
+                    },
+                    beforeSend: function () {
+                        inProgress = true;
+                    }
+                }).done(function (data) {
+                    data = jQuery.parseJSON(data);
+
+                    if (data.result.length > 0) {
+                        $.each(data.result, function (index, data) {
+                            $("#cards").append(generateCardNoticeTemplate(data));
+                        });
+
+                        inProgress = false;
+                        row += 2;
+                        page += 1;
+                    }
+                });
+            }
+        });
+    }
 });
 
 function isValidEmailAddress(email) {
@@ -277,4 +317,86 @@ function loadImages(id) {
         $('#errorModal #errorModalBody').html('<div class="alert alert-success"><strong>Успех!</strong> Запрос успешно отправлен.</div>');
         $('#errorModal').modal('toggle');
     });
+}
+
+function generateCardNoticeTemplate(data) {
+    var html = '<div class="cards-list row">';
+
+    $.each(data, function (index, data) {
+        html += '<div class="card col-sm-12 col-lg-4">' +
+            '<div class="card-inner">' +
+            '<a class="card-link" href="/notice/' + data.id + '" target="_blank">' +
+            '<div class="card-content">' +
+            '<figure class="card-pic">' +
+            '<img class="card-pic-img" src="' + data.main_thumb_img_src + '" alt="' + data.name + '">' +
+            '<div class="card-pic-bg" style="background-image:url(' + data.main_thumb_img_src + ');">' +
+            '</div>' +
+            '<div class="card-pic-overlay"></div>' +
+            '</figure>' +
+            '<div class="card-desc">' +
+            '<div class="card-options">' +
+            '<div class="card-options-item">' +
+            '<div class="card-options-item-label">' +
+            'Комнат' +
+            '</div>' +
+            '<div class="card-options-item-value">' +
+            data.room_count +
+            '</div>' +
+            '</div>' +
+            '<div class="card-options-item">' +
+            '<div class="card-options-item-label">' +
+            '<span>Площадь</span>' +
+            '<span>, </span>' +
+            '<span>м</span>' +
+            '<sup>2</sup>' +
+            '</div>' +
+            '<div class="card-options-item-value">' +
+            data.area +
+            '</div>' +
+            '</div>' +
+            '<div class="card-options-item">' +
+            '<div class="card-options-item-label">' +
+            '<span>руб</span>' +
+            '<span>. / </span>' +
+            '<span>месяц</span>' +
+            '</div>' +
+            '<div class="card-options-item-value">' +
+            data.price +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-info">' +
+            '<div class="card-info-item card-info-item-price">' +
+            '<span class="card-price">' +
+            '<span>' + data.price + '</span>' +
+            '<span> </span>' +
+            '<span>руб</span>' +
+            '<span>.</span>' +
+            '</span>' +
+            '</div>' +
+            '<div class="card-info-item card-info-item-space">' +
+            '<span class="card-space">' +
+            '<span>' + data.type_name + '</span>' +
+            '<span>, </span>' +
+            '<span>' + data.area + '</span>' +
+            '<span>&nbsp;</span>' +
+            '<span>м</span>' +
+            '<sup>2</sup>' +
+            '</span>' +
+            '</div>' +
+            '</div>' +
+            '<h4 class="card-title">' + data.description + '</h4>' +
+            '<div class="card-metro">' +
+            '<span>' + data.address + '</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '</div>' +
+            '</div>';
+    });
+
+    html += '</div>';
+
+    return html;
 }

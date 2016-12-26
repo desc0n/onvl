@@ -517,3 +517,26 @@ span.header-topline-link-block {
     font-size: 20px;
     margin-bottom: 20px;
 }
+.filter-row {
+    margin-bottom: 10px;
+}
+
+.catalog-grid-col {
+    display: block;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+    .catalog-grid-col-aside {
+        display: table-cell;
+    }
+}
+
+.search-container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.search-container .row{
+    margin: 0;
+}

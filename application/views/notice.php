@@ -200,7 +200,6 @@ $contentModel = Model::factory('Content');
                                                 <img class="card-pic-img" src="<?=$noticeModel->getNoticeMainThumbImg($lastAddedNotice['id']);?>" alt="<?=$lastAddedNotice['name'];?>">
                                                 <div class="card-pic-bg" style="background-image:url(<?=$noticeModel->getNoticeMainThumbImg($lastAddedNotice['id']);?>);"></div>
                                                 <div class="card-pic-overlay"></div>
-<!--                                                <div class="card-date">6 дней назад</div>-->
                                             </figure>
                                             <div class="card-desc">
                                                 <div class="card-options">

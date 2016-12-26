@@ -246,11 +246,13 @@ class Model_Notice extends Kohana_Model
 		$type = Arr::get($query, 'type');
 		$priceFrom = Arr::get($query, 'price_from', 0);
 		$priceTo = Arr::get($query, 'price_to', 0);
+		$areaFrom = Arr::get($query, 'area_from', 0);
+		$areaTo = Arr::get($query, 'area_to', 0);
 		$order = Arr::get($query, 'order');
 
 		$notices = [];
 
-		$query = DB::select('n.*', ['t.name', 'type_name'])
+		$query = DB::select('n.*', ['t.name', 'type_name'], 't.room_count')
 			->from(['notice', 'n'])
 			->join(['notice__type', 't'], 'left')
 			->on('t.id', '=', 'n.type')
@@ -260,6 +262,8 @@ class Model_Notice extends Kohana_Model
 
 		$query = !empty($type) ? $query->and_where('t.id', '=', $type) : $query;
 		$query = !empty($priceTo) ? $query->and_where('n.price', '<=', $priceTo) : $query;
+		$query = !empty($areaFrom) ? $query->and_where('n.area', '>=', $areaFrom) : $query;
+		$query = !empty($areaTo) ? $query->and_where('n.area', '<=', $areaTo) : $query;
 
 		$queryCount = clone $query;
 
@@ -292,6 +296,7 @@ class Model_Notice extends Kohana_Model
 		foreach ($res as $row) {
 			$notices[$i] = $row;
 			$notices[$i]['imgs'] = $this->getNoticeImg($row['id']);
+			$notices[$i]['main_thumb_img_src'] = $this->getNoticeMainThumbImg($row['id']);
 			$notices[$i]['paginationCount'] = ceil($rowsCount / count($res));
 			$notices[$i]['count'] = $rowsCount;
 
@@ -446,6 +451,37 @@ class Model_Notice extends Kohana_Model
         ;
 
         return ceil($count / $limit);
+    }
+
+    /**
+     * @param array $query
+     *
+     * @return array
+     */
+    public function findSearchCardsNotices($query)
+    {
+        $searchCardsNotices = [];
+
+        $query['limit'] = 6;
+        $cardsInRowLimit = 3;
+
+        $searchNotices = $this->searchNotices($query);
+
+        $key = 0;
+        $i = 0;
+
+        foreach ($searchNotices as $notice) {
+            $searchCardsNotices[$key][$i] = $notice;
+
+            $i++;
+
+            if ($i >= $cardsInRowLimit){
+                $key++;
+                $i = 0;
+            }
+        }
+
+        return $searchCardsNotices;
     }
 }
 ?>
