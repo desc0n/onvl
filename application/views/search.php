@@ -18,6 +18,8 @@ $noticeModel = Model::factory('Notice');
                             BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
                                 '<div id="listing-map">' +
                                 '</div>' );
+
+                            findSearchCardsNotices();
                         });
                     </script>
                 </div>

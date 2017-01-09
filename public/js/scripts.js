@@ -238,49 +238,13 @@ $(document).ready(function() {
     });
 
     if ($('#filter-form').length) {
-        var inProgress = false;
-        var row = 1;
-        var page = 1;
+        inProgress = false;
+        row = 1;
+        page = 1;
 
         $(window).scroll(function () {
-
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 200 && !inProgress) {
-                var type = [];
-                var checkedTypes = $('.filter-type:checked');
-
-                for (i = 0;i < checkedTypes.length; i++) {
-                    type[i] = checkedTypes[i].value;
-                }
-
-                $.ajax({
-                    url: '/ajax/find_search_cards_notices',
-                    method: 'POST',
-                    data: {
-                        "row": row,
-                        "page": page,
-                        "price_from": $('#filter-form #price_from').val(),
-                        "price_to": $('#filter-form #price_to').val(),
-                        "area_from": $('#filter-form #area_from').val(),
-                        "area_to": $('#filter-form #area_to').val(),
-                        "floor": $('#filter-form #floor').val(),
-                        "type": type
-                    },
-                    beforeSend: function () {
-                        inProgress = true;
-                    }
-                }).done(function (data) {
-                    data = jQuery.parseJSON(data);
-
-                    if (data.result.length > 0) {
-                        $.each(data.result, function (index, data) {
-                            $("#cards").append(generateCardNoticeTemplate(data));
-                        });
-
-                        inProgress = false;
-                        row += 2;
-                        page += 1;
-                    }
-                });
+                findSearchCardsNotices();
             }
         });
     }
@@ -326,7 +290,44 @@ function loadImages(id) {
         $('#errorModal').modal('toggle');
     });
 }
+function findSearchCardsNotices() {
+    var type = [];
+    var checkedTypes = $('.filter-type:checked');
 
+    for (i = 0;i < checkedTypes.length; i++) {
+        type[i] = checkedTypes[i].value;
+    }
+
+    $.ajax({
+        url: '/ajax/find_search_cards_notices',
+        method: 'POST',
+        data: {
+            "row": row,
+            "page": page,
+            "price_from": $('#filter-form #price_from').val(),
+            "price_to": $('#filter-form #price_to').val(),
+            "area_from": $('#filter-form #area_from').val(),
+            "area_to": $('#filter-form #area_to').val(),
+            "floor": $('#filter-form #floor').val(),
+            "type": type
+        },
+        beforeSend: function () {
+            inProgress = true;
+        }
+    }).done(function (data) {
+        data = jQuery.parseJSON(data);
+
+        if (data.result.length > 0) {
+            $.each(data.result, function (index, data) {
+                $("#cards").append(generateCardNoticeTemplate(data));
+            });
+
+            inProgress = false;
+            row += 2;
+            page += 1;
+        }
+    });
+}
 function generateCardNoticeTemplate(data) {
     var yandexMapProperties = [];
 
