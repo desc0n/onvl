@@ -74,6 +74,7 @@ class Controller_Index extends Controller_Base
             ->set('types', $noticeModel->findAllTypes())
             ->set('searchedNotices', $noticeModel->searchNotices($this->request->query()))
             ->set('popularNotices', $noticeModel->findPopular())
+            ->set('params', $noticeModel->findAllParams())
             ->set('get', $this->request->query())
         ;
 

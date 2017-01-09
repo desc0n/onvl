@@ -233,4 +233,18 @@ class Controller_Crm extends Controller_Base
 
         $this->response->body($template);
     }
+
+    public function action_params()
+    {
+        /** @var $noticeModel Model_Notice */
+        $noticeModel = Model::factory('Notice');
+
+        $template = $this->getBaseTemplate();
+
+        $template->content = View::factory('crm/params')
+            ->set('params', $noticeModel->findAllParams())
+        ;
+
+        $this->response->body($template);
+    }
 }

@@ -486,5 +486,15 @@ class Model_Notice extends Kohana_Model
 
         return $searchCardsNotices;
     }
+
+    public function findAllParams()
+    {
+        return DB::select('p.*', [DB::expr("IF(p.type = 'facilities', 'Удобства', IF(p.type = 'specifics', 'Особенности', ''))"), 'type_name'])
+            ->from(['params', 'p'])
+            ->order_by('p.type', 'ASC')
+            ->execute()
+            ->as_array()
+        ;
+    }
 }
 ?>

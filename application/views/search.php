@@ -93,88 +93,31 @@ $noticeModel = Model::factory('Notice');
                                                                     Удобства
                                                                 </div>
                                                                 <ul class="filter-list">
+                                                                <?foreach ($params as $param) {?>
+                                                                    <?if ($param['type'] !== 'facilities') {continue;}?>
                                                                     <li class="filter-list-item">
                                                                         <label class="filter-checkbox filter-checkbox-normal">
                                                                             <input class="filter-checkbox-control" type="checkbox">
                                                                             <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Балкон</span>
+                                                                            <span class="filter-checkbox-text"><?=$param['name'];?></span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Посудомоечная машина</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Холодильник</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Стиральная машина</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Телевизор</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Нагреватель воды</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Кондиционер</span>
-                                                                        </label>
-                                                                    </li>
+                                                                <?}?>
                                                                 </ul>
                                                                 <div class="filter-label">
                                                                     Особенности
                                                                 </div>
                                                                 <ul class="filter-list">
+                                                                <?foreach ($params as $param) {?>
+                                                                    <?if ($param['type'] !== 'specifics') {continue;}?>
                                                                     <li class="filter-list-item">
                                                                         <label class="filter-checkbox filter-checkbox-normal">
                                                                             <input class="filter-checkbox-control" type="checkbox">
                                                                             <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Можно курить</span>
+                                                                            <span class="filter-checkbox-text"><?=$param['name'];?></span>
                                                                         </label>
                                                                     </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Подходит для мероприятий</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Можно с животными</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="filter-list-item">
-                                                                        <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
-                                                                            <span class="filter-checkbox-fake"></span>
-                                                                            <span class="filter-checkbox-text">Подходит для семьи с детьми</span>
-                                                                        </label>
-                                                                    </li>
+                                                                <?}?>
                                                                 </ul>
                                                             </div>
                                                         </div>

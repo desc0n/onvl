@@ -54,6 +54,9 @@
                     <li>
                         <a href="/crm/pages_list"><i class="fa fa-pencil-square-o fa-fw"></i> Редактировать страницу</a>
                     </li>
+                    <li>
+                        <a href="/crm/params"><i class="fa fa-wrench fa-fw"></i> Дополнительные параметры</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->
