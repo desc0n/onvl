@@ -540,3 +540,6 @@ span.header-topline-link-block {
 .search-container .row{
     margin: 0;
 }
+.filter-type {
+    margin-left: -15px!important;
+}
