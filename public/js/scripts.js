@@ -245,6 +245,13 @@ $(document).ready(function() {
         $(window).scroll(function () {
 
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 200 && !inProgress) {
+                var type = [];
+                var checkedTypes = $('.filter-type:checked');
+
+                for (i = 0;i < checkedTypes.length; i++) {
+                    type[i] = checkedTypes[i].value;
+                }
+
                 $.ajax({
                     url: '/ajax/find_search_cards_notices',
                     method: 'POST',
@@ -255,7 +262,8 @@ $(document).ready(function() {
                         "price_to": $('#filter-form #price_to').val(),
                         "area_from": $('#filter-form #area_from').val(),
                         "area_to": $('#filter-form #area_to').val(),
-                        "floor": $('#filter-form #floor').val()
+                        "floor": $('#filter-form #floor').val(),
+                        "type": type
                     },
                     beforeSend: function () {
                         inProgress = true;
@@ -313,13 +321,15 @@ function loadImages(id) {
         contentType: false,
         type: 'POST'
     }).done(function () {
-        $('#errorModal #errorModalLabel').html('Успех');
+        $('#errorModal #errorModalLabel').html('Уведомление');
         $('#errorModal #errorModalBody').html('<div class="alert alert-success"><strong>Успех!</strong> Запрос успешно отправлен.</div>');
         $('#errorModal').modal('toggle');
     });
 }
 
 function generateCardNoticeTemplate(data) {
+    var yandexMapProperties = [];
+
     var html = '<div class="cards-list row">';
 
     $.each(data, function (index, data) {
@@ -394,9 +404,27 @@ function generateCardNoticeTemplate(data) {
             '</a>' +
             '</div>' +
             '</div>';
+
+        if (data.latitude != '' && data.longitude != '') {
+            var coords = new Object();
+            coords["lat"] = data.latitude;
+            coords["lon"] = data.longitude;
+
+            yandexMapProperties.unshift(coords);
+        }
     });
 
     html += '</div>';
 
+    rewriteYandexMap(yandexMapProperties);
+
     return html;
+}
+function rewriteYandexMap(properties) {
+    jQuery.each(properties,function(e, f){
+        var placemark = new ymaps.Placemark([f.lat, f.lon], {
+        });
+
+        myMap.geoObjects.add(placemark);
+    });
 }

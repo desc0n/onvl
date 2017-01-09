@@ -1,3 +1,7 @@
+<?php
+/** @var $noticeModel Model_Notice */
+$noticeModel = Model::factory('Notice');
+?>
 <div class="layout">
     <?= View::factory('header'); ?>
     <div class="body search-body">
@@ -6,39 +10,14 @@
                 <div id="map">
                     <script type="text/javascript">
                         ymaps.ready(function () {
-                            var properties = [
-                                {
-                                    "lat":"43.143568",
-                                    "lng":"131.907499",
-                                },
-                                {
-                                    "lat":"43.15019",
-                                    "lng":"131.906254",
-                                }
-                            ];
-
-                            var myMap = new ymaps.Map('map', {
-                                    center: [43.114894, 131.90443],
-                                    zoom: 12,
-                                    type: "yandex#map"
-                                }, {
-                                }),
-                                BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                                    '<div id="listing-map">' +
-                                    '</div>' );
-
-                            jQuery.each(properties,function(e, f){
-                                var placemark = new ymaps.Placemark([f.lat, f.lng], {
-                                }, {
-                                    balloonContentLayout: BalloonContentLayout,
-                                    balloonPanelMaxMapArea: 0
-                                });
-
-                                myMap.geoObjects.add(placemark);
-                            });
-
-
-
+                            myMap = new ymaps.Map('map', {
+                                center: [43.114894, 131.90443],
+                                zoom: 12,
+                                type: "yandex#map"
+                            }, {}),
+                            BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                '<div id="listing-map">' +
+                                '</div>' );
                         });
                     </script>
                 </div>
@@ -50,6 +29,18 @@
                                     <form id="filter-form">
                                         <div class="filter-main">
                                             <div class="filter-body">
+                                                <div class="filter-row">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <span>Тип</span>
+                                                            <?foreach ($noticeModel->findAllTypes(true) as $type) {?>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <input class="filter-type" type="checkbox" name="type[]" <?=(in_array($type['id'], Arr::get($get, 'type', [])) ? 'checked' : null);?> value="<?=$type['id'];?>"> <?=$type['name'];?>
+                                                            </div>
+                                                            <?}?>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="filter-row">
                                                     <div class="row">
                                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
