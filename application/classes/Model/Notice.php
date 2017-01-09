@@ -206,16 +206,19 @@ class Model_Notice extends Kohana_Model
 	}
 
 	/**
+     * @param bool $fullData
+     *
 	 * @return array
 	 */
-	public function findAllTypes()
+	public function findAllTypes($fullData = false)
 	{
-		return DB::select()
+		$query = DB::select()
 			->from('notice__type')
 			->order_by('id', 'ASC')
 			->execute()
-			->as_array('id', 'name')
-			;
+        ;
+
+        return $fullData ? $query->as_array() : $query->as_array('id', 'name');
 	}
 
 	/**
@@ -243,7 +246,7 @@ class Model_Notice extends Kohana_Model
 	{
 		$page = Arr::get($query, 'page', 1);
 		$limit = Arr::get($query, 'limit', 30);
-		$type = Arr::get($query, 'type');
+		$type = Arr::get($query, 'type', []);
 		$priceFrom = Arr::get($query, 'price_from', 0);
 		$priceTo = Arr::get($query, 'price_to', 0);
 		$areaFrom = Arr::get($query, 'area_from', 0);
@@ -254,13 +257,13 @@ class Model_Notice extends Kohana_Model
 
 		$query = DB::select('n.*', ['t.name', 'type_name'], 't.room_count')
 			->from(['notice', 'n'])
-			->join(['notice__type', 't'], 'left')
+			->join(['notice__type', 't'], !empty($type) ? 'inner' : 'left')
 			->on('t.id', '=', 'n.type')
 			->where('n.status_id', '=', 1)
 			->and_where('n.price', '>=', $priceFrom)
 		;
 
-		$query = !empty($type) ? $query->and_where('t.id', '=', $type) : $query;
+		$query = !empty($type) ? $query->and_where('t.id', 'IN', $type) : $query;
 		$query = !empty($priceTo) ? $query->and_where('n.price', '<=', $priceTo) : $query;
 		$query = !empty($areaFrom) ? $query->and_where('n.area', '>=', $areaFrom) : $query;
 		$query = !empty($areaTo) ? $query->and_where('n.area', '<=', $areaTo) : $query;
