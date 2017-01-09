@@ -14,7 +14,7 @@ $contentModel = Model::factory('Content');
                 <div class="container-fluid">
                     <h1 class="header-main-title">Аренда без посредников</h1>
                     <div class="header-main-search-form">
-                        <div>
+                        <form action="/search">
                             <div class="search-form">
                                 <div class="row">
                                     <div class="col-lg-5 col-sm-12 col-xs-12 col-md-5">
@@ -23,22 +23,12 @@ $contentModel = Model::factory('Content');
                                         </div>
                                         <div class="col-lg-6 col-sm-12  col-xs-12 col-md-6 search-form-checkbox-btn-group text-center">
                                             <span class="btn-group">
-                                            <label class="btn btn-default">
-                                                <input class="search-form-checkbox-control" type="checkbox" value="1">
-                                                <span class="search-form-checkbox-content">1</span>
-                                            </label>
-                                            <label class="btn btn-default">
-                                                <input class="search-form-checkbox-control" type="checkbox" value="2">
-                                                <span class="search-form-checkbox-content">2</span>
-                                            </label>
-                                            <label class="btn btn-default">
-                                                <input class="search-form-checkbox-control" type="checkbox" value="3">
-                                                <span class="search-form-checkbox-content">3</span>
-                                            </label>
-                                            <label class="btn btn-default">
-                                                <input class="search-form-checkbox-control" type="checkbox" value="4">
-                                                <span class="search-form-checkbox-content">4+</span>
-                                            </label>
+                                                <?foreach ($noticeModel->findAllTypes(true) as $type){?>
+                                                <label class="btn btn-default">
+                                                    <input class="search-form-checkbox-control" type="checkbox" name="type[]" value="<?=$type['id'];?>">
+                                                    <span class="search-form-checkbox-content"><?=$type['search_title'];?></span>
+                                                </label>
+                                                <?}?>
                                             </span>
                                         </div>
                                     </div>
@@ -47,22 +37,22 @@ $contentModel = Model::factory('Content');
                                             Цена от
                                         </div>
                                         <div class="col-lg-4 col-sm-12 col-xs-12 col-md-4">
-                                            <input type="text" class="form-control" placeholder="0">
+                                            <input type="text" class="form-control" placeholder="0" name="price_from">
                                         </div>
                                         <div class="col-lg-1 col-sm-12 col-xs-12 col-md-1 search-form-title">
                                             до
                                         </div>
                                         <div class="col-lg-4 col-sm-12 col-xs-12 col-md-4">
-                                            <input type="text" class="form-control" placeholder="0">
+                                            <input type="text" class="form-control" placeholder="0" name="price_to">
                                         </div>
                                     </div>
                                     <p class="hidden-lg hidden-md">&nbsp;</p>
                                     <div class="col-lg-2 col-sm-12 col-xs-12 col-md-2 search-form-btn-block">
-                                        <button class="btn button-blue search-form-btn col-lg-12 col-sm-12 col-xs-12 col-md-12" onclick="window.location.href='/search'">Найти</button>
+                                        <button class="btn button-blue search-form-btn col-lg-12 col-sm-12 col-xs-12 col-md-12">Найти</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
