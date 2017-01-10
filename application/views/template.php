@@ -33,6 +33,7 @@
 </head>
 <body>
 <?= $content; ?>
+<script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=8df52181ef406ffdbd60aa74f2391c29" charset="UTF-8"></script>
 </body>
 <div class="modal fade" id="loginModal">
     <div class="modal-dialog">
