@@ -298,6 +298,13 @@ function findSearchCardsNotices() {
         type[i] = checkedTypes[i].value;
     }
 
+    var param = [];
+    var checkedParams = $('.filter-param:checked');
+
+    for (i = 0;i < checkedParams.length; i++) {
+        param[i] = checkedParams[i].value;
+    }
+
     $.ajax({
         url: '/ajax/find_search_cards_notices',
         method: 'POST',
@@ -309,7 +316,8 @@ function findSearchCardsNotices() {
             "area_from": $('#filter-form #area_from').val(),
             "area_to": $('#filter-form #area_to').val(),
             "floor": $('#filter-form #floor').val(),
-            "type": type
+            "type": type,
+            "param": param
         },
         beforeSend: function () {
             inProgress = true;

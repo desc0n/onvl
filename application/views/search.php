@@ -97,7 +97,7 @@ $noticeModel = Model::factory('Notice');
                                                                     <?if ($param['type'] !== 'facilities') {continue;}?>
                                                                     <li class="filter-list-item">
                                                                         <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
+                                                                            <input class="filter-checkbox-control filter-param" <?=(in_array($param['id'], Arr::get($get, 'param', [])) ? 'checked' : null);?> type="checkbox" name="param[]" value="<?=$param['id'];?>">
                                                                             <span class="filter-checkbox-fake"></span>
                                                                             <span class="filter-checkbox-text"><?=$param['name'];?></span>
                                                                         </label>
@@ -112,7 +112,7 @@ $noticeModel = Model::factory('Notice');
                                                                     <?if ($param['type'] !== 'specifics') {continue;}?>
                                                                     <li class="filter-list-item">
                                                                         <label class="filter-checkbox filter-checkbox-normal">
-                                                                            <input class="filter-checkbox-control" type="checkbox">
+                                                                            <input class="filter-checkbox-control filter-param" <?=(in_array($param['id'], Arr::get($get, 'param', [])) ? 'checked' : null);?> type="checkbox" name="param[]" value="<?=$param['id'];?>">
                                                                             <span class="filter-checkbox-fake"></span>
                                                                             <span class="filter-checkbox-text"><?=$param['name'];?></span>
                                                                         </label>

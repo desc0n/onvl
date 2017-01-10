@@ -247,6 +247,7 @@ class Model_Notice extends Kohana_Model
 		$page = Arr::get($query, 'page', 1);
 		$limit = Arr::get($query, 'limit', 30);
 		$type = Arr::get($query, 'type', []);
+		$param = Arr::get($query, 'param', []);
 		$priceFrom = Arr::get($query, 'price_from', 0);
 		$priceTo = Arr::get($query, 'price_to', 0);
 		$areaFrom = Arr::get($query, 'area_from', 0);
@@ -255,7 +256,7 @@ class Model_Notice extends Kohana_Model
 
 		$notices = [];
 
-		$query = DB::select('n.*', ['t.name', 'type_name'], 't.room_count')
+		$querySql = DB::select('n.*', ['t.name', 'type_name'], 't.room_count')
 			->from(['notice', 'n'])
 			->join(['notice__type', 't'], !empty($type) ? 'inner' : 'left')
 			->on('t.id', '=', 'n.type')
@@ -263,32 +264,33 @@ class Model_Notice extends Kohana_Model
 			->and_where('n.price', '>=', $priceFrom)
 		;
 
-		$query = !empty($type) ? $query->and_where('t.id', 'IN', $type) : $query;
-		$query = !empty($priceTo) ? $query->and_where('n.price', '<=', $priceTo) : $query;
-		$query = !empty($areaFrom) ? $query->and_where('n.area', '>=', $areaFrom) : $query;
-		$query = !empty($areaTo) ? $query->and_where('n.area', '<=', $areaTo) : $query;
+		$querySql = !empty($type) ? $querySql->and_where('t.id', 'IN', $type) : $querySql;
+		$querySql = !empty($param) ? $querySql->and_where('n.id', 'IN', DB::select('p.notice_id')->from(['notice__params', 'p'])->where('p.id', 'IN', $param)) : $querySql;
+		$querySql = !empty($priceTo) ? $querySql->and_where('n.price', '<=', $priceTo) : $querySql;
+		$querySql = !empty($areaFrom) ? $querySql->and_where('n.area', '>=', $areaFrom) : $querySql;
+		$querySql = !empty($areaTo) ? $querySql->and_where('n.area', '<=', $areaTo) : $querySql;
 
-		$queryCount = clone $query;
+		$queryCount = clone $querySql;
 
-		$query = $query
+		$querySql = $querySql
 			->offset((($page - 1) * $limit))
 			->limit(($page * $limit))
 		;
 
 		switch ($order) {
 			case 'priceUp':
-				$query = $query->order_by('n.price', 'ASC');
+				$querySql = $querySql->order_by('n.price', 'ASC');
 
 				break;
 			case 'priceDown':
-				$query = $query->order_by('n.price', 'DESC');
+				$querySql = $querySql->order_by('n.price', 'DESC');
 
 				break;
 			default:
-				$query = $query->order_by('n.id', 'DESC');
+				$querySql = $querySql->order_by('n.id', 'DESC');
 		}
 
-		$res = $query
+		$res = $querySql
 			->execute()
 			->as_array()
 		;
