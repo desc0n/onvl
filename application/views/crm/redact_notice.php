@@ -89,6 +89,31 @@ $noticeModel = Model::factory('Notice');
                     </div>
                 </div>
                 <div class="row form-group">
+                    <div class="col-md-12">
+                        <h3>Дополнительные параметры</h3>
+                        <div class="col-md-6">
+                            <h4 class="text-muted"><?=$noticeModel->noticeParams[$noticeModel::NOTICE_PARAM_FACILITIES];?></h4>
+                            <?foreach ($params as $param) {?>
+                                <?if ($param['type'] !== $noticeModel::NOTICE_PARAM_FACILITIES) {continue;}?>
+                                <div class="col-md-12">
+                                    <input type="checkbox" <?=(in_array($param['id'], $noticeParams) ? 'checked' : null);?> name="param[]" value="<?=$param['id'];?>">
+                                    <span class="text-muted"><?=$param['name'];?></span>
+                                </div>
+                            <?}?>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-muted"><?=$noticeModel->noticeParams[$noticeModel::NOTICE_PARAM_SPECIFICS];?></h4>
+                            <?foreach ($params as $param) {?>
+                                <?if ($param['type'] !== $noticeModel::NOTICE_PARAM_SPECIFICS) {continue;}?>
+                                <div class="col-md-12">
+                                    <input type="checkbox" <?=(in_array($param['id'], $noticeParams) ? 'checked' : null);?> name="param[]" value="<?=$param['id'];?>">
+                                    <span class="text-muted"><?=$param['name'];?></span>
+                                </div>
+                            <?}?>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
                     <div class="col-sm-6">
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-block btn-success" name="redact_notice" value="<?=Arr::get($noticeData, 'id');?>">Сохранить</button>

@@ -7,6 +7,15 @@ class Model_Notice extends Kohana_Model
 {
 	const NOTICES_MARKET_LIMIT = 12;
 
+    const NOTICE_PARAM_FACILITIES = 'facilities';
+
+    const NOTICE_PARAM_SPECIFICS = 'specifics';
+
+    public $noticeParams = [
+        self::NOTICE_PARAM_FACILITIES => 'Удобства',
+        self::NOTICE_PARAM_SPECIFICS => 'Особенности'
+    ];
+
 	public function __construct() {
 	    DB::query(Database::UPDATE,"SET time_zone = '+10:00'")->execute();
     }
@@ -30,36 +39,55 @@ class Model_Notice extends Kohana_Model
             ->where('id', '=', Arr::get($params,'redact_notice'))
             ->execute()
         ;
+
+        foreach (Arr::get($params, 'param', []) as $paramId) {
+            $this->addNoticeParams((int)Arr::get($params,'redact_notice'), $paramId);
+        }
 	}
 
-	public function setNoticeParams($params = [])
+    /**
+     * @param int $noticeId
+     * @param int $paramId
+     */
+	public function addNoticeParams($noticeId, $paramId)
 	{
-		$sql = "insert into `notice_params`
-        (`notice_id`, `name`, `value`, `status_id`)
-        values (:notice_id, :name, :value, 1)";
-		DB::query(Database::UPDATE,$sql)
-			->param(':notice_id', Arr::get($params,'newNoticeParam'))
-			->param(':name', Arr::get($params,'newParamsName',''))
-			->param(':value', Arr::get($params,'newParamsValue',''))
-			->execute();
-	}
+	    if(in_array($paramId, $this->getNoticeParams($noticeId))) {
+	        return;
+        }
 
-	public function getNoticeParams($params = [])
-	{
-		$sql = "select * from `notice_params` where `notice_id` = :id and `status_id` = 1";
-		return DB::query(Database::SELECT, $sql)
-			->param(':id', Arr::get($params, 'id', 0))
+		DB::insert('notice__params', ['notice_id', 'param_id'])
+            ->values ([$noticeId, $paramId])
 			->execute()
-			->as_array();
+        ;
 	}
 
+    /**
+     * @param int $id
+     * @return array
+     */
+	public function getNoticeParams($id)
+	{
+		return DB::select()
+            ->from(['notice__params', 'np'])
+            ->join(['params', 'p'])
+            ->on('p.id', '=', 'np.param_id')
+            ->where('notice_id', '=', $id)
+			->execute()
+			->as_array('id', 'param_id')
+        ;
+	}
 
-    public function removeNoticeParams($params = [])
+    /**
+     * @param int $noticeId
+     * @param int $paramId
+     */
+    public function removeNoticeParams($noticeId, $paramId)
     {
-        $sql = "update `notice_params` set `status_id` = 0 where `id` = :id";
-        DB::query(Database::UPDATE,$sql)
-            ->param(':id', Arr::get($params,'removeProductParam',0))
-            ->execute();
+        DB::delete('notice__params')
+            ->where('notice_id', '=', $noticeId)
+            ->and_where('param_id', '=', $paramId)
+            ->execute()
+        ;
     }
 
     /**
@@ -491,8 +519,14 @@ class Model_Notice extends Kohana_Model
 
     public function findAllParams()
     {
-        return DB::select('p.*', [DB::expr("IF(p.type = 'facilities', 'Удобства', IF(p.type = 'specifics', 'Особенности', ''))"), 'type_name'])
+        return DB::select('p.*', [DB::expr("IF(p.type = :facilities_param, :facilities_param_description, IF(p.type = :specifics_param, :specifics_param_description, ''))"), 'type_name'])
             ->from(['params', 'p'])
+            ->parameters([
+                ':facilities_param' => self::NOTICE_PARAM_FACILITIES,
+                ':facilities_param_description' => $this->noticeParams[self::NOTICE_PARAM_FACILITIES],
+                ':specifics_param' => self::NOTICE_PARAM_SPECIFICS,
+                ':specifics_param_description' => $this->noticeParams[self::NOTICE_PARAM_SPECIFICS]
+            ])
             ->order_by('p.type', 'ASC')
             ->execute()
             ->as_array()

@@ -151,7 +151,9 @@ class Controller_Crm extends Controller_Base
         $template->content = View::factory('crm/redact_notice')
             ->set('districts', $contentModel->findAllDistricts())
             ->set('noticeData', $noticeModel->findById($this->request->param('id')))
+            ->set('noticeParams', $noticeModel->getNoticeParams($this->request->param('id')))
             ->set('types', $noticeModel->findAllTypes())
+            ->set('params', $noticeModel->findAllParams())
         ;
 
         $filename=Arr::get($_FILES, 'imgname', []);
@@ -161,7 +163,7 @@ class Controller_Crm extends Controller_Base
         }
 
         if (isset($_POST['redact_notice'])) {
-            $noticeModel->setNotice($_POST);
+            $noticeModel->setNotice($this->request->post());
 
             HTTP::redirect($this->request->referrer());
         }

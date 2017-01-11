@@ -94,7 +94,7 @@ $noticeModel = Model::factory('Notice');
                                                                 </div>
                                                                 <ul class="filter-list">
                                                                 <?foreach ($params as $param) {?>
-                                                                    <?if ($param['type'] !== 'facilities') {continue;}?>
+                                                                    <?if ($param['type'] !== $noticeModel::NOTICE_PARAM_FACILITIES) {continue;}?>
                                                                     <li class="filter-list-item">
                                                                         <label class="filter-checkbox filter-checkbox-normal">
                                                                             <input class="filter-checkbox-control filter-param" <?=(in_array($param['id'], Arr::get($get, 'param', [])) ? 'checked' : null);?> type="checkbox" name="param[]" value="<?=$param['id'];?>">
@@ -109,7 +109,7 @@ $noticeModel = Model::factory('Notice');
                                                                 </div>
                                                                 <ul class="filter-list">
                                                                 <?foreach ($params as $param) {?>
-                                                                    <?if ($param['type'] !== 'specifics') {continue;}?>
+                                                                    <?if ($param['type'] !== $noticeModel::NOTICE_PARAM_SPECIFICS) {continue;}?>
                                                                     <li class="filter-list-item">
                                                                         <label class="filter-checkbox filter-checkbox-normal">
                                                                             <input class="filter-checkbox-control filter-param" <?=(in_array($param['id'], Arr::get($get, 'param', [])) ? 'checked' : null);?> type="checkbox" name="param[]" value="<?=$param['id'];?>">
