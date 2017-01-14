@@ -78,6 +78,22 @@ class Model_Notice extends Kohana_Model
 	}
 
     /**
+     * @param int $id
+     * @return array
+     */
+	public function getNoticeParamsWithName($id)
+	{
+		return DB::select()
+            ->from(['notice__params', 'np'])
+            ->join(['params', 'p'])
+            ->on('p.id', '=', 'np.param_id')
+            ->where('notice_id', '=', $id)
+			->execute()
+			->as_array('id', 'name')
+        ;
+	}
+
+    /**
      * @param int $noticeId
      * @param int $paramId
      */

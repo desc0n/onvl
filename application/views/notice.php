@@ -121,55 +121,17 @@ $contentModel = Model::factory('Content');
                             <div class="main-card-desc">
                                 <p><?=Arr::get($notice, 'description');?></p>
                             </div>
-<!--                            <div class="main-card-features">-->
-<!--                                <h5 class="main-card-features-title">Дополнительные характеристики</h5>-->
-<!--                                <ul class="main-card-features-list">-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Балкон-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Посудомоечная машина-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Холодильник-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Стиральная машина-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Телевизор-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Нагреватель воды-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Кондиционер-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Можно курить-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Подходит для мероприятий-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item __disabled">-->
-<!--                                        <span class="glyphicon glyphicon-remove-circle"></span>-->
-<!--                                        Можно с животными-->
-<!--                                    </li>-->
-<!--                                    <li class="main-card-features-item">-->
-<!--                                        <span class="glyphicon glyphicon-ok-circle"></span>-->
-<!--                                        Подходит для семьи с детьми-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
+                            <div class="main-card-features">
+                                <h5 class="main-card-features-title">Дополнительные характеристики</h5>
+                                <ul class="main-card-features-list">
+                                    <?foreach ($noticeModel->getNoticeParamsWithName(Arr::get($notice, 'id')) as $paramName) {?>
+                                    <li class="main-card-features-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        <?=$paramName;?>
+                                    </li>
+                                    <?}?>
+                                </ul>
+                            </div>
                             <div class="main-card-interest">
                                 <div class="main-card-interest-title">Понравилась квартира?</div>
                                 <div>
