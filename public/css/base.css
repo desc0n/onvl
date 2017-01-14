@@ -5939,6 +5939,15 @@ body.blog-item .article-preview {
     margin-left: 5px;
 }
 
+.header-topline-link ul.dropdown-menu{
+    min-width: 200px;
+}
+
+.header-topline-link a.toggle-link,
+.header-topline-link a.toggle-link:hover {
+    color: #fff;
+    text-decoration: none;
+}
 a .header-topline-link:hover {
     color: #1b75b6;
     text-decoration: none;

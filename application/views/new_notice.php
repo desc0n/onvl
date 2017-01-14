@@ -1,3 +1,7 @@
+<?php
+/** @var $noticeModel Model_Notice */
+$noticeModel = Model::factory('Notice');
+?>
 <div class="layout">
     <header class="header">
         <div class="header-navbar">
@@ -126,6 +130,37 @@
                             <div>
                                 <div class="input">
                                     <input class="form-control" placeholder="+71234567890" type="text" id="phone">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-row-label">
+                            Дополнительно
+                        </div>
+                        <div class="form-row-content">
+                            <div class="param-list">
+                                <div class="input">
+                                    <div class="col-md-6">
+                                        <h4 class="text-muted"><?=$noticeModel->noticeParams[$noticeModel::NOTICE_PARAM_FACILITIES];?></h4>
+                                        <?foreach ($params as $param) {?>
+                                            <?if ($param['type'] !== $noticeModel::NOTICE_PARAM_FACILITIES) {continue;}?>
+                                            <div class="col-md-12">
+                                                <input type="checkbox" name="param[]" value="<?=$param['id'];?>">
+                                                <span class="text-muted"><?=$param['name'];?></span>
+                                            </div>
+                                        <?}?>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4 class="text-muted"><?=$noticeModel->noticeParams[$noticeModel::NOTICE_PARAM_SPECIFICS];?></h4>
+                                        <?foreach ($params as $param) {?>
+                                            <?if ($param['type'] !== $noticeModel::NOTICE_PARAM_SPECIFICS) {continue;}?>
+                                            <div class="col-md-12">
+                                                <input type="checkbox" name="param[]" value="<?=$param['id'];?>">
+                                                <span class="text-muted"><?=$param['name'];?></span>
+                                            </div>
+                                        <?}?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

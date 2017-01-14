@@ -50,6 +50,7 @@ class Controller_Notice extends Controller_Base
         $template->content=View::factory('new_notice')
             ->set('popularNotices', $noticeModel->findPopular())
             ->set('types', $noticeModel->findAllTypes())
+            ->set('params', $noticeModel->findAllParams())
         ;
 
         $this->response->body($template);

@@ -398,6 +398,7 @@ class Model_Notice extends Kohana_Model
 				'price',
 				'description',
 				'phone',
+                'user_id',
 				'created_at',
 			])
 			->values([
@@ -411,6 +412,7 @@ class Model_Notice extends Kohana_Model
 				Arr::get($params, 'price', 0),
 				Arr::get($params, 'description', ''),
 				Arr::get($params, 'phone', ''),
+                Auth::instance()->get_user()->id,
 				DB::expr('NOW()')
 			])
 			->execute()
@@ -423,6 +425,10 @@ class Model_Notice extends Kohana_Model
 			->where('id', '=', $noticeId)
 			->execute()
 		;
+
+        foreach (Arr::get($params, 'param', []) as $paramId) {
+            $this->addNoticeParams($noticeId, $paramId);
+        }
 
 		return $noticeId;
 	}

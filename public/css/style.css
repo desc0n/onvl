@@ -543,3 +543,7 @@ span.header-topline-link-block {
 .filter-type {
     margin-left: -15px!important;
 }
+.dropdown-menu.pull-right {
+    right: 0!important;
+    left: auto!important;
+}

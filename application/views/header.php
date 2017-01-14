@@ -21,7 +21,14 @@
                     <?} else {?>
                         <span class="header-topline-link header-topline-link-block">
                             <i class="glyphicon glyphicon-user"></i>
-                            <?=Auth::instance()->get_user()->username;?>
+                            <div class="dropdown">
+                                <a class="toggle-link" data-toggle="dropdown" href="#"><?=Auth::instance()->get_user()->username;?></a>
+                                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="/notice/new">Добавить объявление</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </span>
                         <form class="pull-right logout-form" method="post" action="/">
                             <input type="hidden" name="logout">

@@ -175,6 +175,13 @@ $(document).ready(function() {
             return false;
         }
 
+        var param = [];
+        var checkedParams = $('.param-list input[type=checkbox]:checked');
+
+        for (i = 0;i < checkedParams.length; i++) {
+            param[i] = checkedParams[i].value;
+        }
+
         $.post(
             '/ajax/add_notice',
             {
@@ -187,7 +194,8 @@ $(document).ready(function() {
                 name : $('.form-offer #name').val(),
                 price : $('.form-offer #price').val(),
                 description : $('.form-offer #description').val(),
-                phone : $('.form-offer #phone').val()
+                phone : $('.form-offer #phone').val(),
+                param: param
             },
             function (response) {
                 var data = JSON.parse(response);
