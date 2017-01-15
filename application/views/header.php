@@ -1,3 +1,9 @@
+<?php
+/** @var $noticeModel Model_Notice */
+$noticeModel = Model::factory('Notice');
+
+$userNotices = Auth::instance()->logged_in() ? $noticeModel->findUserNotices() : [];
+?>
 <header class="header">
     <div class="header-topline">
         <div class="container-fluid">
@@ -24,9 +30,20 @@
                             <div class="dropdown">
                                 <a class="toggle-link" data-toggle="dropdown" href="#"><?=Auth::instance()->get_user()->username;?></a>
                                 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                                    <?if(count($userNotices)){?>
+                                    <li role="presentation" class="dropdown-header text-center text-muted">Редактировать объявления</li>
+                                    <li role="presentation" class="divider"></li>
+                                    <?}?>
+                                    <?foreach ($userNotices as $userNotice) {?>
                                     <li role="presentation">
-                                        <a role="menuitem" tabindex="-1" href="/notice/new">Добавить объявление</a>
+                                        <a class="text-left" role="menuitem" tabindex="-1" href="/notice/redact/<?=$userNotice['id'];?>"><?=$userNotice['name'];?></a>
                                     </li>
+                                    <?}?>
+                                    <?if(count($userNotices) < 5) {?>
+                                    <li role="presentation" class="text-center">
+                                        <a class="btn button-blue text-center add-notice-btn" role="menuitem" tabindex="-1" href="/notice/new">Добавить объявление</a>
+                                    </li>
+                                    <?}?>
                                 </ul>
                             </div>
                         </span>

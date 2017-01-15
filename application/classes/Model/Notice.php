@@ -355,6 +355,18 @@ class Model_Notice extends Kohana_Model
 		return $notices;
 	}
 
+	public function findUserNotices($userId = null)
+    {
+        $userId = $userId === null ? Auth::instance()->get_user()->id : $userId;
+
+        return DB::select()
+            ->from('notice')
+            ->where('user_id', '=', $userId)
+            ->execute()
+            ->as_array()
+        ;
+    }
+
 	public function loadNoticeImg($filesGlobal, $noticeId)
 	{
 		$filesData = [];

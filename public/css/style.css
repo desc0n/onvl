@@ -547,3 +547,17 @@ span.header-topline-link-block {
     right: 0!important;
     left: auto!important;
 }
+.dropdown-menu li {
+    color: #000000;
+}
+.dropdown-menu li .add-notice-btn {
+    margin: 5px;
+    color: #fff!important;
+}
+.dropdown-menu li .add-notice-btn:hover {
+    color: #fff!important;
+    background: #1b8fb6!important;
+}
+header .dropdown-menu .dropdown-header {
+    padding-top: 10px;
+}
