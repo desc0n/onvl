@@ -241,6 +241,12 @@ class Controller_Crm extends Controller_Base
         /** @var $noticeModel Model_Notice */
         $noticeModel = Model::factory('Notice');
 
+        if (isset($_POST['addParam'])) {
+            $noticeModel->addParam($this->request->post('type'), $this->request->post('name'));
+
+            HTTP::redirect($this->request->referrer());
+        }
+
         $template = $this->getBaseTemplate();
 
         $template->content = View::factory('crm/params')

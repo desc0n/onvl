@@ -46,6 +46,29 @@ class Model_Notice extends Kohana_Model
 	}
 
     /**
+     * @param string $name
+     * @param string $type
+     */
+	public function addParam($type, $name)
+	{
+		DB::insert('params', ['name', 'type'])
+            ->values ([$name, $type])
+			->execute()
+        ;
+	}
+
+    /**
+     * @param int $id
+     */
+	public function removeParam($id)
+	{
+		DB::delete('params')
+            ->where('id', '=', $id)
+			->execute()
+        ;
+	}
+
+    /**
      * @param int $noticeId
      * @param int $paramId
      */
