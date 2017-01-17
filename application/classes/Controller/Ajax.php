@@ -110,6 +110,12 @@ class Controller_Ajax extends Controller
         $this->response->body(json_encode(['id' => $this->noticeModel->addNotice($this->request->post())]));
     }
 
+
+    public function action_set_notice()
+    {
+        $this->response->body(json_encode(['id' => $this->noticeModel->setNotice($this->request->post())]));
+    }
+
     public function action_remove_notice_img()
     {
         $this->noticeModel->removeNoticeImg($this->request->post('id'));

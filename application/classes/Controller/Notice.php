@@ -55,4 +55,32 @@ class Controller_Notice extends Controller_Base
 
         $this->response->body($template);
     }
+
+    public function action_redact()
+    {
+        if(!Auth::instance()->logged_in()) {
+            HTTP::redirect('/');
+        }
+
+        /** @var $contentModel Model_Content */
+        $contentModel = Model::factory('Content');
+
+        /** @var $noticeModel Model_Notice */
+        $noticeModel = Model::factory('Notice');
+
+        $id = $this->request->param('id');
+
+        View::set_global('title', 'Редактировать объявление');
+        View::set_global('rootPage', 'redactNotice');
+
+        $template = $contentModel->getBaseTemplate();
+
+        $template->content=View::factory('redact_notice')
+            ->set('notice', $noticeModel->findByIdAndUser($id, Auth::instance()->get_user()->id))
+            ->set('types', $noticeModel->findAllTypes())
+            ->set('params', $noticeModel->findAllParams())
+        ;
+
+        $this->response->body($template);
+    }
 }

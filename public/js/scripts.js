@@ -205,6 +205,61 @@ $(document).ready(function() {
         );
     });
 
+    $('.form-offer #redactNoticeBtn').click(function () {
+        $(this).attr('disabled', 'disabled');
+
+        if ($('.address-label .validate-form .glyphicon-remove').length) {
+            alert('Координаты адреса не определены!');
+            $(this).removeAttr('disabled');
+
+            return false;
+        }
+
+        if ($('.validate-form .glyphicon-remove').length) {
+            alert('Заполнены не все обязательные поля!');
+            $(this).removeAttr('disabled');
+
+            return false;
+        }
+
+        var param = [];
+        var checkedParams = $('.param-list input[type=checkbox]:checked');
+
+        for (i = 0;i < checkedParams.length; i++) {
+            param[i] = checkedParams[i].value;
+        }
+
+        $.post(
+            '/ajax/set_notice',
+            {
+                redact_notice: $('#itemId').val(),
+                type : $('.form-offer #type').val(),
+                area : $('.form-offer #area').val(),
+                address : $('.form-offer #address').val(),
+                floor : $('.form-offer #floor').val(),
+                longitude : $('.form-offer #longitude').val(),
+                latitude : $('.form-offer #latitude').val(),
+                name : $('.form-offer #name').val(),
+                price : $('.form-offer #price').val(),
+                description : $('.form-offer #description').val(),
+                phone : $('.form-offer #phone').val(),
+                param: param
+            },
+            function (response) {
+                var data = JSON.parse(response);
+
+                loadImages(data.id);
+            }
+        );
+    });
+
+    $('.form-offer #address').on('keyup', function () {
+        $('.address-label .validate-form .glyphicon').remove();
+        $('.address-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
+        $('.form-offer #longitude').val('');
+        $('.form-offer #latitude').val('');
+    });
+
     $('.form-offer #name').on('keyup blur focus', function () {
         if($(this).val().length > 1) {
             $('.name-label .validate-form .glyphicon').remove();
@@ -293,6 +348,10 @@ function loadImages(id) {
         contentType: false,
         type: 'POST'
     }).done(function () {
+        if ($('#redactNoticeBtn').length) {
+            location.reload();
+        }
+
         $('#errorModal #errorModalLabel').html('Уведомление');
         $('#errorModal #errorModalBody').html('<div class="alert alert-success"><strong>Успех!</strong> Запрос успешно отправлен.</div>');
         $('#errorModal').modal('toggle');
@@ -445,3 +504,5 @@ function rewriteYandexMap(properties) {
         myMap.geoObjects.add(placemark);
     });
 }
+function redactNoticeImg(id, src){$('#redactImgModal .modal-body').html('').append('<img src="/public/img/thumb/' + src + '" data-id="' + id + '">');$('#redactImgModal').modal('toggle');}
+function removeNoticeImg(){var id = $('#redactImgModal .modal-body img').data('id');$.ajax({url: '/ajax/remove_notice_img', type: 'POST', data: {id: id}, async: true}).done(function () {$('#redactImgModal').modal('toggle');$('#noticeImg' + id).remove();});}

@@ -20,8 +20,15 @@ class Model_Notice extends Kohana_Model
 	    DB::query(Database::UPDATE,"SET time_zone = '+10:00'")->execute();
     }
 
+    /**
+     * @param array $params
+     *
+     * @return int
+     */
 	public function setNotice($params = [])
 	{
+	    $noticeId = (int)Arr::get($params,'redact_notice');
+
         DB::update('notice')
             ->set([
                 'type' => Arr::get($params, 'type'),
@@ -36,13 +43,15 @@ class Model_Notice extends Kohana_Model
                 'description' => Arr::get($params, 'description', ''),
                 'updated_at' => DB::expr('NOW()'),
             ])
-            ->where('id', '=', Arr::get($params,'redact_notice'))
+            ->where('id', '=', $noticeId)
             ->execute()
         ;
 
         foreach (Arr::get($params, 'param', []) as $paramId) {
-            $this->addNoticeParams((int)Arr::get($params,'redact_notice'), $paramId);
+            $this->addNoticeParams($noticeId, $paramId);
         }
+
+        return $noticeId;
 	}
 
     /**
@@ -211,6 +220,30 @@ class Model_Notice extends Kohana_Model
 			->from(['notice', 'n'])
 			->where('n.id', '=', $id)
 			->and_where('n.status_id', '=', 1)
+			->limit(1)
+			->execute()
+			->current()
+		;
+
+		return !$result ? [] : $result;
+	}
+
+	/**
+	 * @param int $id
+	 *
+	 * @return array
+	 */
+	public function findByIdAndUser($id, $userId)
+	{
+		$result = DB::select(
+			'n.*',
+			[DB::select('t.name')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'type_name'],
+			[DB::select('t.room_count')->from(['notice__type', 't'])->where('t.id', '=', DB::expr('n.type')), 'room_count']
+		)
+			->from(['notice', 'n'])
+			->where('n.id', '=', $id)
+			->and_where('n.status_id', '=', 1)
+			->and_where('n.user_id', '=', $userId)
 			->limit(1)
 			->execute()
 			->current()
