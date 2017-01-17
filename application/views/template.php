@@ -8,13 +8,13 @@
     <link href="/public/i/logo.png" rel="shortcut icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,900,900i" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="/public/css/bootstrap.css">
-    <link rel="stylesheet" media="screen" href="/public/css/base.css">
+    <link rel="stylesheet" media="screen" href="/public/css/base.css?v=2">
     <style type="text/css">
         .fancybox-margin {
             margin-right: 17px;
         }
     </style>
-    <link rel="stylesheet" media="screen" href="/public/css/style.css?v=1">
+    <link rel="stylesheet" media="screen" href="/public/css/style.css?v=2">
     <style type="text/css" media="screen">
         .uv-icon:hover {
             opacity: 1
@@ -28,7 +28,7 @@
     <script src="/public/js/jquery.min.js"></script>
     <script src="/public/js/bootstrap.js"></script>
     <script src="/public/js/bootstrap3-typeahead.js"></script>
-    <script src="/public/js/scripts.js?v=3"></script>
+    <script src="/public/js/scripts.js?v=4"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>

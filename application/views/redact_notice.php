@@ -10,6 +10,7 @@ $noticeParams = $noticeModel->getNoticeParams(Arr::get($notice, 'id'));
             <div class="container">
                 <div class="header-navbar-logo">
                     <a class="logo" href="/">
+                        <img src="/public/i/logo.png">
                     </a>
                 </div>
                 <h1 class="header-navbar-lead">Редактировать объявление</h1>
