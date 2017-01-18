@@ -622,5 +622,56 @@ class Model_Notice extends Kohana_Model
             ->as_array()
         ;
     }
+
+    /**
+     * @param $noticeId
+     */
+    public function addToLikedNotices($noticeId)
+    {
+        $userId = Auth::instance()->get_user()->id;
+
+        if(!$this->findLikedNoticeByNoticeAndUser($noticeId, $userId)) {
+            DB::insert('notice__liked', ['notice_id', 'user_id', 'created_at'])
+                ->values([$noticeId, $userId, DB::expr('NOW()')])
+                ->execute();
+        }
+    }
+
+    /**
+     * @param $noticeId
+     * @param $userId
+     *
+     * @return mixed
+     */
+    public function findLikedNoticeByNoticeAndUser($noticeId, $userId)
+    {
+        return DB::select()
+            ->from('notice__liked')
+            ->where('notice_id', '=', $noticeId)
+            ->and_where('user_id', '=', $userId)
+            ->limit(1)
+            ->execute()
+            ->current()
+        ;
+    }
+
+    /**
+     * @param $userId
+     *
+     * @return mixed
+     */
+    public function findUserLikedNotices($userId = null)
+    {
+        $userId = $userId === null ? Auth::instance()->get_user()->id : $userId;
+
+        return DB::select(['n.id', 'notice_id'] , 'n.name')
+            ->from(['notice__liked', 'nl'])
+            ->join(['notice', 'n'])
+            ->on('n.id', '=', 'nl.notice_id')
+            ->where('nl.user_id', '=', $userId)
+            ->execute()
+            ->as_array()
+        ;
+    }
 }
 ?>

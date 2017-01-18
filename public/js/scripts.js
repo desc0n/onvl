@@ -352,9 +352,7 @@ function loadImages(id) {
             location.reload();
         }
 
-        $('#errorModal #errorModalLabel').html('Уведомление');
-        $('#errorModal #errorModalBody').html('<div class="alert alert-success"><strong>Успех!</strong> Запрос успешно отправлен.</div>');
-        $('#errorModal').modal('toggle');
+        showErrorModal('Уведомление', '<div class="alert alert-success"><strong>Операция успешно выполнена!</strong> Запрос отправлен.</div>')
     });
 }
 function findSearchCardsNotices() {
@@ -504,6 +502,8 @@ function rewriteYandexMap(properties) {
         myMap.geoObjects.add(placemark);
     });
 }
+function showErrorModal(label, body) {$('#errorModal #errorModalLabel').html(label);$('#errorModal #errorModalBody').html(body);$('#errorModal').modal('toggle');}
 function redactNoticeImg(id, src){$('#redactImgModal .modal-body').html('').append('<img src="/public/img/thumb/' + src + '" data-id="' + id + '">');$('#redactImgModal').modal('toggle');}
 function removeNoticeImg(){var id = $('#redactImgModal .modal-body img').data('id');$.ajax({url: '/ajax/remove_notice_img', type: 'POST', data: {id: id}, async: true}).done(function () {$('#redactImgModal').modal('toggle');$('#noticeImg' + id).remove();});}
 function getOwnerPhone(id){$.ajax({url: '/ajax/get_owner_phone', type: 'POST', data: {id: id}, async: true}).done(function (phone) {$('#ownerPhoneModalBody').html(phone);$('#ownerPhoneModal').modal('toggle');});}
+function addToLikedNotices(id){$.ajax({url: '/ajax/add_to_liked_notices', type: 'POST', data: {id: id}, async: true}).done(function () {showErrorModal('Уведомление', '<div class="alert alert-success"><strong>Операция успешно выполнена!</strong> Объявление добавлено в избранное.</div>')});}

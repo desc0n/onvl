@@ -74,7 +74,7 @@ $contentModel = Model::factory('Content');
                                             <?if(!Auth::instance()->logged_in()) {?>
                                                 <button class="btn btn-danger" data-toggle="modal" href="#loginModal"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
                                             <?} else {?>
-                                                <button class="btn btn-danger"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
+                                                <button class="btn btn-danger" onclick="addToLikedNotices(<?=Arr::get($notice, 'id');?>);"><span class="glyphicon glyphicon-heart"></span> В избранное</button>
                                             <?}?>
                                         </div>
                                     </div>

@@ -3,6 +3,7 @@
 $noticeModel = Model::factory('Notice');
 
 $userNotices = Auth::instance()->logged_in() ? $noticeModel->findUserNotices() : [];
+$userLikedNotices = Auth::instance()->logged_in() ? $noticeModel->findUserLikedNotices() : [];
 ?>
 <header class="header">
     <div class="header-topline">
@@ -37,6 +38,16 @@ $userNotices = Auth::instance()->logged_in() ? $noticeModel->findUserNotices() :
                                     <?foreach ($userNotices as $userNotice) {?>
                                     <li role="presentation">
                                         <a class="text-left" role="menuitem" tabindex="-1" href="/notice/redact/<?=$userNotice['id'];?>"><?=$userNotice['name'];?></a>
+                                    </li>
+                                    <?}?>
+                                    <?if(count($userLikedNotices)){?>
+                                    <li role="presentation" class="divider"></li>
+                                    <li role="presentation" class="dropdown-liked text-center text-muted">Избранное</li>
+                                    <li role="presentation" class="divider"></li>
+                                    <?}?>
+                                    <?foreach ($userLikedNotices as $likedNotice) {?>
+                                    <li role="presentation">
+                                        <a class="text-left" role="menuitem" tabindex="-1" href="/notice/<?=$likedNotice['notice_id'];?>"><?=$likedNotice['name'];?></a>
                                     </li>
                                     <?}?>
                                     <?if(count($userNotices) < 5) {?>

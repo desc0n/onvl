@@ -549,6 +549,10 @@ span.header-topline-link-block {
 }
 .dropdown-menu li {
     color: #000000;
+    font-size: 11px;
+}
+.dropdown-menu .divider {
+    margin: 4px 0;
 }
 .dropdown-menu li .add-notice-btn {
     margin: 5px;
@@ -561,7 +565,14 @@ span.header-topline-link-block {
 header .dropdown-menu .dropdown-header {
     padding-top: 10px;
 }
+header .dropdown-menu .dropdown-liked {
+    white-space: normal;
+    line-height: 1.428571429;
+}
 #ownerPhoneModal .modal-dialog {
     top: 40%;
     font-size: 30px!important;
+}
+.alert {
+    margin-bottom: 0!important;
 }

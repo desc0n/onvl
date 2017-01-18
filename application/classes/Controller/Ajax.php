@@ -128,6 +128,11 @@ class Controller_Ajax extends Controller
         $this->response->body(json_encode(['result' => $this->noticeModel->findSearchCardsNotices($this->request->post())]));
     }
 
+    public function action_add_to_liked_notices()
+    {
+        $this->response->body(json_encode(['result' => $this->noticeModel->addToLikedNotices((int)$this->request->post('id'))]));
+    }
+
     public function action_remove_param()
     {
         $this->response->body(json_encode(['result' => $this->noticeModel->removeParam((int)$this->request->post('id'))]));
