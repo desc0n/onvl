@@ -67,7 +67,7 @@ $contentModel = Model::factory('Content');
                                             <?if(!Auth::instance()->logged_in()) {?>
                                                 <a class="btn button-blue" data-toggle="modal" href="#loginModal">Телефон собственника</a>
                                             <?} else {?>
-                                                <a class="btn button-blue">Телефон собственника</a>
+                                                <a class="btn button-blue" onclick="getOwnerPhone(<?=Arr::get($notice, 'id');?>);">Телефон собственника</a>
                                             <?}?>
                                         </div>
                                         <div>
@@ -138,7 +138,7 @@ $contentModel = Model::factory('Content');
                                     <?if(!Auth::instance()->logged_in()) {?>
                                     <a class="btn button-blue" data-toggle="modal" href="#loginModal">Телефон собственника</a>
                                     <?} else {?>
-                                    <a class="btn button-blue">Телефон собственника</a>
+                                    <a class="btn button-blue" onclick="getOwnerPhone(<?=Arr::get($notice, 'id');?>);">Телефон собственника</a>
                                     <?}?>
                                 </div>
                             </div>

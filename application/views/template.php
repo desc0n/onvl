@@ -28,7 +28,7 @@
     <script src="/public/js/jquery.min.js"></script>
     <script src="/public/js/bootstrap.js"></script>
     <script src="/public/js/bootstrap3-typeahead.js"></script>
-    <script src="/public/js/scripts.js?v=4"></script>
+    <script src="/public/js/scripts.js?v=5"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
@@ -102,6 +102,13 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ownerPhoneModal" tabindex="-1" role="dialog" aria-labelledby="ownerPhoneModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center" id="ownerPhoneModalBody"></div>
         </div>
     </div>
 </div>

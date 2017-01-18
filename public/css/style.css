@@ -561,3 +561,7 @@ span.header-topline-link-block {
 header .dropdown-menu .dropdown-header {
     padding-top: 10px;
 }
+#ownerPhoneModal .modal-dialog {
+    top: 40%;
+    font-size: 30px!important;
+}

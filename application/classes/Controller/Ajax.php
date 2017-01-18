@@ -132,4 +132,9 @@ class Controller_Ajax extends Controller
     {
         $this->response->body(json_encode(['result' => $this->noticeModel->removeParam((int)$this->request->post('id'))]));
     }
+
+    public function action_get_owner_phone()
+    {
+        $this->response->body(Arr::get($this->noticeModel->findById((int)$this->request->post('id')), 'phone'));
+    }
 }
