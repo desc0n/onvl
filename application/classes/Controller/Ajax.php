@@ -123,6 +123,20 @@ class Controller_Ajax extends Controller
         $this->response->body(json_encode(['result' =>'success']));
     }
 
+    public function action_remove_notice()
+    {
+        $this->noticeModel->removeNotice((int)$this->request->post('id'));
+
+        $this->response->body(json_encode(['result' =>'success']));
+    }
+
+    public function action_remove_user_notice()
+    {
+        $this->noticeModel->removeUserNotice((int)$this->request->post('id'));
+
+        $this->response->body(json_encode(['result' =>'success']));
+    }
+
     public function action_find_search_cards_notices()
     {
         $this->response->body(json_encode(['result' => $this->noticeModel->findSearchCardsNotices($this->request->post())]));
@@ -131,6 +145,11 @@ class Controller_Ajax extends Controller
     public function action_add_to_liked_notices()
     {
         $this->response->body(json_encode(['result' => $this->noticeModel->addToLikedNotices((int)$this->request->post('id'))]));
+    }
+
+    public function action_remove_from_liked_notices()
+    {
+        $this->response->body(json_encode(['result' => $this->noticeModel->removeFromLikedNotices((int)$this->request->post('id'))]));
     }
 
     public function action_remove_param()

@@ -180,8 +180,8 @@ $noticeParams = $noticeModel->getNoticeParams(Arr::get($notice, 'id'));
                     <div class="form-row">
                         <div class="form-row-content">
                             <input type="hidden" id="itemId" value="<?=Arr::get($notice, 'id');?>">
-                            <button name="button" id="redactNoticeBtn" class="button button-blue button-xl">Сохранить
-                            </button>
+                            <button name="button" id="redactNoticeBtn" class="button button-blue button-xl">Сохранить</button>
+                            <button name="button" id="removeNoticeBtn" class="button button-blue button-xl" onclick="removeUserNotice();">Удалить</button>
                         </div>
                     </div>
                 </div>

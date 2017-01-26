@@ -70,14 +70,6 @@ $noticeModel = Model::factory('Notice');
                                                 <div class="filter-row">
                                                     <div class="row">
                                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                            <span>Этаж</span>
-                                                            <input class="form-control" type="text" id="floor" name="floor" value="<?=Arr::get($get, 'floor', 0);?>">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-row">
-                                                    <div class="row">
-                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                             <button class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12">Найти</button>
                                                         </div>
                                                     </div>

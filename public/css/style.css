@@ -576,3 +576,16 @@ header .dropdown-menu .dropdown-liked {
 .alert {
     margin-bottom: 0!important;
 }
+#removeNoticeBtn {
+    background: #b61e1b;
+    margin-left: 20px;
+}
+.liked-header-link {
+    position: relative;
+}
+.liked-header-link .glyphicon{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+}

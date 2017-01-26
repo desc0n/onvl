@@ -46,8 +46,9 @@ $userLikedNotices = Auth::instance()->logged_in() ? $noticeModel->findUserLikedN
                                     <li role="presentation" class="divider"></li>
                                     <?}?>
                                     <?foreach ($userLikedNotices as $likedNotice) {?>
-                                    <li role="presentation">
+                                    <li role="presentation" class="liked-header-link" id="liked<?=$likedNotice['notice_id'];?>">
                                         <a class="text-left" role="menuitem" tabindex="-1" href="/notice/<?=$likedNotice['notice_id'];?>"><?=$likedNotice['name'];?></a>
+                                        <span class="glyphicon glyphicon-remove pull-right" onclick="removeFromLiked(<?=$likedNotice['notice_id'];?>);"></span>
                                     </li>
                                     <?}?>
                                     <?if(count($userNotices) < 5) {?>

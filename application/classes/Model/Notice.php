@@ -153,12 +153,32 @@ class Model_Notice extends Kohana_Model
         ;
     }
 
-	public function deleteNotice($params)
+    /**
+     * @param int $id
+     */
+	public function removeNotice($id)
 	{
-		$sql = "update `notice` set `status_id` = 0 where `id` = :id";
-		DB::query(Database::UPDATE,$sql)
-			->param(':id', Arr::get($params,'id',0))
-			->execute();
+		DB::update('notice')
+            ->set(['status_id' => 0])
+            ->where('id', '=', $id)
+			->execute()
+        ;
+	}
+
+    /**
+     * @param int $id
+     * @param int $userId
+     */
+	public function removeUserNotice($id, $userId = null)
+	{
+        $userId = $userId === null ? Auth::instance()->get_user()->id : $userId;
+
+		DB::update('notice')
+            ->set(['status_id' => 0])
+            ->where('id', '=', $id)
+            ->and_where('user_id', '=', $userId)
+			->execute()
+        ;
 	}
 
 	public function findLastSeeItems()
@@ -418,6 +438,7 @@ class Model_Notice extends Kohana_Model
         return DB::select()
             ->from('notice')
             ->where('user_id', '=', $userId)
+            ->and_where('status_id', '=', 1)
             ->execute()
             ->as_array()
         ;
@@ -635,6 +656,20 @@ class Model_Notice extends Kohana_Model
                 ->values([$noticeId, $userId, DB::expr('NOW()')])
                 ->execute();
         }
+    }
+
+    /**
+     * @param int $noticeId
+     * @param int $userId
+     */
+    public function removeFromLikedNotices($noticeId, $userId = null)
+    {
+        $userId = $userId === null ? Auth::instance()->get_user()->id : $userId;
+
+        DB::delete('notice__liked')
+            ->where('notice_id', '=', $noticeId)
+            ->and_where('user_id', '=', $userId)
+            ->execute();
     }
 
     /**
