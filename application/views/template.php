@@ -14,7 +14,7 @@
             margin-right: 17px;
         }
     </style>
-    <link rel="stylesheet" media="screen" href="/public/css/style.css?v=2">
+    <link rel="stylesheet" media="screen" href="/public/css/style.css?v=3">
     <style type="text/css" media="screen">
         .uv-icon:hover {
             opacity: 1
@@ -28,7 +28,7 @@
     <script src="/public/js/jquery.min.js"></script>
     <script src="/public/js/bootstrap.js"></script>
     <script src="/public/js/bootstrap3-typeahead.js"></script>
-    <script src="/public/js/scripts.js?v=5"></script>
+    <script src="/public/js/scripts.js?v=6"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>

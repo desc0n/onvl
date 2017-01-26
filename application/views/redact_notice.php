@@ -29,7 +29,7 @@ $noticeParams = $noticeModel->getNoticeParams(Arr::get($notice, 'id'));
                             </div>
                         </div>
                         <div class="form-row-content">
-                            <div class="input input-group">
+                            <div class="form-group input input-group">
                                 <input placeholder="Например, Светланская, 10" id="address" class="form-control" value="<?=Arr::get($notice, 'address');?>">
                                 <input type="hidden" id="latitude" value="<?=Arr::get($notice, 'latitude');?>">
                                 <input type="hidden" id="longitude" value="<?=Arr::get($notice, 'longitude');?>">
@@ -38,6 +38,40 @@ $noticeParams = $noticeModel->getNoticeParams(Arr::get($notice, 'id'));
                                         <i class="glyphicon glyphicon-search" title="Найти координаты"></i>
                                     </button>
                                 </span>
+                            </div>
+                            <div class="address-error">
+                            </div>
+                            <div class="notice-map" id="noticeMap">
+                                <script type="text/javascript">
+                                    ymaps.ready(function () {
+                                        var properties = [
+                                            {
+                                                "lat":"<?=Arr::get($notice, 'latitude');?>",
+                                                "lng":"<?=Arr::get($notice, 'longitude');?>"
+                                            }
+                                        ];
+
+                                        myMap = new ymaps.Map('noticeMap', {
+                                                center: [<?=Arr::get($notice, 'latitude');?>, <?=Arr::get($notice, 'longitude');?>],
+                                                zoom: 12,
+                                                type: "yandex#map"
+                                            }, {
+                                            }),
+                                            BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                '<div id="listing-map">' +
+                                                '</div>' );
+
+                                        jQuery.each(properties,function(e, f){
+                                            var placemark = new ymaps.Placemark([f.lat, f.lng], {
+                                            }, {
+                                                balloonContentLayout: BalloonContentLayout,
+                                                balloonPanelMaxMapArea: 0
+                                            });
+
+                                            myMap.geoObjects.add(placemark);
+                                        });
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>

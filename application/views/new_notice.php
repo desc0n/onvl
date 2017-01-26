@@ -1,6 +1,34 @@
 <?php
 /** @var $noticeModel Model_Notice */
 $noticeModel = Model::factory('Notice');
+
+$userNotices = $noticeModel->findUserNotices();
+
+if (count($userNotices) >= $noticeModel::NOTICES_USER_LIMIT) {
+    echo '
+    <div class="layout">
+        <header class="header">
+            <div class="header-navbar">
+                <div class="container">
+                    <div class="header-navbar-logo">
+                        <a class="logo" href="/">
+                            <img src="/public/i/logo.png">
+                        </a>
+                    </div>
+                    <h1 class="header-navbar-lead">Добавить объявление</h1>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <h2 class="text-center limit-notices">Превышен лимит объявлений</h2>
+            </div>
+        </div>
+    </div>
+    ';
+
+    return;
+}
 ?>
 <div class="layout">
     <header class="header">
@@ -8,9 +36,10 @@ $noticeModel = Model::factory('Notice');
             <div class="container">
                 <div class="header-navbar-logo">
                     <a class="logo" href="/">
+                        <img src="/public/i/logo.png">
                     </a>
                 </div>
-                <h1 class="header-navbar-lead">Добавить объявление.</h1>
+                <h1 class="header-navbar-lead">Добавить объявление</h1>
             </div>
         </div>
     </header>
@@ -26,7 +55,7 @@ $noticeModel = Model::factory('Notice');
                             </div>
                         </div>
                         <div class="form-row-content">
-                            <div class="input input-group">
+                            <div class="form-group input input-group">
                                 <input placeholder="Например, Светланская, 10" id="address" class="form-control">
                                 <input type="hidden" id="latitude">
                                 <input type="hidden" id="longitude">
@@ -35,6 +64,24 @@ $noticeModel = Model::factory('Notice');
                                         <i class="glyphicon glyphicon-search" title="Найти координаты"></i>
                                     </button>
                                 </span>
+                            </div>
+                            <div class="address-error">
+                            </div>
+                            <div class="notice-map" id="noticeMap">
+                                <script type="text/javascript">
+                                    ymaps.ready(function () {
+
+                                        myMap = new ymaps.Map('noticeMap', {
+                                            center: ['43.115141', '131.885341'],
+                                            zoom: 12,
+                                            type: "yandex#map"
+                                        }, {
+                                        }),
+                                            BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                '<div id="listing-map">' +
+                                                '</div>' );
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>

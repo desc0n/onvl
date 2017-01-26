@@ -7,6 +7,8 @@ class Model_Notice extends Kohana_Model
 {
 	const NOTICES_MARKET_LIMIT = 12;
 
+	const NOTICES_USER_LIMIT = 5;
+
     const NOTICE_PARAM_FACILITIES = 'facilities';
 
     const NOTICE_PARAM_SPECIFICS = 'specifics';

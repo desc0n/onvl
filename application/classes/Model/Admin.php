@@ -685,6 +685,7 @@ class Model_Admin extends Kohana_Model
             && array_key_exists('GeoObject', $response['response']['GeoObjectCollection']['featureMember'][0])
             && array_key_exists('Point', $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject'])
             && array_key_exists('pos', $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point'])
+            && $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'] !== '131.885341 43.115141'
             ? explode(' ', $response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'])
             : null
         ;

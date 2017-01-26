@@ -51,7 +51,7 @@ $userLikedNotices = Auth::instance()->logged_in() ? $noticeModel->findUserLikedN
                                         <span class="glyphicon glyphicon-remove pull-right" onclick="removeFromLiked(<?=$likedNotice['notice_id'];?>);"></span>
                                     </li>
                                     <?}?>
-                                    <?if(count($userNotices) < 5) {?>
+                                    <?if(count($userNotices) < $noticeModel::NOTICES_USER_LIMIT) {?>
                                     <li role="presentation" class="text-center">
                                         <a class="btn button-blue text-center add-notice-btn" role="menuitem" tabindex="-1" href="/notice/new">Добавить объявление</a>
                                     </li>

@@ -141,18 +141,29 @@ $(document).ready(function() {
             var data = JSON.parse(response);
 
             if (data.result == 'success') {
+                var properties = [];
+                var coords = new Object();
+
+                coords["lat"] = data.latitude;
+                coords["lon"] = data.longitude;
+
+                properties.unshift(coords);
+
                 $('.address-label .validate-form .glyphicon').remove();
                 $('.address-label .validate-form').append('<i class="glyphicon glyphicon-ok"></i>');
-
+                $('.address-error').html('');
+                $('#findCoordBtn').removeClass('btn-danger');
                 $('.form-offer #latitude').val(data.latitude);
                 $('.form-offer #longitude').val(data.longitude);
+                rewriteYandexMap(properties);
             } else {
                 $('.address-label .validate-form .glyphicon').remove();
                 $('.address-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
 
                 $('.form-offer #latitude').val('');
                 $('.form-offer #longitude').val('');
-
+                $('.address-error').html('<div class="text-center">Адрес не определен</div>');
+                $('#findCoordBtn').addClass('btn-danger');
                 alert('Ошибка в определении координат адреса!');
             }
         });
@@ -258,6 +269,11 @@ $(document).ready(function() {
         $('.address-label .validate-form').append('<i class="glyphicon glyphicon-remove"></i>');
         $('.form-offer #longitude').val('');
         $('.form-offer #latitude').val('');
+        $('#findCoordBtn').addClass('btn-danger');
+        $('.address-error').html('<div class="text-center">Адрес не определен</div>');
+        myMap.geoObjects.each(function(obj){
+            myMap.geoObjects.remove(obj);
+        });
     });
 
     $('.form-offer #name').on('keyup blur focus', function () {
