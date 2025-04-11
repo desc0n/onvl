@@ -134,6 +134,22 @@ Route::set('page', 'page/<slug>',[
 		'action'     => 'page',
 	])
 ;
+Route::set('arenda', 'arenda-<slug>',[
+	'slug' =>'[0-9a-z_-]+',
+])
+	->defaults([
+		'controller' => 'index',
+		'action'     => 'arenda',
+	])
+;
+Route::set('progulki', 'progulki-<slug>',[
+	'slug' =>'[0-9a-z_-]+',
+])
+	->defaults([
+		'controller' => 'index',
+		'action'     => 'arenda',
+	])
+;
 
 Route::set('search', 'search',[
         'controller' => 'index',
